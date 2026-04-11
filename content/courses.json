@@ -1,0 +1,20 @@
+[
+  {
+    "id": "pyspark",
+    "title": "PySpark for Absolute Beginners",
+    "description": "Master Apache Spark with Python — from zero to confident. 30 hands-on lessons covering DataFrames, transformations, aggregations, and real-world data engineering patterns.",
+    "status": "active",
+    "href": "/pyspark",
+    "lessonCount": 30,
+    "tags": ["pyspark", "data-engineering", "beginner"]
+  },
+  {
+    "id": "sql",
+    "title": "SQL Fundamentals",
+    "description": "Write powerful SQL queries from scratch. Coming soon.",
+    "status": "coming-soon",
+    "href": "/sql",
+    "lessonCount": 0,
+    "tags": ["sql", "database", "beginner"]
+  }
+]

@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[31078,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+3:I[39756,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[37457,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+0:{"rsc":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true}]],["$","$L2",null,{"courseId":"pyspark","modules":[{"id":"getting-started","title":"Getting Started","lessons":[{"slug":"what-is-spark","title":"What is Apache Spark?"},{"slug":"spark-vs-pandas","title":"Spark vs Pandas — When to Use Which"},{"slug":"installing-pyspark","title":"Installing PySpark"},{"slug":"first-sparksession","title":"Your First SparkSession"},{"slug":"understanding-spark-ui","title":"Understanding the Spark UI"}]}],"children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"UJCiYKTmrgTqQisOVlDAL"}

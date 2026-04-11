@@ -1,0 +1,161 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],"default"]
+9:I[22016,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],""]
+a:I[74356,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],"default"]
+b:I[97367,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+3:T659d,<h1 id="your-first-sparksession">Your First SparkSession</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What a SparkSession is and why it matters</li>
+<li>How to create and configure a SparkSession</li>
+<li>The SparkSession lifecycle (create → use → stop)</li>
+<li>Key configuration options for development</li>
+<li>How to avoid common SparkSession pitfalls</li>
+</ul>
+</div><h2 id="what-is-a-sparksession">What is a SparkSession?</h2>
+<p>The SparkSession is your <strong>entry point to all Spark functionality</strong>. Every PySpark program starts by creating one. Think of it as opening a connection to the Spark engine.</p>
+<p>Before Spark 2.0, you had to create separate contexts (SparkContext, SQLContext, HiveContext). Now, SparkSession unifies all of these into a single object.</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">graph TD</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A[SparkSession] --> B[SparkContext]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A --> C[SQLContext]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A --> D[HiveContext]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    A --> E[StreamingContext]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    style A fill:#4A90D9,color:#fff</span></span></code></pre>
+<h2 id="creating-a-sparksession">Creating a SparkSession</h2>
+<p>The simplest way:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"MyFirstApp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Spark version: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.version</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"App name: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.sparkContext.appName</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>Spark version: 3.5.0
+App name: MyFirstApp
+</code></pre></div>
+<h2 id="the-builder-pattern">The Builder Pattern</h2>
+<p>SparkSession uses the <strong>builder pattern</strong> — you chain configuration calls before creating the session:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"ConfiguredApp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"local[*]"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">config</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"spark.sql.shuffle.partitions"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"4"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">config</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"spark.driver.memory"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2g"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">config</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"spark.ui.showConsoleProgress"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"false"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<h3 id="key-configuration-options">Key Configuration Options</h3>
+<p>| Config | What it does | Good default |
+|--------|-------------|--------------|
+| <code>appName</code> | Names your app (shows in Spark UI) | Always set this |
+| <code>master</code> | Where to run: <code>local[*]</code>, <code>yarn</code>, <code>k8s</code> | <code>local[*]</code> for dev |
+| <code>spark.driver.memory</code> | Memory for the driver | <code>2g</code> for dev |
+| <code>spark.sql.shuffle.partitions</code> | Partitions during shuffles | <code>4</code> for dev, <code>200</code> for prod |
+| <code>spark.ui.showConsoleProgress</code> | Show progress bars | <code>false</code> to reduce noise |</p>
+<h2 id="the-master-setting">The <code>master</code> Setting</h2>
+<p>The <code>master</code> URL tells Spark where to run:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Use all available CPU cores locally</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"local[*]"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Use exactly 4 cores</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"local[4]"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Single thread (useful for debugging)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"local[1]"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Connect to a YARN cluster</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"yarn"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<p>For learning, always use <code>local[*]</code>.</p>
+<h2 id="getorcreate-vs-new-session">getOrCreate() vs New Session</h2>
+<p><code>getOrCreate()</code> is smart — it returns the <strong>existing session</strong> if one is already running, or creates a new one:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># First call: creates a new session</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"App1"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Second call: returns the SAME session (ignores new appName)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"App2"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(spark1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">is</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark2)  </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># True!</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-1">Expected Output</h3>
+<pre data-cw-output="true"><code>True
+</code></pre></div>
+<p>If you need a truly new session, use <code>newSession()</code>:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark_new </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark1.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">newSession</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<h2 id="stopping-a-sparksession">Stopping a SparkSession</h2>
+<p>Always stop your session when done:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">stop</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<p>This releases resources (memory, ports, threads). In a script, put it at the end. In a notebook, stop it when you're done experimenting.</p>
+<h2 id="a-complete-example">A Complete Example</h2>
+<p>Here's a full program that creates a session, does some work, and cleans up:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 1. Create the session</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"EmployeeAnalysis"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"local[*]"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">config</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"spark.sql.shuffle.partitions"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"4"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 2. Create sample data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">employees </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Alice"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">95000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Bob"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">110000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Charlie"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Marketing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">85000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Diana"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Marketing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">92000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Eve"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">105000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">createDataFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(employees, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"salary"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 3. Analyze</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"All employees:"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Average salary by department:"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">groupBy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">avg</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"salary"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 4. Clean up</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">stop</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-2">Expected Output</h3>
+<pre data-cw-output="true"><code>All employees:
++-------+-----------+------+
+|   name| department|salary|
++-------+-----------+------+
+|  Alice|Engineering| 95000|
+|    Bob|Engineering|110000|
+|Charlie|  Marketing| 85000|
+|  Diana|  Marketing| 92000|
+|    Eve|Engineering|105000|
++-------+-----------+------+
+
+Average salary by department:
++-----------+-----------+
+| department|avg(salary)|
++-----------+-----------+
+|Engineering|   103333.3|
+|  Marketing|    88500.0|
++-----------+-----------+
+</code></pre></div>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Not calling <code>spark.stop()</code>.</strong> This leaves Spark processes running in the background, consuming memory and ports. Always stop when done.</li>
+<li><strong>Setting master in production code.</strong> The cluster manager should set the master, not your code. Only use <code>.master("local[*]")</code> during development. In production, submit with <code>spark-submit --master yarn</code>.</li>
+<li><strong>Creating multiple SparkSessions.</strong> Each session consumes resources. Use <code>getOrCreate()</code> to avoid duplicates.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>SparkSession is the single entry point to all Spark functionality</li>
+<li>Use the builder pattern to configure before creating</li>
+<li><code>getOrCreate()</code> reuses existing sessions</li>
+<li>Always set <code>appName</code> for identification in the Spark UI</li>
+<li>Use <code>local[*]</code> as master during development</li>
+<li>Always call <code>spark.stop()</code> when finished</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Your SparkSession automatically starts a web UI at <code>localhost:4040</code>. Next, we'll explore how to use it to monitor and debug your Spark applications.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Your First SparkSession\",\"description\":\"Create and configure your first SparkSession. Understand the SparkSession lifecycle, configuration options, and how Spark initializes.\",\"url\":\"https://learn.lumivoxx.com/pyspark/first-sparksession\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://learn.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Codewise\",\"url\":\"https://learn.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Codewise\",\"item\":\"https://learn.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://learn.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Your First SparkSession\",\"item\":\"https://learn.lumivoxx.com/pyspark/first-sparksession\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Getting Started"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Your First SparkSession"}],["$","p",null,{"className":"lesson-header__description","children":"Create and configure your first SparkSession. Understand the SparkSession lifecycle, configuration options, and how Spark initializes."}]]}],["$","$L2",null,{"html":"$3"}],"$L4","$L5"]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"UJCiYKTmrgTqQisOVlDAL"}
+4:["$","div",null,{"className":"ad-unit mt-8","data-ad-slot":"lesson-bottom","aria-label":"Advertisement","children":["$","div",null,{"className":"ad-unit__placeholder","children":["$","span",null,{"className":"ad-unit__label","children":"Ad"}]}]}]
+5:["$","div",null,{"className":"lesson-nav","children":[["$","$L9",null,{"href":"/pyspark/installing-pyspark","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Installing PySpark"}]]}],["$","$L9",null,{"href":"/pyspark/understanding-spark-ui","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Understanding the Spark UI"}]]}]]}]
+6:["$","aside",null,{"className":"lesson-toc","children":["$","$La",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"what-is-a-sparksession","text":"What is a SparkSession?","level":2},{"id":"creating-a-sparksession","text":"Creating a SparkSession","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"the-builder-pattern","text":"The Builder Pattern","level":2},{"id":"key-configuration-options","text":"Key Configuration Options","level":3},{"id":"the-master-setting","text":"The master Setting","level":2},{"id":"getorcreate-vs-new-session","text":"getOrCreate() vs New Session","level":2},{"id":"expected-output-1","text":"Expected Output","level":3},{"id":"stopping-a-sparksession","text":"Stopping a SparkSession","level":2},{"id":"a-complete-example","text":"A Complete Example","level":2},{"id":"expected-output-2","text":"Expected Output","level":3},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+7:["$","script","script-0",{"src":"/_next/static/chunks/0qku.4mv8dgvp.js","async":true}]
+8:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

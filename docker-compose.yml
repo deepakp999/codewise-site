@@ -1,0 +1,7 @@
+services:
+  codewise:
+    build: .
+    container_name: codewise
+    restart: unless-stopped
+    ports:
+      - "3080:80"

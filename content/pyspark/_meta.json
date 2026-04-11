@@ -1,0 +1,18 @@
+{
+  "id": "pyspark",
+  "title": "PySpark for Absolute Beginners",
+  "description": "Master Apache Spark with Python — from zero to confident.",
+  "modules": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "lessons": [
+        { "slug": "what-is-spark", "title": "What is Apache Spark?", "file": "01-what-is-spark.md" },
+        { "slug": "spark-vs-pandas", "title": "Spark vs Pandas — When to Use Which", "file": "02-spark-vs-pandas.md" },
+        { "slug": "installing-pyspark", "title": "Installing PySpark", "file": "03-installing-pyspark.md" },
+        { "slug": "first-sparksession", "title": "Your First SparkSession", "file": "04-first-sparksession.md" },
+        { "slug": "understanding-spark-ui", "title": "Understanding the Spark UI", "file": "05-understanding-spark-ui.md" }
+      ]
+    }
+  ]
+}
