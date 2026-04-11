@@ -13,6 +13,61 @@
         { "slug": "first-sparksession", "title": "Your First SparkSession", "file": "04-first-sparksession.md" },
         { "slug": "understanding-spark-ui", "title": "Understanding the Spark UI", "file": "05-understanding-spark-ui.md" }
       ]
+    },
+    {
+      "id": "dataframes-deep-dive",
+      "title": "DataFrames Deep Dive",
+      "lessons": [
+        { "slug": "creating-dataframes", "title": "Creating DataFrames from Lists, Dicts, and Files", "file": "06-creating-dataframes.md" },
+        { "slug": "schemas-and-data-types", "title": "Schemas and Data Types — Why Explicit Schemas Matter", "file": "07-schemas-and-data-types.md" },
+        { "slug": "selecting-filtering-sorting", "title": "Selecting, Filtering, and Sorting Rows in PySpark", "file": "08-selecting-filtering-sorting.md" },
+        { "slug": "adding-renaming-dropping-columns", "title": "Adding, Renaming, and Dropping Columns in PySpark", "file": "09-adding-renaming-dropping-columns.md" },
+        { "slug": "groupby-and-aggregations", "title": "GroupBy, Aggregations, and Window Functions in PySpark", "file": "10-groupby-and-aggregations.md" },
+        { "slug": "handling-nulls", "title": "Handling Null Values and Dirty Data in PySpark", "file": "11-handling-nulls.md" },
+        { "slug": "reading-files", "title": "Reading CSV, JSON, and Parquet Files in PySpark", "file": "12-reading-files.md" }
+      ]
+    },
+    {
+      "id": "spark-sql",
+      "title": "Spark SQL",
+      "lessons": [
+        { "slug": "sql-queries-on-dataframes", "title": "Running SQL Queries on PySpark DataFrames", "file": "13-sql-queries-on-dataframes.md" },
+        { "slug": "temp-views", "title": "Temp Views, Global Views, and When to Use Each", "file": "14-temp-views.md" },
+        { "slug": "joins", "title": "PySpark Joins — Inner, Left, Right, Anti, and Cross", "file": "15-joins.md" },
+        { "slug": "subqueries-and-ctes", "title": "Subqueries and CTEs in Spark SQL", "file": "16-subqueries-and-ctes.md" },
+        { "slug": "udfs", "title": "UDFs — Writing Custom Functions (And Why to Avoid Them)", "file": "17-udfs.md" }
+      ]
+    },
+    {
+      "id": "spark-internals",
+      "title": "Spark Internals",
+      "lessons": [
+        { "slug": "lazy-evaluation-and-dag", "title": "Lazy Evaluation and the DAG — Why Spark Waits", "file": "18-lazy-evaluation-and-dag.md" },
+        { "slug": "partitions", "title": "Partitions — How Spark Splits Your Data", "file": "19-partitions.md" },
+        { "slug": "shuffles", "title": "Shuffles — The Most Expensive Thing in Spark", "file": "20-shuffles.md" },
+        { "slug": "catalyst-optimizer", "title": "Catalyst Optimizer — How Spark Rewrites Your Queries", "file": "21-catalyst-optimizer.md" },
+        { "slug": "repartition-vs-coalesce", "title": "Repartition vs Coalesce — When to Use Which", "file": "22-repartition-vs-coalesce.md" }
+      ]
+    },
+    {
+      "id": "real-world-patterns",
+      "title": "Real-World Patterns",
+      "lessons": [
+        { "slug": "etl-pipeline", "title": "Building an ETL Pipeline from Scratch", "file": "23-etl-pipeline.md" },
+        { "slug": "caching-and-persistence", "title": "Caching and Persistence — Speed Up Repeated Queries", "file": "24-caching-and-persistence.md" },
+        { "slug": "broadcast-joins", "title": "Broadcast Joins — Eliminating Shuffles for Small Tables", "file": "25-broadcast-joins.md" },
+        { "slug": "data-skew", "title": "Data Skew — Diagnosing and Fixing Uneven Partitions", "file": "26-data-skew.md" },
+        { "slug": "production-pyspark", "title": "Writing Production-Quality PySpark Code", "file": "27-production-pyspark.md" }
+      ]
+    },
+    {
+      "id": "interview-prep",
+      "title": "Interview Prep & Next Steps",
+      "lessons": [
+        { "slug": "interview-questions", "title": "Top 20 PySpark Interview Questions (With Code Answers)", "file": "28-interview-questions.md" },
+        { "slug": "performance-tuning-cheatsheet", "title": "PySpark Performance Tuning Cheat Sheet", "file": "29-performance-tuning-cheatsheet.md" },
+        { "slug": "where-to-go-next", "title": "Where to Go Next — Your PySpark Learning Roadmap", "file": "30-where-to-go-next.md" }
+      ]
     }
   ]
 }

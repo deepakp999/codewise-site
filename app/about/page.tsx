@@ -54,12 +54,6 @@ export default function AboutPage() {
           building data pipelines and backend systems.
         </p>
 
-        <h2>Open source</h2>
-        <p>
-          The site itself is open source. If you spot a typo, a bug, or want
-          to suggest a lesson, open a PR on GitHub.
-        </p>
-
         <h2>Contact</h2>
         <p>
           Got a question, suggestion, or just want to say hi? Reach out at{" "}

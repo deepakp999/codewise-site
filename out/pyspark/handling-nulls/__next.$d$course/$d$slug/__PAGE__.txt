@@ -1,0 +1,255 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],"default"]
+9:I[22016,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],""]
+a:I[74356,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],"default"]
+b:I[97367,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+3:Tabdb,<h1 id="handling-null-values-and-dirty-data">Handling Null Values and Dirty Data</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How to detect null values in your DataFrame</li>
+<li>How to drop rows with nulls (<code>dropna</code>)</li>
+<li>How to fill nulls with default values (<code>fillna</code>)</li>
+<li>How to use <code>when</code>/<code>otherwise</code> for custom null handling</li>
+<li>How to deal with bad data types and inconsistent values</li>
+</ul>
+</div><h2 id="why-this-lesson-matters">Why This Lesson Matters</h2>
+<p>Every real dataset has problems. Missing values, wrong types, inconsistent formats, duplicate rows. Data cleaning typically takes 60-80% of a data engineer's time. PySpark gives you tools to handle all of this at scale.</p>
+<h2 id="setup-a-messy-dataset">Setup: A Messy Dataset</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql.functions </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> col, when, count, isnan, isnull, coalesce, lit, trim, lower</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"CleanData"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.sparkContext.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">setLogLevel</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"ERROR"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">data </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Alice"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">120000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"alice@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Bob"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Marketing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"bob@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Charlie"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">130000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Diana"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Sales"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">88000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"diana@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Marketing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">92000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"eve@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Frank"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">None</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Grace"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Sales"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">97000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"grace@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">createDataFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(data, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"salary"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"email"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+-----------+------+-----------------+
+|   name| department|salary|            email|
++-------+-----------+------+-----------------+
+|  Alice|Engineering|120000|alice@company.com|
+|    Bob|  Marketing|  null|  bob@company.com|
+|Charlie|       null|130000|             null|
+|  Diana|      Sales| 88000|diana@company.com|
+|   null|  Marketing| 92000|  eve@company.com|
+|  Frank|Engineering|  null|             null|
+|  Grace|      Sales| 97000|grace@company.com|
++-------+-----------+------+-----------------+
+</code></pre></div>
+<h2 id="detecting-nulls">Detecting Nulls</h2>
+<h3 id="count-nulls-per-column">Count nulls per column</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Count nulls in each column</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">select</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">([</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">    count</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">when</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(c).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">isNull</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(), c)).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">alias</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(c)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> c </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">in</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df.columns</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-1">Expected Output</h3>
+<pre data-cw-output="true"><code>+----+----------+------+-----+
+|name|department|salary|email|
++----+----------+------+-----+
+|   1|         1|     2|    2|
++----+----------+------+-----+
+</code></pre></div>
+<h3 id="check-if-a-specific-column-has-nulls">Check if a specific column has nulls</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Filter rows where salary is null</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">filter</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"salary"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">isNull</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-2">Expected Output</h3>
+<pre data-cw-output="true"><code>+-----+-----------+------+---------------+
+| name| department|salary|          email|
++-----+-----------+------+---------------+
+|  Bob|  Marketing|  null|bob@company.com|
+|Frank|Engineering|  null|           null|
++-----+-----------+------+---------------+
+</code></pre></div>
+<h2 id="dropping-rows-with-nulls">Dropping Rows with Nulls</h2>
+<h3 id="drop-rows-where-any-column-is-null">Drop rows where ANY column is null</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">dropna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">().</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-3">Expected Output</h3>
+<pre data-cw-output="true"><code>+-----+-----------+------+-----------------+
+| name| department|salary|            email|
++-----+-----------+------+-----------------+
+|Alice|Engineering|120000|alice@company.com|
+|Diana|      Sales| 88000|diana@company.com|
+|Grace|      Sales| 97000|grace@company.com|
++-----+-----------+------+-----------------+
+</code></pre></div>
+<p>That's aggressive — we lost 4 out of 7 rows.</p>
+<h3 id="drop-rows-where-all-columns-are-null">Drop rows where ALL columns are null</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Only drop rows where every column is null</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">dropna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E36209;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">how</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"all"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<p>This keeps all our rows since none of them are entirely null.</p>
+<h3 id="drop-rows-based-on-specific-columns">Drop rows based on specific columns</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Only drop rows where name OR department is null</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">dropna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E36209;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">subset</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-4">Expected Output</h3>
+<pre data-cw-output="true"><code>+-----+-----------+------+-----------------+
+| name| department|salary|            email|
++-----+-----------+------+-----------------+
+|Alice|Engineering|120000|alice@company.com|
+|  Bob|  Marketing|  null|  bob@company.com|
+|Diana|      Sales| 88000|diana@company.com|
+|Frank|Engineering|  null|             null|
+|Grace|      Sales| 97000|grace@company.com|
++-----+-----------+------+-----------------+
+</code></pre></div>
+<h3 id="drop-rows-with-a-threshold">Drop rows with a threshold</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Keep rows that have at least 3 non-null values</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">dropna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E36209;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">thresh</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<h2 id="filling-null-values">Filling Null Values</h2>
+<h3 id="fill-all-nulls-with-a-single-value">Fill all nulls with a single value</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Fill all string nulls with "Unknown" and numeric nulls with 0</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_filled </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">fillna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Unknown"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">fillna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_filled.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-5">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+-----------+------+-----------------+
+|   name| department|salary|            email|
++-------+-----------+------+-----------------+
+|  Alice|Engineering|120000|alice@company.com|
+|    Bob|  Marketing|     0|  bob@company.com|
+|Charlie|    Unknown|130000|          Unknown|
+|  Diana|      Sales| 88000|diana@company.com|
+|Unknown|  Marketing| 92000|  eve@company.com|
+|  Frank|Engineering|     0|          Unknown|
+|  Grace|      Sales| 97000|grace@company.com|
++-------+-----------+------+-----------------+
+</code></pre></div>
+<h3 id="fill-specific-columns-with-specific-values">Fill specific columns with specific values</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_filled </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">fillna</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">({</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">    "name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Unknown"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">    "department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Unassigned"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">    "salary"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">    "email"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"no-email@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_filled.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-6">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+-----------+------+--------------------+
+|   name| department|salary|               email|
++-------+-----------+------+--------------------+
+|  Alice|Engineering|120000|   alice@company.com|
+|    Bob|  Marketing|     0|     bob@company.com|
+|Charlie| Unassigned|130000|no-email@company.com|
+|  Diana|      Sales| 88000|   diana@company.com|
+|Unknown|  Marketing| 92000|     eve@company.com|
+|  Frank|Engineering|     0|no-email@company.com|
+|  Grace|      Sales| 97000|   grace@company.com|
++-------+-----------+------+--------------------+
+</code></pre></div>
+<h3 id="fill-with-column-specific-logic-using-coalesce">Fill with column-specific logic using coalesce</h3>
+<p><code>coalesce</code> returns the first non-null value from a list of columns or expressions:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># If email is null, construct one from the name</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_smart </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">withColumn</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">    "email"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">    coalesce</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">        col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"email"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">        when</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">isNotNull</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">             lower</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)) </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF"> lit</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_smart.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">select</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"email"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-7">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+-------------------+
+|   name|              email|
++-------+-------------------+
+|  Alice|  alice@company.com|
+|    Bob|    bob@company.com|
+|Charlie|charlie@company.com|
+|  Diana|  diana@company.com|
+|   null|    eve@company.com|
+|  Frank|  frank@company.com|
+|  Grace|  grace@company.com|
++-------+-------------------+
+</code></pre></div>
+<h2 id="handling-duplicates">Handling Duplicates</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Add a duplicate row for demonstration</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">data_with_dup </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> data </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Alice"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">120000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"alice@company.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_dup </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">createDataFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(data_with_dup, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"salary"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"email"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Count before</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Before: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_dup.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">count</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> rows"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Drop exact duplicate rows</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_deduped </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df_dup.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">dropDuplicates</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"After dropDuplicates: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_deduped.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">count</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> rows"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Drop duplicates based on specific columns</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_deduped_name </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df_dup.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">dropDuplicates</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">([</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"After dropDuplicates on name: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_deduped_name.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">count</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> rows"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-8">Expected Output</h3>
+<pre data-cw-output="true"><code>Before: 8 rows
+After dropDuplicates: 7 rows
+After dropDuplicates on name: 7 rows
+</code></pre></div>
+<h2 id="replacing-values">Replacing Values</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Replace specific values</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_replaced </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Marketing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Growth"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_replaced.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-9">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+-----------+------+-----------------+
+|   name| department|salary|            email|
++-------+-----------+------+-----------------+
+|  Alice|Engineering|120000|alice@company.com|
+|    Bob|     Growth|  null|  bob@company.com|
+|Charlie|       null|130000|             null|
+|  Diana|      Sales| 88000|diana@company.com|
+|   null|     Growth| 92000|  eve@company.com|
+|  Frank|Engineering|  null|             null|
+|  Grace|      Sales| 97000|grace@company.com|
++-------+-----------+------+-----------------+
+</code></pre></div>
+<h2 id="cleaning-string-data">Cleaning String Data</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">messy_data </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"  Alice  "</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"  ENGINEERING  "</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"bob"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">" marketing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"CHARLIE"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Engineering  "</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_messy </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">createDataFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(messy_data, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Trim whitespace and standardize case</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_clean </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> df_messy \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">withColumn</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">trim</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">withColumn</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">lower</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">trim</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"department"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))))</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df_clean.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-10">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+-----------+
+|   name| department|
++-------+-----------+
+|  Alice|engineering|
+|    bob|  marketing|
+|CHARLIE|engineering|
++-------+-----------+
+</code></pre></div>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Using <code>== None</code> instead of <code>.isNull()</code>.</strong> In PySpark, <code>col("salary") == None</code> does NOT work. Use <code>col("salary").isNull()</code> or <code>col("salary").isNotNull()</code>. This is different from Python where <code>x is None</code> works.</li>
+<li><strong>Filling nulls with the wrong type.</strong> <code>df.fillna("0", subset=["salary"])</code> fills a numeric column with the string "0" only if the column is a string type. For integer columns, use <code>df.fillna(0, subset=["salary"])</code> — the value must match the column's data type.</li>
+<li><strong>Dropping nulls too aggressively.</strong> Using <code>dropna()</code> without <code>subset</code> or <code>thresh</code> can remove most of your data. Always check how many rows you'll lose first: <code>df.dropna().count()</code> vs <code>df.count()</code>.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Always start by counting nulls per column to understand the scope of the problem.</li>
+<li><code>dropna(subset=[...])</code> is safer than <code>dropna()</code> — only drop rows where critical columns are null.</li>
+<li><code>fillna()</code> with a dictionary lets you set different defaults for different columns.</li>
+<li><code>coalesce()</code> is powerful for "fall through" logic — use the first available value from multiple sources.</li>
+<li>Clean strings with <code>trim()</code> and <code>lower()</code> before doing any comparisons or groupBy operations.</li>
+<li>Use <code>.isNull()</code> and <code>.isNotNull()</code> — never <code>== None</code>.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Your data is clean. Now how do you get it in the first place? In <strong>Lesson 12: Reading CSV, JSON, and Parquet Files</strong>, we'll dive deep into file formats — when to use each one, how to handle tricky files, and why Parquet is the format every data engineer should know.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Handling Null Values and Dirty Data in PySpark\",\"description\":\"Learn how to detect, drop, fill, and replace null values in PySpark DataFrames. Clean messy data with fillna, dropna, when/otherwise, and type casting.\",\"url\":\"https://learn.lumivoxx.com/pyspark/handling-nulls\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://learn.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Codewise\",\"url\":\"https://learn.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Codewise\",\"item\":\"https://learn.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://learn.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Handling Null Values and Dirty Data in PySpark\",\"item\":\"https://learn.lumivoxx.com/pyspark/handling-nulls\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"DataFrames Deep Dive"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Handling Null Values and Dirty Data in PySpark"}],["$","p",null,{"className":"lesson-header__description","children":"Learn how to detect, drop, fill, and replace null values in PySpark DataFrames. Clean messy data with fillna, dropna, when/otherwise, and type casting."}]]}],["$","$L2",null,{"html":"$3"}],"$L4","$L5"]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Y0zKI18idWNA70NkkLl_u"}
+4:["$","div",null,{"className":"ad-unit mt-8","data-ad-slot":"lesson-bottom","aria-label":"Advertisement","children":["$","div",null,{"className":"ad-unit__placeholder","children":["$","span",null,{"className":"ad-unit__label","children":"Ad"}]}]}]
+5:["$","div",null,{"className":"lesson-nav","children":[["$","$L9",null,{"href":"/pyspark/groupby-and-aggregations","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"GroupBy, Aggregations, and Window Functions in PySpark"}]]}],["$","$L9",null,{"href":"/pyspark/reading-files","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Reading CSV, JSON, and Parquet Files in PySpark"}]]}]]}]
+6:["$","aside",null,{"className":"lesson-toc","children":["$","$La",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"why-this-lesson-matters","text":"Why This Lesson Matters","level":2},{"id":"setup-a-messy-dataset","text":"Setup: A Messy Dataset","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"detecting-nulls","text":"Detecting Nulls","level":2},{"id":"count-nulls-per-column","text":"Count nulls per column","level":3},{"id":"expected-output-1","text":"Expected Output","level":3},{"id":"check-if-a-specific-column-has-nulls","text":"Check if a specific column has nulls","level":3},{"id":"expected-output-2","text":"Expected Output","level":3},{"id":"dropping-rows-with-nulls","text":"Dropping Rows with Nulls","level":2},{"id":"drop-rows-where-any-column-is-null","text":"Drop rows where ANY column is null","level":3},{"id":"expected-output-3","text":"Expected Output","level":3},{"id":"drop-rows-where-all-columns-are-null","text":"Drop rows where ALL columns are null","level":3},{"id":"drop-rows-based-on-specific-columns","text":"Drop rows based on specific columns","level":3},{"id":"expected-output-4","text":"Expected Output","level":3},{"id":"drop-rows-with-a-threshold","text":"Drop rows with a threshold","level":3},{"id":"filling-null-values","text":"Filling Null Values","level":2},{"id":"fill-all-nulls-with-a-single-value","text":"Fill all nulls with a single value","level":3},{"id":"expected-output-5","text":"Expected Output","level":3},{"id":"fill-specific-columns-with-specific-values","text":"Fill specific columns with specific values","level":3},{"id":"expected-output-6","text":"Expected Output","level":3},{"id":"fill-with-column-specific-logic-using-coalesce","text":"Fill with column-specific logic using coalesce","level":3},{"id":"expected-output-7","text":"Expected Output","level":3},{"id":"handling-duplicates","text":"Handling Duplicates","level":2},{"id":"expected-output-8","text":"Expected Output","level":3},{"id":"replacing-values","text":"Replacing Values","level":2},{"id":"expected-output-9","text":"Expected Output","level":3},{"id":"cleaning-string-data","text":"Cleaning String Data","level":2},{"id":"expected-output-10","text":"Expected Output","level":3},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+7:["$","script","script-0",{"src":"/_next/static/chunks/0qku.4mv8dgvp.js","async":true}]
+8:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

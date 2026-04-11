@@ -5,6 +5,12 @@
    Theme toggle switches .dark class on <html>
    =================================================== */
 
+/* --- Scroll offset for fixed navbar --- */
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
 /* --- Light Mode (default) --- */
 :root {
   --cw-bg: #FAFBFD;
