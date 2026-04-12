@@ -4,115 +4,230 @@
 a:I[74356,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],"default"]
 b:I[97367,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 c:"$Sreact.suspense"
-3:T3e99,<h1 id="installing-pyspark">Installing PySpark</h1>
+3:T7f85,<h1 id="setting-up-pyspark">Setting Up PySpark</h1>
 <div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
 <ul>
-<li>How to install Java (Spark's runtime dependency)</li>
-<li>How to install PySpark with pip</li>
-<li>How to verify your installation works</li>
-<li>How to troubleshoot common installation issues</li>
+<li>How to start using PySpark in 2 minutes with Google Colab (no install needed)</li>
+<li>How to install PySpark locally on your machine</li>
+<li>How to troubleshoot the most common installation errors</li>
 </ul>
-</div><h2 id="prerequisites">Prerequisites</h2>
-<p>Before installing PySpark, you need:</p>
-<ol>
-<li><strong>Python 3.8+</strong> installed</li>
-<li><strong>Java 11 or 17</strong> (Spark runs on the JVM)</li>
-<li><strong>pip</strong> (Python's package manager)</li>
-</ol>
-<h2 id="step-1-install-java">Step 1: Install Java</h2>
-<p>Spark runs on the Java Virtual Machine (JVM), so you need Java installed first.</p>
-<h3 id="check-if-java-is-already-installed">Check if Java is already installed</h3>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">java</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -version</span></span></code></pre>
-<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
-<pre data-cw-output="true"><code>openjdk version "17.0.2" 2022-01-18
-OpenJDK Runtime Environment (build 17.0.2+8-86)
-OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
-</code></pre></div>
-<p>If you see a version number (11+), you're good. If not, install it:</p>
-<h3 id="macos">macOS</h3>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">brew</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openjdk@17</span></span></code></pre>
-<h3 id="ubuntudebian">Ubuntu/Debian</h3>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> update</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openjdk-17-jdk</span></span></code></pre>
-<h3 id="windows">Windows</h3>
-<p>Download from <a href="https://adoptium.net/">Adoptium</a> and run the installer. Make sure to check "Set JAVA_HOME" during installation.</p>
-<h2 id="step-2-install-pyspark">Step 2: Install PySpark</h2>
-<p>With Java ready, installing PySpark is one command:</p>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pyspark</span></span></code></pre>
-<p>This installs PySpark and bundles a local Spark instance — no cluster setup needed.</p>
-<h3 id="for-a-specific-version">For a specific version</h3>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pyspark==</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">3.5.0</span></span></code></pre>
-<h3 id="with-optional-extras-recommended">With optional extras (recommended)</h3>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'pyspark[sql]'</span></span></code></pre>
-<h2 id="step-3-verify-the-installation">Step 3: Verify the Installation</h2>
-<p>Open a Python shell and run:</p>
+</div><h2 id="two-options--pick-one">Two Options — Pick One</h2>
+<p><strong>Option A: Google Colab (Recommended for beginners)</strong>
+Zero setup. PySpark runs in your browser. Free. Start coding in 2 minutes.</p>
+<p><strong>Option B: Local install</strong>
+Full control. Runs on your machine. Requires Java setup. Takes 10-15 minutes.</p>
+<p>Start with Colab. You can always install locally later when you need it for production work or larger datasets.</p>
+<hr>
+<h2 id="option-a-google-colab-zero-install">Option A: Google Colab (Zero Install)</h2>
+<p>Google Colab is a free online notebook environment. PySpark works out of the box with one install command.</p>
+<h3 id="step-1-open-colab">Step 1: Open Colab</h3>
+<p>Go to <a href="https://colab.research.google.com">colab.research.google.com</a> and create a new notebook.</p>
+<h3 id="step-2-install-pyspark">Step 2: Install PySpark</h3>
+<p>In the first cell, run:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FFFFFF;--shiki-dark-font-style:inherit">!</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">pip install pyspark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">q</span></span></code></pre>
+<p>That's it. Java is already installed on Colab's servers.</p>
+<h3 id="step-3-verify-it-works">Step 3: Verify it works</h3>
+<p>In the next cell:</p>
 <pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder \</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"InstallTest"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">master</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"local[*]"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"ColabTest"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Create a simple DataFrame</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">data </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Alice"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">30</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">), (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Bob"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">25</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">), (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Charlie"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">35</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">data </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Alice"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">25</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">), (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Bob"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">30</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">), (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Charlie"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">35</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)]</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">createDataFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(data, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"age"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
-<span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">stop</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
-<div data-cw-section="output-block"><h3 id="expected-output-1">Expected Output</h3>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"PySpark version: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.version</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
 <pre data-cw-output="true"><code>+-------+---+
 |   name|age|
 +-------+---+
-|  Alice| 30|
-|    Bob| 25|
+|  Alice| 25|
+|    Bob| 30|
 |Charlie| 35|
 +-------+---+
+
+PySpark version: 4.0.0
 </code></pre></div>
-<p>If you see this table, PySpark is working correctly.</p>
-<h2 id="step-4-set-environment-variables-optional">Step 4: Set Environment Variables (Optional)</h2>
-<p>For a cleaner setup, set these environment variables:</p>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Add to your ~/.bashrc or ~/.zshrc</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> SPARK_HOME</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "import pyspark; print(pyspark.__path__[0])"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> PYSPARK_PYTHON</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">python3</span></span></code></pre>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<h3 id="java-not-found-or-java_home-is-not-set">"Java not found" or "JAVA_HOME is not set"</h3>
-<p>Set JAVA_HOME explicitly:</p>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># macOS (Homebrew)</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> JAVA_HOME</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">/usr/libexec/java_home</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -v</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 17</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<p>You're ready. Every code example in this course runs in Colab. Just add <code>!pip install pyspark -q</code> as the first cell of each notebook.</p>
+<h3 id="colab-limitations">Colab Limitations</h3>
+<p>Colab is great for learning but has limits:</p>
+<ul>
+<li>Sessions time out after ~90 minutes of inactivity</li>
+<li>You get limited RAM (around 12 GB on the free tier)</li>
+<li>Files don't persist between sessions — save your work to Google Drive</li>
+<li>For large datasets (10+ GB), you'll need a local install or a cloud cluster</li>
+</ul>
+<hr>
+<h2 id="option-b-local-install">Option B: Local Install</h2>
+<p>If you want PySpark on your own machine — for offline work, larger datasets, or production development — follow these steps.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>PySpark needs two things on your machine:</p>
+<ol>
+<li><strong>Python 3.9 or higher</strong> — you probably already have this</li>
+<li><strong>Java 17 or 21</strong> — this is the part that trips up most people</li>
+</ol>
+<p>Let's check what you have and install what's missing.</p>
+<h2 id="step-1-check-your-python-version">Step 1: Check Your Python Version</h2>
+<p>Open a terminal (or Command Prompt on Windows) and run:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> --version</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-1">Expected Output</h3>
+<pre data-cw-output="true"><code>Python 3.11.5
+</code></pre></div>
+<p>If you see Python 3.9 or higher, you're good. If not, install Python from <a href="https://python.org">python.org</a> before continuing.</p>
+<blockquote>
+<p><strong>Note:</strong> On some systems, you may need to use <code>python3</code> instead of <code>python</code>.</p>
+</blockquote>
+<h2 id="step-2-install-java">Step 2: Install Java</h2>
+<p>PySpark runs on the Java Virtual Machine (JVM) under the hood. Even though you'll write Python code, Java needs to be installed. PySpark 4.0 supports Java 17 and Java 21.</p>
+<h3 id="check-if-java-is-already-installed">Check if Java Is Already Installed</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">java</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -version</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-if-installed">Expected Output (If Installed)</h3>
+<pre data-cw-output="true"><code>openjdk version "17.0.9" 2023-10-17
+OpenJDK Runtime Environment (build 17.0.9+9)
+OpenJDK 64-Bit Server VM (build 17.0.9+9, mixed mode)
+</code></pre></div>
+<p>If you see version 17 or 21, skip to Step 3. If you get "command not found" or see an older version, install Java:</p>
+<h3 id="install-java-on-mac">Install Java on Mac</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Using Homebrew (recommended)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">brew</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openjdk@17</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Linux</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> JAVA_HOME</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">usr</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lib</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">jvm</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">java-17-openjdk-amd64</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Add Java to your PATH</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"'</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> >></span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ~/.zshrc</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">source</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ~/.zshrc</span></span></code></pre>
+<h3 id="install-java-on-ubuntu--linux">Install Java on Ubuntu / Linux</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> update</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> openjdk-17-jdk</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Windows (PowerShell)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">$env</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:JAVA_HOME = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"C:\Program Files\Eclipse Adoptium\jdk-17.0.2.8-hotspot"</span></span></code></pre>
-<h3 id="py4jjavaerror-on-startup">"Py4JJavaError" on startup</h3>
-<p>This usually means Java version mismatch. Spark 3.5 supports Java 11 and 17. Java 8 works but is deprecated. Java 21 is <strong>not</strong> supported yet.</p>
-<h3 id="slow-startup-on-first-run">Slow startup on first run</h3>
-<p>The first time you create a SparkSession, Spark downloads some files and initializes. This can take 30-60 seconds. Subsequent runs are faster.</p>
-<h2 id="using-jupyter-notebooks">Using Jupyter Notebooks</h2>
-<p>If you prefer notebooks, PySpark works great with Jupyter:</p>
-<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> jupyter</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">PYSPARK_DRIVER_PYTHON</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">jupyter</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> PYSPARK_DRIVER_PYTHON_OPTS</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"notebook"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> pyspark</span></span></code></pre>
-<p>Or simply create a SparkSession in any Jupyter notebook after installing PySpark.</p>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Verify</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">java</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -version</span></span></code></pre>
+<h3 id="install-java-on-windows">Install Java on Windows</h3>
+<ol>
+<li>Download the OpenJDK 17 installer from <a href="https://adoptium.net">adoptium.net</a></li>
+<li>Run the installer — check the box that says "Set JAVA_HOME variable"</li>
+<li>Restart your Command Prompt</li>
+<li>Run <code>java -version</code> to verify</li>
+</ol>
+<h3 id="set-java_home-if-pyspark-cant-find-java-later">Set JAVA_HOME (If PySpark Can't Find Java Later)</h3>
+<p>Some systems need the <code>JAVA_HOME</code> environment variable set explicitly:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Mac / Linux — add to ~/.bashrc or ~/.zshrc</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> JAVA_HOME</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">dirname</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">dirname</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">readlink</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">which</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))))</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Verify</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">echo</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> $JAVA_HOME</span></span></code></pre>
+<p>On Windows, set it through System Properties → Environment Variables → New System Variable → <code>JAVA_HOME</code> = <code>C:\Program Files\Eclipse Adoptium\jdk-17.0.9+9</code> (adjust the path to match your install).</p>
+<h2 id="step-3-install-pyspark">Step 3: Install PySpark</h2>
+<p>This is the easy part:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pyspark</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-2">Expected Output</h3>
+<pre data-cw-output="true"><code>Collecting pyspark
+  Downloading pyspark-4.0.0.tar.gz (425.5 MB)
+Installing collected packages: pyspark
+Successfully installed pyspark-4.0.0
+</code></pre></div>
+<blockquote>
+<p><strong>Tip:</strong> If you use virtual environments (and you should), create one first:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -m</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> venv</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> spark-env</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">source</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> spark-env/bin/activate</span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">   # Mac/Linux</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">spark-env\Scripts\activate</span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      # Windows</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pyspark</span></span></code></pre>
+</blockquote>
+<h2 id="step-4-verify-the-installation">Step 4: Verify the Installation</h2>
+<p>Create a file called <code>test_spark.py</code> with this content:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Create a Spark session</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"InstallTest"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Create a simple DataFrame</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">data </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Alice"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">25</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">), (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Bob"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">30</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">), (</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Charlie"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">35</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">createDataFrame</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(data, [</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"age"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Show the DataFrame</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">show</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Print Spark version</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"PySpark version: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.version</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Clean up</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">stop</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<p>Run it:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> test_spark.py</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output-3">Expected Output</h3>
+<pre data-cw-output="true"><code>+-------+---+
+|   name|age|
++-------+---+
+|  Alice| 25|
+|    Bob| 30|
+|Charlie| 35|
++-------+---+
+
+PySpark version: 4.0.0
+</code></pre></div>
+<p>You'll see a bunch of log messages (INFO and WARN lines) before the table appears — that's normal. Spark is verbose by default. We'll quiet those logs down in a moment.</p>
+<h2 id="step-5-reduce-log-noise-optional-but-recommended">Step 5: Reduce Log Noise (Optional but Recommended)</h2>
+<p>Spark outputs a lot of INFO-level logs by default. To reduce the noise, find your Spark configuration directory and update the log level:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Add this right after creating your SparkSession</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.sparkContext.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">setLogLevel</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"ERROR"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<p>Or to set it permanently, find your <code>log4j2.properties</code> file:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Find where PySpark is installed</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "import pyspark; print(pyspark.__path__[0])"</span></span></code></pre>
+<p>Navigate to that directory, then <code>conf/</code>, and copy <code>log4j2.properties.template</code> to <code>log4j2.properties</code>. Change the root logger level from <code>info</code> to <code>warn</code>:</p>
+<pre><code>rootLogger.level = warn
+</code></pre>
+<h2 id="troubleshooting-common-errors">Troubleshooting Common Errors</h2>
+<h3 id="java-gateway-process-exited-before-sending-its-port-number">"Java gateway process exited before sending its port number"</h3>
+<p>This almost always means Java isn't installed or <code>JAVA_HOME</code> isn't set correctly.</p>
+<p>Fix:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Check if Java is accessible</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">java</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -version</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># If it works but PySpark still fails, set JAVA_HOME explicitly</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> JAVA_HOME</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">dirname</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">dirname</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">readlink</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">which</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> java</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))))</span></span></code></pre>
+<h3 id="java_home-is-not-set">"JAVA_HOME is not set"</h3>
+<p>Fix: Follow the JAVA_HOME instructions in Step 2 above for your operating system.</p>
+<h3 id="py4jjavaerror-or-py4jnetworkerror">"Py4JJavaError" or "Py4JNetworkError"</h3>
+<p>This usually means a version mismatch. Ensure:</p>
+<ul>
+<li>You have Java 17 or 21 (not Java 8 or 11 — PySpark 4.0 dropped support for older versions)</li>
+<li>Your PySpark version matches your Java version</li>
+</ul>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Check Java version</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">java</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -version</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Check PySpark version</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "import pyspark; print(pyspark.__version__)"</span></span></code></pre>
+<h3 id="modulenotfounderror-no-module-named-pyspark">"ModuleNotFoundError: No module named 'pyspark'"</h3>
+<p>You installed PySpark in a different Python environment than the one you're running.</p>
+<p>Fix:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Make sure pip and python point to the same installation</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">which</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> python</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">which</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pip</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Or use python -m pip to be safe</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">python</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -m</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pip</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> pyspark</span></span></code></pre>
 <div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
 <ul>
-<li><strong>Forgetting to install Java.</strong> PySpark will install fine with pip, but fail at runtime without Java. Always verify <code>java -version</code> first.</li>
-<li><strong>Using Java 21.</strong> Spark 3.5 doesn't support Java 21 yet. Stick with Java 11 or 17.</li>
-<li><strong>Installing in the wrong Python environment.</strong> If you use conda or venv, make sure PySpark is installed in the same environment you're running scripts from.</li>
+<li><strong>Installing Java 8 or 11.</strong> PySpark 4.0 requires Java 17 or 21. Older Java versions will cause cryptic errors. Always check the PySpark version's compatibility matrix.</li>
+<li><strong>Forgetting to restart the terminal after setting environment variables.</strong> After adding <code>JAVA_HOME</code> or modifying <code>PATH</code>, you must open a new terminal window (or run <code>source ~/.zshrc</code>) for the changes to take effect.</li>
+<li><strong>Running PySpark without enough memory.</strong> Spark's default memory setting is often fine for learning, but if you get <code>OutOfMemoryError</code> on larger practice datasets, add this when creating your SparkSession:
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession.builder \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">appName</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"MyApp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">config</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"spark.driver.memory"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"4g"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+</li>
 </ul>
 </div><h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>PySpark needs Java 11 or 17 as a prerequisite</li>
-<li><code>pip install pyspark</code> bundles everything you need for local development</li>
-<li>Always verify with a simple DataFrame test after installation</li>
-<li>First startup is slow; subsequent runs are faster</li>
-<li>Set JAVA_HOME if you encounter Java-related errors</li>
+<li>PySpark requires Python 3.9+ and Java 17 or 21.</li>
+<li>Install with <code>pip install pyspark</code> — it includes a built-in standalone Spark for local development.</li>
+<li>The most common installation issue is Java not being installed or <code>JAVA_HOME</code> not being set.</li>
+<li>Set the log level to <code>ERROR</code> or <code>WARN</code> to reduce console noise while learning.</li>
 </ul>
 <h2 id="next-lesson">Next Lesson</h2>
-<p>Your environment is ready. Let's create your first SparkSession and understand what happens under the hood.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Installing PySpark\",\"description\":\"Step-by-step guide to installing PySpark on Windows, macOS, and Linux. Includes Java setup, environment verification, and troubleshooting.\",\"url\":\"https://learn.lumivoxx.com/pyspark/installing-pyspark\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://learn.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Codewise\",\"url\":\"https://learn.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Codewise\",\"item\":\"https://learn.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://learn.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Installing PySpark\",\"item\":\"https://learn.lumivoxx.com/pyspark/installing-pyspark\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Getting Started"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Installing PySpark"}],["$","p",null,{"className":"lesson-header__description","children":"Step-by-step guide to installing PySpark on Windows, macOS, and Linux. Includes Java setup, environment verification, and troubleshooting."}]]}],["$","$L2",null,{"html":"$3"}],"$L4","$L5"]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"QrBJ92gj8_g7J8N_iHlg6"}
+<p>PySpark is installed and running. In <strong>Lesson 4: Your First SparkSession</strong>, we'll explore what a SparkSession actually is, what happens when you create one, and write your first real data processing code from scratch.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"How to Set Up PySpark (Colab or Local Install)\",\"description\":\"Get PySpark running in 2 minutes with Google Colab, or install locally on Mac, Windows, or Linux with Java setup and troubleshooting.\",\"url\":\"https://learn.lumivoxx.com/pyspark/installing-pyspark\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://learn.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Codewise\",\"url\":\"https://learn.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Codewise\",\"item\":\"https://learn.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://learn.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How to Set Up PySpark (Colab or Local Install)\",\"item\":\"https://learn.lumivoxx.com/pyspark/installing-pyspark\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"How to Set Up PySpark (Colab or Local Install)"}],["$","p",null,{"className":"lesson-header__description","children":"Get PySpark running in 2 minutes with Google Colab, or install locally on Mac, Windows, or Linux with Java setup and troubleshooting."}]]}],["$","$L2",null,{"html":"$3"}],"$L4","$L5"]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"11Yyp-YbRpJ7JxVQDYNPV"}
 4:["$","div",null,{"className":"ad-unit mt-8","data-ad-slot":"lesson-bottom","aria-label":"Advertisement","children":["$","div",null,{"className":"ad-unit__placeholder","children":["$","span",null,{"className":"ad-unit__label","children":"Ad"}]}]}]
 5:["$","div",null,{"className":"lesson-nav","children":[["$","$L9",null,{"href":"/pyspark/spark-vs-pandas","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Spark vs Pandas — When to Use Which"}]]}],["$","$L9",null,{"href":"/pyspark/first-sparksession","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Your First SparkSession"}]]}]]}]
-6:["$","aside",null,{"className":"lesson-toc","children":["$","$La",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"prerequisites","text":"Prerequisites","level":2},{"id":"step-1-install-java","text":"Step 1: Install Java","level":2},{"id":"check-if-java-is-already-installed","text":"Check if Java is already installed","level":3},{"id":"expected-output","text":"Expected Output","level":3},{"id":"macos","text":"macOS","level":3},{"id":"ubuntudebian","text":"Ubuntu/Debian","level":3},{"id":"windows","text":"Windows","level":3},{"id":"step-2-install-pyspark","text":"Step 2: Install PySpark","level":2},{"id":"for-a-specific-version","text":"For a specific version","level":3},{"id":"with-optional-extras-recommended","text":"With optional extras (recommended)","level":3},{"id":"step-3-verify-the-installation","text":"Step 3: Verify the Installation","level":2},{"id":"expected-output-1","text":"Expected Output","level":3},{"id":"step-4-set-environment-variables-optional","text":"Step 4: Set Environment Variables (Optional)","level":2},{"id":"troubleshooting","text":"Troubleshooting","level":2},{"id":"java-not-found-or-java_home-is-not-set","text":"\"Java not found\" or \"JAVA_HOME is not set\"","level":3},{"id":"py4jjavaerror-on-startup","text":"\"Py4JJavaError\" on startup","level":3},{"id":"slow-startup-on-first-run","text":"Slow startup on first run","level":3},{"id":"using-jupyter-notebooks","text":"Using Jupyter Notebooks","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","aside",null,{"className":"lesson-toc","children":["$","$La",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"two-options--pick-one","text":"Two Options — Pick One","level":2},{"id":"option-a-google-colab-zero-install","text":"Option A: Google Colab (Zero Install)","level":2},{"id":"step-1-open-colab","text":"Step 1: Open Colab","level":3},{"id":"step-2-install-pyspark","text":"Step 2: Install PySpark","level":3},{"id":"step-3-verify-it-works","text":"Step 3: Verify it works","level":3},{"id":"expected-output","text":"Expected Output","level":3},{"id":"colab-limitations","text":"Colab Limitations","level":3},{"id":"option-b-local-install","text":"Option B: Local Install","level":2},{"id":"prerequisites","text":"Prerequisites","level":3},{"id":"step-1-check-your-python-version","text":"Step 1: Check Your Python Version","level":2},{"id":"expected-output-1","text":"Expected Output","level":3},{"id":"step-2-install-java","text":"Step 2: Install Java","level":2},{"id":"check-if-java-is-already-installed","text":"Check if Java Is Already Installed","level":3},{"id":"expected-output-if-installed","text":"Expected Output (If Installed)","level":3},{"id":"install-java-on-mac","text":"Install Java on Mac","level":3},{"id":"install-java-on-ubuntu--linux","text":"Install Java on Ubuntu / Linux","level":3},{"id":"install-java-on-windows","text":"Install Java on Windows","level":3},{"id":"set-java_home-if-pyspark-cant-find-java-later","text":"Set JAVA_HOME (If PySpark Can't Find Java Later)","level":3},{"id":"step-3-install-pyspark","text":"Step 3: Install PySpark","level":2},{"id":"expected-output-2","text":"Expected Output","level":3},{"id":"step-4-verify-the-installation","text":"Step 4: Verify the Installation","level":2},{"id":"expected-output-3","text":"Expected Output","level":3},{"id":"step-5-reduce-log-noise-optional-but-recommended","text":"Step 5: Reduce Log Noise (Optional but Recommended)","level":2},{"id":"troubleshooting-common-errors","text":"Troubleshooting Common Errors","level":2},{"id":"java-gateway-process-exited-before-sending-its-port-number","text":"\"Java gateway process exited before sending its port number\"","level":3},{"id":"java_home-is-not-set","text":"\"JAVA_HOME is not set\"","level":3},{"id":"py4jjavaerror-or-py4jnetworkerror","text":"\"Py4JJavaError\" or \"Py4JNetworkError\"","level":3},{"id":"modulenotfounderror-no-module-named-pyspark","text":"\"ModuleNotFoundError: No module named 'pyspark'\"","level":3},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
 7:["$","script","script-0",{"src":"/_next/static/chunks/0qku.4mv8dgvp.js","async":true}]
 8:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
 d:null
