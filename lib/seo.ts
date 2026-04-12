@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://learn.lumivoxx.com";
+const SITE_URL = "https://codewise.lumivoxx.com";
 const SITE_NAME = "CodewiseX";
 
 /**

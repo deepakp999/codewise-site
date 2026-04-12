@@ -3,7 +3,7 @@ import { getAllCourses, getCourseMeta } from "@/lib/courses";
 
 export const dynamic = "force-static";
 
-const SITE_URL = "https://learn.lumivoxx.com";
+const SITE_URL = "https://codewise.lumivoxx.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];

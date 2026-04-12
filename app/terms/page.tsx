@@ -23,7 +23,7 @@ export default function TermsPage() {
         <h2>Acceptance of Terms</h2>
         <p>
           By accessing and using CodewiseX at{" "}
-          <strong>learn.lumivoxx.com</strong> (the &quot;Site&quot;), you
+          <strong>codewise.lumivoxx.com</strong> (the &quot;Site&quot;), you
           agree to be bound by these Terms of Service. If you do not agree,
           please do not use the Site.
         </p>

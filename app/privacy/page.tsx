@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         <p>
           CodewiseX (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates
           the website{" "}
-          <strong>learn.lumivoxx.com</strong> (the &quot;Site&quot;). This
+          <strong>codewise.lumivoxx.com</strong> (the &quot;Site&quot;). This
           Privacy Policy explains how we collect, use, and protect information
           when you visit our Site.
         </p>

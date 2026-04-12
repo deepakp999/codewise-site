@@ -26,4 +26,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://learn.lumivoxx.com/sitemap.xml
+Sitemap: https://codewise.lumivoxx.com/sitemap.xml
