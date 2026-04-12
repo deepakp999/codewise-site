@@ -1,0 +1,62 @@
+{
+  "id": "abap-modern",
+  "title": "ABAP Modern — RAP, CDS & ABAP Cloud",
+  "description": "Master SAP's modern development stack — CDS views, RAP business objects, ABAP Cloud, and clean core. 25 lessons for ABAP developers transitioning to S/4HANA Cloud.",
+  "modules": [
+    {
+      "id": "modern-abap-landscape",
+      "title": "The Modern ABAP Landscape",
+      "lessons": [
+        { "slug": "why-modern-abap", "title": "Why Modern ABAP? Classic vs Cloud Development Explained", "file": "01-why-modern-abap.md" },
+        { "slug": "abap-cloud-development-model", "title": "The ABAP Cloud Development Model", "file": "02-abap-cloud-development-model.md" },
+        { "slug": "setting-up-adt", "title": "Setting Up ADT (Eclipse) for ABAP Development", "file": "03-setting-up-adt.md" },
+        { "slug": "modern-abap-syntax", "title": "Modern ABAP Syntax — Inline Declarations and Expressions", "file": "04-modern-abap-syntax.md" },
+        { "slug": "abap-oop-for-rap", "title": "OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection", "file": "05-abap-oop-for-rap.md" }
+      ]
+    },
+    {
+      "id": "cds-views",
+      "title": "CDS Views",
+      "lessons": [
+        { "slug": "what-are-cds-views", "title": "What Are CDS Views? Your First CDS View", "file": "06-what-are-cds-views.md" },
+        { "slug": "cds-joins-and-associations", "title": "Joins and Associations in CDS", "file": "07-cds-joins-and-associations.md" },
+        { "slug": "cds-annotations", "title": "Annotations — UI, Search, OData, and Metadata Extensions", "file": "08-cds-annotations.md" },
+        { "slug": "cds-calculated-fields-and-expressions", "title": "Calculated Fields, CASE, CAST, and SQL Functions", "file": "09-cds-calculated-fields-and-expressions.md" },
+        { "slug": "cds-compositions-and-hierarchies", "title": "Compositions — Parent-Child Relationships in CDS", "file": "10-cds-compositions-and-hierarchies.md" },
+        { "slug": "cds-parameters-and-input", "title": "CDS Views with Parameters", "file": "11-cds-parameters-and-input.md" },
+        { "slug": "cds-access-control", "title": "CDS Access Control — Authorization at the View Level", "file": "12-cds-access-control.md" }
+      ]
+    },
+    {
+      "id": "rap-fundamentals",
+      "title": "RAP Fundamentals",
+      "lessons": [
+        { "slug": "what-is-rap", "title": "What Is RAP? The Big Picture", "file": "13-what-is-rap.md" },
+        { "slug": "rap-managed-bo", "title": "Building Your First RAP Managed Business Object", "file": "14-rap-managed-bo.md" },
+        { "slug": "rap-service-definition-binding", "title": "Service Definition and Service Binding — Exposing Your App", "file": "15-rap-service-definition-binding.md" },
+        { "slug": "rap-eml", "title": "Entity Manipulation Language (EML) — CRUD Operations in Code", "file": "16-rap-eml.md" },
+        { "slug": "rap-unmanaged-bo", "title": "Unmanaged RAP — When You Need Full Control", "file": "17-rap-unmanaged-bo.md" },
+        { "slug": "rap-query-implementation", "title": "RAP Query — Read-Only Access Patterns", "file": "18-rap-query-implementation.md" }
+      ]
+    },
+    {
+      "id": "rap-advanced",
+      "title": "RAP Advanced Features",
+      "lessons": [
+        { "slug": "rap-validations-determinations", "title": "Validations and Determinations — Business Rules in RAP", "file": "19-rap-validations-determinations.md" },
+        { "slug": "rap-actions", "title": "Actions — Static, Instance, and Factory Actions", "file": "20-rap-actions.md" },
+        { "slug": "rap-draft", "title": "Draft Handling — Save Incomplete Work", "file": "21-rap-draft.md" },
+        { "slug": "rap-feature-control", "title": "Feature Control and Authorization — Dynamic UI Behavior", "file": "22-rap-feature-control.md" }
+      ]
+    },
+    {
+      "id": "real-world-next-steps",
+      "title": "Real-World Patterns & Next Steps",
+      "lessons": [
+        { "slug": "rap-testing-and-clean-core", "title": "Testing RAP Apps and Clean Core Compliance", "file": "23-rap-testing-and-clean-core.md" },
+        { "slug": "rap-extensibility", "title": "Extensibility — BADIs, Side-by-Side, and BTP Integration", "file": "24-rap-extensibility.md" },
+        { "slug": "abap-modern-whats-next", "title": "What's Next — Certification, CDS Pattern, and Your Career", "file": "25-abap-modern-whats-next.md" }
+      ]
+    }
+  ]
+}

@@ -18,6 +18,15 @@
     "tags": ["abap", "sap", "enterprise", "beginner"]
   },
   {
+    "id": "abap-modern",
+    "title": "ABAP Modern — RAP, CDS & ABAP Cloud",
+    "description": "Master SAP's modern development stack — CDS views, RAP business objects, ABAP Cloud, and clean core. 25 lessons for ABAP developers transitioning to S/4HANA Cloud.",
+    "status": "active",
+    "href": "/abap-modern",
+    "lessonCount": 25,
+    "tags": ["abap", "sap", "rap", "cds", "s4hana"]
+  },
+  {
     "id": "sql",
     "title": "SQL Fundamentals",
     "description": "Write powerful SQL queries from scratch. Coming soon.",

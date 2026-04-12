@@ -124,6 +124,7 @@ function getEmojiForCourse(id: string): string {
   const map: Record<string, string> = {
     pyspark: "🔥",
     "abap-classic": "🏗️",
+    "abap-modern": "🚀",
     sql: "🗃️",
     python: "🐍",
     kafka: "📡",
