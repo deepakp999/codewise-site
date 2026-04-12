@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllCourses } from "@/lib/courses";
+import { websiteJsonLd } from "@/lib/seo";
 
 export default function Home() {
   const courses = getAllCourses();
@@ -8,10 +9,15 @@ export default function Home() {
 
   return (
     <main className="catalog" data-pagefind-body>
+      {/* WebSite JSON-LD for sitelinks searchbox */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+      />
       {/* Hero */}
       <section className="catalog-hero">
         <h1 className="catalog-hero__title">
-          <span className="catalog-hero__accent">Code</span>wise
+          <span className="catalog-hero__accent">Code</span>wiseX
         </h1>
         <p className="catalog-hero__tagline">
           Free, in-depth technical courses — built for clarity.
@@ -117,6 +123,7 @@ export default function Home() {
 function getEmojiForCourse(id: string): string {
   const map: Record<string, string> = {
     pyspark: "🔥",
+    "abap-classic": "🏗️",
     sql: "🗃️",
     python: "🐍",
     kafka: "📡",

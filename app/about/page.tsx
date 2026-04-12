@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Codewise",
+  title: "About CodewiseX",
   description:
-    "Codewise offers free, in-depth technical courses with clear explanations, real code, and practical exercises.",
+    "CodewiseX by Lumivoxx offers free, in-depth technical courses with clear explanations, real code, and practical exercises.",
 };
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
     <main className="catalog" data-pagefind-body>
       <section className="catalog-hero" style={{ paddingBottom: "24px" }}>
         <h1 className="catalog-hero__title">
-          About <span className="catalog-hero__accent">Code</span>wise
+          About <span className="catalog-hero__accent">Code</span>wiseX
         </h1>
       </section>
 
@@ -19,10 +19,10 @@ export default function AboutPage() {
         className="prose-column"
         style={{ maxWidth: "640px", margin: "0 auto" }}
       >
-        <h2>Why Codewise?</h2>
+        <h2>Why CodewiseX?</h2>
         <p>
           Most technical tutorials are either too shallow (just copy this code)
-          or too academic (here&apos;s a 40-page paper). Codewise sits in
+          or too academic (here&apos;s a 40-page paper). CodewiseX sits in
           between — we explain <strong>why</strong> things work, show you
           real code, and warn you about the mistakes everyone makes.
         </p>
@@ -49,7 +49,7 @@ export default function AboutPage() {
 
         <h2>Who&apos;s behind this?</h2>
         <p>
-          Codewise is built by a solo developer and data engineer who got tired
+          CodewiseX is built by a solo developer and data engineer who got tired
           of bad tutorials. Every lesson is written from real-world experience
           building data pipelines and backend systems.
         </p>

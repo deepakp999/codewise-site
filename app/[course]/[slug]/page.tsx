@@ -47,6 +47,9 @@ export async function generateMetadata({
     title: `${frontmatter.title} — ${meta.title}`,
     description: frontmatter.description,
     keywords: frontmatter.tags,
+    alternates: {
+      canonical: `/${course}/${slug}`,
+    },
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
@@ -85,9 +88,10 @@ export default async function LessonPage({ params }: LessonPageProps) {
     courseId: course,
     slug,
     courseTitle: courseMeta.title,
+    date: frontmatter.date as string | undefined,
   });
   const breadcrumbs = breadcrumbJsonLd([
-    { name: "Codewise", url: "/" },
+    { name: "CodewiseX", url: "/" },
     { name: courseMeta.title, url: `/${course}` },
     { name: frontmatter.title, url: `/${course}/${slug}` },
   ]);

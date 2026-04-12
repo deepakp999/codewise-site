@@ -24,6 +24,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   });
 
+  // Privacy page
+  entries.push({
+    url: `${SITE_URL}/privacy`,
+    lastModified: new Date(),
+    changeFrequency: "yearly",
+    priority: 0.3,
+  });
+
+  // Terms page
+  entries.push({
+    url: `${SITE_URL}/terms`,
+    lastModified: new Date(),
+    changeFrequency: "yearly",
+    priority: 0.3,
+  });
+
   // Course pages and lesson pages
   const courses = getAllCourses();
   for (const course of courses) {

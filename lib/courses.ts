@@ -41,6 +41,7 @@ export interface LessonFrontmatter {
   module: string;
   module_title: string;
   tags: string[];
+  date?: string;
   prev_slug: string | null;
   next_slug: string | null;
   [key: string]: unknown;

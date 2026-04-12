@@ -26,8 +26,11 @@ export async function generateMetadata({
   if (!info) return { title: "Not Found" };
 
   return {
-    title: `${info.title} — Codewise`,
+    title: `${info.title} — CodewiseX`,
     description: info.description,
+    alternates: {
+      canonical: `/${course}`,
+    },
     openGraph: {
       title: info.title,
       description: info.description,
@@ -61,7 +64,7 @@ export default async function CourseLandingPage({ params }: CoursePageProps) {
     courseId: course,
   });
   const breadcrumbs = breadcrumbJsonLd([
-    { name: "Codewise", url: "/" },
+    { name: "CodewiseX", url: "/" },
     { name: meta.title, url: `/${course}` },
   ]);
 

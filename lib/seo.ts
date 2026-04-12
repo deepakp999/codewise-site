@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const SITE_URL = "https://learn.lumivoxx.com";
-const SITE_NAME = "Codewise";
+const SITE_NAME = "CodewiseX";
 
 /**
  * Generate default site-wide metadata.
@@ -14,13 +14,17 @@ export function getDefaultMeta(): Metadata {
       template: `%s | ${SITE_NAME}`,
     },
     description:
-      "Free, in-depth technical courses built for clarity. Master PySpark, SQL, and more with hands-on lessons.",
+      "Free, in-depth technical courses built for clarity. Master PySpark, SAP ABAP, and more with hands-on lessons.",
     keywords: [
       "pyspark tutorial",
+      "abap tutorial",
+      "sap abap for beginners",
+      "learn abap programming",
       "data engineering course",
       "free coding courses",
       "learn spark",
       "sql tutorial",
+      "free sap training",
     ],
     authors: [{ name: SITE_NAME }],
     creator: SITE_NAME,
@@ -31,7 +35,7 @@ export function getDefaultMeta(): Metadata {
       url: SITE_URL,
       title: `${SITE_NAME} — Free Technical Courses`,
       description:
-        "Free, in-depth technical courses built for clarity. Master PySpark, SQL, and more with hands-on lessons.",
+        "Free, in-depth technical courses built for clarity. Master PySpark, SAP ABAP, and more with hands-on lessons.",
     },
     twitter: {
       card: "summary_large_image",
@@ -89,6 +93,7 @@ export function lessonJsonLd(lesson: {
   courseId: string;
   slug: string;
   courseTitle: string;
+  date?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -96,6 +101,10 @@ export function lessonJsonLd(lesson: {
     headline: lesson.title,
     description: lesson.description,
     url: `${SITE_URL}/${lesson.courseId}/${lesson.slug}`,
+    ...(lesson.date && {
+      datePublished: lesson.date,
+      dateModified: lesson.date,
+    }),
     isPartOf: {
       "@type": "Course",
       name: lesson.courseTitle,
@@ -108,6 +117,47 @@ export function lessonJsonLd(lesson: {
     },
     isAccessibleForFree: true,
     inLanguage: "en",
+  };
+}
+
+/**
+ * Build JSON-LD for the WebSite (homepage).
+ * Enables sitelinks searchbox in Google results.
+ */
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description:
+      "Free, in-depth technical courses built for clarity. Master PySpark, SAP ABAP, and more.",
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}
+
+/**
+ * Build JSON-LD for FAQ pages.
+ * AI engines cite FAQ structured data directly.
+ */
+export function faqJsonLd(
+  faqs: { question: string; answer: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }
 

@@ -58,8 +58,8 @@ export default function Navbar() {
               <span className={`navbar__hamburger-line ${menuIsOpen ? "navbar__hamburger-line--open" : ""}`} />
             </button>
 
-            <Link href="/" className="navbar__logo" aria-label="Codewise Home">
-              <span className="navbar__logo-accent">Code</span>wise
+            <Link href="/" className="navbar__logo" aria-label="CodewiseX Home">
+              <span className="navbar__logo-accent">Code</span>wiseX
             </Link>
           </div>
 

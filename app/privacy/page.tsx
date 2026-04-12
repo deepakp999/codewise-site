@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Codewise",
+  title: "Privacy Policy — CodewiseX",
   description:
-    "How Codewise collects, uses, and protects your information. Includes details on cookies, Google AdSense, and your rights.",
+    "How CodewiseX collects, uses, and protects your information. Includes details on cookies, Google AdSense, and your rights.",
 };
 
 export default function PrivacyPage() {
@@ -22,9 +22,9 @@ export default function PrivacyPage() {
       >
         <h2>Introduction</h2>
         <p>
-          Codewise (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates
+          CodewiseX (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates
           the website{" "}
-          <strong>codewise.lumivoxx.com</strong> (the &quot;Site&quot;). This
+          <strong>learn.lumivoxx.com</strong> (the &quot;Site&quot;). This
           Privacy Policy explains how we collect, use, and protect information
           when you visit our Site.
         </p>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
 
         <h3>Information We Do Not Collect</h3>
         <p>
-          Codewise does not require user accounts, registration, or sign-ups. We
+          CodewiseX does not require user accounts, registration, or sign-ups. We
           do not collect personal information such as names, email addresses, or
           payment details through the Site.
         </p>

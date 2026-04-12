@@ -10,8 +10,8 @@ export default function Footer() {
     <footer className="footer" role="contentinfo">
       <div className="footer__inner">
         <div className="footer__left">
-          <Link href="/" className="footer__logo" aria-label="Codewise Home">
-            <span className="footer__logo-accent">Code</span>wise
+          <Link href="/" className="footer__logo" aria-label="CodewiseX Home">
+            <span className="footer__logo-accent">Code</span>wiseX
           </Link>
           <p className="footer__tagline">
             Free, in-depth technical courses — built for clarity.
@@ -38,7 +38,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © {year} Codewise. All content is free to learn from.
+            © {year} CodewiseX by Lumivoxx. All content is free to learn from.
           </p>
         </div>
       </div>

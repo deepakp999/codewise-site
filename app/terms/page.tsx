@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Codewise",
+  title: "Terms of Service — CodewiseX",
   description:
-    "Terms and conditions for using the Codewise educational platform.",
+    "Terms and conditions for using the CodewiseX educational platform.",
 };
 
 export default function TermsPage() {
@@ -22,15 +22,15 @@ export default function TermsPage() {
       >
         <h2>Acceptance of Terms</h2>
         <p>
-          By accessing and using Codewise at{" "}
-          <strong>codewise.lumivoxx.com</strong> (the &quot;Site&quot;), you
+          By accessing and using CodewiseX at{" "}
+          <strong>learn.lumivoxx.com</strong> (the &quot;Site&quot;), you
           agree to be bound by these Terms of Service. If you do not agree,
           please do not use the Site.
         </p>
 
         <h2>Use of Content</h2>
         <p>
-          All educational content on Codewise — including text, code examples,
+          All educational content on CodewiseX — including text, code examples,
           diagrams, and illustrations — is provided for personal, non-commercial
           learning purposes. You may:
         </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
             datasets.
           </li>
           <li>
-            Present Codewise content as your own original work.
+            Present CodewiseX content as your own original work.
           </li>
         </ul>
 
@@ -66,14 +66,14 @@ export default function TermsPage() {
 
         <h2>Advertisements</h2>
         <p>
-          Codewise displays advertisements through Google AdSense to support
+          CodewiseX displays advertisements through Google AdSense to support
           free access to all content. By using the Site, you acknowledge that:
         </p>
         <ul>
           <li>Ads may appear on pages throughout the Site.</li>
           <li>
             Ad content is served by third parties and does not represent
-            endorsement by Codewise.
+            endorsement by CodewiseX.
           </li>
           <li>
             Ad-related cookies may be placed on your device as described in
@@ -90,15 +90,15 @@ export default function TermsPage() {
 
         <h2>Intellectual Property</h2>
         <p>
-          The Codewise name, logo, site design, and original educational
-          content are the property of Codewise. Third-party trademarks (e.g.,
+          The CodewiseX name, logo, site design, and original educational
+          content are the property of CodewiseX by Lumivoxx. Third-party trademarks (e.g.,
           Apache Spark, Python, PySpark) belong to their respective owners and
           are used for educational reference only.
         </p>
 
         <h2>Limitation of Liability</h2>
         <p>
-          Codewise is an educational resource. We are not liable for any
+          CodewiseX is an educational resource. We are not liable for any
           damages arising from your use of the Site or application of concepts
           learned here. This includes, but is not limited to:
         </p>
