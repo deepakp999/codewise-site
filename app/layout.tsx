@@ -59,7 +59,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col relative overflow-x-hidden">
+      <body className="min-h-full flex flex-col relative overflow-x-hidden" suppressHydrationWarning>
         {/* Ambient background orbs */}
         <div className="bg-orb bg-orb--blue" aria-hidden="true" />
         <div className="bg-orb bg-orb--purple" aria-hidden="true" />
