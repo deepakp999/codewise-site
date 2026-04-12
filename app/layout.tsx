@@ -35,6 +35,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta name="google-adsense-account" content="ca-pub-9139184252658211" />
         {/* Inline script to set dark mode BEFORE paint to avoid flash */}
         <script
           dangerouslySetInnerHTML={{
