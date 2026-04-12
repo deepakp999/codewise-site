@@ -12,7 +12,6 @@ import { lessonJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import Prose from "@/components/Content/Prose";
 import TableOfContents from "@/components/Lesson/TableOfContents";
 import LessonNav from "@/components/Lesson/LessonNav";
-import AdUnit from "@/components/AdUnit";
 
 // ─── Static Params ──────────────────────────────────
 
@@ -123,8 +122,6 @@ export default async function LessonPage({ params }: LessonPageProps) {
         {/* Rendered markdown */}
         <Prose html={contentHtml} />
 
-        {/* Ad before nav */}
-        <AdUnit slot="lesson-bottom" className="mt-8" />
 
         {/* Prev/Next navigation */}
         <LessonNav courseId={course} prev={nav.prev} next={nav.next} />
