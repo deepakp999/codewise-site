@@ -25,6 +25,12 @@ export default function Footer() {
           <Link href="/about" className="footer__link">
             About
           </Link>
+          <Link href="/privacy" className="footer__link">
+            Privacy
+          </Link>
+          <Link href="/terms" className="footer__link">
+            Terms
+          </Link>
           <a href="mailto:hey@lumivoxx.com" className="footer__link">
             Contact
           </a>
