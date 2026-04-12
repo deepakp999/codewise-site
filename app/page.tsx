@@ -17,7 +17,7 @@ export default function Home() {
           Free, in-depth technical courses — built for clarity.
         </p>
         <p className="catalog-hero__sub">
-          No ads wall. No paywall. Just clean explanations, real code, and
+          No paywall. No sign-up. Just clean explanations, real code, and
           exercises that stick.
         </p>
       </section>
