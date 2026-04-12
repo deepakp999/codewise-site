@@ -9,6 +9,15 @@
     "tags": ["pyspark", "data-engineering", "beginner"]
   },
   {
+    "id": "abap-classic",
+    "title": "ABAP Classic — SAP Programming from Scratch",
+    "description": "Learn SAP ABAP from zero — reports, internal tables, Open SQL, ALV, BAPIs, IDocs, and real-world debugging. 30 lessons built for developers entering the SAP ecosystem.",
+    "status": "active",
+    "href": "/abap-classic",
+    "lessonCount": 30,
+    "tags": ["abap", "sap", "enterprise", "beginner"]
+  },
+  {
     "id": "sql",
     "title": "SQL Fundamentals",
     "description": "Write powerful SQL queries from scratch. Coming soon.",
