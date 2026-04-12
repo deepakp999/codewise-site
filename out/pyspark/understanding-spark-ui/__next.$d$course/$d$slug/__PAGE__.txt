@@ -4,7 +4,7 @@
 a:I[74356,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0qku.4mv8dgvp.js"],"default"]
 b:I[97367,["/_next/static/chunks/0qehze85o2.kp.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 c:"$Sreact.suspense"
-3:T5567,<h1 id="understanding-the-spark-ui">Understanding the Spark UI</h1>
+3:T562e,<h1 id="understanding-the-spark-ui">Understanding the Spark UI</h1>
 <div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
 <ul>
 <li>How to access and navigate the Spark Web UI</li>
@@ -23,7 +23,7 @@ c:"$Sreact.suspense"
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">getOrCreate</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">f</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Spark UI: http://localhost:</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">spark.sparkContext.uiWebUrl.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">split</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">':'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)[</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
-<p>By default, it runs at <strong>http://localhost:4040</strong>. If that port is taken, Spark tries 4041, 4042, and so on.</p>
+<p>By default, it runs at <strong><a href="http://localhost:4040">http://localhost:4040</a></strong>. If that port is taken, Spark tries 4041, 4042, and so on.</p>
 <h2 id="the-main-tabs">The Main Tabs</h2>
 <p>The Spark UI has several tabs. Here are the most important ones:</p>
 <h3 id="jobs-tab">Jobs Tab</h3>
@@ -50,11 +50,32 @@ c:"$Sreact.suspense"
 <p>Shows the execution plans for SQL queries and DataFrame operations — essential for optimization.</p>
 <h2 id="jobs-stages-and-tasks-explained">Jobs, Stages, and Tasks Explained</h2>
 <p>Understanding this hierarchy is crucial:</p>
-<p>| Level | What It Is | Triggered By |
-|-------|-----------|--------------|
-| <strong>Job</strong> | A complete computation | An action (<code>.show()</code>, <code>.count()</code>, <code>.write()</code>) |
-| <strong>Stage</strong> | A set of tasks with no shuffles between them | Shuffle boundaries (<code>.groupBy()</code>, <code>.join()</code>) |
-| <strong>Task</strong> | Work done on one data partition | One task per partition per stage |</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What It Is</th>
+<th>Triggered By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Job</strong></td>
+<td>A complete computation</td>
+<td>An action (<code>.show()</code>, <code>.count()</code>, <code>.write()</code>)</td>
+</tr>
+<tr>
+<td><strong>Stage</strong></td>
+<td>A set of tasks with no shuffles between them</td>
+<td>Shuffle boundaries (<code>.groupBy()</code>, <code>.join()</code>)</td>
+</tr>
+<tr>
+<td><strong>Task</strong></td>
+<td>Work done on one data partition</td>
+<td>One task per partition per stage</td>
+</tr>
+</tbody>
+</table>
 <h2 id="triggering-a-job-to-observe">Triggering a Job to Observe</h2>
 <p>Let's create some data and watch the UI:</p>
 <pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pyspark.sql </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SparkSession</span></span>
@@ -93,7 +114,7 @@ c:"$Sreact.suspense"
 |product_4|   50020.0| 2000|
 +---------+----------+-----+
 </code></pre></div>
-<p>Now open <strong>http://localhost:4040</strong> and you'll see 2 completed jobs.</p>
+<p>Now open <strong><a href="http://localhost:4040">http://localhost:4040</a></strong> and you'll see 2 completed jobs.</p>
 <h2 id="reading-the-dag-visualization">Reading the DAG Visualization</h2>
 <p>Click on any job to see its <strong>Directed Acyclic Graph (DAG)</strong>. This shows the physical execution plan:</p>
 <ul>
@@ -145,7 +166,7 @@ c:"$Sreact.suspense"
 <li>The UI is your best friend for debugging slow jobs</li>
 </ul>
 <h2 id="next-lesson">Next Lesson</h2>
-<p>You now have a solid foundation: you know what Spark is, when to use it, how to install it, how to create a session, and how to monitor it. In the next module, we'll dive into Spark DataFrames — the core data structure you'll use every day.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Understanding the Spark UI\",\"description\":\"Learn to read and use the Spark Web UI to monitor jobs, stages, and tasks. Debug performance issues like a pro.\",\"url\":\"https://learn.lumivoxx.com/pyspark/understanding-spark-ui\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://learn.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Codewise\",\"url\":\"https://learn.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Codewise\",\"item\":\"https://learn.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://learn.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Understanding the Spark UI\",\"item\":\"https://learn.lumivoxx.com/pyspark/understanding-spark-ui\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Getting Started"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Understanding the Spark UI"}],["$","p",null,{"className":"lesson-header__description","children":"Learn to read and use the Spark Web UI to monitor jobs, stages, and tasks. Debug performance issues like a pro."}]]}],["$","$L2",null,{"html":"$3"}],"$L4","$L5"]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Y0zKI18idWNA70NkkLl_u"}
+<p>You now have a solid foundation: you know what Spark is, when to use it, how to install it, how to create a session, and how to monitor it. In the next module, we'll dive into Spark DataFrames — the core data structure you'll use every day.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Understanding the Spark UI\",\"description\":\"Learn to read and use the Spark Web UI to monitor jobs, stages, and tasks. Debug performance issues like a pro.\",\"url\":\"https://learn.lumivoxx.com/pyspark/understanding-spark-ui\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://learn.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Codewise\",\"url\":\"https://learn.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Codewise\",\"item\":\"https://learn.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://learn.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Understanding the Spark UI\",\"item\":\"https://learn.lumivoxx.com/pyspark/understanding-spark-ui\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Getting Started"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Understanding the Spark UI"}],["$","p",null,{"className":"lesson-header__description","children":"Learn to read and use the Spark Web UI to monitor jobs, stages, and tasks. Debug performance issues like a pro."}]]}],["$","$L2",null,{"html":"$3"}],"$L4","$L5"]}],"$L6"]}],["$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"QrBJ92gj8_g7J8N_iHlg6"}
 4:["$","div",null,{"className":"ad-unit mt-8","data-ad-slot":"lesson-bottom","aria-label":"Advertisement","children":["$","div",null,{"className":"ad-unit__placeholder","children":["$","span",null,{"className":"ad-unit__label","children":"Ad"}]}]}]
 5:["$","div",null,{"className":"lesson-nav","children":[["$","$L9",null,{"href":"/pyspark/first-sparksession","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Your First SparkSession"}]]}],["$","$L9",null,{"href":"/pyspark/creating-dataframes","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Creating DataFrames from Lists, Dicts, and Files"}]]}]]}]
 6:["$","aside",null,{"className":"lesson-toc","children":["$","$La",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"accessing-the-spark-ui","text":"Accessing the Spark UI","level":2},{"id":"the-main-tabs","text":"The Main Tabs","level":2},{"id":"jobs-tab","text":"Jobs Tab","level":3},{"id":"stages-tab","text":"Stages Tab","level":3},{"id":"storage-tab","text":"Storage Tab","level":3},{"id":"sqldataframe-tab","text":"SQL/DataFrame Tab","level":3},{"id":"jobs-stages-and-tasks-explained","text":"Jobs, Stages, and Tasks Explained","level":2},{"id":"triggering-a-job-to-observe","text":"Triggering a Job to Observe","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"reading-the-dag-visualization","text":"Reading the DAG Visualization","level":2},{"id":"key-metrics-to-watch","text":"Key Metrics to Watch","level":2},{"id":"in-the-stages-tab-look-for","text":"In the Stages tab, look for:","level":3},{"id":"task-duration-distribution","text":"Task Duration Distribution","level":3},{"id":"using-the-sql-tab","text":"Using the SQL Tab","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]

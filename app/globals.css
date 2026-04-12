@@ -286,6 +286,65 @@ html.dark .shiki span {
   background: transparent !important;
 }
 
+/* Tables (GFM) */
+.prose-column table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+  display: block;
+}
+
+.prose-column thead {
+  display: table-header-group;
+}
+
+.prose-column tbody {
+  display: table-row-group;
+}
+
+.prose-column tr {
+  display: table-row;
+  border-bottom: 1px solid var(--cw-glass-border);
+}
+
+.prose-column thead tr {
+  border-bottom: 2px solid var(--cw-glass-border);
+}
+
+.prose-column tbody tr:nth-child(even) {
+  background: var(--cw-glass);
+}
+
+.prose-column tbody tr:hover {
+  background: var(--cw-sidebar-active);
+}
+
+.prose-column th {
+  display: table-cell;
+  text-align: left;
+  color: var(--cw-text);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 10px 14px;
+  white-space: nowrap;
+}
+
+.prose-column td {
+  display: table-cell;
+  padding: 10px 14px;
+  color: var(--cw-text2);
+  vertical-align: top;
+}
+
+.prose-column td code {
+  font-size: 12px;
+}
+
 /* ===================================================
    SPECIAL SECTIONS (from rehype plugin)
    =================================================== */
