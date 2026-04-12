@@ -1,0 +1,158 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T2af7,<h1 id="extensibility--badis-side-by-side-and-btp-integration">Extensibility — BADIs, Side-by-Side, and BTP Integration</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The extensibility model in ABAP Cloud</li>
+<li>Developer extensibility: on-stack with released BADIs</li>
+<li>Side-by-side extensibility: separate apps on BTP</li>
+<li>Key-user extensibility: no-code extensions</li>
+<li>Choosing the right extensibility approach</li>
+</ul>
+</div><h2 id="techmarts-extensibility-challenge">TechMart's Extensibility Challenge</h2>
+<p>TechMart acquires "GadgetWorld." GadgetWorld needs additional fields on the Sales Order — a warranty flag and a returns policy reference. TechMart's Sales Order BO was built clean. How do you add these fields without modifying the original code?</p>
+<h2 id="three-extensibility-approaches">Three Extensibility Approaches</h2>
+<h3 id="1-developer-extensibility-on-stack">1. Developer Extensibility (On-Stack)</h3>
+<p>Add custom logic using released extension points — BADIs, extend behavior definitions, additional CDS fields.</p>
+<p><strong>Extending a CDS view with additional fields:</strong></p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">EXTEND VIEW ENTITY ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">WITH</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">  ztm_salesorder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">warranty_flag</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">   AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> WarrantyFlag,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">  ztm_salesorder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">returns_policy</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ReturnsPolicy</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p><strong>Extending a behavior definition:</strong></p>
+<p>You can add new validations, determinations, and actions to an existing BO without modifying the original:</p>
+<pre><code>extension using interface zif_tm_so_extension
+  implementation in class zbp_tm_so_extension;
+
+extend behavior for ZI_TM_SalesOrder
+{
+  validation validateWarranty on save { field WarrantyFlag; }
+  determination determineReturnsPolicy on modify { field ReturnsPolicy; }
+}
+</code></pre>
+<p><strong>Using a released BADI:</strong></p>
+<p>SAP standard BOs provide BADIs for extension. These are the officially supported hooks:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_order_badi</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION PUBLIC FINAL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  CREATE PUBLIC</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PUBLIC SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    INTERFACES</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_released_badi_for_orders.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_order_badi</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> if_released_badi_for_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">after_save</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Custom logic after order is saved</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " E.g., trigger warranty registration for GadgetWorld orders</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h3 id="2-side-by-side-extensibility-btp">2. Side-by-Side Extensibility (BTP)</h3>
+<p>Build a separate application on SAP BTP that communicates with the core S/4HANA system via released APIs:</p>
+<pre><code>S/4HANA Core System          SAP BTP
+┌────────────────────┐       ┌──────────────────────┐
+│ Sales Order BO     │ ←API→ │ Warranty Management  │
+│ (unchanged)        │       │ App (custom)          │
+│                    │       │                       │
+│ Released OData API │───────│ Reads orders via API  │
+│                    │       │ Stores warranty data  │
+│                    │       │ in BTP database       │
+└────────────────────┘       └──────────────────────┘
+</code></pre>
+<p>Use side-by-side when:</p>
+<ul>
+<li>The extension is complex (its own data model, workflow, UI)</li>
+<li>The core system shouldn't carry the custom logic load</li>
+<li>You need technologies not available in ABAP (ML models, external APIs)</li>
+<li>The extension has its own lifecycle (different team, different release cycle)</li>
+</ul>
+<h3 id="3-key-user-extensibility-no-code">3. Key-User Extensibility (No-Code)</h3>
+<p>For business users who need simple extensions:</p>
+<ul>
+<li>Add custom fields via the Fiori "Custom Fields" app</li>
+<li>Create custom logic with BTP Workflow</li>
+<li>Add custom tiles and pages</li>
+</ul>
+<p>No developer involvement needed. Limited but powerful for simple cases.</p>
+<h2 id="choosing-the-right-approach">Choosing the Right Approach</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Approach</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add a field + simple validation</td>
+<td>Developer (on-stack)</td>
+<td>Minimal effort, stays in ABAP</td>
+</tr>
+<tr>
+<td>Build a warranty management app</td>
+<td>Side-by-side (BTP)</td>
+<td>Separate concerns, own data model</td>
+</tr>
+<tr>
+<td>Add a field for reporting only</td>
+<td>Key-user</td>
+<td>No developer needed</td>
+</tr>
+<tr>
+<td>Integrate with external warranty API</td>
+<td>Side-by-side (BTP)</td>
+<td>External communication, async</td>
+</tr>
+<tr>
+<td>Add complex business rules to existing BO</td>
+<td>Developer (on-stack)</td>
+<td>Deep integration with BO lifecycle</td>
+</tr>
+<tr>
+<td>Build an ML model for demand forecasting</td>
+<td>Side-by-side (BTP)</td>
+<td>Different technology stack</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> Start with the simplest approach. Key-user if possible, developer on-stack if business logic is needed, side-by-side only for complex standalone functionality.</p>
+<h2 id="clean-core-and-extensibility-levels">Clean Core and Extensibility Levels</h2>
+<p>Remember the levels from Lesson 2:</p>
+<ul>
+<li><strong>Level A</strong> — All extensions use released APIs and extension points. Fully upgrade-safe.</li>
+<li><strong>Level B</strong> — Uses stable but unreleased APIs. Acceptable with governance.</li>
+<li><strong>Level C/D</strong> — Uses internal APIs or modifications. Not upgrade-safe.</li>
+</ul>
+<p>GadgetWorld's extension should be Level A:</p>
+<ul>
+<li>CDS view extensions (released feature)</li>
+<li>Behavior extensions (released feature)</li>
+<li>Released BADIs (guaranteed stable)</li>
+<li>BTP communication via released OData APIs</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Modifying the original BO</strong> — The whole point of extensibility is NOT touching the original. If you change <code>ZI_TM_SalesOrder</code> directly, you're creating Level C/D technical debt.</li>
+<li><strong>Using unreleased BADIs</strong> — Not all BADIs are released for cloud. Check the API state in ADT before implementing.</li>
+<li><strong>Side-by-side for simple fields</strong> — Don't build a BTP app just to add one field. Use on-stack developer extensibility.</li>
+<li><strong>Ignoring key-user extensibility</strong> — If a business user just needs one extra field for reporting, they can add it themselves. No developer ticket needed.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>ABAP Cloud offers three extensibility approaches: developer (on-stack), side-by-side (BTP), and key-user (no-code).</li>
+<li>CDS views and behavior definitions can be extended without modification using <code>EXTEND VIEW ENTITY</code> and <code>extend behavior</code>.</li>
+<li>Side-by-side extensions on BTP communicate via released APIs — separate concerns, separate lifecycle.</li>
+<li>Always aim for Level A extensibility — use only released extension points.</li>
+<li>Start simple (key-user), escalate to developer, then side-by-side only when needed.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>You've built a complete, tested, extensible RAP application. In our final lesson, we'll map your path forward — the <strong>C_ABAPD_2601 certification</strong>, the emerging CDS-only pattern, SAP Joule AI for development, and career paths for modern ABAP developers.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Extensibility — BADIs, Side-by-Side, and BTP Integration\",\"description\":\"Learn how to extend RAP applications without modifying the original code using released BADIs, side-by-side extensions on BTP, and clean core principles.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-extensibility\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Extensibility — BADIs, Side-by-Side, and BTP Integration\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-extensibility\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Real-World Patterns & Next Steps"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Extensibility — BADIs, Side-by-Side, and BTP Integration"}],["$","p",null,{"className":"lesson-header__description","children":"Learn how to extend RAP applications without modifying the original code using released BADIs, side-by-side extensions on BTP, and clean core principles."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/rap-testing-and-clean-core","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Testing RAP Apps and Clean Core Compliance"}]]}],["$","$L8",null,{"href":"/abap-modern/abap-modern-whats-next","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"What's Next — Certification, CDS Pattern, and Your Career"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"techmarts-extensibility-challenge","text":"TechMart's Extensibility Challenge","level":2},{"id":"three-extensibility-approaches","text":"Three Extensibility Approaches","level":2},{"id":"1-developer-extensibility-on-stack","text":"1. Developer Extensibility (On-Stack)","level":3},{"id":"2-side-by-side-extensibility-btp","text":"2. Side-by-Side Extensibility (BTP)","level":3},{"id":"3-key-user-extensibility-no-code","text":"3. Key-User Extensibility (No-Code)","level":3},{"id":"choosing-the-right-approach","text":"Choosing the Right Approach","level":2},{"id":"clean-core-and-extensibility-levels","text":"Clean Core and Extensibility Levels","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

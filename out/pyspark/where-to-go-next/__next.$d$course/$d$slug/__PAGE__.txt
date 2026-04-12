@@ -1,0 +1,171 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T37c9,<h1 id="where-to-go-next">Where to Go Next</h1>
+<h2 id="what-youve-accomplished">What You've Accomplished</h2>
+<p>You started this course knowing Python and pandas. You now understand:</p>
+<ul>
+<li>How Spark distributes data across a cluster and why it matters</li>
+<li>The DataFrame API for creating, transforming, filtering, joining, and aggregating data</li>
+<li>Spark SQL for writing queries and combining SQL with Python</li>
+<li>Spark internals: lazy evaluation, DAGs, partitions, shuffles, and the Catalyst optimizer</li>
+<li>Production patterns: ETL pipelines, caching, broadcast joins, data skew, and spark-submit</li>
+<li>Interview preparation for data engineering roles</li>
+</ul>
+<p>That's a solid foundation. Here's what to learn next, in priority order based on what data engineering job markets demand.</p>
+<h2 id="priority-1-sql-mastery">Priority 1: SQL Mastery</h2>
+<p>PySpark is half the job. The other half is SQL. Most data engineering teams use SQL daily — for ad-hoc queries, pipeline logic, and communicating with analysts.</p>
+<p><strong>What to focus on:</strong></p>
+<ul>
+<li>Window functions (you started in Lesson 10 — go deeper)</li>
+<li>Complex joins and set operations</li>
+<li>Query optimization and index awareness</li>
+<li>Database-specific SQL (PostgreSQL, Snowflake, BigQuery)</li>
+</ul>
+<p><strong>Resources:</strong></p>
+<ul>
+<li>Codewise SQL course (coming soon)</li>
+<li>PostgreSQL official documentation</li>
+<li>"SQL Performance Explained" by Markus Winand</li>
+</ul>
+<h2 id="priority-2-data-pipeline-orchestration-airflow">Priority 2: Data Pipeline Orchestration (Airflow)</h2>
+<p>In Lesson 27, you built a pipeline as a Python script. In production, pipelines run on a schedule, have dependencies, and need monitoring. Apache Airflow is the industry standard for orchestrating data pipelines.</p>
+<p><strong>What to learn:</strong></p>
+<ul>
+<li>DAGs (Directed Acyclic Graphs) for pipeline definition</li>
+<li>Operators: BashOperator, PythonOperator, SparkSubmitOperator</li>
+<li>Task dependencies and scheduling</li>
+<li>Monitoring, alerting, and retry logic</li>
+<li>Connections and variables for configuration</li>
+</ul>
+<p><strong>Why it matters:</strong> Most data engineering job postings list Airflow as a required or preferred skill. It's the tool that ties your PySpark pipelines together.</p>
+<h2 id="priority-3-delta-lake-and-lakehouse-architecture">Priority 3: Delta Lake and Lakehouse Architecture</h2>
+<p>Parquet is great (Lesson 12), but it has limitations: no ACID transactions, no schema evolution, no time travel. Delta Lake adds these features on top of Parquet.</p>
+<p><strong>What to learn:</strong></p>
+<ul>
+<li>ACID transactions on data lakes</li>
+<li>Schema enforcement and evolution</li>
+<li>Time travel (query data as it existed at a previous point in time)</li>
+<li>MERGE (upsert) operations</li>
+<li>Optimize and Z-ORDER for query performance</li>
+</ul>
+<p><strong>Why it matters:</strong> Delta Lake (and similar formats like Apache Iceberg and Apache Hudi) is becoming the standard for modern data lakes. Databricks, the company founded by Spark's creators, built their entire platform on Delta Lake.</p>
+<h2 id="priority-4-structured-streaming">Priority 4: Structured Streaming</h2>
+<p>Everything in this course was batch processing — read data, transform it, write output. Structured Streaming processes data as it arrives, in near-real-time.</p>
+<p><strong>What to learn:</strong></p>
+<ul>
+<li>The streaming DataFrame model (same API as batch, different execution)</li>
+<li>Reading from Kafka, file streams, and sockets</li>
+<li>Watermarks and late data handling</li>
+<li>Output modes: append, complete, update</li>
+<li>Checkpointing for fault tolerance</li>
+</ul>
+<p><strong>What it looks like:</strong></p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Streaming looks almost identical to batch — that's the beauty</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">stream_df </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> spark.readStream \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">format</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"kafka"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">option</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"kafka.bootstrap.servers"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"localhost:9092"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">option</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"subscribe"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"orders"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">load</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Same transformations you already know</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">orders </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> stream_df.</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">select</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">    col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"value"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">cast</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"string"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">    col</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"timestamp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># Write as a continuous query</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">query </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> orders.writeStream \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">format</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"parquet"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">option</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"checkpointLocation"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"/checkpoint/orders"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">start</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"/output/orders"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<h2 id="priority-5-cloud-platforms">Priority 5: Cloud Platforms</h2>
+<p>Most production Spark runs on cloud-managed services, not standalone clusters:</p>
+<p><strong>Databricks</strong> — the most popular managed Spark platform. Founded by Spark's creators. Adds notebooks, collaboration, Delta Lake, MLflow, and auto-scaling clusters. Free Community Edition available for learning.</p>
+<p><strong>AWS EMR (Elastic MapReduce)</strong> — Amazon's managed Spark service. Integrates with S3, Glue, and the broader AWS ecosystem.</p>
+<p><strong>Google Dataproc</strong> — Google's managed Spark. Integrates with BigQuery, Cloud Storage, and GCP services.</p>
+<p><strong>Azure Synapse / HDInsight</strong> — Microsoft's managed Spark offerings, integrating with Azure Data Lake and the Microsoft ecosystem.</p>
+<p><strong>What to focus on:</strong> Pick one cloud platform (whichever your target company uses) and learn to run Spark on it. The PySpark code is identical — what changes is cluster management, storage paths, and IAM configuration.</p>
+<h2 id="priority-6-spark-mllib-if-youre-interested-in-ml">Priority 6: Spark MLlib (If You're Interested in ML)</h2>
+<p>Spark MLlib is a distributed machine learning library. It's relevant if you're interested in ML engineering or if your data engineering role involves building ML pipelines.</p>
+<p><strong>What to learn:</strong></p>
+<ul>
+<li>Feature engineering with Spark (VectorAssembler, StringIndexer)</li>
+<li>ML Pipelines (Transformer → Estimator → Model)</li>
+<li>Common algorithms: logistic regression, random forests, k-means</li>
+<li>Model evaluation and hyperparameter tuning</li>
+<li>Saving and loading models</li>
+</ul>
+<p><strong>Note:</strong> Most ML work in industry happens in Python with scikit-learn, PyTorch, or TensorFlow on smaller datasets. MLlib's advantage is when your training data is too large to fit on one machine.</p>
+<h2 id="the-data-engineering-tech-stack-2026">The Data Engineering Tech Stack (2026)</h2>
+<p>Here's what a complete data engineering skill set looks like:</p>
+<pre><code>Core (you have this):
+  ✓ Python
+  ✓ PySpark / Apache Spark
+  ✓ SQL
+
+Pipeline &#x26; Orchestration:
+  → Apache Airflow
+  → dbt (data build tool)
+
+Storage &#x26; Formats:
+  ✓ Parquet
+  → Delta Lake / Iceberg
+  → Cloud storage (S3, GCS, ADLS)
+
+Cloud Platforms (pick one):
+  → Databricks
+  → AWS (EMR, Glue, Redshift)
+  → GCP (Dataproc, BigQuery)
+  → Azure (Synapse, Data Factory)
+
+Streaming (when needed):
+  → Kafka
+  → Spark Structured Streaming
+
+Version Control &#x26; CI/CD:
+  ✓ Git
+  → GitHub Actions or similar
+  → Docker basics
+
+Data Quality:
+  → Great Expectations
+  → dbt tests
+</code></pre>
+<p>You don't need everything on this list to get hired. PySpark + SQL + one cloud platform + Airflow covers most job postings.</p>
+<h2 id="building-your-portfolio">Building Your Portfolio</h2>
+<p>The best way to demonstrate your skills:</p>
+<ol>
+<li><strong>Build a public project</strong> — an ETL pipeline that processes a real public dataset (NYC taxi data, weather data, stock market data) and produces an analysis</li>
+<li><strong>Write about what you learned</strong> — a blog post or README explaining your design decisions</li>
+<li><strong>Show your code</strong> — clean, well-structured code on GitHub with a README</li>
+<li><strong>Contribute to open source</strong> — even small documentation fixes to PySpark or related projects show engagement</li>
+</ol>
+<h2 id="what-codewise-is-building-next">What Codewise Is Building Next</h2>
+<p>We're building more free courses following the same format — clear explanations, code with expected output, common mistakes, and a structured path from beginner to job-ready.</p>
+<p><strong>Coming soon:</strong></p>
+<ul>
+<li>SQL for Data Engineers</li>
+<li>Apache Airflow for Beginners</li>
+<li>dbt Fundamentals</li>
+</ul>
+<p>Follow us at <a href="https://codewise.lumivoxx.com">codewise.lumivoxx.com</a> for updates.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>You now have the PySpark foundation. The next priorities are SQL, Airflow, and a cloud platform.</li>
+<li>Pick technologies based on job postings in your target companies.</li>
+<li>Build a portfolio project that demonstrates end-to-end data engineering skills.</li>
+<li>The PySpark skills you've learned transfer directly to Databricks, EMR, and Dataproc — the code is the same.</li>
+<li>Keep learning. Data engineering evolves fast, but the fundamentals (distributed computing, SQL, pipeline design) are stable.</li>
+</ul>
+<h2 id="thank-you">Thank You</h2>
+<p>You made it through 30 lessons. You went from "what is Spark?" to understanding partitions, shuffles, the Catalyst optimizer, broadcast joins, data skew, and production code patterns. That's a real achievement.</p>
+<p>Go build something. Get hired. Come back and tell us about it.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Where to Go Next — Your PySpark Learning Roadmap\",\"description\":\"After mastering PySpark basics, explore Structured Streaming, MLlib, Delta Lake, Databricks, and the broader data engineering ecosystem.\",\"url\":\"https://codewise.lumivoxx.com/pyspark/where-to-go-next\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"PySpark for Absolute Beginners\",\"url\":\"https://codewise.lumivoxx.com/pyspark\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"PySpark for Absolute Beginners\",\"item\":\"https://codewise.lumivoxx.com/pyspark\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Where to Go Next — Your PySpark Learning Roadmap\",\"item\":\"https://codewise.lumivoxx.com/pyspark/where-to-go-next\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"PySpark for Absolute Beginners"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Interview Prep & Next Steps"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Where to Go Next — Your PySpark Learning Roadmap"}],["$","p",null,{"className":"lesson-header__description","children":"After mastering PySpark basics, explore Structured Streaming, MLlib, Delta Lake, Databricks, and the broader data engineering ecosystem."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/pyspark/performance-tuning-cheatsheet","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"PySpark Performance Tuning Cheat Sheet"}]]}],["$","div",null,{}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youve-accomplished","text":"What You've Accomplished","level":2},{"id":"priority-1-sql-mastery","text":"Priority 1: SQL Mastery","level":2},{"id":"priority-2-data-pipeline-orchestration-airflow","text":"Priority 2: Data Pipeline Orchestration (Airflow)","level":2},{"id":"priority-3-delta-lake-and-lakehouse-architecture","text":"Priority 3: Delta Lake and Lakehouse Architecture","level":2},{"id":"priority-4-structured-streaming","text":"Priority 4: Structured Streaming","level":2},{"id":"priority-5-cloud-platforms","text":"Priority 5: Cloud Platforms","level":2},{"id":"priority-6-spark-mllib-if-youre-interested-in-ml","text":"Priority 6: Spark MLlib (If You're Interested in ML)","level":2},{"id":"the-data-engineering-tech-stack-2026","text":"The Data Engineering Tech Stack (2026)","level":2},{"id":"building-your-portfolio","text":"Building Your Portfolio","level":2},{"id":"what-codewise-is-building-next","text":"What Codewise Is Building Next","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"thank-you","text":"Thank You","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

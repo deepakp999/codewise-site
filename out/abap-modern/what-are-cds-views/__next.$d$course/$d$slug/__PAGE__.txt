@@ -1,0 +1,164 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T4eff,<h1 id="what-are-cds-views-your-first-cds-view-entity">What Are CDS Views? Your First CDS View Entity</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What CDS views are and why they replaced DDIC views</li>
+<li>The difference between <code>DEFINE VIEW</code> (old) and <code>DEFINE VIEW ENTITY</code> (new)</li>
+<li>How to create a CDS view entity in ADT</li>
+<li>Basic SELECT, field aliasing, and key definitions</li>
+<li>How CDS views execute on the database (code pushdown)</li>
+</ul>
+</div><h2 id="why-cds-views">Why CDS Views?</h2>
+<p>In Classic ABAP, you modeled data in SE11 — tables, views, structures, data elements, domains. It worked, but it had limits. DDIC views couldn't have calculated fields. They couldn't define associations (only joins). They couldn't carry metadata about how the data should be displayed in a UI.</p>
+<p>CDS views solve all of these problems. They are the <strong>single data modeling layer</strong> for modern SAP applications. Everything flows through CDS:</p>
+<pre><code>Database Tables → CDS Views → RAP Business Objects → OData Services → Fiori Apps
+</code></pre>
+<p>Think of CDS views as intelligent windows into your data. A DDIC view was a static JOIN. A CDS view is a JOIN + calculated fields + annotations + associations + access control + parameter support — all defined in one place, executed on the database.</p>
+<h2 id="define-view-vs-define-view-entity">DEFINE VIEW vs DEFINE VIEW ENTITY</h2>
+<p>You'll see two syntaxes in the SAP ecosystem:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- OLD syntax (still works, but don't use for new development)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@AbapCatalog</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.sqlViewName: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'ZV_TM_PROD'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ZI_TM_Product </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_product { ... }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- NEW syntax (use this — it's the standard for ABAP Cloud)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_Product </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_product { ... }</span></span></code></pre>
+<p><strong>Always use <code>DEFINE VIEW ENTITY</code></strong> for new development. The old <code>DEFINE VIEW</code> requires an SQL view name and has limitations. View entities are the standard for RAP and ABAP Cloud.</p>
+<h2 id="creating-your-first-cds-view-entity">Creating Your First CDS View Entity</h2>
+<p>Let's model TechMart's product catalog. Assume we have this database table (from the Classic course):</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Table: ZTM_PRODUCT</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Fields: product_id, name, category, price, currency, stock_quantity,</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"         created_by, created_at, last_changed_by, last_changed_at</span></span></code></pre>
+<p>In ADT: Right-click <code>ZTECHMART_MODERN</code> → <strong>New → Data Definition</strong></p>
+<p>Name: <code>ZI_TM_Product</code>
+Description: <code>TechMart Product - Interface View</code></p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@AccessControl</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.authorizationCheck: #NOT_REQUIRED</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@EndUserText</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'TechMart Product'</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_Product</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_product</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> product_id     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductId,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">           AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductName,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      category       </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Category,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      price          </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Price,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      currency       </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Currency,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      stock_quantity </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> StockQuantity,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_by     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CreatedBy,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_at     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CreatedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      last_changed_by </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LastChangedBy,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      last_changed_at </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LastChangedAt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>Activate with <strong>Ctrl+F3</strong>.</p>
+<div data-cw-section="output-block"><h3 id="expected-output-data-preview-in-adt">Expected Output (Data Preview in ADT)</h3>
+<p>Right-click the CDS view → <strong>Open With → Data Preview</strong>:</p>
+<pre data-cw-output="true"><code>| ProductId | ProductName | Category    | Price  | Currency | StockQuantity |
+|-----------|-------------|-------------|--------|----------|---------------|
+| WIDGET-A  | Widget Pro  | ELECTRONICS | 49.99  | USD      | 500           |
+| WIDGET-B  | Widget Lite | ELECTRONICS | 29.99  | USD      | 1200          |
+| GADGET-X  | Gadget Max  | GADGETS     | 199.99 | USD      | 85            |
+</code></pre></div>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<p>SAP has strict naming conventions for CDS views:</p>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ZI_</code></td>
+<td>Interface view (base data model)</td>
+<td><code>ZI_TM_Product</code></td>
+</tr>
+<tr>
+<td><code>ZC_</code></td>
+<td>Consumption/Projection view (exposed to UI)</td>
+<td><code>ZC_TM_Product</code></td>
+</tr>
+<tr>
+<td><code>ZR_</code></td>
+<td>Root view for RAP BO</td>
+<td><code>ZR_TM_SalesOrder</code></td>
+</tr>
+<tr>
+<td><code>ZA_</code></td>
+<td>Abstract entity (for action parameters)</td>
+<td><code>ZA_TM_ApproveParams</code></td>
+</tr>
+</tbody>
+</table>
+<p>We use <code>ZI_</code> for now because this is an interface view — the foundation. Later, we'll create <code>ZC_</code> projections that select specific fields from <code>ZI_</code> views for different use cases.</p>
+<h2 id="key-fields">Key Fields</h2>
+<p>The <code>key</code> keyword marks the primary key. CDS requires at least one key field:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> product_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductId,    </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- This is the primary key</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">       AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductName,  </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- Not a key field</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>For composite keys, mark multiple fields:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> order_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> item_id  </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ItemId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ...</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<h2 id="field-aliasing-with-as">Field Aliasing with AS</h2>
+<p>Always alias your fields to CamelCase names. This is mandatory for Fiori compatibility and the convention in CDS:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- Database column name     →  CDS alias (CamelCase)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">   product_id               →  ProductId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">   stock_quantity            →  StockQuantity</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">   last_changed_at           →  LastChangedAt</span></span></code></pre>
+<h2 id="using-cds-views-in-abap-code">Using CDS Views in ABAP Code</h2>
+<p>Once activated, you can SELECT from a CDS view just like a table:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" In an ABAP class</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_Product</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Category </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'ELECTRONICS'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_electronics</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" The field names are the CDS aliases, not the table column names</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_electronics </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_product</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  out->write( </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ls_product-ProductName</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> - </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ls_product-Price</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> { </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ls_product-Currency</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>Widget Pro - 49.99 USD
+Widget Lite - 29.99 USD
+</code></pre></div>
+<p><strong>Important:</strong> In ABAP SQL, you use the CDS alias names (<code>ProductName</code>), not the database column names (<code>name</code>). The CDS view IS the data model.</p>
+<h2 id="code-pushdown--why-cds-is-fast">Code Pushdown — Why CDS Is Fast</h2>
+<p>When you SELECT from a CDS view, the query executes on the database. The ABAP application server never sees the raw data — it gets the result set. This is called <strong>code pushdown</strong> — pushing computation to SAP HANA.</p>
+<pre><code>Classic ABAP approach:
+  Database → raw data → ABAP application server → process → result
+  
+CDS approach:
+  Database → CDS view (joins, filters, calculations) → result → ABAP
+</code></pre>
+<p>For large datasets, this is dramatically faster. TechMart's sales analysis that took 30 seconds with Classic SELECT + LOOP + COLLECT now takes 2 seconds via a CDS view with aggregation.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Forgetting <code>@AccessControl.authorizationCheck</code></strong> — Every CDS view needs this annotation. Use <code>#NOT_REQUIRED</code> during development, then add proper access control later (Lesson 12).</li>
+<li><strong>Using <code>DEFINE VIEW</code> instead of <code>DEFINE VIEW ENTITY</code></strong> — The old syntax requires an SQL view name and has limitations. Always use <code>DEFINE VIEW ENTITY</code>.</li>
+<li><strong>Not aliasing fields</strong> — Unaliased fields use database column names, which are often uppercase with underscores. CamelCase aliases are mandatory for Fiori and RAP compatibility.</li>
+<li><strong>Forgetting to activate</strong> — CDS views must be activated (Ctrl+F3) before they appear in data preview or ABAP SQL.</li>
+<li><strong>Trying to create CDS in SE11</strong> — CDS views can ONLY be created in ADT. They don't exist in the SE11 world.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>CDS views are the data modeling layer of modern ABAP. Everything — RAP, OData, Fiori — is built on CDS.</li>
+<li>Use <code>DEFINE VIEW ENTITY</code> (not the old <code>DEFINE VIEW</code>) for all new development.</li>
+<li>Alias fields to CamelCase with <code>AS</code>. Mark primary keys with <code>key</code>.</li>
+<li>CDS views execute on the database (code pushdown), making them faster than Classic ABAP processing.</li>
+<li>Naming convention: <code>ZI_</code> for interface views, <code>ZC_</code> for consumption views, <code>ZR_</code> for RAP root views.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Our product view is a single-table SELECT. Real applications need to combine data from multiple tables. In Lesson 7, we'll add <strong>joins and associations</strong> — connecting TechMart's products to orders, customers, and categories. You'll learn why CDS associations are fundamentally different (and better) than Classic SQL joins.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"What Are CDS Views? Creating Your First CDS View Entity\",\"description\":\"Learn what Core Data Services (CDS) views are, how they replace DDIC views, and create your first CDS view entity for TechMart's product catalog.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/what-are-cds-views\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Are CDS Views? Creating Your First CDS View Entity\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/what-are-cds-views\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"CDS Views"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"What Are CDS Views? Creating Your First CDS View Entity"}],["$","p",null,{"className":"lesson-header__description","children":"Learn what Core Data Services (CDS) views are, how they replace DDIC views, and create your first CDS view entity for TechMart's product catalog."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/abap-oop-for-rap","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]]}],["$","$L8",null,{"href":"/abap-modern/cds-joins-and-associations","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Joins and Associations in CDS"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"why-cds-views","text":"Why CDS Views?","level":2},{"id":"define-view-vs-define-view-entity","text":"DEFINE VIEW vs DEFINE VIEW ENTITY","level":2},{"id":"creating-your-first-cds-view-entity","text":"Creating Your First CDS View Entity","level":2},{"id":"expected-output-data-preview-in-adt","text":"Expected Output (Data Preview in ADT)","level":3},{"id":"naming-conventions","text":"Naming Conventions","level":2},{"id":"key-fields","text":"Key Fields","level":2},{"id":"field-aliasing-with-as","text":"Field Aliasing with AS","level":2},{"id":"using-cds-views-in-abap-code","text":"Using CDS Views in ABAP Code","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"code-pushdown--why-cds-is-fast","text":"Code Pushdown — Why CDS Is Fast","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

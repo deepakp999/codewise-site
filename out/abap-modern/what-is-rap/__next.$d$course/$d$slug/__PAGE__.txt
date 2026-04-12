@@ -1,0 +1,145 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T1e06,<h1 id="what-is-rap-the-big-picture">What Is RAP? The Big Picture</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What RAP is and why SAP created it</li>
+<li>The three-layer architecture: data model, behavior, service</li>
+<li>The three implementation types: managed, unmanaged, query</li>
+<li>How RAP connects to everything you've learned so far</li>
+<li>A visual map of all RAP artifacts</li>
+</ul>
+</div><h2 id="the-problem-rap-solves">The Problem RAP Solves</h2>
+<p>You've built CDS views that model TechMart's data beautifully. But CDS views are read-only. Users can't create a new sales order, update a status, or delete a cancelled order through a CDS view alone.</p>
+<p>In Classic ABAP, you'd solve this with BAPIs, function modules, and dynpro transactions — writing hundreds of lines of boilerplate for CRUD operations, locking, authorization, validation, and error handling.</p>
+<p>RAP eliminates that boilerplate. You define WHAT your business object does (create, update, delete, validate, execute actions), and the framework handles HOW — the OData service generation, the locking mechanism, the draft handling, the transaction management.</p>
+<h2 id="the-three-layer-architecture">The Three-Layer Architecture</h2>
+<p>Every RAP application has three layers:</p>
+<pre><code>┌──────────────────────────────────────────┐
+│  Layer 3: SERVICE                        │
+│  Service Definition + Service Binding    │
+│  → Exposes the BO as OData V2/V4        │
+│  → Consumed by Fiori, external systems   │
+├──────────────────────────────────────────┤
+│  Layer 2: BEHAVIOR                       │
+│  Behavior Definition + Implementation    │
+│  → Defines CRUD, validations, actions    │
+│  → Business logic lives here             │
+├──────────────────────────────────────────┤
+│  Layer 1: DATA MODEL                     │
+│  CDS View Entities (Interface + Project) │
+│  → The foundation you built in Module 2  │
+│  → Compositions define the BO structure  │
+└──────────────────────────────────────────┘
+</code></pre>
+<p>You've already built Layer 1. Modules 3 and 4 build Layers 2 and 3.</p>
+<h2 id="the-three-implementation-types">The Three Implementation Types</h2>
+<p>RAP offers three patterns for different scenarios:</p>
+<p><strong>Managed (this course's focus):</strong>
+The framework handles everything — database operations, locking, numbering, draft. You write only business logic (validations, actions, determinations). Best for new applications.</p>
+<pre><code>You define:  "Sales Order has CRUD, validate customer, action approve"
+RAP does:    INSERT/UPDATE/DELETE to database, lock handling, OData plumbing
+</code></pre>
+<p><strong>Unmanaged:</strong>
+You handle database operations yourself. The framework provides the OData service and transaction framework, but you write the save logic. Best for wrapping existing code (BAPIs, legacy persistence).</p>
+<pre><code>You define:  "Sales Order has CRUD" + you implement the SAVE method
+RAP does:    OData plumbing, transaction coordination
+You do:      INSERT/UPDATE/DELETE to database in your save method
+</code></pre>
+<p><strong>Query:</strong>
+Read-only. No CRUD, no behavior. Used for analytical queries, search results, or data that comes from non-ABAP sources. Best for reporting views.</p>
+<pre><code>You define:  "Product Report has read access"
+RAP does:    OData query service
+No create, update, or delete
+</code></pre>
+<p>For TechMart's Sales Order app, we'll use <strong>managed</strong> — it's the most productive and the recommended approach for new development.</p>
+<h2 id="the-artifact-map">The Artifact Map</h2>
+<p>Here's every artifact in a complete RAP application. Don't memorize this — we'll build each one step by step:</p>
+<pre><code>ZI_TM_SalesOrder (Interface CDS View Entity)
+    ↓ defines data model + compositions
+ZI_TM_SalesOrderItem (Interface CDS View Entity - child)
+    ↓
+ZC_TM_SalesOrder (Projection CDS View Entity)
+    ↓ selects fields for this specific app
+ZC_TM_SalesOrderItem (Projection CDS View Entity - child)
+    ↓
+Behavior Definition: ZI_TM_SalesOrder
+    ↓ defines CRUD, validations, actions
+Behavior Projection: ZC_TM_SalesOrder
+    ↓ exposes which behaviors this app uses
+Behavior Implementation: zbp_i_tm_salesorder
+    ↓ ABAP class with business logic
+Service Definition: ZSD_TM_SALESORDER
+    ↓ lists which entities to expose
+Service Binding: ZSB_TM_SALESORDER_V4
+    ↓ binds to OData V4 protocol
+    ↓
+Fiori Elements App (auto-generated from annotations)
+</code></pre>
+<p>That's 10+ artifacts, but each one is small and focused. The framework generates skeletons for most of them.</p>
+<h2 id="how-it-connects-to-what-you-know">How It Connects to What You Know</h2>
+<table>
+<thead>
+<tr>
+<th>You've already learned</th>
+<th>How it maps to RAP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDS view entities (L06)</td>
+<td>= Layer 1 data model</td>
+</tr>
+<tr>
+<td>Compositions (L10)</td>
+<td>= BO structure (root + children)</td>
+</tr>
+<tr>
+<td>Associations (L07)</td>
+<td>= Value helps and navigation</td>
+</tr>
+<tr>
+<td>Annotations (L08)</td>
+<td>= Fiori UI generation</td>
+</tr>
+<tr>
+<td>Access control (L12)</td>
+<td>= Authorization layer</td>
+</tr>
+<tr>
+<td>OOP interfaces (L05)</td>
+<td>= Behavior implementation pattern</td>
+</tr>
+<tr>
+<td>Modern syntax (L04)</td>
+<td>= Used in all implementation code</td>
+</tr>
+</tbody>
+</table>
+<p>RAP is not a new concept — it's the integration layer that connects everything you've already built.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Trying to build RAP without understanding CDS</strong> — RAP is built ON CDS. If compositions, associations, and annotations are unclear, go back to Module 2.</li>
+<li><strong>Starting with unmanaged</strong> — Unmanaged is for legacy integration. Start with managed. It's simpler and teaches the patterns better.</li>
+<li><strong>Thinking RAP replaces ABAP</strong> — RAP is a framework written in ABAP. Your business logic is still ABAP code in classes. RAP just provides the structure.</li>
+<li><strong>Skipping the projection layer</strong> — You could expose interface views directly, but projections give you flexibility: one interface view, multiple projections for different apps.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>RAP is SAP's strategic framework for building transactional business applications in ABAP Cloud.</li>
+<li>Three layers: data model (CDS), behavior (validations/actions), service (OData exposure).</li>
+<li>Three types: managed (framework does persistence), unmanaged (you do persistence), query (read-only).</li>
+<li>RAP integrates everything from Module 2 — CDS views, compositions, annotations, access control — into interactive applications.</li>
+<li>Start with managed. It handles 90% of new application scenarios.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Theory is over. In Lesson 14, we'll <strong>build TechMart's Sales Order app from scratch</strong> — the complete managed RAP business object, from CDS views through behavior definition to Fiori preview. It's the biggest lesson in the course, and by the end, you'll have a working CRUD application.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"What Is RAP? The ABAP RESTful Application Programming Model\",\"description\":\"Understand the RAP architecture, the three implementation types (managed, unmanaged, query), and how CDS views become interactive business applications.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/what-is-rap\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What Is RAP? The ABAP RESTful Application Programming Model\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/what-is-rap\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Fundamentals"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"What Is RAP? The ABAP RESTful Application Programming Model"}],["$","p",null,{"className":"lesson-header__description","children":"Understand the RAP architecture, the three implementation types (managed, unmanaged, query), and how CDS views become interactive business applications."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/cds-access-control","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"CDS Access Control — Authorization at the View Level"}]]}],["$","$L8",null,{"href":"/abap-modern/rap-managed-bo","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Building Your First RAP Managed Business Object"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-problem-rap-solves","text":"The Problem RAP Solves","level":2},{"id":"the-three-layer-architecture","text":"The Three-Layer Architecture","level":2},{"id":"the-three-implementation-types","text":"The Three Implementation Types","level":2},{"id":"the-artifact-map","text":"The Artifact Map","level":2},{"id":"how-it-connects-to-what-you-know","text":"How It Connects to What You Know","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

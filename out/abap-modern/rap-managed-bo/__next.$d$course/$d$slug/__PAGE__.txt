@@ -1,0 +1,295 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T671b,<h1 id="building-your-first-rap-managed-business-object">Building Your First RAP Managed Business Object</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How to create database tables for RAP (with UUID keys)</li>
+<li>Building the complete CDS view stack (interface + projection)</li>
+<li>Writing a behavior definition</li>
+<li>Creating a behavior implementation class</li>
+<li>The managed BO end-to-end flow</li>
+</ul>
+</div><h2 id="step-1--database-tables">Step 1 — Database Tables</h2>
+<p>RAP managed BOs work best with UUID primary keys (not sequential numbers). This avoids numbering conflicts in concurrent systems:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">@EndUserText.label : </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'TechMart Sales Order'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">@AbapCatalog.tableCategory : #TRANSPARENT</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">@AbapCatalog.deliveryClass : #A</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DEFINE TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> client</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">       : abap.clnt </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">NOT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> NULL;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> order_uuid   : sysuuid_x16 </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">NOT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> NULL;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      order_id     : abap.numc(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">10</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      customer_id  : abap.char(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">10</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      order_date   : abap.dats;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      status       : abap.char(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      amount       : abap.curr(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">15</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      currency</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">     : abap.cuky;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_by   : syuname;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_at   : timestampl;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      last_changed_by : syuname;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      last_changed_at : timestampl;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      local_last_changed_at : timestampl;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p><strong>Why UUID?</strong> In managed RAP, the framework creates records before the user clicks "save" (especially with draft). Sequential numbering would create gaps and conflicts. UUIDs are globally unique — no conflicts, no locks needed for number generation.</p>
+<h2 id="step-2--interface-cds-views">Step 2 — Interface CDS Views</h2>
+<p>You already created these in Module 2. Here's the final version with administrative fields that RAP needs:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@AccessControl</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.authorizationCheck: #NOT_REQUIRED</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@EndUserText</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'TechMart Sales Order'</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ROOT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> VIEW ENTITY ZI_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  COMPOSITION </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[0..*]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OF ZI_TM_SalesOrderItem </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> _Items</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ASSOCIATION </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[0..1]</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_Customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> _Customer</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ON</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">projection</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">CustomerId</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> _Customer</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">CustomerId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> order_uuid         </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderUUID,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      order_id           </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      customer_id        </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CustomerId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      order_date         </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderDate,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      status</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">             AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> Status</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      amount             </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> TotalAmount,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      currency           </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Currency,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Semantics</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">user</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">createdBy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_by         </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CreatedBy,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Semantics</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">systemDateTime</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">createdAt</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_at         </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CreatedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Semantics</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">user</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">lastChangedBy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      last_changed_by    </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LastChangedBy,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Semantics</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">systemDateTime</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">lastChangedAt</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      last_changed_at    </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LastChangedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Semantics</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">systemDateTime</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">localInstanceLastChangedAt</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      local_last_changed_at </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LocalLastChangedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      _Items,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      _Customer</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>Notice the <strong><code>ROOT</code></strong> keyword — <code>DEFINE ROOT VIEW ENTITY</code>. This tells RAP this entity is the root of the business object.</p>
+<p>The <code>@Semantics</code> annotations on administrative fields tell the managed framework to auto-fill them. You never write code to set <code>CreatedBy</code> or <code>LastChangedAt</code> — the framework handles it.</p>
+<h2 id="step-3--behavior-definition">Step 3 — Behavior Definition</h2>
+<p>In ADT: Right-click <code>ZI_TM_SalesOrder</code> → <strong>New Behavior Definition</strong></p>
+<pre><code>managed implementation in class zbp_i_tm_salesorder unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZI_TM_SalesOrder alias SalesOrder
+persistent table ztm_salesorder
+draft table ztm_so_d
+lock master total etag LastChangedAt
+authorization master ( global )
+etag master LocalLastChangedAt
+{
+  field ( readonly ) OrderUUID, CreatedBy, CreatedAt,
+                     LastChangedBy, LastChangedAt, LocalLastChangedAt;
+  field ( numbering : managed ) OrderUUID;
+
+  create;
+  update;
+  delete;
+
+  association _Items { create; with draft; }
+
+  mapping for ztm_salesorder corresponding
+  {
+    OrderUUID = order_uuid;
+    OrderId = order_id;
+    CustomerId = customer_id;
+    OrderDate = order_date;
+    Status = status;
+    TotalAmount = amount;
+    Currency = currency;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}
+
+define behavior for ZI_TM_SalesOrderItem alias SalesOrderItem
+persistent table ztm_soitem
+draft table ztm_soi_d
+lock dependent by _SalesOrder
+authorization dependent by _SalesOrder
+etag master LocalLastChangedAt
+{
+  field ( readonly ) OrderUUID, ItemUUID;
+  field ( numbering : managed ) ItemUUID;
+
+  update;
+  delete;
+
+  association _SalesOrder { with draft; }
+
+  mapping for ztm_soitem corresponding
+  {
+    ItemUUID = item_uuid;
+    OrderUUID = order_uuid;
+    ProductId = product_id;
+    Quantity = quantity;
+    Price = price;
+    Currency = currency;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}
+</code></pre>
+<p>Let's break down the critical lines:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>managed implementation in class</code></td>
+<td>Framework handles persistence</td>
+</tr>
+<tr>
+<td><code>strict ( 2 )</code></td>
+<td>Enable latest RAP feature set</td>
+</tr>
+<tr>
+<td><code>with draft</code></td>
+<td>Enable draft/autosave</td>
+</tr>
+<tr>
+<td><code>persistent table</code></td>
+<td>Where to store data</td>
+</tr>
+<tr>
+<td><code>draft table</code></td>
+<td>Where to store draft data</td>
+</tr>
+<tr>
+<td><code>lock master</code></td>
+<td>This entity controls locking</td>
+</tr>
+<tr>
+<td><code>etag master</code></td>
+<td>Optimistic concurrency field</td>
+</tr>
+<tr>
+<td><code>field ( readonly )</code></td>
+<td>Users can't edit these fields</td>
+</tr>
+<tr>
+<td><code>field ( numbering : managed )</code></td>
+<td>Framework generates UUIDs</td>
+</tr>
+<tr>
+<td><code>create; update; delete;</code></td>
+<td>Enable CRUD operations</td>
+</tr>
+<tr>
+<td><code>association _Items { create; }</code></td>
+<td>Allow creating children from parent</td>
+</tr>
+<tr>
+<td><code>mapping for ... corresponding</code></td>
+<td>Map CDS fields to table columns</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-4--behavior-implementation-class">Step 4 — Behavior Implementation Class</h2>
+<p>ADT can generate the class skeleton. Click the quick fix (Ctrl+1) on the behavior definition → "Create behavior implementation class."</p>
+<p>For a basic managed BO with no custom logic yet, the class is nearly empty:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zbp_i_tm_salesorder</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION PUBLIC ABSTRACT FINAL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  FOR BEHAVIOR OF</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> ZI_TM_SalesOrder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zbp_i_tm_salesorder</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>That's it. The managed framework handles all CRUD operations automatically. We'll add validations, determinations, and actions in Module 4.</p>
+<h2 id="step-5--projection-views-and-behavior">Step 5 — Projection Views and Behavior</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@AccessControl</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.authorizationCheck: #NOT_REQUIRED</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@EndUserText</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'Sales Order - App Projection'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@Metadata</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.allowExtensions: true</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ROOT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> VIEW ENTITY ZC_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PROVIDER</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CONTRACT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> transactional_query</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> PROJECTION </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ON</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderUUID,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      CustomerId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      OrderDate,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      Status</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      TotalAmount,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      Currency,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      CreatedBy,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      CreatedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      LastChangedBy,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      LastChangedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      LocalLastChangedAt,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      _Items : REDIRECTED </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> COMPOSITION CHILD ZC_TM_SalesOrderItem,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      _Customer</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>Behavior projection (separate file):</p>
+<pre><code>projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_TM_SalesOrder alias SalesOrder
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Items { create; with draft; }
+}
+
+define behavior for ZC_TM_SalesOrderItem alias SalesOrderItem
+use etag
+{
+  use update;
+  use delete;
+
+  use association _SalesOrder { with draft; }
+}
+</code></pre>
+<p>The projection behavior uses <code>use</code> instead of defining new operations — it selects which behaviors from the interface layer this app exposes.</p>
+<h2 id="the-complete-artifact-list">The Complete Artifact List</h2>
+<p>After this lesson, you've created:</p>
+<pre><code>✓ ztm_salesorder        (database table)
+✓ ztm_soitem            (database table)
+✓ ztm_so_d              (draft table - auto-generated)
+✓ ztm_soi_d             (draft table - auto-generated)
+✓ ZI_TM_SalesOrder      (interface CDS - root)
+✓ ZI_TM_SalesOrderItem  (interface CDS - child)
+✓ ZC_TM_SalesOrder      (projection CDS - root)
+✓ ZC_TM_SalesOrderItem  (projection CDS - child)
+✓ Behavior Definition    (on ZI_TM_SalesOrder)
+✓ Behavior Projection    (on ZC_TM_SalesOrder)
+✓ zbp_i_tm_salesorder   (behavior implementation class)
+</code></pre>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Forgetting the mapping block</strong> — Without <code>mapping for ... corresponding</code>, the framework can't save CDS field values to table columns. Activation fails.</li>
+<li><strong>Missing administrative fields</strong> — <code>@Semantics.user.createdBy</code>, <code>@Semantics.systemDateTime.createdAt</code>, etc. are required for managed BOs with draft. Skip them and draft breaks.</li>
+<li><strong>Using sequential keys instead of UUIDs</strong> — Managed numbering works with UUIDs. If you want a human-readable order number, use a determination (Lesson 19) to generate it after creation.</li>
+<li><strong>Forgetting <code>lock dependent by</code></strong> — Child entities must declare their lock dependency on the parent. Without it, concurrent editing can corrupt data.</li>
+<li><strong>Not creating the draft tables</strong> — The <code>draft table</code> in the behavior definition must exist. ADT can generate them — use the quick fix.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>A managed RAP BO has: database tables, interface CDS views with compositions, behavior definition, behavior implementation class, projection views, and behavior projection.</li>
+<li>The managed framework handles persistence (INSERT/UPDATE/DELETE), locking, draft, UUID numbering, and administrative fields automatically.</li>
+<li><code>DEFINE ROOT VIEW ENTITY</code> marks the BO root. Children use <code>COMPOSITION</code>/<code>TO PARENT</code>.</li>
+<li>The behavior definition is the central artifact — it declares CRUD, field properties, and maps CDS fields to table columns.</li>
+<li>For a basic managed BO with no custom logic, the implementation class is nearly empty. The framework does the work.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>You've built the BO but can't see it yet. In Lesson 15, we'll create the <strong>service definition and service binding</strong> — exposing TechMart's Sales Order as an OData V4 service and previewing it in Fiori Elements.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Building Your First RAP Managed Business Object\",\"description\":\"Step-by-step guide to building a complete managed RAP business object for TechMart's Sales Order app — from CDS views to Fiori preview.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-managed-bo\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Building Your First RAP Managed Business Object\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-managed-bo\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Fundamentals"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Building Your First RAP Managed Business Object"}],["$","p",null,{"className":"lesson-header__description","children":"Step-by-step guide to building a complete managed RAP business object for TechMart's Sales Order app — from CDS views to Fiori preview."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/what-is-rap","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"What Is RAP? The Big Picture"}]]}],["$","$L8",null,{"href":"/abap-modern/rap-service-definition-binding","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Service Definition and Service Binding — Exposing Your App"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"step-1--database-tables","text":"Step 1 — Database Tables","level":2},{"id":"step-2--interface-cds-views","text":"Step 2 — Interface CDS Views","level":2},{"id":"step-3--behavior-definition","text":"Step 3 — Behavior Definition","level":2},{"id":"step-4--behavior-implementation-class","text":"Step 4 — Behavior Implementation Class","level":2},{"id":"step-5--projection-views-and-behavior","text":"Step 5 — Projection Views and Behavior","level":2},{"id":"the-complete-artifact-list","text":"The Complete Artifact List","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

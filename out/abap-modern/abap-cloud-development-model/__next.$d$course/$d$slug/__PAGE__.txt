@@ -1,0 +1,149 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T4ba0,<h1 id="the-abap-cloud-development-model">The ABAP Cloud Development Model</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What the ABAP Cloud development model is and where it applies</li>
+<li>What "released APIs" are and why they matter</li>
+<li>How the ABAP Test Cockpit (ATC) enforces the rules</li>
+<li>The clean core extensibility levels (A through D)</li>
+<li>What you CAN and CAN'T do in ABAP Cloud</li>
+</ul>
+</div><h2 id="the-rulebook">The Rulebook</h2>
+<p>In Classic ABAP, you could do almost anything. Access any SAP table. Call any function module. Modify standard includes. It worked, but it created a maintenance nightmare — every SAP upgrade could break your custom code.</p>
+<p>ABAP Cloud is the opposite approach: <strong>you can only use what SAP explicitly allows.</strong></p>
+<p>Think of it as the difference between a wild-west town and a gated community. In the wild west (Classic ABAP), you build wherever you want, however you want. In the gated community (ABAP Cloud), there are building codes, approved contractors, and a homeowners' association (the ABAP Test Cockpit) that checks everything.</p>
+<h2 id="where-does-abap-cloud-apply">Where Does ABAP Cloud Apply?</h2>
+<p>ABAP Cloud is mandatory in:</p>
+<ul>
+<li><strong>SAP BTP ABAP Environment</strong> — the cloud-only ABAP runtime</li>
+<li><strong>S/4HANA Cloud Public Edition</strong> — SAP's SaaS offering</li>
+</ul>
+<p>ABAP Cloud is optional (but recommended) in:</p>
+<ul>
+<li><strong>S/4HANA Cloud Private Edition</strong> — hosted cloud, customer-managed</li>
+<li><strong>S/4HANA On-Premise</strong> — traditional installation</li>
+</ul>
+<p>TechMart is migrating to S/4HANA Cloud, so ABAP Cloud is mandatory for us. But even if your company is on-premise, learning ABAP Cloud now means your code is future-proof.</p>
+<h2 id="released-apis--the-core-concept">Released APIs — The Core Concept</h2>
+<p>In Classic ABAP, if you needed customer data, you might write:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Classic approach — WORKS, but NOT cloud-safe</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> kna1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_customers</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> land1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'US'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>This accesses <code>KNA1</code> directly — an SAP internal table. If SAP restructures this table in a future release, your code breaks.</p>
+<p>In ABAP Cloud, you use a <strong>released API</strong> instead:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" ABAP Cloud approach — uses a released CDS view</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> I_Customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_customers</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHERE</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> Country</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'US'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p><code>I_Customer</code> is a CDS view released by SAP. SAP guarantees its interface stability. Even if SAP restructures the underlying tables, <code>I_Customer</code> continues to work.</p>
+<p><strong>How to know if something is released:</strong> In ADT, every SAP object has an "API State" property. If it says <code>Released</code> with a stability contract (C1 = use in cloud, C2 = use in key user extensibility), it's safe to use. If it doesn't, it's off-limits in ABAP Cloud.</p>
+<div data-cw-section="output-block"><h3 id="expected-output-api-state-in-adt">Expected Output (API State in ADT)</h3>
+<p>When you open a released CDS view in ADT, you'll see:</p>
+<pre data-cw-output="true"><code>Properties:
+  API State: Released
+  Stability Contract: C1 (Use in Cloud Development)
+  Visibility: Public
+  Release State: Released
+</code></pre></div>
+<p>If you try to use an unreleased object, the ATC flags it immediately.</p>
+<h2 id="the-abap-test-cockpit-atc--your-gatekeeper">The ABAP Test Cockpit (ATC) — Your Gatekeeper</h2>
+<p>The ATC is a static code analysis tool. In ABAP Cloud, it runs automatically and <strong>blocks transport</strong> if your code violates the rules.</p>
+<p>Key checks the ATC performs:</p>
+<ul>
+<li><strong>Released API check</strong> — Did you use only released objects?</li>
+<li><strong>Obsolete syntax check</strong> — Did you use deprecated statements?</li>
+<li><strong>Clean ABAP check</strong> — Does your code follow naming conventions and best practices?</li>
+</ul>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" This code will FAIL the ATC in ABAP Cloud:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: lv_name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#005CC5;--shiki-dark:#ABB2BF"> c</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LENGTH</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 30</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.       </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Obsolete: use CHARACTER or STRING</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">MOVE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_input</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_name.             </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Obsolete: use assignment operator</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FUNCTION</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'BAPI_CUSTOMER_GETLIST'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">. </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Not released for cloud</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> kna1.                    </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Not released for cloud</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" This code will PASS the ATC:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lv_name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_input.                      </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Inline declaration</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> I_Customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).  </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Released CDS view</span></span></code></pre>
+<p>Think of the ATC as the compiler for cloud-readiness. You wouldn't ship code that doesn't compile. In ABAP Cloud, you can't ship code that doesn't pass ATC.</p>
+<h2 id="clean-core-extensibility-levels">Clean Core Extensibility Levels</h2>
+<p>SAP introduced a graduated model for classifying custom code. This helps companies plan their migration:</p>
+<p><strong>Level A — Fully Cloud-Ready</strong></p>
+<ul>
+<li>Uses only released APIs (C1 contract)</li>
+<li>Built with ABAP Cloud, CDS, and RAP</li>
+<li>Upgrade-safe, no risk during quarterly updates</li>
+<li><em>This is what we build in this course</em></li>
+</ul>
+<p><strong>Level B — Stable Classic</strong></p>
+<ul>
+<li>Uses documented, generally stable SAP APIs</li>
+<li>Not officially released, but unlikely to break</li>
+<li>Acceptable with governance sign-off</li>
+<li>Requires monitoring during upgrades</li>
+</ul>
+<p><strong>Level C — Risky Classic</strong></p>
+<ul>
+<li>Accesses SAP internal objects</li>
+<li>Meaningful upgrade risk</li>
+<li>Should be on a remediation roadmap</li>
+</ul>
+<p><strong>Level D — Dangerous</strong></p>
+<ul>
+<li>Modifications to SAP standard code</li>
+<li>Implicit enhancements, direct writes to SAP tables</li>
+<li>Severe upgrade risk</li>
+<li>Should have a retirement timeline</li>
+</ul>
+<p>TechMart's goal: all new development at Level A, existing code assessed and migrated from C/D → A/B over time.</p>
+<h2 id="what-you-cant-do-in-abap-cloud">What You CAN'T Do in ABAP Cloud</h2>
+<p>These Classic ABAP features are not available:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" NOT available in ABAP Cloud:</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - SE80, SE38, SE37, SE11 (SAP GUI transactions)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - CALL FUNCTION (classic function modules)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - FORM/ENDFORM (subroutines)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - WRITE statements (classic list output)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Dynpro programming (MODULE, PBO, PAI)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Direct access to unreleased SAP tables</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Classic BAdI calls (use new BAdI framework)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - EXEC SQL (native SQL)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Memory export/import (EXPORT TO MEMORY)</span></span></code></pre>
+<h2 id="what-you-can-do-in-abap-cloud">What You CAN Do in ABAP Cloud</h2>
+<p>Everything you need for modern application development:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Available in ABAP Cloud:</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - CDS view entities (data modeling)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - RAP business objects (transactional apps)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - ABAP classes and interfaces (OOP)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Modern ABAP SQL (enhanced Open SQL)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - ABAP Unit tests</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Released SAP APIs and extension points</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Released BADIs</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Background processing (via released APIs)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Exception handling (TRY/CATCH)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - String processing, date/time functions</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - Internal tables with modern syntax</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" - HTTP/REST client (via released classes)</span></span></code></pre>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>"Released APIs don't cover my use case"</strong> — This is sometimes true in early adoption. SAP releases new APIs with each quarterly update. Check the SAP API Business Hub for the latest. If your API truly doesn't exist, Level B (stable classic) is acceptable with governance sign-off.</li>
+<li><strong>"ATC is just a recommendation I can ignore"</strong> — In ABAP Cloud, ATC violations block transport. You literally cannot deploy non-compliant code. On-premise, it's configurable — but treat it as mandatory.</li>
+<li><strong>"I'll learn clean core later"</strong> — Every line of non-compliant code you write today is technical debt tomorrow. Start clean, stay clean.</li>
+<li><strong>Confusing ABAP Cloud with SAP BTP</strong> — ABAP Cloud is a development model (a set of rules). SAP BTP is a platform. You can use ABAP Cloud on BTP, on S/4HANA Cloud, and on S/4HANA on-premise. They're different things.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>ABAP Cloud restricts you to released APIs — SAP's guarantee of upgrade stability.</li>
+<li>The ABAP Test Cockpit (ATC) enforces these rules automatically and blocks non-compliant code from transport.</li>
+<li>Clean Core extensibility ranges from Level A (fully cloud-ready) to Level D (dangerous modifications). Aim for Level A.</li>
+<li>You lose classic tools (SE80, function modules, dynpros) but gain a safer, more productive development model.</li>
+<li>This course builds everything at Level A — fully cloud-ready, fully upgrade-safe.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>In Lesson 3, we'll <strong>set up your development environment</strong> — install Eclipse, add ABAP Development Tools (ADT), connect to a free SAP BTP ABAP Environment trial, and write your first "Hello World" in ABAP Cloud. The tooling shift from SE80 to ADT is the first thing you'll feel as a Classic developer.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"The ABAP Cloud Development Model — Rules, Released APIs, and Clean Core\",\"description\":\"Learn the ABAP Cloud development model, understand released APIs, the ABAP Test Cockpit, and the clean core extensibility levels that govern modern SAP development.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/abap-cloud-development-model\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"The ABAP Cloud Development Model — Rules, Released APIs, and Clean Core\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/abap-cloud-development-model\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"The Modern ABAP Landscape"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"The ABAP Cloud Development Model — Rules, Released APIs, and Clean Core"}],["$","p",null,{"className":"lesson-header__description","children":"Learn the ABAP Cloud development model, understand released APIs, the ABAP Test Cockpit, and the clean core extensibility levels that govern modern SAP development."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/why-modern-abap","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Why Modern ABAP? Classic vs Cloud Development Explained"}]]}],["$","$L8",null,{"href":"/abap-modern/setting-up-adt","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Setting Up ADT (Eclipse) for ABAP Development"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-rulebook","text":"The Rulebook","level":2},{"id":"where-does-abap-cloud-apply","text":"Where Does ABAP Cloud Apply?","level":2},{"id":"released-apis--the-core-concept","text":"Released APIs — The Core Concept","level":2},{"id":"expected-output-api-state-in-adt","text":"Expected Output (API State in ADT)","level":3},{"id":"the-abap-test-cockpit-atc--your-gatekeeper","text":"The ABAP Test Cockpit (ATC) — Your Gatekeeper","level":2},{"id":"clean-core-extensibility-levels","text":"Clean Core Extensibility Levels","level":2},{"id":"what-you-cant-do-in-abap-cloud","text":"What You CAN'T Do in ABAP Cloud","level":2},{"id":"what-you-can-do-in-abap-cloud","text":"What You CAN Do in ABAP Cloud","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

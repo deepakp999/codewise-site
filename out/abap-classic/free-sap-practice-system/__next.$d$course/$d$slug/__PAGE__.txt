@@ -1,0 +1,154 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T2f47,<h1 id="setting-up-a-free-sap-practice-system">Setting Up a Free SAP Practice System</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Three free options for practicing ABAP</li>
+<li>How to set up the SAP BTP Trial (recommended)</li>
+<li>How to access the ABAP Development Tools (Eclipse ADT)</li>
+<li>Alternative options if BTP Trial doesn't work for you</li>
+</ul>
+</div><h2 id="the-access-problem">The Access Problem</h2>
+<p>Unlike Python where you install it in 2 minutes, SAP systems are enterprise software — they normally cost millions to license. But SAP provides several free options for learning.</p>
+<p>Here are your three options, ranked by recommendation:</p>
+<h2 id="option-1-sap-btp-trial-recommended">Option 1: SAP BTP Trial (Recommended)</h2>
+<p>SAP Business Technology Platform (BTP) offers a free trial environment that includes an ABAP development environment.</p>
+<h3 id="step-1-create-a-free-sap-account">Step 1: Create a Free SAP Account</h3>
+<ol>
+<li>Go to <a href="https://account.sap.com">account.sap.com</a></li>
+<li>Click "Register" and fill in your details</li>
+<li>Verify your email address</li>
+<li>You now have an SAP Universal ID</li>
+</ol>
+<h3 id="step-2-access-btp-trial">Step 2: Access BTP Trial</h3>
+<ol>
+<li>Go to <a href="https://account.hanatrial.ondemand.com">account.hanatrial.ondemand.com</a></li>
+<li>Log in with your SAP Universal ID</li>
+<li>Select the datacenter closest to you</li>
+<li>Click "Continue" to provision your trial account (takes a few minutes)</li>
+</ol>
+<h3 id="step-3-create-an-abap-trial-instance">Step 3: Create an ABAP Trial Instance</h3>
+<ol>
+<li>In the BTP Cockpit, navigate to "Service Marketplace"</li>
+<li>Search for "ABAP environment" or "ABAP Trial"</li>
+<li>Click "Create" to provision an ABAP trial instance</li>
+<li>Wait 10-15 minutes for provisioning to complete</li>
+</ol>
+<h3 id="step-4-install-eclipse-adt">Step 4: Install Eclipse ADT</h3>
+<p>The BTP ABAP environment uses Eclipse with SAP's ABAP Development Tools (ADT) — not the traditional SAP GUI.</p>
+<ol>
+<li>Download Eclipse from <a href="https://www.eclipse.org/downloads/">eclipse.org</a> (Eclipse IDE for Java Developers)</li>
+<li>Open Eclipse, go to Help → Install New Software</li>
+<li>Add the SAP Development Tools update site: <code>https://tools.hana.ondemand.com/latest</code></li>
+<li>Select "ABAP Development Tools" and install</li>
+<li>Restart Eclipse</li>
+</ol>
+<h3 id="step-5-connect-to-your-abap-trial">Step 5: Connect to Your ABAP Trial</h3>
+<ol>
+<li>In Eclipse, go to File → New → ABAP Cloud Project</li>
+<li>Select "SAP BTP ABAP Environment"</li>
+<li>Log in with your SAP account</li>
+<li>Select your trial instance</li>
+<li>You're connected — you can now create and run ABAP programs</li>
+</ol>
+<h3 id="btp-trial-limitations">BTP Trial Limitations</h3>
+<ul>
+<li>Trial accounts expire after 90 days (you can renew)</li>
+<li>Limited resource allocation</li>
+<li>Some features available in paid editions are restricted</li>
+<li>This is "ABAP Cloud" — some classic ABAP features (like SE38, SE11) are not available. You use Eclipse ADT instead.</li>
+</ul>
+<p><strong>Important note:</strong> The BTP Trial runs modern ABAP (ABAP Cloud). Some classic ABAP statements taught in this course may not be available in the cloud environment. We'll note these differences as we go. For learning the fundamentals — variables, internal tables, control flow, classes — the BTP Trial works perfectly.</p>
+<h2 id="option-2-sap-learning-hub--sap-sandbox">Option 2: SAP Learning Hub / SAP Sandbox</h2>
+<p>SAP provides sandbox systems through their learning programs:</p>
+<ol>
+<li>Go to <a href="https://learning.sap.com">learning.sap.com</a></li>
+<li>Browse the free learning journeys</li>
+<li>Some courses include access to a practice SAP system</li>
+<li>Look for "Acquiring Core ABAP Skills" — it includes guided hands-on exercises</li>
+</ol>
+<p>This option gives you access to a more traditional SAP system (closer to what companies actually run), but availability depends on the specific course you enroll in.</p>
+<h2 id="option-3-third-party-sap-access">Option 3: Third-Party SAP Access</h2>
+<p>Several companies offer low-cost SAP system access for learners:</p>
+<ul>
+<li><strong>Michael Management</strong> — SAP training with system access included</li>
+<li><strong>ERPsim</strong> — educational SAP simulations</li>
+<li><strong>SAP S/4HANA Fully Activated Appliance</strong> — available on SAP Cloud Appliance Library (requires a cloud account, runs for free for limited hours)</li>
+</ul>
+<p>These are paid options but relatively affordable ($10-50/month) if the free options don't meet your needs.</p>
+<h2 id="which-option-should-i-choose">Which Option Should I Choose?</h2>
+<pre><code>Situation                               Best Option
+───────────────────────────────────     ──────────────
+Just starting, want to try ABAP         SAP BTP Trial (free, modern)
+Need classic SAP GUI experience         SAP Learning Hub sandbox
+Employer provides SAP access            Use your company's DEV system
+Want full S/4HANA experience            Cloud Appliance Library
+</code></pre>
+<p>For this course, we recommend the SAP BTP Trial. The syntax and concepts are identical whether you use Eclipse ADT or SAP GUI SE38. We'll show code that works in both environments.</p>
+<h2 id="working-without-a-system">Working Without a System</h2>
+<p>If you can't access any SAP system right now, you can still learn:</p>
+<ul>
+<li>Read through the lessons and understand the concepts</li>
+<li>Study the code examples and expected output</li>
+<li>Take notes on the syntax and patterns</li>
+<li>Set up system access when you're ready to practice hands-on</li>
+</ul>
+<p>Many of the early lessons (variables, control flow, internal tables) teach concepts that translate directly from Python/Java. Understanding the theory first makes hands-on practice more productive.</p>
+<h2 id="eclipse-adt-vs-sap-gui--quick-comparison">Eclipse ADT vs SAP GUI — Quick Comparison</h2>
+<p>If you come from the modern development world, Eclipse ADT will feel familiar:</p>
+<pre><code>Feature              SAP GUI (SE38/SE80)    Eclipse ADT
+──────────────────   ──────────────────     ──────────────
+IDE                  SAP's own GUI          Eclipse-based
+Code editing         Basic text editor      Syntax highlighting, autocomplete
+Refactoring          Manual                 Built-in refactoring tools
+Version control      Transport system       Transport system + git integration
+Debugging            ABAP Debugger (built-in) ABAP Debugger (in Eclipse)
+Navigation           Transaction codes       Package explorer + search
+Used in              Classic SAP systems     S/4HANA, BTP, modern projects
+</code></pre>
+<p>The ABAP code you write is identical in both environments. The difference is the editor experience. Eclipse ADT is what modern SAP projects use. SAP GUI is what you'll encounter in older systems at companies (which is still most companies in 2026).</p>
+<h2 id="verifying-your-setup">Verifying Your Setup</h2>
+<p>Once you're connected (either via Eclipse ADT or SAP GUI), verify by creating a simple program:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">REPORT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> z_setup_test.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: lv_message</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#005CC5;--shiki-dark:#ABB2BF"> string</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Setup complete! ABAP is working.'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_message.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: lv_date</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#005CC5;--shiki-dark:#ABB2BF"> d</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">lv_date </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> sy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">datum</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.  </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" sy-datum is the current system date</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Today is:'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, lv_date.</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>Setup complete! ABAP is working.
+Today is: 20260412
+</code></pre></div>
+<p>If you see this output, your environment is ready. If you get errors, check:</p>
+<ul>
+<li>Is the program name starting with Z or Y?</li>
+<li>Did you activate (Ctrl+F3) before running (F8)?</li>
+<li>Are you connected to the right system/instance?</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Giving up if the first option doesn't work.</strong> SAP access can be frustrating to set up — it's enterprise software, not a pip install. Try all three options before getting discouraged.</li>
+<li><strong>Expecting SAP GUI for the BTP Trial.</strong> The BTP Trial uses Eclipse ADT, not the classic SAP GUI. The code is the same, but the editor looks different.</li>
+<li><strong>Not bookmarking your access details.</strong> SAP URLs, system IDs, client numbers, and credentials — write them down. You'll need them every time you log in.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>SAP BTP Trial is the fastest free path to an ABAP development environment.</li>
+<li>Eclipse ADT is the modern ABAP IDE — it works with BTP and S/4HANA systems.</li>
+<li>Classic SAP GUI is still used at most companies — you'll learn to work with both.</li>
+<li>All ABAP code in this course works in both Eclipse ADT and SAP GUI environments.</li>
+<li>If you can't access a system right now, study the concepts and code examples — the fundamentals transfer regardless of the environment.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Module 1 is complete! You understand what SAP and ABAP are, how the landscape works, how to navigate the system, and how to write and run a basic program. In <strong>Module 2</strong>, we dive into the ABAP language itself, starting with <strong>Lesson 6: Variables, Data Types, and Constants</strong> — where we'll map everything you know from Python/Java to ABAP's type system.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Setting Up a Free SAP Practice System\",\"description\":\"Get free access to a real SAP system for ABAP development. Covers SAP BTP Trial, SAP Learning Hub, and ABAP Cloud trial options.\",\"url\":\"https://codewise.lumivoxx.com/abap-classic/free-sap-practice-system\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Classic — SAP Programming from Scratch\",\"url\":\"https://codewise.lumivoxx.com/abap-classic\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Classic — SAP Programming from Scratch\",\"item\":\"https://codewise.lumivoxx.com/abap-classic\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Setting Up a Free SAP Practice System\",\"item\":\"https://codewise.lumivoxx.com/abap-classic/free-sap-practice-system\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Classic — SAP Programming from Scratch"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"SAP & ABAP Orientation"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Setting Up a Free SAP Practice System"}],["$","p",null,{"className":"lesson-header__description","children":"Get free access to a real SAP system for ABAP development. Covers SAP BTP Trial, SAP Learning Hub, and ABAP Cloud trial options."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-classic/first-abap-program","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Your First ABAP Program — Hello World in SE38"}]]}],["$","$L8",null,{"href":"/abap-classic/variables-and-data-types","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Variables, Data Types, and Constants in ABAP"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-access-problem","text":"The Access Problem","level":2},{"id":"option-1-sap-btp-trial-recommended","text":"Option 1: SAP BTP Trial (Recommended)","level":2},{"id":"step-1-create-a-free-sap-account","text":"Step 1: Create a Free SAP Account","level":3},{"id":"step-2-access-btp-trial","text":"Step 2: Access BTP Trial","level":3},{"id":"step-3-create-an-abap-trial-instance","text":"Step 3: Create an ABAP Trial Instance","level":3},{"id":"step-4-install-eclipse-adt","text":"Step 4: Install Eclipse ADT","level":3},{"id":"step-5-connect-to-your-abap-trial","text":"Step 5: Connect to Your ABAP Trial","level":3},{"id":"btp-trial-limitations","text":"BTP Trial Limitations","level":3},{"id":"option-2-sap-learning-hub--sap-sandbox","text":"Option 2: SAP Learning Hub / SAP Sandbox","level":2},{"id":"option-3-third-party-sap-access","text":"Option 3: Third-Party SAP Access","level":2},{"id":"which-option-should-i-choose","text":"Which Option Should I Choose?","level":2},{"id":"working-without-a-system","text":"Working Without a System","level":2},{"id":"eclipse-adt-vs-sap-gui--quick-comparison","text":"Eclipse ADT vs SAP GUI — Quick Comparison","level":2},{"id":"verifying-your-setup","text":"Verifying Your Setup","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

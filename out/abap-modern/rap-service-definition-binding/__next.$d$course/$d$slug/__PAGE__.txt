@@ -1,0 +1,110 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T15f9,<h1 id="service-definition-and-service-binding">Service Definition and Service Binding</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What service definitions and service bindings are</li>
+<li>Creating an OData V4 service for TechMart's Sales Order</li>
+<li>Testing with Fiori Elements preview</li>
+<li>The difference between OData V2 and V4</li>
+<li>How annotations drive the generated UI</li>
+</ul>
+</div><h2 id="service-definition--what-to-expose">Service Definition — What to Expose</h2>
+<p>The service definition lists which entities from your projection are available via OData:</p>
+<p>In ADT: Right-click package → <strong>New → Service Definition</strong></p>
+<pre><code>@EndUserText.label: 'TechMart Sales Order Service'
+define service ZSD_TM_SALESORDER {
+  expose ZC_TM_SalesOrder as SalesOrder;
+  expose ZC_TM_SalesOrderItem as SalesOrderItem;
+  expose ZI_TM_Customer as Customer;
+  expose ZI_TM_Product as Product;
+}
+</code></pre>
+<p>You expose projection views (for transactional entities) and interface views (for reference data like Customer and Product). The <code>as</code> alias becomes the entity set name in OData.</p>
+<h2 id="service-binding--how-to-expose">Service Binding — How to Expose</h2>
+<p>The service binding connects the definition to a protocol:</p>
+<p>In ADT: Right-click package → <strong>New → Service Binding</strong></p>
+<ul>
+<li>Name: <code>ZSB_TM_SALESORDER_V4</code></li>
+<li>Binding Type: <strong>OData V4 - UI</strong></li>
+<li>Service Definition: <code>ZSD_TM_SALESORDER</code></li>
+</ul>
+<p>After activation, click <strong>Publish</strong> in the service binding editor. This registers the OData service.</p>
+<p>Then click <strong>Preview</strong> next to the <code>SalesOrder</code> entity set. ADT launches a browser with a fully functional Fiori Elements list report + object page — generated entirely from your CDS annotations.</p>
+<div data-cw-section="output-block"><h3 id="expected-output-fiori-preview">Expected Output (Fiori Preview)</h3>
+<pre data-cw-output="true"><code>┌─────────────────────────────────────────────────────┐
+│  Sales Orders                          [Create] [⋮]  │
+├─────────────────────────────────────────────────────┤
+│  Filters: [Customer ID ▾] [Status ▾]    [Go]  [▾]  │
+├──────┬──────────┬────────┬───────────┬──────────────┤
+│ ID   │ Customer │ Date   │ Status    │ Total Amount │
+├──────┼──────────┼────────┼───────────┼──────────────┤
+│ 1001 │ CUST-42  │ Jan 15 │ New       │ 5,499.99 USD │
+│ 1002 │ CUST-07  │ Mar 20 │ Completed │ 24,000.00 USD│
+└──────┴──────────┴────────┴───────────┴──────────────┘
+</code></pre></div>
+<p>You can create, edit, and delete orders right from this preview. No frontend code written.</p>
+<h2 id="odata-v2-vs-v4">OData V2 vs V4</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>OData V2</th>
+<th>OData V4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft support</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Deep insert (parent+child)</td>
+<td>Limited</td>
+<td>Full support</td>
+</tr>
+<tr>
+<td>Batch requests</td>
+<td>Yes</td>
+<td>Enhanced</td>
+</tr>
+<tr>
+<td>Fiori Elements support</td>
+<td>Full</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>When to use</td>
+<td>Legacy apps, integration</td>
+<td>New apps (recommended)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Default to OData V4</strong> for all new development.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Exposing interface views for transactional entities</strong> — Expose projection views (<code>ZC_</code>) for entities with CRUD. Interface views (<code>ZI_</code>) can be exposed for read-only reference data.</li>
+<li><strong>Forgetting to Publish</strong> — Activating the service binding is not enough. You must click <strong>Publish</strong> to register the OData service.</li>
+<li><strong>Missing UI annotations</strong> — The Fiori preview generates UI from annotations. If your fields have no <code>@UI.lineItem</code>, the list is empty.</li>
+<li><strong>Wrong binding type</strong> — Use "OData V4 - UI" for Fiori apps. "OData V4 - Web API" is for programmatic consumption without UI.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Service definition lists WHICH entities to expose. Service binding defines HOW (OData V2/V4).</li>
+<li>Fiori Elements preview generates a complete UI from CDS annotations — no frontend code.</li>
+<li>Default to OData V4 for new apps.</li>
+<li>Publish the service binding after activation.</li>
+<li>The Fiori preview is your primary testing tool during RAP development.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>The Fiori preview lets users interact with data through the UI. But sometimes you need to manipulate business objects programmatically — in background jobs, integrations, or custom logic. In Lesson 16, we'll learn <strong>EML (Entity Manipulation Language)</strong> — the ABAP way to read, create, update, and delete RAP business objects from code.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Service Definition and Service Binding — Exposing Your RAP App\",\"description\":\"Learn how to create OData services from RAP business objects, bind them to OData V2 or V4, and preview your app in Fiori Elements.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-service-definition-binding\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Service Definition and Service Binding — Exposing Your RAP App\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-service-definition-binding\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Fundamentals"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Service Definition and Service Binding — Exposing Your RAP App"}],["$","p",null,{"className":"lesson-header__description","children":"Learn how to create OData services from RAP business objects, bind them to OData V2 or V4, and preview your app in Fiori Elements."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/rap-managed-bo","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Building Your First RAP Managed Business Object"}]]}],["$","$L8",null,{"href":"/abap-modern/rap-eml","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Entity Manipulation Language (EML) — CRUD Operations in Code"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"service-definition--what-to-expose","text":"Service Definition — What to Expose","level":2},{"id":"service-binding--how-to-expose","text":"Service Binding — How to Expose","level":2},{"id":"expected-output-fiori-preview","text":"Expected Output (Fiori Preview)","level":3},{"id":"odata-v2-vs-v4","text":"OData V2 vs V4","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

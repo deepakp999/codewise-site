@@ -1,0 +1,180 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","rap-extensibility",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","rap-extensibility","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T2af7,<h1 id="extensibility--badis-side-by-side-and-btp-integration">Extensibility — BADIs, Side-by-Side, and BTP Integration</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The extensibility model in ABAP Cloud</li>
+<li>Developer extensibility: on-stack with released BADIs</li>
+<li>Side-by-side extensibility: separate apps on BTP</li>
+<li>Key-user extensibility: no-code extensions</li>
+<li>Choosing the right extensibility approach</li>
+</ul>
+</div><h2 id="techmarts-extensibility-challenge">TechMart's Extensibility Challenge</h2>
+<p>TechMart acquires "GadgetWorld." GadgetWorld needs additional fields on the Sales Order — a warranty flag and a returns policy reference. TechMart's Sales Order BO was built clean. How do you add these fields without modifying the original code?</p>
+<h2 id="three-extensibility-approaches">Three Extensibility Approaches</h2>
+<h3 id="1-developer-extensibility-on-stack">1. Developer Extensibility (On-Stack)</h3>
+<p>Add custom logic using released extension points — BADIs, extend behavior definitions, additional CDS fields.</p>
+<p><strong>Extending a CDS view with additional fields:</strong></p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">EXTEND VIEW ENTITY ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">WITH</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">  ztm_salesorder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">warranty_flag</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">   AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> WarrantyFlag,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">  ztm_salesorder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">returns_policy</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ReturnsPolicy</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p><strong>Extending a behavior definition:</strong></p>
+<p>You can add new validations, determinations, and actions to an existing BO without modifying the original:</p>
+<pre><code>extension using interface zif_tm_so_extension
+  implementation in class zbp_tm_so_extension;
+
+extend behavior for ZI_TM_SalesOrder
+{
+  validation validateWarranty on save { field WarrantyFlag; }
+  determination determineReturnsPolicy on modify { field ReturnsPolicy; }
+}
+</code></pre>
+<p><strong>Using a released BADI:</strong></p>
+<p>SAP standard BOs provide BADIs for extension. These are the officially supported hooks:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_order_badi</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION PUBLIC FINAL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  CREATE PUBLIC</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PUBLIC SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    INTERFACES</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_released_badi_for_orders.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_order_badi</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> if_released_badi_for_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">after_save</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Custom logic after order is saved</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " E.g., trigger warranty registration for GadgetWorld orders</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h3 id="2-side-by-side-extensibility-btp">2. Side-by-Side Extensibility (BTP)</h3>
+<p>Build a separate application on SAP BTP that communicates with the core S/4HANA system via released APIs:</p>
+<pre><code>S/4HANA Core System          SAP BTP
+┌────────────────────┐       ┌──────────────────────┐
+│ Sales Order BO     │ ←API→ │ Warranty Management  │
+│ (unchanged)        │       │ App (custom)          │
+│                    │       │                       │
+│ Released OData API │───────│ Reads orders via API  │
+│                    │       │ Stores warranty data  │
+│                    │       │ in BTP database       │
+└────────────────────┘       └──────────────────────┘
+</code></pre>
+<p>Use side-by-side when:</p>
+<ul>
+<li>The extension is complex (its own data model, workflow, UI)</li>
+<li>The core system shouldn't carry the custom logic load</li>
+<li>You need technologies not available in ABAP (ML models, external APIs)</li>
+<li>The extension has its own lifecycle (different team, different release cycle)</li>
+</ul>
+<h3 id="3-key-user-extensibility-no-code">3. Key-User Extensibility (No-Code)</h3>
+<p>For business users who need simple extensions:</p>
+<ul>
+<li>Add custom fields via the Fiori "Custom Fields" app</li>
+<li>Create custom logic with BTP Workflow</li>
+<li>Add custom tiles and pages</li>
+</ul>
+<p>No developer involvement needed. Limited but powerful for simple cases.</p>
+<h2 id="choosing-the-right-approach">Choosing the Right Approach</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Approach</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add a field + simple validation</td>
+<td>Developer (on-stack)</td>
+<td>Minimal effort, stays in ABAP</td>
+</tr>
+<tr>
+<td>Build a warranty management app</td>
+<td>Side-by-side (BTP)</td>
+<td>Separate concerns, own data model</td>
+</tr>
+<tr>
+<td>Add a field for reporting only</td>
+<td>Key-user</td>
+<td>No developer needed</td>
+</tr>
+<tr>
+<td>Integrate with external warranty API</td>
+<td>Side-by-side (BTP)</td>
+<td>External communication, async</td>
+</tr>
+<tr>
+<td>Add complex business rules to existing BO</td>
+<td>Developer (on-stack)</td>
+<td>Deep integration with BO lifecycle</td>
+</tr>
+<tr>
+<td>Build an ML model for demand forecasting</td>
+<td>Side-by-side (BTP)</td>
+<td>Different technology stack</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> Start with the simplest approach. Key-user if possible, developer on-stack if business logic is needed, side-by-side only for complex standalone functionality.</p>
+<h2 id="clean-core-and-extensibility-levels">Clean Core and Extensibility Levels</h2>
+<p>Remember the levels from Lesson 2:</p>
+<ul>
+<li><strong>Level A</strong> — All extensions use released APIs and extension points. Fully upgrade-safe.</li>
+<li><strong>Level B</strong> — Uses stable but unreleased APIs. Acceptable with governance.</li>
+<li><strong>Level C/D</strong> — Uses internal APIs or modifications. Not upgrade-safe.</li>
+</ul>
+<p>GadgetWorld's extension should be Level A:</p>
+<ul>
+<li>CDS view extensions (released feature)</li>
+<li>Behavior extensions (released feature)</li>
+<li>Released BADIs (guaranteed stable)</li>
+<li>BTP communication via released OData APIs</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Modifying the original BO</strong> — The whole point of extensibility is NOT touching the original. If you change <code>ZI_TM_SalesOrder</code> directly, you're creating Level C/D technical debt.</li>
+<li><strong>Using unreleased BADIs</strong> — Not all BADIs are released for cloud. Check the API state in ADT before implementing.</li>
+<li><strong>Side-by-side for simple fields</strong> — Don't build a BTP app just to add one field. Use on-stack developer extensibility.</li>
+<li><strong>Ignoring key-user extensibility</strong> — If a business user just needs one extra field for reporting, they can add it themselves. No developer ticket needed.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>ABAP Cloud offers three extensibility approaches: developer (on-stack), side-by-side (BTP), and key-user (no-code).</li>
+<li>CDS views and behavior definitions can be extended without modification using <code>EXTEND VIEW ENTITY</code> and <code>extend behavior</code>.</li>
+<li>Side-by-side extensions on BTP communicate via released APIs — separate concerns, separate lifecycle.</li>
+<li>Always aim for Level A extensibility — use only released extension points.</li>
+<li>Start simple (key-user), escalate to developer, then side-by-side only when needed.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>You've built a complete, tested, extensible RAP application. In our final lesson, we'll map your path forward — the <strong>C_ABAPD_2601 certification</strong>, the emerging CDS-only pattern, SAP Joule AI for development, and career paths for modern ABAP developers.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Extensibility — BADIs, Side-by-Side, and BTP Integration\",\"description\":\"Learn how to extend RAP applications without modifying the original code using released BADIs, side-by-side extensions on BTP, and clean core principles.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-extensibility\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Extensibility — BADIs, Side-by-Side, and BTP Integration\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-extensibility\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Real-World Patterns & Next Steps"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Extensibility — BADIs, Side-by-Side, and BTP Integration"}],["$","p",null,{"className":"lesson-header__description","children":"Learn how to extend RAP applications without modifying the original code using released BADIs, side-by-side extensions on BTP, and clean core principles."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/rap-testing-and-clean-core","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Testing RAP Apps and Clean Core Compliance"}]]}],["$","$L6",null,{"href":"/abap-modern/abap-modern-whats-next","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"What's Next — Certification, CDS Pattern, and Your Career"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"techmarts-extensibility-challenge","text":"TechMart's Extensibility Challenge","level":2},{"id":"three-extensibility-approaches","text":"Three Extensibility Approaches","level":2},{"id":"1-developer-extensibility-on-stack","text":"1. Developer Extensibility (On-Stack)","level":3},{"id":"2-side-by-side-extensibility-btp","text":"2. Side-by-Side Extensibility (BTP)","level":3},{"id":"3-key-user-extensibility-no-code","text":"3. Key-User Extensibility (No-Code)","level":3},{"id":"choosing-the-right-approach","text":"Choosing the Right Approach","level":2},{"id":"clean-core-and-extensibility-levels","text":"Clean Core and Extensibility Levels","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Extensibility — BADIs, Side-by-Side, and BTP Integration — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Learn how to extend RAP applications without modifying the original code using released BADIs, side-by-side extensions on BTP, and clean core principles."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"abap extensibility,badi,side by side,btp,clean core"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/rap-extensibility/"}],["$","meta","8",{"property":"og:title","content":"Extensibility — BADIs, Side-by-Side, and BTP Integration"}],["$","meta","9",{"property":"og:description","content":"Learn how to extend RAP applications without modifying the original code using released BADIs, side-by-side extensions on BTP, and clean core principles."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/rap-extensibility/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

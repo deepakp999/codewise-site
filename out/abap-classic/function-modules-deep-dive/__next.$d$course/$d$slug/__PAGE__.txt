@@ -1,0 +1,184 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T6ff8,<h1 id="function-modules-and-function-groups--deep-dive">Function Modules and Function Groups — Deep Dive</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How to create function modules in SE37</li>
+<li>The four parameter categories (IMPORTING, EXPORTING, CHANGING, TABLES)</li>
+<li>Exception handling patterns</li>
+<li>RFC-enabled function modules for cross-system calls</li>
+<li>Function group organization and global data</li>
+</ul>
+</div><h2 id="what-are-function-modules">What Are Function Modules?</h2>
+<p>Function modules are SAP's reusable code units — stored in the system dictionary, callable from any program, and discoverable via SE37. Think of them as globally available functions with a formal interface.</p>
+<p>You've already called function modules (REUSE_ALV_GRID_DISPLAY, CONVERSION_EXIT_ALPHA_OUTPUT). Now let's build our own.</p>
+<h2 id="creating-a-function-module-in-se37">Creating a Function Module in SE37</h2>
+<h3 id="step-1-create-a-function-group">Step 1: Create a Function Group</h3>
+<p>Function modules live in function groups — containers that share global data. In SE37, go to Function Group → Create:</p>
+<ul>
+<li><strong>Function Group:</strong> <code>Z_HR_UTILS</code></li>
+<li><strong>Short Text:</strong> "HR Utility Functions"</li>
+<li><strong>Package:</strong> <code>$TMP</code> (for learning)</li>
+</ul>
+<h3 id="step-2-create-the-function-module">Step 2: Create the Function Module</h3>
+<p>In SE37, enter the name <code>Z_CALCULATE_BONUS</code> and click Create:</p>
+<ul>
+<li><strong>Function Group:</strong> <code>Z_HR_UTILS</code></li>
+<li><strong>Short Text:</strong> "Calculate employee bonus based on salary and rating"</li>
+</ul>
+<h3 id="step-3-define-the-interface">Step 3: Define the Interface</h3>
+<p>On the <strong>Import</strong> tab:</p>
+<pre><code>Parameter Name    Type         Reference Type    Optional    Description
+─────────────     ──────       ──────────────    ─────────   ───────────
+IV_SALARY         TYPE         P DECIMALS 2      -           Annual salary
+IV_RATING         TYPE         C LENGTH 1        -           Performance rating (A/B/C)
+IV_YEARS          TYPE         I                 X           Years of service
+</code></pre>
+<p>On the <strong>Export</strong> tab:</p>
+<pre><code>Parameter Name    Type         Reference Type    Description
+─────────────     ──────       ──────────────    ───────────
+EV_BONUS          TYPE         P DECIMALS 2      Calculated bonus amount
+EV_BONUS_PCT      TYPE         P DECIMALS 1      Bonus percentage applied
+</code></pre>
+<p>On the <strong>Exceptions</strong> tab:</p>
+<pre><code>Exception Name           Description
+──────────────           ───────────
+INVALID_RATING           Rating must be A, B, or C
+SALARY_NOT_POSITIVE      Salary must be greater than zero
+</code></pre>
+<h3 id="step-4-write-the-code">Step 4: Write the Code</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FUNCTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> z_calculate_bonus.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"----------------------------------------------------------------------</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"  IMPORTING</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    VALUE(IV_SALARY) TYPE P DECIMALS 2</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    VALUE(IV_RATING) TYPE C LENGTH 1</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    VALUE(IV_YEARS) TYPE I OPTIONAL</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"  EXPORTING</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    VALUE(EV_BONUS) TYPE P DECIMALS 2</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    VALUE(EV_BONUS_PCT) TYPE P DECIMALS 1</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"  EXCEPTIONS</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    INVALID_RATING</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"    SALARY_NOT_POSITIVE</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">*"----------------------------------------------------------------------</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Validate inputs</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_salary </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">&#x3C;=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RAISE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> salary_not_positive.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Determine bonus percentage based on rating</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  CASE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_rating.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'A'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 20</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'B'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 12</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'C'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WHEN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> OTHERS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      RAISE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> invalid_rating.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDCASE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Add loyalty bonus: 0.5% per year of service</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_years </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SUPPLIED</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> AND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_years </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">></span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">+</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( iv_years </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '0.5'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Calculate bonus amount</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ev_bonus </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_salary </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 100</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDFUNCTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h3 id="step-5-activate-and-test">Step 5: Activate and Test</h3>
+<p>Activate (Ctrl+F3), then test (F8). SE37 provides a test screen where you enter parameter values and see results — invaluable for debugging.</p>
+<h2 id="calling-your-function-module">Calling Your Function Module</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">REPORT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> z_call_fm.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: lv_bonus    </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#005CC5;--shiki-dark:#ABB2BF"> p</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DECIMALS</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      lv_bonus_pct</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#005CC5;--shiki-dark:#ABB2BF"> p</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DECIMALS</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FUNCTION</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Z_CALCULATE_BONUS'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  EXPORTING</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    iv_salary </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CONV</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">120000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    iv_rating </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'A'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    iv_years  </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 5</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IMPORTING</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ev_bonus     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_bonus</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ev_bonus_pct </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_bonus_pct</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  EXCEPTIONS</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    invalid_rating      </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    salary_not_positive </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    OTHERS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">              =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 3</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CASE</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> sy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">subrc</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Bonus: </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">lv_bonus</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">lv_bonus_pct</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">%)</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Error: Invalid rating'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Error: Salary must be positive'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHEN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> OTHERS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Unknown error'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCASE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>Bonus: 27,000.00 (22.5%)
+</code></pre></div>
+<h2 id="rfc-enabled-function-modules">RFC-Enabled Function Modules</h2>
+<p>To call a function module from another SAP system (or from an external program), mark it as <strong>RFC-enabled</strong> in the Attributes tab:</p>
+<pre><code>Processing Type: Remote-Enabled Module
+</code></pre>
+<p>RFC-enabled function modules can be called across SAP systems, from Java programs, from Python (using PyRFC), and from web services. This is how SAP systems communicate with each other.</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* Call a function module on a remote SAP system</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FUNCTION</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Z_CALCULATE_BONUS'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  DESTINATION</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'RFC_PRODUCTION'</span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " RFC destination configured in SM59</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  EXPORTING</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    iv_salary </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CONV</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">120000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    iv_rating </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'A'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IMPORTING</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ev_bonus </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_bonus</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  EXCEPTIONS</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    communication_failure </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  MESSAGE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_error_msg</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    system_failure        </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  MESSAGE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_error_msg</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    invalid_rating        </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 3</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    salary_not_positive   </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 4</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    OTHERS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">                =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>The <code>DESTINATION</code> parameter routes the call to a remote system. RFC destinations are configured in transaction SM59 by the Basis team.</p>
+<h2 id="function-group-global-data">Function Group Global Data</h2>
+<p>Function modules in the same function group share global data:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* In the TOP include of function group Z_HR_UTILS:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: gv_company_code</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> bukrs,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      gt_config      </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE TABLE OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> zhrc_config.</span></span></code></pre>
+<p>All function modules in Z_HR_UTILS can access <code>gv_company_code</code> and <code>gt_config</code>. This is useful for caching — load configuration once, share across all function calls.</p>
+<h2 id="finding-standard-function-modules">Finding Standard Function Modules</h2>
+<p>SE37 has a search function. Common ways to find the right function module:</p>
+<ul>
+<li><strong>Search by name:</strong> Use wildcards like <code>*CUSTOMER*CREATE*</code></li>
+<li><strong>Search by function group:</strong> Browse function groups related to your module</li>
+<li><strong>Google it:</strong> "SAP function module to create sales order" → results usually point you to the right FM</li>
+<li><strong>SE37 documentation:</strong> Most SAP function modules have inline documentation</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Not handling all exceptions.</strong> If a function module raises an exception you don't handle, <code>sy-subrc</code> gets a non-zero value but your program may not realize something went wrong. Always handle <code>OTHERS</code> as a catch-all.</li>
+<li><strong>Passing the wrong parameter direction.</strong> IMPORTING parameters are input to the function module. EXPORTING parameters are output from it. This is from the function module's perspective — the caller EXPORTS to the FM's IMPORTING and IMPORTS from the FM's EXPORTING. The naming is backwards from the caller's point of view.</li>
+<li><strong>Making a function module RFC-enabled without considering serialization.</strong> RFC-enabled function modules serialize all parameters across the network. Complex deep structures or large tables can cause performance issues over RFC.</li>
+<li><strong>Using TABLES parameter instead of CHANGING.</strong> The TABLES parameter is legacy — it uses header lines, which are deprecated. Use CHANGING with a typed table for new function modules.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Function modules are reusable, callable from any program, and testable in SE37.</li>
+<li>Interface has four categories: IMPORTING (in), EXPORTING (out), CHANGING (in+out), EXCEPTIONS (errors).</li>
+<li>Always handle exceptions — at minimum, handle OTHERS as a catch-all.</li>
+<li>RFC-enabled function modules can be called from remote systems and external programs.</li>
+<li>Function groups share global data across their function modules — useful for caching.</li>
+<li>Test function modules directly in SE37 (F8) before calling them from your program.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>SAP comes with thousands of standard function modules. The most important ones are <strong>BAPIs</strong>. In <strong>Lesson 24: BAPIs — SAP's Standard APIs</strong>, we'll learn how to use these pre-built APIs to create, read, update, and delete SAP business objects.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Function Modules and Function Groups — Deep Dive\",\"description\":\"Master SAP function modules: creating them in SE37, parameter types, exception handling, RFC-enabled functions, and function group organization.\",\"url\":\"https://codewise.lumivoxx.com/abap-classic/function-modules-deep-dive\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Classic — SAP Programming from Scratch\",\"url\":\"https://codewise.lumivoxx.com/abap-classic\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Classic — SAP Programming from Scratch\",\"item\":\"https://codewise.lumivoxx.com/abap-classic\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Function Modules and Function Groups — Deep Dive\",\"item\":\"https://codewise.lumivoxx.com/abap-classic/function-modules-deep-dive\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Classic — SAP Programming from Scratch"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Integration & Communication"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Function Modules and Function Groups — Deep Dive"}],["$","p",null,{"className":"lesson-header__description","children":"Master SAP function modules: creating them in SE37, parameter types, exception handling, RFC-enabled functions, and function group organization."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-classic/alv-oo","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"ALV with OO — CL_SALV_TABLE"}]]}],["$","$L8",null,{"href":"/abap-classic/bapis","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"BAPIs — SAP's Standard APIs"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"what-are-function-modules","text":"What Are Function Modules?","level":2},{"id":"creating-a-function-module-in-se37","text":"Creating a Function Module in SE37","level":2},{"id":"step-1-create-a-function-group","text":"Step 1: Create a Function Group","level":3},{"id":"step-2-create-the-function-module","text":"Step 2: Create the Function Module","level":3},{"id":"step-3-define-the-interface","text":"Step 3: Define the Interface","level":3},{"id":"step-4-write-the-code","text":"Step 4: Write the Code","level":3},{"id":"step-5-activate-and-test","text":"Step 5: Activate and Test","level":3},{"id":"calling-your-function-module","text":"Calling Your Function Module","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"rfc-enabled-function-modules","text":"RFC-Enabled Function Modules","level":2},{"id":"function-group-global-data","text":"Function Group Global Data","level":2},{"id":"finding-standard-function-modules","text":"Finding Standard Function Modules","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

@@ -1,0 +1,189 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","cds-annotations",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","cds-annotations","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T4ba9,<h1 id="annotations--ui-search-odata-and-metadata-extensions">Annotations — UI, Search, OData, and Metadata Extensions</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What annotations are and why they're unique to CDS</li>
+<li>@UI annotations for Fiori Elements layout</li>
+<li>@Search annotations for full-text search</li>
+<li>@OData annotations for service behavior</li>
+<li>Metadata extensions — separating UI concerns from data models</li>
+</ul>
+</div><h2 id="what-are-annotations">What Are Annotations?</h2>
+<p>Annotations are metadata that you attach to CDS views and fields. They don't change the data — they tell consumers (Fiori, OData, analytics) <strong>how</strong> to use the data.</p>
+<p>Think of annotations like labels on a shipping box. The box content (data) doesn't change, but the labels tell the handler: "Fragile" (display as read-only), "This Side Up" (show in this position on the UI), "Express" (searchable, high priority).</p>
+<p>In Classic ABAP, you'd control UI layout in dynpro screen painter or ALV field catalog. In modern ABAP, annotations do this declaratively — no code needed.</p>
+<h2 id="ui-annotations--controlling-fiori-layout">@UI Annotations — Controlling Fiori Layout</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_Product</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_product</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.facet: [{ id: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'ProductInfo'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">                    type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: #IDENTIFICATION_REFERENCE,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">                    label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'Product Details'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">                    position: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">10</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">                    </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> @UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: { lineItem:       </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 10, importance: #HIGH }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">             identification: </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 10 }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">             selectionField: </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 10 }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      product_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: { lineItem:       </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 20, importance: #HIGH }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">             identification: </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 20 }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductName,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: { lineItem:       </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 30 }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">             selectionField: </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 20 }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      category </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Category,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: { lineItem:       </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 40, importance: #MEDIUM }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">             identification: </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[{ position: 40 }]</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      price </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Price,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">hidden</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      created_by </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CreatedBy</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>What each annotation does:</p>
+<table>
+<thead>
+<tr>
+<th>Annotation</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@UI.lineItem</code></td>
+<td>Show this field as a column in the list view</td>
+</tr>
+<tr>
+<td><code>@UI.identification</code></td>
+<td>Show this field on the object detail page</td>
+</tr>
+<tr>
+<td><code>@UI.selectionField</code></td>
+<td>Add this field as a filter on the search bar</td>
+</tr>
+<tr>
+<td><code>@UI.hidden</code></td>
+<td>Don't show this field in the UI</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td>Order of the field (10, 20, 30...)</td>
+</tr>
+<tr>
+<td><code>importance</code></td>
+<td><code>#HIGH</code> always visible, <code>#MEDIUM</code> visible on larger screens, <code>#LOW</code> hidden on small screens</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This single CDS view generates a complete Fiori Elements list report + object page — no frontend code needed.</strong> The Fiori framework reads these annotations and builds the UI automatically.</p>
+<h2 id="search-annotations">@Search Annotations</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@Search</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.searchable: true</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_Product </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_product</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Search</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.defaultSearchElement: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Search</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.fuzzinessThreshold: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">8</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductName,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      @Search</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.defaultSearchElement: true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      category </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Category,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      product_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>This enables fuzzy search in Fiori apps. A user typing "widgt" in the search bar will find "Widget Pro" because the fuzziness threshold allows approximate matches.</p>
+<h2 id="metadata-extensions--keep-views-clean">Metadata Extensions — Keep Views Clean</h2>
+<p>Putting dozens of UI annotations directly in a CDS view makes it hard to read. <strong>Metadata extensions</strong> separate UI concerns from data modeling:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">" Step 1: The CDS view stays clean — data only</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">@AccessControl.authorizationCheck: #NOT_REQUIRED</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">@EndUserText.label: 'TechMart Product'</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">@Metadata.allowExtensions: true   -- THIS enables metadata extensions</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">DEFINE VIEW ENTITY ZI_TM_Product</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  AS SELECT FROM ztm_product</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">{</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  key product_id     AS ProductId,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">      name           AS ProductName,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">      category       AS Category,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">      price          AS Price,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">      currency       AS Currency,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">      stock_quantity AS StockQuantity</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">}</span></span></code></pre>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">" Step 2: A separate metadata extension handles UI annotations</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">@Metadata.layer: #CORE</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ANNOTATE VIEW ENTITY ZI_TM_Product WITH</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">{</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  @UI.facet: [{ id: 'ProductInfo',</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">                type: #IDENTIFICATION_REFERENCE,</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">                label: 'Product Details',</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">                position: 10 }]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  @UI: { lineItem:       [{ position: 10, importance: #HIGH }],</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">         identification: [{ position: 10 }],</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">         selectionField: [{ position: 10 }] }</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  ProductId;</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  </span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  @UI: { lineItem:       [{ position: 20, importance: #HIGH }],</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">         identification: [{ position: 20 }] }</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  ProductName;</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  </span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  @UI: { lineItem:       [{ position: 30 }],</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">         selectionField: [{ position: 20 }] }</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  Category;</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  </span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  @UI: { lineItem:       [{ position: 40 }],</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">         identification: [{ position: 40 }] }</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  Price;</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">}</span></span></code></pre>
+<p><strong>Best practice:</strong> Always use metadata extensions for UI annotations. Keep the CDS view entity focused on data modeling. This separation is a Clean Core principle.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Embedding UI annotations directly in interface views</strong> — Use metadata extensions instead. Interface views (<code>ZI_</code>) should be pure data models.</li>
+<li><strong>Forgetting <code>@Metadata.allowExtensions: true</code></strong> — Without this, you can't create metadata extensions for the view.</li>
+<li><strong>Wrong position numbering</strong> — Use increments of 10 (10, 20, 30) so you can insert fields later without renumbering.</li>
+<li><strong>Overannotating</strong> — Not every field needs to be on every UI facet. Show only what users need.</li>
+<li><strong>Ignoring <code>importance</code></strong> — On mobile devices, only <code>#HIGH</code> importance fields show. If your key fields are <code>#LOW</code>, mobile users see an empty list.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Annotations are metadata that control how CDS data is consumed — by Fiori, OData, analytics, and search.</li>
+<li>@UI annotations generate complete Fiori Elements UIs without frontend code. <code>lineItem</code> = list columns, <code>identification</code> = detail page, <code>selectionField</code> = search filters.</li>
+<li>@Search annotations enable fuzzy full-text search in Fiori apps.</li>
+<li>Metadata extensions separate UI concerns from data models — always use them for UI annotations.</li>
+<li>Annotations are declarative — you describe WHAT you want, not HOW to build it.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Fields straight from the database aren't always enough. In Lesson 9, we'll add <strong>calculated fields, CASE expressions, CAST, and SQL functions</strong> — transforming raw TechMart data into business-meaningful values directly in CDS.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"CDS Annotations — UI, Search, OData, and Metadata Extensions\",\"description\":\"Learn how CDS annotations control Fiori UI layout, search behavior, OData exposure, and how metadata extensions keep views clean.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/cds-annotations\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"CDS Annotations — UI, Search, OData, and Metadata Extensions\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/cds-annotations\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"CDS Views"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"CDS Annotations — UI, Search, OData, and Metadata Extensions"}],["$","p",null,{"className":"lesson-header__description","children":"Learn how CDS annotations control Fiori UI layout, search behavior, OData exposure, and how metadata extensions keep views clean."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/cds-joins-and-associations","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Joins and Associations in CDS"}]]}],["$","$L6",null,{"href":"/abap-modern/cds-calculated-fields-and-expressions","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Calculated Fields, CASE, CAST, and SQL Functions"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"what-are-annotations","text":"What Are Annotations?","level":2},{"id":"ui-annotations--controlling-fiori-layout","text":"@UI Annotations — Controlling Fiori Layout","level":2},{"id":"search-annotations","text":"@Search Annotations","level":2},{"id":"metadata-extensions--keep-views-clean","text":"Metadata Extensions — Keep Views Clean","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"CDS Annotations — UI, Search, OData, and Metadata Extensions — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Learn how CDS annotations control Fiori UI layout, search behavior, OData exposure, and how metadata extensions keep views clean."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"cds annotations,ui annotations,metadata extensions,fiori elements,odata"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/cds-annotations/"}],["$","meta","8",{"property":"og:title","content":"CDS Annotations — UI, Search, OData, and Metadata Extensions"}],["$","meta","9",{"property":"og:description","content":"Learn how CDS annotations control Fiori UI layout, search behavior, OData exposure, and how metadata extensions keep views clean."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/cds-annotations/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

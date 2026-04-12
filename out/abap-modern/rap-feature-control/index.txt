@@ -1,0 +1,223 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","rap-feature-control",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","rap-feature-control","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T6430,<h1 id="feature-control-and-authorization">Feature Control and Authorization</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What feature control is and why it matters</li>
+<li>Instance feature control: per-record dynamic behavior</li>
+<li>Static feature control: global operation control</li>
+<li>Field-level control: read-only fields based on status</li>
+<li>RAP authorization checks</li>
+</ul>
+</div><h2 id="why-feature-control">Why Feature Control?</h2>
+<p>Without feature control, every button and field is always available. Users can try to delete approved orders, edit completed orders, or approve already-approved orders. The validation would reject the action, but the user sees an error instead of not seeing the button at all.</p>
+<p>Feature control prevents the action from being offered. No button = no confusion.</p>
+<h2 id="instance-feature-control">Instance Feature Control</h2>
+<p>Controls operations per record — "this specific order can/can't be edited."</p>
+<p><strong>Step 1: Declare in behavior definition</strong></p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+{
+  ...
+  action approve result [1] $self;
+  
+  instance features;  -- Enable instance feature control
+}
+</code></pre>
+<p><strong>Step 2: Implement</strong></p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> get_instance_features</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Read current state of each order</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  READ</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      FIELDS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( Status )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">keys</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  result</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FOR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_orders (</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Can only delete New or Cancelled orders</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %delete </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> COND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'N'</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> OR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'X'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      THEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-enabled</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-disabled )</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Can only update non-completed orders</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %update </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> COND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'C'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      THEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-disabled</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-enabled )</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Can only approve New orders</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %action-approve </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> COND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'N'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      THEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-enabled</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-disabled )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ) ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>In the Fiori UI:</p>
+<ul>
+<li>Approved orders: no Edit button, no Delete button, no Approve button</li>
+<li>New orders: all buttons visible</li>
+<li>Completed orders: read-only, only Delete visible for admins</li>
+</ul>
+<h2 id="static-feature-control">Static Feature Control</h2>
+<p>Controls operations globally — "can ANY user create new orders?"</p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+{
+  ...
+  static features;
+}
+</code></pre>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> get_global_features</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Example: disable creation during system maintenance</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " In practice, check a configuration table or system parameter</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lv_maintenance</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> abap_false</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.  </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Would check a real flag</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_maintenance </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> abap_true</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    result-%create </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-o-disabled.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="field-level-control">Field-Level Control</h2>
+<p>Make specific fields read-only based on the record's state:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" In get_instance_features</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">result</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FOR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_orders (</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Customer can't be changed after approval</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %field-CustomerId </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> COND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'N'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      THEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-f-unrestricted</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-f-read_only )</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Order date is always read-only (set by system)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %field-OrderDate </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-f-read_only</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Status is always read-only (changed by actions only)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %field-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>fc-f-read_only</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) ).</span></span></code></pre>
+<p>Field control values:</p>
+<ul>
+<li><code>fc-f-unrestricted</code> — fully editable</li>
+<li><code>fc-f-read_only</code> — visible but not editable</li>
+<li><code>fc-f-mandatory</code> — must be filled (shows asterisk in UI)</li>
+</ul>
+<h2 id="rap-authorization">RAP Authorization</h2>
+<p>RAP authorization checks happen separately from feature control:</p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+  authorization master ( global, instance )
+{
+  ...
+}
+</code></pre>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> get_instance_authorizations</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Check user authorization for each instance</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  READ</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      FIELDS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">Country</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">keys</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_orders </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_order</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Check authorization object</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    AUTHORITY-CHECK</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> OBJECT</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Z_TM_ORD'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ID</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'ACTVT'</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FIELD</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '02'</span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        " Change</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ID</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'ZREGION'</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FIELD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Country.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lv_authorized</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> COND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WHEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> sy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">subrc</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> THEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>auth-allowed</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>auth-unauthorized ).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    APPEND</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      %update </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_authorized</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      %delete </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_authorized</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      %action-approve </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lv_authorized</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    )</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> result</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="feature-control-vs-authorization-vs-validation">Feature Control vs Authorization vs Validation</h2>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Purpose</th>
+<th>When It Runs</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature Control</td>
+<td>UI behavior — show/hide buttons</td>
+<td>Before UI renders</td>
+<td>Button hidden/disabled</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Access control — who can do what</td>
+<td>On operation request</td>
+<td>403 Unauthorized</td>
+</tr>
+<tr>
+<td>Validation</td>
+<td>Data quality — is the data valid</td>
+<td>On save</td>
+<td>Error message</td>
+</tr>
+</tbody>
+</table>
+<p>All three work together:</p>
+<ol>
+<li>Feature control hides the Approve button for non-New orders</li>
+<li>Authorization checks if the user is allowed to approve</li>
+<li>Validation confirms the data is valid for approval</li>
+</ol>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Using validation instead of feature control</strong> — If an operation should never be available for a given status, use feature control to hide the button. Don't let users click it and then show an error.</li>
+<li><strong>Forgetting to declare <code>instance features</code></strong> — Without this line in the behavior definition, <code>get_instance_features</code> is never called.</li>
+<li><strong>Not returning results for all keys</strong> — The method receives a table of keys. Return feature control for EVERY key, not just the first one.</li>
+<li><strong>Hardcoding authorization</strong> — Use SAP authorization objects, not hardcoded user checks.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Feature control dynamically shows/hides operations and fields based on record state.</li>
+<li>Instance feature control: per-record (approved orders can't be deleted). Static feature control: global (maintenance mode disables creation).</li>
+<li>Field-level control: make fields read-only, mandatory, or unrestricted based on status.</li>
+<li>Feature control, authorization, and validation are three complementary mechanisms — use all three.</li>
+<li>Feature control improves UX by preventing impossible actions, not just rejecting them.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>The Sales Order app is feature-complete. In Lesson 23, we'll make it <strong>production-ready</strong> — writing ABAP Unit tests for our validations and actions, running ATC clean core checks, and ensuring the code is upgrade-safe.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Feature Control and Authorization — Dynamic UI Behavior in RAP\",\"description\":\"Learn to dynamically enable, disable, or hide fields and operations based on business rules using RAP instance and static feature control.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-feature-control\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Feature Control and Authorization — Dynamic UI Behavior in RAP\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-feature-control\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Advanced Features"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Feature Control and Authorization — Dynamic UI Behavior in RAP"}],["$","p",null,{"className":"lesson-header__description","children":"Learn to dynamically enable, disable, or hide fields and operations based on business rules using RAP instance and static feature control."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/rap-draft","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Draft Handling — Save Incomplete Work"}]]}],["$","$L6",null,{"href":"/abap-modern/rap-testing-and-clean-core","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Testing RAP Apps and Clean Core Compliance"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"why-feature-control","text":"Why Feature Control?","level":2},{"id":"instance-feature-control","text":"Instance Feature Control","level":2},{"id":"static-feature-control","text":"Static Feature Control","level":2},{"id":"field-level-control","text":"Field-Level Control","level":2},{"id":"rap-authorization","text":"RAP Authorization","level":2},{"id":"feature-control-vs-authorization-vs-validation","text":"Feature Control vs Authorization vs Validation","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Feature Control and Authorization — Dynamic UI Behavior in RAP — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Learn to dynamically enable, disable, or hide fields and operations based on business rules using RAP instance and static feature control."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"rap feature control,dynamic ui,authorization,field control,abap rap"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/rap-feature-control/"}],["$","meta","8",{"property":"og:title","content":"Feature Control and Authorization — Dynamic UI Behavior in RAP"}],["$","meta","9",{"property":"og:description","content":"Learn to dynamically enable, disable, or hide fields and operations based on business rules using RAP instance and static feature control."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/rap-feature-control/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

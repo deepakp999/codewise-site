@@ -1,0 +1,185 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T399a,<h1 id="why-modern-abap-classic-vs-cloud-development-explained">Why Modern ABAP? Classic vs Cloud Development Explained</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Why SAP created a new development model</li>
+<li>What "ABAP Cloud" and "Clean Core" actually mean</li>
+<li>The key differences between Classic ABAP and Modern ABAP</li>
+<li>What happens to your existing Classic ABAP skills</li>
+<li>The TechMart migration story that drives this entire course</li>
+</ul>
+</div><h2 id="the-world-changed--and-abap-changed-with-it">The World Changed — And ABAP Changed With It</h2>
+<p>If you've completed the ABAP Classic course, you know how to write reports, build function modules, create DDIC objects, and use Open SQL. Those skills got you through decades of SAP R/3 and ECC projects.</p>
+<p>Then SAP released S/4HANA. And then S/4HANA Cloud. And suddenly, the rules changed.</p>
+<p>Here's what happened at TechMart — the fictional company we've been working with since the Classic course.</p>
+<p>TechMart's CIO sends this email to the development team:</p>
+<pre><code>Subject: S/4HANA Cloud Migration — What This Means for Development
+
+Team,
+
+We are migrating to S/4HANA Cloud Public Edition by Q4. This means:
+
+1. SE80 is no longer available. All development happens in Eclipse (ADT).
+2. Function modules and classic dynpros cannot be created in the cloud.
+3. Only "released APIs" can be used — no direct access to SAP standard tables.
+4. All new apps must be built using CDS views and the RAP framework.
+5. Fiori replaces SAP GUI as the primary user interface.
+
+If you're thinking "my old skills are useless" — they're not. ABAP is still ABAP.
+But HOW you write it changes significantly.
+
+Please prioritize upskilling. This is not optional.
+
+— CIO, TechMart
+</code></pre>
+<p>This course is your response to that email.</p>
+<h2 id="what-exactly-changed">What Exactly Changed?</h2>
+<p>Let's be concrete. Here's what you knew from Classic ABAP and what replaces it:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" CLASSIC ABAP — What you learned in the previous course</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" ======================================================</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Data Dictionary (SE11)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Tables, data elements, domains, structures</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → DDIC views for joining tables</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Function Modules (SE37)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Reusable logic with importing/exporting parameters</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → BAPIs for external integration</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Programs and Transactions (SE38, SE80)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Reports with selection screens</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Module pool programs with dynpros</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Authorization</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → AUTHORITY-CHECK statement in code</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Testing</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Manual testing via SE38, SM35, or test transactions</span></span></code></pre>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" MODERN ABAP — What you'll learn in THIS course</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" ======================================================</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" CDS View Entities (ADT)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Replace DDIC views</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Define data models with annotations, associations, compositions</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Feed Fiori apps directly</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" RAP Business Objects (ADT)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Replace function modules and BAPIs</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Managed/Unmanaged/Query patterns</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Built-in CRUD, draft, validation, actions</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Eclipse ADT</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Replaces SE80 for ALL development</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Code completion, refactoring, integrated testing</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" CDS Access Control (DCL)</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Replaces AUTHORITY-CHECK for CDS-based authorization</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" ABAP Unit + Test Doubles</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → Automated testing built into the framework</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">"   → RAP test doubles for isolated unit tests</span></span></code></pre>
+<p>The language is still ABAP. The database is still tables. The logic is still SELECT, LOOP, IF-ELSE. But the <strong>architecture</strong> around it is completely different.</p>
+<h2 id="why-did-sap-do-this">Why Did SAP Do This?</h2>
+<p>Three reasons, and they all matter:</p>
+<p><strong>1. Cloud requires upgrade safety.</strong> In SAP's cloud editions, SAP pushes updates quarterly. If your custom code touches SAP internal tables or uses undocumented APIs, those updates break your code. ABAP Cloud restricts you to "released APIs" — SAP's guarantee that these interfaces won't change during upgrades.</p>
+<p><strong>2. Fiori needs a different backend.</strong> The old dynpro-based screens are desktop-only. Fiori apps are browser-based, responsive, and run on OData services. CDS views + RAP generate OData services automatically — no manual coding of the service layer.</p>
+<p><strong>3. SAP HANA changes how you think about data.</strong> The old approach was "pull data into ABAP, process it in memory." With HANA, you push logic to the database. CDS views execute on the database layer, which is orders of magnitude faster for large datasets.</p>
+<h2 id="the-clean-core-philosophy">The "Clean Core" Philosophy</h2>
+<p>You'll hear "Clean Core" everywhere in SAP now. It means one thing: <strong>don't modify SAP's standard code.</strong> Instead, extend it through well-defined extension points.</p>
+<p>Think of it like renting an apartment:</p>
+<ul>
+<li><strong>Classic ABAP</strong> = You owned the house. You knocked down walls, rewired the electricity, built an extension. Your house, your rules. But when the landlord (SAP) needs to renovate, everything you built gets in the way.</li>
+<li><strong>Clean Core</strong> = You rent the apartment. You can furnish it however you want (extensions), but you can't knock down walls (modify SAP standard). When the landlord renovates, your furniture survives.</li>
+</ul>
+<p>In practice, Clean Core means:</p>
+<ul>
+<li>Use only released SAP APIs (checked by the ABAP Test Cockpit)</li>
+<li>Build extensions using RAP and CDS, not modifications</li>
+<li>Use BADIs and extension points, not user exits or implicit enhancements</li>
+<li>Test with ABAP Unit, not manual walkthrough</li>
+</ul>
+<h2 id="what-happens-to-your-classic-abap-skills">What Happens to Your Classic ABAP Skills?</h2>
+<p>Good news: most of what you learned transfers directly.</p>
+<table>
+<thead>
+<tr>
+<th>Classic Skill</th>
+<th>Still Useful?</th>
+<th>How It Maps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data types (C, I, N, STRING, etc.)</td>
+<td>Yes</td>
+<td>Same types, modern syntax for declarations</td>
+</tr>
+<tr>
+<td>Internal tables</td>
+<td>Yes</td>
+<td>Same concept, modern syntax (VALUE, FOR, REDUCE)</td>
+</tr>
+<tr>
+<td>Open SQL (SELECT, INSERT, etc.)</td>
+<td>Yes</td>
+<td>Now called "ABAP SQL" with enhanced syntax</td>
+</tr>
+<tr>
+<td>OOP (classes, interfaces)</td>
+<td>Critical</td>
+<td>RAP behavior is implemented in classes</td>
+</tr>
+<tr>
+<td>ABAP Debugger</td>
+<td>Yes</td>
+<td>Works in ADT with enhanced features</td>
+</tr>
+<tr>
+<td>ALV reporting</td>
+<td>Partially</td>
+<td>Replaced by CDS + Fiori Elements for new apps</td>
+</tr>
+<tr>
+<td>Function modules</td>
+<td>Partially</td>
+<td>Still exist on-premise, not in ABAP Cloud</td>
+</tr>
+<tr>
+<td>Dynpros / selection screens</td>
+<td>No</td>
+<td>Replaced entirely by Fiori Elements</td>
+</tr>
+<tr>
+<td>SE80 / SAP GUI development</td>
+<td>No</td>
+<td>Replaced entirely by ADT (Eclipse)</td>
+</tr>
+</tbody>
+</table>
+<p>The bottom line: <strong>your ABAP logic skills transfer. Your tooling and architecture knowledge needs updating.</strong></p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>"I'll just keep using SE80"</strong> — You can't. ABAP Cloud objects (CDS entities, RAP artifacts) can only be created in ADT. SE80 literally cannot display them.</li>
+<li><strong>"Classic ABAP is dead"</strong> — No. Millions of lines of Classic ABAP run in production today. But all NEW development on S/4HANA Cloud must use ABAP Cloud. On-premise systems will gradually adopt it too.</li>
+<li><strong>"I need to learn a completely new language"</strong> — No. It's still ABAP. The syntax is modernized (more concise, more expressive), but the core logic is the same. If you can write a LOOP and a SELECT, you can learn CDS and RAP.</li>
+<li><strong>"RAP is just another framework that SAP will replace in 5 years"</strong> — Unlikely. RAP is SAP's strategic programming model. CDS views have been stable since 2014. SAP is investing heavily in RAP tooling, including AI-assisted development with Joule.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>SAP moved from Classic ABAP to ABAP Cloud because cloud operation, Fiori, and HANA require a new architecture.</li>
+<li>"Clean Core" means: don't modify SAP standard, extend through released APIs and well-defined extension points.</li>
+<li>Your Classic ABAP skills (data types, internal tables, SQL, OOP) transfer directly. What changes is the tooling (ADT), the data layer (CDS), and the application framework (RAP).</li>
+<li>This course takes you from Classic to Modern using the same TechMart examples, so the transition feels like an upgrade, not a restart.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>In Lesson 2, we'll look at the <strong>ABAP Cloud Development Model</strong> in detail — what "released APIs" are, how the ABAP Test Cockpit enforces clean core rules, and the exact boundaries of what you can and can't do in ABAP Cloud. This is the rulebook for everything that follows.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Why Modern ABAP? Classic vs Cloud Development Explained\",\"description\":\"Understand why SAP moved from Classic ABAP to ABAP Cloud, what changed, and why every ABAP developer needs to learn the modern stack.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/why-modern-abap\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Why Modern ABAP? Classic vs Cloud Development Explained\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/why-modern-abap\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"The Modern ABAP Landscape"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Why Modern ABAP? Classic vs Cloud Development Explained"}],["$","p",null,{"className":"lesson-header__description","children":"Understand why SAP moved from Classic ABAP to ABAP Cloud, what changed, and why every ABAP developer needs to learn the modern stack."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","div",null,{}],["$","$L8",null,{"href":"/abap-modern/abap-cloud-development-model","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"The ABAP Cloud Development Model"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-world-changed--and-abap-changed-with-it","text":"The World Changed — And ABAP Changed With It","level":2},{"id":"what-exactly-changed","text":"What Exactly Changed?","level":2},{"id":"why-did-sap-do-this","text":"Why Did SAP Do This?","level":2},{"id":"the-clean-core-philosophy","text":"The \"Clean Core\" Philosophy","level":2},{"id":"what-happens-to-your-classic-abap-skills","text":"What Happens to Your Classic ABAP Skills?","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

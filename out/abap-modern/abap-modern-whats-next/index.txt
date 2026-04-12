@@ -1,0 +1,150 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","abap-modern-whats-next",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","abap-modern-whats-next","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T1deb,<h1 id="whats-next--certification-cds-pattern-and-your-career">What's Next — Certification, CDS Pattern, and Your Career</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How to prepare for the C_ABAPD_2601 ABAP Cloud certification</li>
+<li>The CDS-only pattern — the future of RAP</li>
+<li>SAP Joule AI for ABAP development</li>
+<li>Career paths for modern ABAP developers</li>
+<li>Resources for continued learning</li>
+</ul>
+</div><h2 id="what-youve-accomplished">What You've Accomplished</h2>
+<p>Let's take stock. In 25 lessons, you went from "I know Classic ABAP" to:</p>
+<ul>
+<li>Understanding why ABAP Cloud exists and what Clean Core means</li>
+<li>Setting up ADT and connecting to a cloud ABAP system</li>
+<li>Writing modern ABAP syntax (inline declarations, constructor operators)</li>
+<li>Modeling data with CDS view entities (joins, associations, compositions, annotations, parameters, access control)</li>
+<li>Building a complete managed RAP business object (CRUD, draft, validations, determinations, actions, feature control)</li>
+<li>Understanding unmanaged and query patterns for legacy and analytics</li>
+<li>Testing with ABAP Unit and ensuring clean core compliance</li>
+<li>Extending applications without modification</li>
+</ul>
+<p>That's a real skillset. TechMart's Sales Order app is production-ready.</p>
+<h2 id="the-c_abapd_2601-certification">The C_ABAPD_2601 Certification</h2>
+<p>SAP's ABAP Cloud certification validates exactly the skills you've learned. Key facts:</p>
+<p><strong>Exam format:</strong> Hands-on practical coding in a live SAP system. Not multiple choice. You build real artifacts — CDS views, RAP BOs, behavior implementations — directly in ADT.</p>
+<p><strong>Duration:</strong> 3–4 hours of development time (plus preparation time).</p>
+<p><strong>Topics covered:</strong> CDS view entities, associations, compositions, annotations. RAP behavior definitions, validations, determinations, actions. Service definitions and bindings. ABAP Cloud development rules and ATC.</p>
+<p><strong>How to prepare:</strong> You've already covered the core content. Next steps:</p>
+<ol>
+<li><strong>Practice on BTP trial</strong> — Build 2–3 more RAP apps beyond TechMart. Different domains (e.g., HR leave requests, inventory management).</li>
+<li><strong>SAP's RAP100 course</strong> — Free on SAP Learning. Hands-on exercises that mirror the exam format.</li>
+<li><strong>Time management</strong> — The exam is time-constrained. Practice building a complete BO (CDS + behavior + service) in under 60 minutes.</li>
+<li><strong>Know the shortcuts</strong> — ADT quick fixes (Ctrl+1) generate skeletons for behavior implementations, draft tables, and service bindings. Use them.</li>
+</ol>
+<h2 id="the-cds-only-pattern--whats-coming">The CDS-Only Pattern — What's Coming</h2>
+<p>RAP is evolving. The latest development is the <strong>CDS-only pattern</strong> (also called CDS pattern), where even more artifacts are defined in CDS rather than in separate ABAP objects.</p>
+<p>In the CDS-only pattern:</p>
+<ul>
+<li><strong>Database tables</strong> are replaced by CDS table entities (defined in CDS, not SE11)</li>
+<li><strong>Data elements and domains</strong> are replaced by CDS simple types</li>
+<li><strong>DDIC structures</strong> are replaced by CDS abstract entities</li>
+<li><strong>Draft tables</strong> are auto-generated from CDS definitions</li>
+</ul>
+<p>This means fewer artifacts to create and maintain. A complete BO could be defined almost entirely in CDS, with only the business logic remaining in ABAP classes.</p>
+<p>The CDS-only pattern is not yet 100% complete (as of 2026, some features like enum support at the UI level are still evolving), but it's SAP's stated direction. Learning it now positions you ahead of most ABAP developers.</p>
+<h2 id="sap-joule-ai-for-development">SAP Joule AI for Development</h2>
+<p>SAP's AI assistant is integrated into ADT. Joule can:</p>
+<ul>
+<li><strong>Generate code</strong> — Describe what you need in natural language, and Joule generates the ABAP/CDS code</li>
+<li><strong>Explain code</strong> — Select existing code and ask Joule to explain it</li>
+<li><strong>Generate unit tests</strong> — Point Joule at a behavior implementation and it creates ABAP Unit test classes</li>
+<li><strong>Refactor</strong> — Convert old syntax to modern syntax, suggest improvements</li>
+</ul>
+<p>Joule doesn't replace understanding — you need to validate what it generates. But it dramatically speeds up the mechanical parts of development (boilerplate, test setup, syntax conversion).</p>
+<h2 id="career-paths">Career Paths</h2>
+<p>Modern ABAP developers are in high demand. The global migration to S/4HANA means every SAP customer needs developers who can:</p>
+<p><strong>Path 1: S/4HANA Migration Developer</strong></p>
+<ul>
+<li>Convert Classic ABAP to ABAP Cloud</li>
+<li>Wrap legacy BAPIs in RAP services</li>
+<li>Clean up technical debt (Level C/D → Level A)</li>
+<li>High demand through 2028+</li>
+</ul>
+<p><strong>Path 2: RAP Application Developer</strong></p>
+<ul>
+<li>Build new Fiori apps with RAP</li>
+<li>End-to-end: CDS → RAP → OData → Fiori</li>
+<li>Extend standard SAP BOs</li>
+<li>Growing demand as S/4HANA Cloud adoption increases</li>
+</ul>
+<p><strong>Path 3: BTP Extension Developer</strong></p>
+<ul>
+<li>Side-by-side extensions on SAP BTP</li>
+<li>Integration with non-SAP systems</li>
+<li>AI/ML integration with SAP data</li>
+<li>Highest growth area</li>
+</ul>
+<p><strong>Path 4: SAP Architect</strong></p>
+<ul>
+<li>Design clean core strategies</li>
+<li>Define extensibility standards</li>
+<li>Govern custom code quality</li>
+<li>Requires deep experience in all paths</li>
+</ul>
+<h2 id="continued-learning-resources">Continued Learning Resources</h2>
+<p><strong>Free:</strong></p>
+<ul>
+<li>SAP BTP ABAP Environment Trial (hands-on practice)</li>
+<li>SAP Learning courses: RAP100, BTP Developer tutorials</li>
+<li>SAP Community blogs and RAP series</li>
+<li>ABAP Cheat Sheets on GitHub (clean-core/abap-cheat-sheets)</li>
+<li>Codewise courses at codewise.lumivoxx.com</li>
+</ul>
+<p><strong>SAP Documentation:</strong></p>
+<ul>
+<li>SAP Help Portal — ABAP Cloud documentation</li>
+<li>SAP API Business Hub — browse released APIs</li>
+<li>SAP Developer tutorials — step-by-step guides</li>
+</ul>
+<p><strong>Coming soon on Codewise:</strong></p>
+<ul>
+<li>ABAP for SAP BTP (side-by-side development)</li>
+<li>Fiori Elements Deep Dive</li>
+<li>SAP Integration Suite for ABAP Developers</li>
+</ul>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>The C_ABAPD_2601 certification is hands-on — practice building complete RAP apps under time pressure.</li>
+<li>The CDS-only pattern is SAP's future direction — fewer artifacts, more declarative definitions.</li>
+<li>SAP Joule AI accelerates development but doesn't replace understanding.</li>
+<li>Modern ABAP developers are in high demand across migration, new development, BTP extension, and architecture roles.</li>
+<li>Keep practicing. Build apps beyond TechMart. The skills compound.</li>
+</ul>
+<h2 id="thank-you">Thank You</h2>
+<p>You've completed the ABAP Modern course. You went from Classic ABAP — SE80, function modules, dynpros — to CDS views, RAP business objects, draft handling, and clean core extensibility. That's a significant professional upgrade.</p>
+<p>The SAP ecosystem is in the middle of its biggest transformation since R/3 → ECC. Developers who can bridge Classic and Modern ABAP are exactly what the market needs.</p>
+<p>Go build something. Get certified. Come back and tell us about it.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"What's Next — Certification, CDS Pattern, and Your Career\",\"description\":\"Map your path forward as a modern ABAP developer. Prepare for the C_ABAPD_2601 certification, learn about the CDS-only pattern, and explore career opportunities.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/abap-modern-whats-next\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"What's Next — Certification, CDS Pattern, and Your Career\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/abap-modern-whats-next\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Real-World Patterns & Next Steps"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"What's Next — Certification, CDS Pattern, and Your Career"}],["$","p",null,{"className":"lesson-header__description","children":"Map your path forward as a modern ABAP developer. Prepare for the C_ABAPD_2601 certification, learn about the CDS-only pattern, and explore career opportunities."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/rap-extensibility","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Extensibility — BADIs, Side-by-Side, and BTP Integration"}]]}],["$","div",null,{}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"what-youve-accomplished","text":"What You've Accomplished","level":2},{"id":"the-c_abapd_2601-certification","text":"The C_ABAPD_2601 Certification","level":2},{"id":"the-cds-only-pattern--whats-coming","text":"The CDS-Only Pattern — What's Coming","level":2},{"id":"sap-joule-ai-for-development","text":"SAP Joule AI for Development","level":2},{"id":"career-paths","text":"Career Paths","level":2},{"id":"continued-learning-resources","text":"Continued Learning Resources","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"thank-you","text":"Thank You","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"What's Next — Certification, CDS Pattern, and Your Career — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Map your path forward as a modern ABAP developer. Prepare for the C_ABAPD_2601 certification, learn about the CDS-only pattern, and explore career opportunities."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"abap certification,c_abapd_2601,cds pattern,joule,abap career"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/abap-modern-whats-next/"}],["$","meta","8",{"property":"og:title","content":"What's Next — Certification, CDS Pattern, and Your Career"}],["$","meta","9",{"property":"og:description","content":"Map your path forward as a modern ABAP developer. Prepare for the C_ABAPD_2601 certification, learn about the CDS-only pattern, and explore career opportunities."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/abap-modern-whats-next/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

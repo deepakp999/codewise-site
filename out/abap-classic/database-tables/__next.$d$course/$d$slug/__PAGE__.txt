@@ -1,0 +1,124 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T3c3f,<h1 id="database-tables-and-transparent-tables">Database Tables and Transparent Tables</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How SAP stores data in the underlying database</li>
+<li>What transparent tables are and why they matter</li>
+<li>Primary keys and foreign keys in SAP</li>
+<li>Table categories: transparent, pooled, and cluster</li>
+<li>How to view table data with SE16N</li>
+</ul>
+</div><h2 id="transparent-tables">Transparent Tables</h2>
+<p>A <strong>transparent table</strong> is the most common table type in SAP. It has a 1:1 mapping between the dictionary definition in SE11 and the actual database table — same name, same fields, same structure.</p>
+<pre><code>SE11 Definition: ZEMPLOYEES          Database Table: ZEMPLOYEES
+┌──────────────┬──────────────┐     ┌──────────────┬──────────────┐
+│ MANDT (key)  │ CLNT(3)      │     │ MANDT        │ VARCHAR(3)   │
+│ EMP_ID (key) │ NUMC(10)     │     │ EMP_ID       │ VARCHAR(10)  │
+│ NAME         │ CHAR(50)     │     │ NAME         │ VARCHAR(50)  │
+│ DEPARTMENT   │ CHAR(30)     │     │ DEPARTMENT   │ VARCHAR(30)  │
+│ SALARY       │ CURR(13,2)   │     │ SALARY       │ DECIMAL(13,2)│
+└──────────────┴──────────────┘     └──────────────┴──────────────┘
+        Dictionary                         Database
+</code></pre>
+<p>What you define in SE11 is what exists in the database. When you activate a table in SE11, SAP creates (or alters) the corresponding database table automatically.</p>
+<h2 id="primary-keys">Primary Keys</h2>
+<p>Every SAP table has a primary key. The first key field is almost always MANDT (client). The remaining key fields uniquely identify a record within that client.</p>
+<pre><code>Table KNA1 (Customer Master):
+  Primary Key: MANDT + KUNNR
+  
+  MANDT  KUNNR       NAME1              LAND1
+  ──────────────────────────────────────────────
+  100    0000001001   Acme Corp          US
+  100    0000001002   Global Industries  DE
+  200    0000001001   Test Customer      US     ← Same KUNNR, different client
+</code></pre>
+<p>The combination MANDT + KUNNR is unique. Two rows can have the same KUNNR if they're in different clients (different MANDT values). This is how client isolation works at the database level.</p>
+<h2 id="foreign-keys">Foreign Keys</h2>
+<p>Foreign keys define relationships between tables:</p>
+<pre><code>VBAK (Sales Order Header)              VBAP (Sales Order Items)
+┌────────┬────────┬────────┐          ┌────────┬────────┬────────┬────────┐
+│ MANDT  │ VBELN  │ KUNNR  │          │ MANDT  │ VBELN  │ POSNR  │ MATNR  │
+│ 100    │ 100001 │ 001001 │───┐      │ 100    │ 100001 │ 000010 │ MAT001 │
+│ 100    │ 100002 │ 001002 │   │      │ 100    │ 100001 │ 000020 │ MAT002 │
+└────────┴────────┴────────┘   │      │ 100    │ 100002 │ 000010 │ MAT003 │
+                               │      └────────┴────────┴────────┴────────┘
+                               └──── VBELN links header to items
+</code></pre>
+<p>VBAK.VBELN → VBAP.VBELN — every item belongs to a header. This is a standard parent-child relationship, like orders and order_items in any e-commerce database.</p>
+<h2 id="viewing-table-data-with-se16n">Viewing Table Data with SE16N</h2>
+<p>Type <code>/nSE16N</code>, enter a table name, and press F8 (Execute):</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* SE16N lets you:</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* - View all records or filter by specific fields</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* - Export data to a spreadsheet</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* - Count records matching your criteria</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* - Display individual records in detail</span></span></code></pre>
+<p><strong>SE16N is your best debugging friend.</strong> When an ABAP program produces wrong results, the first question is always: "What's actually in the table?" SE16N answers that.</p>
+<h3 id="useful-se16n-tricks">Useful SE16N tricks:</h3>
+<ul>
+<li>Enter <code>*</code> in a field to see all values</li>
+<li>Enter a range like <code>001000</code> to <code>001999</code> for number ranges</li>
+<li>Use the "Number of Entries" button to count without displaying all rows</li>
+<li>Maximum display is 500 rows by default — change the setting if you need more</li>
+</ul>
+<h2 id="table-categories-in-s4hana">Table Categories in S/4HANA</h2>
+<p>In modern S/4HANA, only transparent tables exist. But in older SAP systems, you'll encounter:</p>
+<pre><code>Transparent Table  → 1:1 with database table (99% of what you'll work with)
+Pooled Table      → Multiple SAP tables stored in one database table (legacy)
+Cluster Table     → Multiple SAP tables stored in one database table, compressed (legacy)
+</code></pre>
+<p>Pooled and cluster tables were used for performance in older databases. S/4HANA on HANA doesn't need them — they're all converted to transparent tables during migration.</p>
+<h2 id="creating-sample-data-for-practice">Creating Sample Data for Practice</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">REPORT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> z_create_sample_data.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* Define table structure (should match your SE11 table ZEMPLOYEES)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: ls_emp</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> zemployees.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">* Insert records</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-mandt </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> sy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">mandt</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-employee_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '0000000001'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-name </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Alice Johnson'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-department </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Engineering'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-salary </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 120000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-hire_date </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '20200115'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INSERT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> zemployees </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_emp.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-employee_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '0000000002'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-name </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Bob Smith'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-department </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Marketing'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-salary </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 95000</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ls_emp-hire_date </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '20190601'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INSERT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> zemployees </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_emp.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IF</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> sy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">subrc</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  COMMIT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> WORK</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Data inserted successfully'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WRITE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Insert failed — data may already exist'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>We'll cover INSERT, UPDATE, DELETE in detail in Lesson 16. This is just to create test data for the next lesson.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Forgetting that MANDT is part of the key.</strong> When you select data, SAP automatically filters by the current client (sy-mandt). But if you're doing cross-client operations or debugging, remember that the same key can exist in multiple clients.</li>
+<li><strong>Using SE16 to modify production data.</strong> SE16 can display and (with authorization) modify data directly. This is extremely dangerous in production — changes bypass all application logic, validation, and audit trails. Never modify production data via SE16.</li>
+<li><strong>Not understanding key fields.</strong> If you try to INSERT a record with the same primary key as an existing record, it fails (sy-subrc = 4). Use MODIFY instead if you want to insert-or-update.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Transparent tables have a 1:1 mapping between SE11 definition and the database table.</li>
+<li>Primary keys always include MANDT (client) as the first field.</li>
+<li>Foreign keys define relationships between tables (header ↔ items, master ↔ transaction).</li>
+<li>SE16N is your primary tool for viewing table data — essential for debugging.</li>
+<li>In S/4HANA, all tables are transparent. Pooled and cluster tables are legacy concepts.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>You know how tables are defined and structured. In <strong>Lesson 15: Open SQL — Reading from the Database</strong>, we'll write SELECT statements to query SAP data — the operation you'll perform most often as an ABAP developer.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Database Tables and Transparent Tables\",\"description\":\"Understand how SAP stores data: transparent tables, pooled tables, cluster tables, primary keys, foreign keys, and table relationships.\",\"url\":\"https://codewise.lumivoxx.com/abap-classic/database-tables\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Classic — SAP Programming from Scratch\",\"url\":\"https://codewise.lumivoxx.com/abap-classic\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Classic — SAP Programming from Scratch\",\"item\":\"https://codewise.lumivoxx.com/abap-classic\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Database Tables and Transparent Tables\",\"item\":\"https://codewise.lumivoxx.com/abap-classic/database-tables\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Classic — SAP Programming from Scratch"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Data Dictionary & Database"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Database Tables and Transparent Tables"}],["$","p",null,{"className":"lesson-header__description","children":"Understand how SAP stores data: transparent tables, pooled tables, cluster tables, primary keys, foreign keys, and table relationships."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-classic/data-dictionary","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"The ABAP Data Dictionary (SE11)"}]]}],["$","$L8",null,{"href":"/abap-classic/open-sql-reading","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Open SQL — Reading from the Database"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"transparent-tables","text":"Transparent Tables","level":2},{"id":"primary-keys","text":"Primary Keys","level":2},{"id":"foreign-keys","text":"Foreign Keys","level":2},{"id":"viewing-table-data-with-se16n","text":"Viewing Table Data with SE16N","level":2},{"id":"useful-se16n-tricks","text":"Useful SE16N tricks:","level":3},{"id":"table-categories-in-s4hana","text":"Table Categories in S/4HANA","level":2},{"id":"creating-sample-data-for-practice","text":"Creating Sample Data for Practice","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

@@ -1,0 +1,229 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","setting-up-adt",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","setting-up-adt","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T37ba,<h1 id="setting-up-adt-eclipse-for-abap-development">Setting Up ADT (Eclipse) for ABAP Development</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How to install Eclipse IDE and ABAP Development Tools (ADT)</li>
+<li>How to create a free SAP BTP ABAP Environment trial account</li>
+<li>How to connect ADT to your cloud system</li>
+<li>How to create your first ABAP Cloud project and package</li>
+<li>Your first "Hello World" in ABAP Cloud</li>
+</ul>
+</div><h2 id="goodbye-se80-hello-eclipse">Goodbye SE80, Hello Eclipse</h2>
+<p>If you've been using SE80 your entire ABAP career, this lesson is a significant shift. Eclipse with ADT is not just a different editor — it's a different way of working. You'll have code completion, inline error checking, refactoring tools, integrated testing, and the ability to work on multiple objects simultaneously in tabs.</p>
+<p>Think of the shift like this: SE80 is a flip phone. It makes calls, it sends texts, it works. Eclipse ADT is a smartphone — same core functions, but with a modern interface that makes you dramatically more productive once you get past the learning curve.</p>
+<h2 id="step-1--install-eclipse">Step 1 — Install Eclipse</h2>
+<p>Download Eclipse IDE for Java Developers (yes, Java — ADT runs as an Eclipse plugin):</p>
+<ol>
+<li>Go to <code>https://www.eclipse.org/downloads/</code></li>
+<li>Download <strong>Eclipse IDE for Java Developers</strong> (latest release)</li>
+<li>Install it — accept the defaults</li>
+<li>Launch Eclipse and choose a workspace directory (e.g., <code>C:\eclipse-workspace\abap</code>)</li>
+</ol>
+<p><strong>Important:</strong> Use the "Java Developers" package, not "Enterprise Java" or "C/C++". ADT is compatible with the Java Developers package.</p>
+<h2 id="step-2--install-abap-development-tools-adt">Step 2 — Install ABAP Development Tools (ADT)</h2>
+<p>ADT is an Eclipse plugin provided by SAP:</p>
+<ol>
+<li>In Eclipse, go to <strong>Help → Install New Software</strong></li>
+<li>Click <strong>Add</strong> and enter:
+<ul>
+<li>Name: <code>ABAP Development Tools</code></li>
+<li>URL: <code>https://tools.hana.ondemand.com/latest</code></li>
+</ul>
+</li>
+<li>Check <strong>ABAP Development Tools</strong> from the list</li>
+<li>Click <strong>Next</strong>, accept the license, and finish the installation</li>
+<li>Restart Eclipse when prompted</li>
+</ol>
+<p>After restart, you should see ABAP-specific perspectives and menu options.</p>
+<div data-cw-section="output-block"><h3 id="expected-output-adt-installed-successfully">Expected Output (ADT Installed Successfully)</h3>
+<pre data-cw-output="true"><code>Eclipse Menu Bar now shows:
+  File | Edit | Navigate | Search | Project | Run | ABAP | Window | Help
+
+ABAP Perspective available:
+  Window → Perspective → Open Perspective → Other → ABAP
+</code></pre></div>
+<h2 id="step-3--create-a-sap-btp-abap-environment-trial">Step 3 — Create a SAP BTP ABAP Environment Trial</h2>
+<p>SAP provides a free trial system — no cost, no credit card:</p>
+<ol>
+<li>Go to <code>https://www.sap.com/products/technology-platform/trial.html</code></li>
+<li>Create a SAP Universal ID (or log in if you have one)</li>
+<li>Activate the <strong>SAP BTP Trial</strong> in your preferred region</li>
+<li>From the BTP cockpit, navigate to <strong>Instances and Subscriptions</strong></li>
+<li>Create an instance of <strong>SAP BTP, ABAP Environment</strong> (trial plan)</li>
+<li>Wait for provisioning (~10 minutes)</li>
+</ol>
+<p>Once provisioned, you'll see a service key with connection details.</p>
+<p><strong>Note:</strong> The trial has limitations (storage, runtime quotas), but it's more than enough for this entire course. TechMart's training environment uses the same trial system.</p>
+<h2 id="step-4--connect-adt-to-your-btp-system">Step 4 — Connect ADT to Your BTP System</h2>
+<ol>
+<li>In Eclipse, switch to the <strong>ABAP Perspective</strong> (Window → Perspective → Open Perspective → ABAP)</li>
+<li>In the Project Explorer, right-click → <strong>New → ABAP Cloud Project</strong></li>
+<li>Select <strong>SAP BTP ABAP Environment</strong></li>
+<li>Enter your service key or use the <strong>SAP Logon Service URL</strong> from the BTP cockpit</li>
+<li>Log in with your SAP Universal ID</li>
+<li>Name your project (e.g., <code>TECHMART_CLOUD</code>)</li>
+<li>Click <strong>Finish</strong></li>
+</ol>
+<p>You should now see the system in your Project Explorer with expandable nodes for packages, dictionary objects, and more.</p>
+<div data-cw-section="output-block"><h3 id="expected-output-connected-to-btp">Expected Output (Connected to BTP)</h3>
+<pre data-cw-output="true"><code>Project Explorer:
+  ▼ TECHMART_CLOUD [your-system-id]
+    ▼ Favorite Packages
+    ▼ Released Objects
+      ▼ Core Data Services
+      ▼ Classes/Interfaces
+      ▼ ...
+</code></pre></div>
+<h2 id="step-5--create-your-package">Step 5 — Create Your Package</h2>
+<p>Every object in ABAP Cloud lives in a package. Let's create TechMart's development package:</p>
+<ol>
+<li>Right-click your project → <strong>New → ABAP Package</strong></li>
+<li>Enter:
+<ul>
+<li>Name: <code>ZTECHMART_MODERN</code></li>
+<li>Description: <code>TechMart Modern ABAP Development</code></li>
+<li>Superpackage: <code>ZLOCAL</code> (for local development on trial)</li>
+</ul>
+</li>
+<li>Click <strong>Next</strong>, select a transport request (or create a new one)</li>
+<li>Click <strong>Finish</strong></li>
+</ol>
+<pre><code>Project Explorer:
+  ▼ TECHMART_CLOUD
+    ▼ Favorite Packages
+      ▼ ZTECHMART_MODERN
+        (empty — we'll add objects starting next lesson)
+</code></pre>
+<h2 id="step-6--your-first-abap-cloud-program">Step 6 — Your First ABAP Cloud Program</h2>
+<p>Let's write a simple class to confirm everything works:</p>
+<ol>
+<li>Right-click <code>ZTECHMART_MODERN</code> → <strong>New → ABAP Class</strong></li>
+<li>Enter:
+<ul>
+<li>Name: <code>ZCL_TM_HELLO_CLOUD</code></li>
+<li>Description: <code>TechMart Hello Cloud</code></li>
+<li>Add interface: <code>IF_OO_ADT_CLASSRUN</code></li>
+</ul>
+</li>
+<li>Click <strong>Next</strong> → select transport → <strong>Finish</strong></li>
+</ol>
+<p>The <code>IF_OO_ADT_CLASSRUN</code> interface lets you run a class directly from ADT — it's the ABAP Cloud equivalent of a Classic report program.</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_hello_cloud</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PUBLIC</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  FINAL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  CREATE PUBLIC</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PUBLIC SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    INTERFACES</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_oo_adt_classrun.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_hello_cloud</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> if_oo_adt_classrun</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">main</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    out->write( </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Welcome to ABAP Cloud, TechMart developer!</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ).</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    out->write( </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Today's date: </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">cl_abap_context_info=>get_system_date( )</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ).</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    out->write( </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Your user: </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">cl_abap_context_info=>get_user_technical_name( )</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>Run it: <strong>Right-click the class → Run As → ABAP Application (Console)</strong></p>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>Welcome to ABAP Cloud, TechMart developer!
+Today's date: 2026-04-12
+Your user: CB9876543210
+</code></pre></div>
+<p>Notice what's different from Classic ABAP:</p>
+<ul>
+<li>No <code>REPORT</code> statement — we use a class, not a program</li>
+<li>No <code>WRITE</code> statement — we use <code>out->write()</code></li>
+<li>String templates with <code>| |</code> instead of concatenation</li>
+<li><code>cl_abap_context_info</code> instead of <code>sy-datum</code> and <code>sy-uname</code> (those aren't available in ABAP Cloud)</li>
+</ul>
+<h2 id="adt-tips-for-se80-veterans">ADT Tips for SE80 Veterans</h2>
+<table>
+<thead>
+<tr>
+<th>SE80 Habit</th>
+<th>ADT Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Double-click to navigate</td>
+<td><strong>Ctrl+Click</strong> on any object name</td>
+</tr>
+<tr>
+<td>F1 for help</td>
+<td><strong>F2</strong> shows inline documentation</td>
+</tr>
+<tr>
+<td>SE38 to create a report</td>
+<td>Right-click package → New → ABAP Class (with IF_OO_ADT_CLASSRUN)</td>
+</tr>
+<tr>
+<td>SE11 to view tables</td>
+<td><strong>Ctrl+Shift+A</strong> → search for table/CDS entity name</td>
+</tr>
+<tr>
+<td>Pretty Printer</td>
+<td><strong>Shift+F1</strong> (ABAP Formatter)</td>
+</tr>
+<tr>
+<td>SE24 for classes</td>
+<td>Just open the class file directly in ADT</td>
+</tr>
+<tr>
+<td>Activation (Ctrl+F3 in SE80)</td>
+<td><strong>Ctrl+F3</strong> in ADT too (this one stayed the same!)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pro tip:</strong> Learn <strong>Ctrl+Shift+A</strong> (Open ABAP Development Object) immediately. It's the universal search — type any object name and jump to it instantly. This alone makes ADT faster than SE80.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Installing the wrong Eclipse package</strong> — The "Eclipse IDE for Enterprise Java and Web Developers" has conflicts with ADT. Use "Eclipse IDE for Java Developers."</li>
+<li><strong>Not switching to ABAP Perspective</strong> — ADT features only appear in the ABAP perspective. If you don't see ABAP options, check Window → Perspective.</li>
+<li><strong>Using <code>sy-</code> system fields in ABAP Cloud</strong> — <code>SY-DATUM</code>, <code>SY-UNAME</code>, <code>SY-SUBRC</code> after SQL are not available. Use <code>cl_abap_context_info</code> for system info and inline error handling for SQL.</li>
+<li><strong>Creating objects in $TMP</strong> — <code>$TMP</code> is for local throwaway objects. Use a proper Z-package for anything you want to keep.</li>
+<li><strong>Expecting SAP GUI transactions to work</strong> — SE11, SE37, SE80 — none of these are available in the BTP trial. Everything happens in ADT.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Eclipse with ADT is the mandatory IDE for ABAP Cloud development. SE80 cannot create or edit cloud objects.</li>
+<li>SAP BTP ABAP Environment trial gives you a free cloud system for learning — no cost, no credit card.</li>
+<li>In ABAP Cloud, everything is a class. The <code>IF_OO_ADT_CLASSRUN</code> interface replaces classic report programs for console output.</li>
+<li>Learn Ctrl+Shift+A, Ctrl+Click, and F2 immediately — they'll make you productive in ADT fast.</li>
+<li>Classic system fields like <code>sy-datum</code> are replaced by <code>cl_abap_context_info</code> methods.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Now that your environment is ready, let's learn the <strong>modern ABAP syntax</strong> — inline declarations, string templates, constructor operators, and the new internal table expressions. If Classic ABAP was prose, modern ABAP is poetry — same ideas, fewer words. We'll convert TechMart code from Classic to Modern style side by side.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Setting Up ADT (Eclipse) for ABAP Cloud Development\",\"description\":\"Step-by-step guide to install Eclipse, add ABAP Development Tools, connect to SAP BTP ABAP Environment trial, and write your first ABAP Cloud program.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/setting-up-adt\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Setting Up ADT (Eclipse) for ABAP Cloud Development\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/setting-up-adt\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"The Modern ABAP Landscape"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Setting Up ADT (Eclipse) for ABAP Cloud Development"}],["$","p",null,{"className":"lesson-header__description","children":"Step-by-step guide to install Eclipse, add ABAP Development Tools, connect to SAP BTP ABAP Environment trial, and write your first ABAP Cloud program."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/abap-cloud-development-model","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"The ABAP Cloud Development Model"}]]}],["$","$L6",null,{"href":"/abap-modern/modern-abap-syntax","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Modern ABAP Syntax — Inline Declarations and Expressions"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"goodbye-se80-hello-eclipse","text":"Goodbye SE80, Hello Eclipse","level":2},{"id":"step-1--install-eclipse","text":"Step 1 — Install Eclipse","level":2},{"id":"step-2--install-abap-development-tools-adt","text":"Step 2 — Install ABAP Development Tools (ADT)","level":2},{"id":"expected-output-adt-installed-successfully","text":"Expected Output (ADT Installed Successfully)","level":3},{"id":"step-3--create-a-sap-btp-abap-environment-trial","text":"Step 3 — Create a SAP BTP ABAP Environment Trial","level":2},{"id":"step-4--connect-adt-to-your-btp-system","text":"Step 4 — Connect ADT to Your BTP System","level":2},{"id":"expected-output-connected-to-btp","text":"Expected Output (Connected to BTP)","level":3},{"id":"step-5--create-your-package","text":"Step 5 — Create Your Package","level":2},{"id":"step-6--your-first-abap-cloud-program","text":"Step 6 — Your First ABAP Cloud Program","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"adt-tips-for-se80-veterans","text":"ADT Tips for SE80 Veterans","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Setting Up ADT (Eclipse) for ABAP Cloud Development — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Step-by-step guide to install Eclipse, add ABAP Development Tools, connect to SAP BTP ABAP Environment trial, and write your first ABAP Cloud program."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"adt,eclipse,abap development tools,btp trial,setup"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/setting-up-adt/"}],["$","meta","8",{"property":"og:title","content":"Setting Up ADT (Eclipse) for ABAP Cloud Development"}],["$","meta","9",{"property":"og:description","content":"Step-by-step guide to install Eclipse, add ABAP Development Tools, connect to SAP BTP ABAP Environment trial, and write your first ABAP Cloud program."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/setting-up-adt/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

@@ -1,0 +1,197 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T7e44,<h1 id="oop-refresher--interfaces-abstract-classes-and-the-rap-connection">OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Why OOP is the foundation of RAP (not optional — mandatory)</li>
+<li>Interfaces in ABAP Cloud — the contract pattern</li>
+<li>Abstract classes and method templates</li>
+<li>How RAP behavior implementations use these OOP patterns</li>
+<li>A preview of what RAP handler classes look like</li>
+</ul>
+</div><h2 id="why-this-lesson-exists">Why This Lesson Exists</h2>
+<p>In the Classic course, you learned OOP as one of many approaches. You could write a report without classes. You could use function modules instead of methods. OOP was a best practice, not a requirement.</p>
+<p>In ABAP Cloud, <strong>OOP is the only way to write executable code.</strong> There are no reports (SE38), no function modules (SE37), no subroutines (FORM/ENDFORM). Everything is a class.</p>
+<p>RAP takes this further. When you define a business object's behavior (validations, actions, determinations), the framework generates a class skeleton. You fill in the methods. The pattern is always the same: interface → class → method implementation.</p>
+<h2 id="interfaces--the-contract">Interfaces — The Contract</h2>
+<p>An interface defines WHAT a class can do without saying HOW:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTERFACE</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zif_tm_calculator</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> PUBLIC</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> calculate_total</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    IMPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> it_items      </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_soitem_tab</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RETURNING</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">rv_total</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_amount.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> apply_discount</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    IMPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_percentage  </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#005CC5;--shiki-dark:#ABB2BF"> decfloat34</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    CHANGING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  cv_amount      </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_amount.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDINTERFACE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>Any class that implements this interface MUST provide these methods:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_standard_calc</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION PUBLIC FINAL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  CREATE PUBLIC</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PUBLIC SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    INTERFACES</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> zif_tm_calculator.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_standard_calc</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zif_tm_calculator</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">calculate_total</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    rv_total </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> REDUCE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_amount(</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      INIT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> sum</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CONV</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_amount( </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      FOR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_item </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> it_items</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      NEXT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> sum</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> sum</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( ls_item-quantity </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_item-price )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zif_tm_calculator</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">~</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">apply_discount</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    cv_amount </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> cv_amount </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> -</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> iv_percentage </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 100</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p><strong>Why this matters for RAP:</strong> RAP behavior implementations follow this exact pattern. The framework defines the interface (what methods you must implement), and you provide the logic.</p>
+<h2 id="abstract-classes--templates-for-behavior">Abstract Classes — Templates for Behavior</h2>
+<p>An abstract class provides partial implementation — some methods are concrete, others are left for subclasses:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_order_processor</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION PUBLIC ABSTRACT</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  CREATE PUBLIC</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PUBLIC SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> process_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FINAL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IMPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> is_order</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      RAISING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">   cx_tm_order_error.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PROTECTED SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Subclasses MUST implement these</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> validate_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ABSTRACT</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IMPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> is_order</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      RAISING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">   cx_tm_order_error.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> calculate_shipping </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ABSTRACT</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IMPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> is_order       </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      RETURNING</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">rv_cost</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TYPE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_amount.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zcl_tm_order_processor</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> process_order</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Template method pattern — the framework calls this,</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " but validate_order and calculate_shipping are YOUR code</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    validate_order( is_order ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lv_shipping</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> calculate_shipping( is_order ).</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " ... continue processing</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p><strong>Why this matters for RAP:</strong> RAP handler classes follow the template method pattern. The framework calls your methods at specific lifecycle points (on save, on modify, before action). You implement the business logic; the framework handles the plumbing.</p>
+<h2 id="the-rap-connection--a-preview">The RAP Connection — A Preview</h2>
+<p>Here's what a RAP behavior implementation class actually looks like. Don't worry about understanding every detail yet — we'll build this step by step in Module 3. The point is to see the OOP pattern:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" This class is GENERATED by the RAP framework</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" You fill in the method bodies</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> lhc_salesorder</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION INHERITING FROM</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">  cl_abap_behavior_handler</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PRIVATE SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " These methods are called by the framework</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Their signatures are defined by RAP, not by you</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> validate_customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FOR</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALIDATE ON</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SAVE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IMPORTING</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> keys</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FOR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder~validateCustomer.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> determine_total </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FOR</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DETERMINE ON</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODIFY</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IMPORTING</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> keys</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FOR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder~determineTotal.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> approve_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FOR</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODIFY</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IMPORTING</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> keys</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FOR</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ACTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder~approve</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> result</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> lhc_salesorder</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> validate_customer</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " YOUR business logic here</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Read the order data using EML</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    READ</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        FIELDS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( customer_id )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">keys</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_orders </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_order</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-customer_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> INITIAL</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        APPEND</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky )</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> failed-salesorder.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        APPEND</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          %msg </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> new_message_with_text(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            severity </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv_message=>severity-error</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">            text</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">     =</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Customer ID is required</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        )</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> reported-salesorder.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> determine_total</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Auto-calculate order total from line items</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " ... implementation in Lesson 19</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> approve_order</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Change status to 'Approved'</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " ... implementation in Lesson 20</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>See the pattern?</p>
+<ol>
+<li>The class <strong>inherits</strong> from <code>cl_abap_behavior_handler</code> (an abstract class from the framework)</li>
+<li>The methods are <strong>defined by the framework</strong> (you don't choose the signatures)</li>
+<li>You <strong>implement the body</strong> — that's your business logic</li>
+<li>The framework <strong>calls your methods</strong> at the right time (on save, on modify, on action)</li>
+</ol>
+<p>This is the interface/abstract-class/template-method pattern from OOP textbooks, applied at industrial scale.</p>
+<h2 id="key-oop-patterns-youll-use-in-rap">Key OOP Patterns You'll Use in RAP</h2>
+<table>
+<thead>
+<tr>
+<th>OOP Pattern</th>
+<th>Where It Appears in RAP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface implementation</td>
+<td>Behavior handler implements framework-defined method signatures</td>
+</tr>
+<tr>
+<td>Template method</td>
+<td>Framework calls your validation/determination/action methods</td>
+</tr>
+<tr>
+<td>Dependency injection</td>
+<td>Test doubles replace real dependencies for unit testing</td>
+</tr>
+<tr>
+<td>Factory method</td>
+<td>Factory actions create new BO instances</td>
+</tr>
+<tr>
+<td>Observer pattern</td>
+<td>Determinations react to data changes (on modify triggers)</td>
+</tr>
+</tbody>
+</table>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>"I'll skip OOP and learn RAP directly"</strong> — RAP IS OOP. Every behavior implementation is a class. Every validation is a method. If interfaces and inheritance confuse you, go back to the Classic OOP lessons before continuing.</li>
+<li><strong>Trying to use procedural code in behavior implementations</strong> — You can't write <code>PERFORM</code> or <code>CALL FUNCTION</code> inside RAP handler methods. Everything is a method call on a class.</li>
+<li><strong>Overcomplicating class hierarchies</strong> — RAP keeps it simple: one handler class per entity, methods per behavior feature. Don't create deep inheritance trees. RAP doesn't need them.</li>
+<li><strong>Ignoring the <code>LOCAL MODE</code> keyword</strong> — When reading data inside a handler, you use <code>IN LOCAL MODE</code> to bypass authorization (you're already inside the BO). Forgetting this causes authorization failures.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>In ABAP Cloud, OOP is mandatory — there's no procedural alternative.</li>
+<li>Interfaces define contracts (what methods must exist). RAP uses this pattern for behavior implementations.</li>
+<li>Abstract classes provide templates. RAP handler classes inherit from <code>cl_abap_behavior_handler</code> and implement framework-defined methods.</li>
+<li>RAP behavior implementation = OOP template method pattern. The framework calls your methods; you provide the business logic.</li>
+<li>You don't need advanced OOP (multiple inheritance, design patterns beyond the basics). RAP keeps the class structure simple and predictable.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>With your environment set up, modern syntax mastered, and OOP refreshed, it's time to dive into <strong>CDS Views</strong> — the data modeling layer of modern ABAP. In Lesson 6, we'll create our first CDS view entity, modeling TechMart's product catalog. This is where Classic DDIC views get replaced by something far more powerful.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection\",\"description\":\"Bridge your Classic ABAP OOP knowledge to RAP patterns. Learn how interfaces, abstract classes, and handler methods connect to RAP behavior implementations.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/abap-oop-for-rap\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/abap-oop-for-rap\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"The Modern ABAP Landscape"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}],["$","p",null,{"className":"lesson-header__description","children":"Bridge your Classic ABAP OOP knowledge to RAP patterns. Learn how interfaces, abstract classes, and handler methods connect to RAP behavior implementations."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/modern-abap-syntax","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Modern ABAP Syntax — Inline Declarations and Expressions"}]]}],["$","$L8",null,{"href":"/abap-modern/what-are-cds-views","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"What Are CDS Views? Your First CDS View"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"why-this-lesson-exists","text":"Why This Lesson Exists","level":2},{"id":"interfaces--the-contract","text":"Interfaces — The Contract","level":2},{"id":"abstract-classes--templates-for-behavior","text":"Abstract Classes — Templates for Behavior","level":2},{"id":"the-rap-connection--a-preview","text":"The RAP Connection — A Preview","level":2},{"id":"key-oop-patterns-youll-use-in-rap","text":"Key OOP Patterns You'll Use in RAP","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

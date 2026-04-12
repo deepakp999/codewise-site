@@ -1,0 +1,199 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","rap-unmanaged-bo",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","rap-unmanaged-bo","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T4b89,<h1 id="unmanaged-rap--when-you-need-full-control">Unmanaged RAP — When You Need Full Control</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>When to choose unmanaged over managed RAP</li>
+<li>The unmanaged save sequence</li>
+<li>Wrapping existing BAPI logic in a RAP service</li>
+<li>The interaction phase vs save phase</li>
+<li>Migration path from unmanaged to managed</li>
+</ul>
+</div><h2 id="when-to-use-unmanaged">When to Use Unmanaged</h2>
+<p>Managed RAP handles persistence automatically — the framework generates INSERT/UPDATE/DELETE. But what if:</p>
+<ul>
+<li>You have existing BAPI logic for order processing that's been tested for years?</li>
+<li>Your data is stored across multiple tables with complex relationships?</li>
+<li>You need custom locking beyond what managed provides?</li>
+<li>You're integrating with non-ABAP systems?</li>
+</ul>
+<p>Unmanaged RAP gives you the RAP service layer (OData, Fiori, EML) while you keep full control of persistence.</p>
+<h2 id="the-behavior-definition">The Behavior Definition</h2>
+<pre><code>unmanaged implementation in class zbp_i_tm_legacy_order unique;
+strict ( 2 );
+
+define behavior for ZI_TM_LegacyOrder alias LegacyOrder
+lock master
+authorization master ( global )
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+
+  mapping for ztm_legacy_order corresponding { ... }
+}
+</code></pre>
+<p>The only difference from managed: <code>unmanaged</code> instead of <code>managed</code> on the first line.</p>
+<h2 id="the-save-sequence">The Save Sequence</h2>
+<p>In unmanaged RAP, you implement the save yourself. The framework splits the transaction into two phases:</p>
+<p><strong>Interaction Phase</strong> — User is editing. Data is in a transactional buffer (memory). No database writes yet.</p>
+<p><strong>Save Phase</strong> — User clicks Save. The framework calls your save methods to persist the buffer to the database.</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> lsc_zi_tm_legacyorder</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFINITION INHERITING FROM</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">  cl_abap_behavior_saver</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  PROTECTED SECTION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    METHODS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> save_modified </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">REDEFINITION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CLASS</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> lsc_zi_tm_legacyorder</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> IMPLEMENTATION</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> save_modified</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Handle creates</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> create-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> NOT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> INITIAL</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> create-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_create</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        INSERT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_legacy_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( ls_create ) ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Handle updates</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> update-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> NOT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> INITIAL</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> update-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_update</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        UPDATE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_legacy_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( ls_update ) ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Handle deletes</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> delete-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> NOT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> INITIAL</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> delete-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_delete</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        DELETE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_legacy_order </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( ls_delete-%key ) ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDCLASS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="wrapping-a-bapi">Wrapping a BAPI</h2>
+<p>TechMart's legacy system has a BAPI for order creation. Wrap it in unmanaged RAP:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> save_modified</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> create-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> NOT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> INITIAL</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> create-legacyorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_create</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      " Call the existing BAPI instead of direct SQL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_header</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> bapi_order_header(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_create-CustomerId</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        date</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">     =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_create-OrderDate</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ).</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      " Note: In ABAP Cloud, you'd use a released wrapper for the BAPI</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      " This is conceptual — actual implementation depends on your system</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      CALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FUNCTION</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Z_TM_BAPI_ORDER_CREATE'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        EXPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> is_header </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_header</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        IMPORTING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ev_order_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lv_new_id</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        EXCEPTIONS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> OTHERS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      IF</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> sy</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">subrc</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> &#x3C;></span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        " Handle error</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="managed-vs-unmanaged--decision-matrix">Managed vs Unmanaged — Decision Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Use Managed</th>
+<th>Use Unmanaged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New application, no legacy code</td>
+<td>Yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Wrapping existing BAPIs</td>
+<td>—</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Simple CRUD on single/few tables</td>
+<td>Yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Complex multi-table persistence</td>
+<td>—</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Need draft support easily</td>
+<td>Yes (built-in)</td>
+<td>Possible but complex</td>
+</tr>
+<tr>
+<td>Custom locking requirements</td>
+<td>—</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Migrating Classic to RAP</td>
+<td>—</td>
+<td>Start here, migrate to managed later</td>
+</tr>
+</tbody>
+</table>
+<h2 id="migration-path">Migration Path</h2>
+<p>Many teams start unmanaged (to wrap legacy code) and migrate to managed over time:</p>
+<ol>
+<li><strong>Phase 1:</strong> Unmanaged RAP wrapping existing BAPIs → immediate Fiori/OData benefit</li>
+<li><strong>Phase 2:</strong> Gradually move persistence logic from BAPIs to managed RAP</li>
+<li><strong>Phase 3:</strong> Full managed RAP with validations, actions, draft</li>
+</ol>
+<p>This is TechMart's approach for the legacy order system.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Starting with unmanaged for new apps</strong> — If there's no legacy code to wrap, use managed. It's less code and more framework support.</li>
+<li><strong>Forgetting the saver class</strong> — Unmanaged MUST have a saver class with <code>save_modified</code>. Without it, nothing persists.</li>
+<li><strong>Calling COMMIT WORK in the saver</strong> — The framework handles COMMIT. Your saver does INSERT/UPDATE/DELETE only.</li>
+<li><strong>Not handling all three operations</strong> — Check <code>create</code>, <code>update</code>, AND <code>delete</code> in <code>save_modified</code>. Missing one means that operation silently does nothing.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Unmanaged RAP gives you the service layer (OData, Fiori, EML) while you control persistence.</li>
+<li>You implement <code>save_modified</code> in a saver class — handling creates, updates, and deletes to the database.</li>
+<li>Ideal for wrapping legacy BAPIs and complex persistence scenarios.</li>
+<li>Start unmanaged for legacy integration, migrate to managed when ready.</li>
+<li>For new applications with no legacy constraints, always use managed.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Not all data needs CRUD. In Lesson 18, we'll learn <strong>RAP Query</strong> — the read-only pattern for analytical views, search results, and data from non-standard sources.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Unmanaged RAP — When You Need Full Control\",\"description\":\"Learn when and how to use unmanaged RAP for wrapping legacy ABAP code, custom persistence, and BAPI integration in modern OData services.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-unmanaged-bo\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Unmanaged RAP — When You Need Full Control\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-unmanaged-bo\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Fundamentals"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Unmanaged RAP — When You Need Full Control"}],["$","p",null,{"className":"lesson-header__description","children":"Learn when and how to use unmanaged RAP for wrapping legacy ABAP code, custom persistence, and BAPI integration in modern OData services."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/rap-eml","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Entity Manipulation Language (EML) — CRUD Operations in Code"}]]}],["$","$L6",null,{"href":"/abap-modern/rap-query-implementation","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"RAP Query — Read-Only Access Patterns"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"when-to-use-unmanaged","text":"When to Use Unmanaged","level":2},{"id":"the-behavior-definition","text":"The Behavior Definition","level":2},{"id":"the-save-sequence","text":"The Save Sequence","level":2},{"id":"wrapping-a-bapi","text":"Wrapping a BAPI","level":2},{"id":"managed-vs-unmanaged--decision-matrix","text":"Managed vs Unmanaged — Decision Matrix","level":2},{"id":"migration-path","text":"Migration Path","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Unmanaged RAP — When You Need Full Control — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Learn when and how to use unmanaged RAP for wrapping legacy ABAP code, custom persistence, and BAPI integration in modern OData services."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"rap unmanaged,legacy integration,bapi wrapper,custom persistence,abap rap"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/rap-unmanaged-bo/"}],["$","meta","8",{"property":"og:title","content":"Unmanaged RAP — When You Need Full Control"}],["$","meta","9",{"property":"og:description","content":"Learn when and how to use unmanaged RAP for wrapping legacy ABAP code, custom persistence, and BAPI integration in modern OData services."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/rap-unmanaged-bo/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

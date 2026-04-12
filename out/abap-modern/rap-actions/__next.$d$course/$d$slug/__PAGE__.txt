@@ -1,0 +1,176 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T7070,<h1 id="actions--static-instance-and-factory-actions">Actions — Static, Instance, and Factory Actions</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What actions are and the three types</li>
+<li>Instance actions: operations on a specific record</li>
+<li>Static actions: operations without selecting a record</li>
+<li>Factory actions: creating new records from existing ones</li>
+<li>Action parameters and result types</li>
+</ul>
+</div><h2 id="what-are-actions">What Are Actions?</h2>
+<p>Actions are custom operations beyond standard CRUD. They appear as buttons in the Fiori UI. TechMart needs:</p>
+<ul>
+<li><strong>Approve Order</strong> — change status from New to Approved (instance action)</li>
+<li><strong>Create with Reference</strong> — copy an existing order (factory action)</li>
+<li><strong>Generate Daily Report</strong> — runs without selecting an order (static action)</li>
+</ul>
+<h2 id="instance-action--approve-order">Instance Action — Approve Order</h2>
+<p>An instance action operates on a selected record.</p>
+<p><strong>Step 1: Declare in behavior definition</strong></p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+{
+  ...
+  action approve result [1] $self;
+}
+</code></pre>
+<p><code>result [1] $self</code> means the action returns the updated instance.</p>
+<p><strong>Step 2: Implement</strong></p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> approve</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Read current status</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  READ</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      FIELDS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( Status OrderId )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">keys</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_orders </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_order</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Only New orders can be approved</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">&#x3C;></span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'N'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      APPEND</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky )</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> failed-salesorder.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      APPEND</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        %msg </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> new_message_with_text(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          severity </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv_message=>severity-error</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">          text</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Order </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">{ </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ls_order-OrderId</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> }</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> cannot be approved (status is not New)</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      )</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> reported-salesorder.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      CONTINUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " Update status to Approved</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    MODIFY</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        UPDATE</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FIELDS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( Status )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( (</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          %tky   </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%tky</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'A'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        ) )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      REPORTED</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_rep</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Return updated instances</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  READ</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FIELDS</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">keys</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_result</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  result</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FOR</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_r </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_result (</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %tky </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_r-%tky  %param </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_r ) ).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="static-action--no-instance-selection">Static Action — No Instance Selection</h2>
+<p>A static action doesn't need a selected record.</p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+{
+  ...
+  static action generateReport;
+}
+</code></pre>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> generateReport</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Business logic that doesn't depend on a specific order</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " For example: generate a daily summary, trigger batch processing</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  APPEND</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    %msg </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> new_message_with_text(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      severity </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv_message=>severity-success</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      text</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Daily report generation started</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">|</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  )</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> reported-salesorder.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="factory-action--create-from-existing">Factory Action — Create from Existing</h2>
+<p>A factory action creates a new instance, often by copying an existing one.</p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+{
+  ...
+  factory action copyOrder [1];
+}
+</code></pre>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> copyOrder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Read the source order</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  READ</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      ALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FIELDS</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> CORRESPONDING</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">keys</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    RESULT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_source</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_source</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_source[ </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ].</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Create a copy with New status and today's date</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  MODIFY</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> ENTITIES OF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">IN</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> LOCAL</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> MODE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ENTITY</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      CREATE</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FIELDS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ( CustomerId OrderDate Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">Currency</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      WITH</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> VALUE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> #( (</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        %cid       </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'copy_1'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        CustomerId </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_source-CustomerId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        OrderDate  </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> cl_abap_context_info=>get_system_date( )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        Status     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'N'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        Currency</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">   =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_source-Currency</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ) )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    MAPPED</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_mapped</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Return the new instance</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  mapped-salesorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_mapped-salesorder.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="actions-with-parameters">Actions with Parameters</h2>
+<p>Actions can accept input. Define an abstract entity for the parameter:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@EndUserText</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'Rejection Reason'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE ABSTRACT ENTITY ZA_TM_RejectParams</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  Reason : </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">abap</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">string</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">200</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>Declare the action with the parameter:</p>
+<pre><code>action rejectOrder parameter ZA_TM_RejectParams result [1] $self;
+</code></pre>
+<p>Access the parameter in the implementation:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">METHOD</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> rejectOrder</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lv_reason</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> keys[ </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ]-%param-Reason.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  " Store reason, update status to Rejected, etc.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDMETHOD</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<h2 id="exposing-actions-in-the-projection">Exposing Actions in the Projection</h2>
+<p>Actions declared at the interface level must be exposed in the projection:</p>
+<pre><code>projection;
+define behavior for ZC_TM_SalesOrder alias SalesOrder
+{
+  use action approve;
+  use action copyOrder;
+  use action rejectOrder;
+  use static action generateReport;
+}
+</code></pre>
+<p>And add UI annotations to show the button:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@UI</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.lineItem: [{ </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: #FOR_ACTION, dataAction: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'approve'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">                  label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'Approve'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, position: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">10</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }]</span></span></code></pre>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Instance action on multiple selections</strong> — RAP actions receive a table of keys. Loop through all of them, don't just process <code>keys[ 1 ]</code>.</li>
+<li><strong>Forgetting to return result</strong> — If the behavior definition says <code>result [1] $self</code>, the method MUST populate the <code>result</code> parameter. Otherwise the Fiori UI won't refresh.</li>
+<li><strong>Not exposing in projection</strong> — An action declared at the interface level but not exposed in the projection behavior won't appear in the Fiori app.</li>
+<li><strong>Mixing action and validation logic</strong> — Actions should execute operations. Put data validation in validations, not in actions.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Actions are custom operations beyond CRUD — they appear as buttons in Fiori.</li>
+<li>Instance actions operate on selected records. Static actions don't need selection. Factory actions create new records.</li>
+<li>Use abstract entities for action parameters (user input).</li>
+<li>Actions must be exposed in the projection behavior with <code>use action</code>.</li>
+<li>Add <code>@UI.lineItem</code> annotations with <code>type: #FOR_ACTION</code> to display action buttons.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>TechMart's users want to save partial work and come back later. In Lesson 21, we'll implement <strong>draft handling</strong> — the auto-save mechanism that lets users edit without committing, resuming later where they left off.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Actions in RAP — Static, Instance, and Factory Actions\",\"description\":\"Learn to implement RAP actions for custom business operations like approving orders, copying records, and triggering workflows.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-actions\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Actions in RAP — Static, Instance, and Factory Actions\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-actions\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Advanced Features"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Actions in RAP — Static, Instance, and Factory Actions"}],["$","p",null,{"className":"lesson-header__description","children":"Learn to implement RAP actions for custom business operations like approving orders, copying records, and triggering workflows."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/rap-validations-determinations","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Validations and Determinations — Business Rules in RAP"}]]}],["$","$L8",null,{"href":"/abap-modern/rap-draft","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Draft Handling — Save Incomplete Work"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"what-are-actions","text":"What Are Actions?","level":2},{"id":"instance-action--approve-order","text":"Instance Action — Approve Order","level":2},{"id":"static-action--no-instance-selection","text":"Static Action — No Instance Selection","level":2},{"id":"factory-action--create-from-existing","text":"Factory Action — Create from Existing","level":2},{"id":"actions-with-parameters","text":"Actions with Parameters","level":2},{"id":"exposing-actions-in-the-projection","text":"Exposing Actions in the Projection","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

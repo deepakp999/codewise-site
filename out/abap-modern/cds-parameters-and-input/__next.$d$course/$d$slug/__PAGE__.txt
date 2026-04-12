@@ -1,0 +1,153 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T5c7f,<h1 id="cds-views-with-parameters">CDS Views with Parameters</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How to define input parameters on CDS views</li>
+<li>Calling parameterized views from ABAP SQL</li>
+<li>Using parameters for date ranges, currency conversion, and filtering</li>
+<li>Parameters with default values</li>
+<li>When to use parameters vs WHERE filters</li>
+</ul>
+</div><h2 id="why-parameters">Why Parameters?</h2>
+<p>A regular CDS view always returns the same columns and structure. Filtering happens in the WHERE clause of the consuming ABAP SQL. But sometimes the logic inside the view itself needs to change based on input — a reference date for aging calculations, a target currency for conversion, a fiscal year for period selection.</p>
+<p>Parameters let you pass values INTO the CDS view definition, not just filter the output.</p>
+<h2 id="defining-parameters">Defining Parameters</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@AccessControl</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.authorizationCheck: #NOT_REQUIRED</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">@EndUserText</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.label: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">'TechMart Orders by Date Range'</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_OrdersByPeriod</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WITH</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> PARAMETERS</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_date_from : </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">abap</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">dats</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_date_to   : </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">abap</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">dats</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> order_id   </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      customer_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CustomerId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      order_date  </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderDate,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      status</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">     AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> Status</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      amount     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Amount,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      currency   </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Currency,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">      -- Use parameters in calculated fields</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      DATS_DAYS_BETWEEN( order_date, $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">parameters</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">p_date_to</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> DaysUntilEnd,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      CASE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> DATS_DAYS_BETWEEN( order_date, $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">session</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">system_date</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ) </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">></span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 90</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">          THEN</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Overdue'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> DATS_DAYS_BETWEEN( order_date, $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">session</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">system_date</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ) </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">></span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 30</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">          THEN</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Aging'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        ELSE</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Current'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      END</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> AgingStatus</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> order_date </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">BETWEEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">parameters</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">p_date_from</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">                     AND</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">parameters</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">p_date_to</span></span></code></pre>
+<p>Parameters are accessed with <code>$parameters.parameter_name</code>.</p>
+<h2 id="calling-from-abap-sql">Calling from ABAP SQL</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Pass parameter values when selecting</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_OrdersByPeriod(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_date_from </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '20260101'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_date_to   </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '20260331'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_q1_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Combine with additional WHERE clause</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_OrdersByPeriod(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_date_from </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '20260101'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_date_to   </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> '20260331'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'N'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_q1_new_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span></code></pre>
+<div data-cw-section="output-block"><h3 id="expected-output">Expected Output</h3>
+<pre data-cw-output="true"><code>| OrderId | OrderDate  | Status | Amount   | DaysUntilEnd | AgingStatus |
+|---------|------------|--------|----------|--------------|-------------|
+| 1042    | 2026-01-15 | N      | 4500.00  | 75           | Aging       |
+| 1089    | 2026-03-20 | C      | 1200.00  | 11           | Current     |
+</code></pre></div>
+<h2 id="parameters-with-default-values">Parameters with Default Values</h2>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_ProductStock</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WITH</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> PARAMETERS</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">    @Environment</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.systemField: #SYSTEM_DATE</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_reference_date : </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">abap</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">dats</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    p_min_stock      : </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">abap</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">int4</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DEFAULT</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_product</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> product_id     </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductId,</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">           AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ProductName,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      stock_quantity </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> StockQuantity,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      CASE</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        WHEN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> stock_quantity </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&#x3C;=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">parameters</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">p_min_stock</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">          THEN</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'Reorder'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        ELSE</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'OK'</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      END</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> StockStatus</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> stock_quantity </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">>=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">parameters</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">p_min_stock</span></span></code></pre>
+<p>The <code>@Environment.systemField: #SYSTEM_DATE</code> annotation auto-fills the parameter with today's date when no value is provided.</p>
+<h2 id="parameters-in-associations">Parameters in Associations</h2>
+<p>You can pass parameters through associations to other parameterized views:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  WITH</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> PARAMETERS p_currency : </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">abap</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">cuky</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ASSOCIATION </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[0..*]</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrderItem( p_currency: $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">parameters</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">p_currency</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> )</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> _Items </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ON</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">projection</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">OrderId</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> _Items</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">OrderId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> order_id </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      ...</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      _Items</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<h2 id="when-to-use-parameters-vs-where">When to Use Parameters vs WHERE</h2>
+<table>
+<thead>
+<tr>
+<th>Use Parameters when...</th>
+<th>Use WHERE when...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The view logic itself changes (calculations, CASE)</td>
+<td>You just need to filter output rows</td>
+</tr>
+<tr>
+<td>You need to pass values to associated views</td>
+<td>The filter is simple equality/range</td>
+</tr>
+<tr>
+<td>The view represents a function with inputs</td>
+<td>The view represents a data set</td>
+</tr>
+<tr>
+<td>Currency/unit conversion needs a target</td>
+<td>You're filtering on existing columns</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> If removing the filter would change the <em>meaning</em> of the view (not just the number of rows), use a parameter.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Too many parameters</strong> — If your view has 8 parameters, it's too complex. Split it into multiple focused views.</li>
+<li><strong>Forgetting <code>$parameters.</code></strong> — Parameters in the view body must be prefixed with <code>$parameters.</code>. Without it, the system looks for a field name.</li>
+<li><strong>Using parameters where WHERE suffices</strong> — If you just want orders for customer X, add a WHERE clause in ABAP SQL. Don't create a parameter for it.</li>
+<li><strong>Parameter type mismatches</strong> — The ABAP SQL call must pass values matching the parameter type exactly. <code>p_date_from = '2026-01-01'</code> fails — use <code>'20260101'</code> (DATS format).</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Parameters let you pass runtime values INTO CDS view logic — calculated fields, CASE expressions, WHERE conditions.</li>
+<li>Access parameters with <code>$parameters.name</code> in the view body.</li>
+<li>Call parameterized views with <code>SELECT FROM ViewName( param = value )</code>.</li>
+<li>Use <code>@Environment.systemField</code> for auto-filled defaults.</li>
+<li>Parameters are for view logic; WHERE is for output filtering. Don't overuse parameters.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Data access needs security. In Lesson 12, we'll add <strong>CDS access control</strong> — restricting which rows a user can see based on their authorization, all defined declaratively without AUTHORITY-CHECK statements.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"CDS Views with Parameters — Configurable Queries\",\"description\":\"Learn to create parameterized CDS views that accept input values at runtime, enabling flexible reporting and data filtering in ABAP Cloud.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/cds-parameters-and-input\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"CDS Views with Parameters — Configurable Queries\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/cds-parameters-and-input\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"CDS Views"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"CDS Views with Parameters — Configurable Queries"}],["$","p",null,{"className":"lesson-header__description","children":"Learn to create parameterized CDS views that accept input values at runtime, enabling flexible reporting and data filtering in ABAP Cloud."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/cds-compositions-and-hierarchies","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Compositions — Parent-Child Relationships in CDS"}]]}],["$","$L8",null,{"href":"/abap-modern/cds-access-control","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"CDS Access Control — Authorization at the View Level"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"why-parameters","text":"Why Parameters?","level":2},{"id":"defining-parameters","text":"Defining Parameters","level":2},{"id":"calling-from-abap-sql","text":"Calling from ABAP SQL","level":2},{"id":"expected-output","text":"Expected Output","level":3},{"id":"parameters-with-default-values","text":"Parameters with Default Values","level":2},{"id":"parameters-in-associations","text":"Parameters in Associations","level":2},{"id":"when-to-use-parameters-vs-where","text":"When to Use Parameters vs WHERE","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

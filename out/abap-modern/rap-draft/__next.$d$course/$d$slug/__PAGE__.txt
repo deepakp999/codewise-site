@@ -1,0 +1,125 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T21aa,<h1 id="draft-handling--save-incomplete-work">Draft Handling — Save Incomplete Work</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>What draft handling is and why it matters</li>
+<li>How draft works technically (draft tables, draft actions)</li>
+<li>The draft lifecycle: new → edit → activate/discard</li>
+<li>Side effects — refresh fields after changes</li>
+<li>Draft-specific behavior features</li>
+</ul>
+</div><h2 id="why-draft">Why Draft?</h2>
+<p>Without draft, users must complete and save in a single session. Close the browser? Data gone. Network hiccup? Data gone. Need approval from a colleague before saving? You can't.</p>
+<p>Draft handling stores incomplete data in a separate draft table. Users can:</p>
+<ul>
+<li>Start editing and come back hours later</li>
+<li>Switch devices mid-edit</li>
+<li>Get interrupted without losing work</li>
+<li>Share draft for review before finalizing</li>
+</ul>
+<p>Every production Fiori app uses draft. It's not optional — it's expected.</p>
+<h2 id="how-we-already-enabled-draft">How We Already Enabled Draft</h2>
+<p>In Lesson 14, we added <code>with draft</code> and <code>draft table</code> to the behavior definition:</p>
+<pre><code>managed implementation in class zbp_i_tm_salesorder unique;
+with draft;
+
+define behavior for ZI_TM_SalesOrder alias SalesOrder
+persistent table ztm_salesorder
+draft table ztm_so_d          -- Draft data goes here
+lock master total etag LastChangedAt
+{
+  ...
+}
+</code></pre>
+<p>The <code>draft table</code> is a copy of the persistent table with additional draft metadata columns. ADT generates it for you — use the quick fix (Ctrl+1) on the behavior definition.</p>
+<h2 id="the-draft-lifecycle">The Draft Lifecycle</h2>
+<pre><code>1. User clicks CREATE or EDIT
+   → Framework creates a draft record in ztm_so_d
+   → Persistent table is unchanged
+
+2. User edits fields, adds line items
+   → Changes saved to draft table automatically
+   → Determinations with "on modify" fire
+   → No changes to persistent table yet
+
+3. User clicks SAVE (Activate)
+   → Validations run ("on save")
+   → If valid: draft → persistent table, draft deleted
+   → If invalid: errors shown, draft preserved
+
+4. User clicks DISCARD (Cancel)
+   → Draft deleted, no changes to persistent table
+</code></pre>
+<h2 id="draft-actions-in-the-behavior-definition">Draft Actions in the Behavior Definition</h2>
+<p>Draft adds these automatic actions:</p>
+<pre><code>define behavior for ZI_TM_SalesOrder alias SalesOrder
+{
+  ...
+  draft action Edit;               -- Enter edit mode (create draft from active)
+  draft action Activate;            -- Save (move draft to active)
+  draft action Discard;             -- Cancel (delete draft)
+  draft action Resume;              -- Continue editing a saved draft
+  draft determine action Prepare;   -- Validate before activating
+}
+</code></pre>
+<p>These are generated automatically when you declare <code>with draft</code>. You don't implement them — the framework handles them.</p>
+<h2 id="the-prepare-action">The <code>Prepare</code> Action</h2>
+<p><code>draft determine action Prepare</code> runs all <code>on save</code> validations when the user clicks Save, BEFORE actually activating the draft. If validations fail, the draft stays, and the user sees error messages.</p>
+<p>This is how RAP separates "save draft" (automatic, no validation) from "activate" (validation required).</p>
+<h2 id="side-effects--real-time-ui-updates">Side Effects — Real-Time UI Updates</h2>
+<p>When a user changes a field, you often want other fields to update immediately. For example: changing an item's quantity should recalculate the order total.</p>
+<p>Declare side effects in the behavior definition:</p>
+<pre><code>define behavior for ZI_TM_SalesOrderItem alias SalesOrderItem
+{
+  ...
+  side effects {
+    field Quantity affects field _SalesOrder.TotalAmount;
+    field Price affects field _SalesOrder.TotalAmount;
+  }
+}
+</code></pre>
+<p>When <code>Quantity</code> changes, the framework:</p>
+<ol>
+<li>Runs the <code>determineTotal</code> determination (on modify)</li>
+<li>Refreshes the <code>TotalAmount</code> field in the Fiori UI</li>
+</ol>
+<p>No manual UI refresh needed.</p>
+<h2 id="the-is_draft-indicator">The %is_draft Indicator</h2>
+<p>In code, you can check whether you're working with a draft or active instance:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" In a handler method</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">LOOP AT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lt_orders </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">INTO</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ls_order</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  IF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ls_order-%is_draft </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> if_abap_behv=>mk-on.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " This is a draft — partial data expected</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ELSE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">    " This is an active record — full validation applies</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ENDIF</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ENDLOOP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span></span></code></pre>
+<p>This is useful for validations that should be lenient in draft mode (e.g., allow empty required fields during editing) but strict on activation.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Strict validation in draft mode</strong> — Users expect to save partial work. Don't reject drafts for empty required fields. Validate strictly only in <code>on save</code> / Prepare.</li>
+<li><strong>Forgetting draft tables for children</strong> — Every entity in the BO hierarchy needs its own draft table. Parent AND child.</li>
+<li><strong>Not declaring <code>with draft</code> on associations</strong> — The behavior definition must say <code>association _Items { create; with draft; }</code> — the <code>with draft</code> is required.</li>
+<li><strong>Heavy on modify determinations</strong> — In draft mode, <code>on modify</code> fires on every field change. Keep these lightweight.</li>
+<li><strong>Not testing draft → activate flow</strong> — The Fiori preview's Save button activates the draft. Test the full cycle: create → edit → save → verify active data.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Draft stores incomplete data in a separate table — users can save, leave, and resume.</li>
+<li>Draft is enabled with <code>with draft</code> + <code>draft table</code> in the behavior definition.</li>
+<li>The lifecycle: Edit → draft saved automatically → Activate (validates + persists) or Discard.</li>
+<li>Side effects refresh related fields in real-time when data changes during editing.</li>
+<li>Validate leniently in draft mode, strictly on activation (Prepare action).</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>The Sales Order app has CRUD, validations, actions, and draft. But there's one more piece: controlling what users CAN and CAN'T do based on the record's state. In Lesson 22, we'll implement <strong>feature control</strong> — hiding the Delete button on approved orders, disabling the Approve button on already-approved orders, and making fields read-only based on status.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Draft Handling — Save Incomplete Work in RAP\",\"description\":\"Learn how RAP draft handling enables auto-save, resume editing, and safe concurrent access in Fiori apps.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/rap-draft\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Draft Handling — Save Incomplete Work in RAP\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/rap-draft\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"RAP Advanced Features"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Draft Handling — Save Incomplete Work in RAP"}],["$","p",null,{"className":"lesson-header__description","children":"Learn how RAP draft handling enables auto-save, resume editing, and safe concurrent access in Fiori apps."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SGd06c1AeaIFU2VEcIGup"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/abap-modern/rap-actions","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Actions — Static, Instance, and Factory Actions"}]]}],["$","$L8",null,{"href":"/abap-modern/rap-feature-control","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Feature Control and Authorization — Dynamic UI Behavior"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"why-draft","text":"Why Draft?","level":2},{"id":"how-we-already-enabled-draft","text":"How We Already Enabled Draft","level":2},{"id":"the-draft-lifecycle","text":"The Draft Lifecycle","level":2},{"id":"draft-actions-in-the-behavior-definition","text":"Draft Actions in the Behavior Definition","level":2},{"id":"the-prepare-action","text":"The Prepare Action","level":2},{"id":"side-effects--real-time-ui-updates","text":"Side Effects — Real-Time UI Updates","level":2},{"id":"the-is_draft-indicator","text":"The %is_draft Indicator","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

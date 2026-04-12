@@ -1,0 +1,179 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/0muq98hi178y..css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","abap-modern","cds-joins-and-associations",""],"q":"","i":false,"f":[[["",{"children":[["course","abap-modern","d",null],{"children":[["slug","cds-joins-and-associations","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SGd06c1AeaIFU2VEcIGup"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0muq98hi178y..css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"abap-modern","modules":[{"id":"modern-abap-landscape","title":"The Modern ABAP Landscape","lessons":[{"slug":"why-modern-abap","title":"Why Modern ABAP? Classic vs Cloud Development Explained"},{"slug":"abap-cloud-development-model","title":"The ABAP Cloud Development Model"},{"slug":"setting-up-adt","title":"Setting Up ADT (Eclipse) for ABAP Development"},{"slug":"modern-abap-syntax","title":"Modern ABAP Syntax — Inline Declarations and Expressions"},{"slug":"abap-oop-for-rap","title":"OOP Refresher — Interfaces, Abstract Classes, and the RAP Connection"}]},{"id":"cds-views","title":"CDS Views","lessons":[{"slug":"what-are-cds-views","title":"What Are CDS Views? Your First CDS View"},{"slug":"cds-joins-and-associations","title":"Joins and Associations in CDS"},{"slug":"cds-annotations","title":"Annotations — UI, Search, OData, and Metadata Extensions"},{"slug":"cds-calculated-fields-and-expressions","title":"Calculated Fields, CASE, CAST, and SQL Functions"},{"slug":"cds-compositions-and-hierarchies","title":"Compositions — Parent-Child Relationships in CDS"},{"slug":"cds-parameters-and-input","title":"CDS Views with Parameters"},{"slug":"cds-access-control","title":"CDS Access Control — Authorization at the View Level"}]},{"id":"rap-fundamentals","title":"RAP Fundamentals","lessons":[{"slug":"what-is-rap","title":"What Is RAP? The Big Picture"},{"slug":"rap-managed-bo","title":"Building Your First RAP Managed Business Object"},{"slug":"rap-service-definition-binding","title":"Service Definition and Service Binding — Exposing Your App"},{"slug":"rap-eml","title":"Entity Manipulation Language (EML) — CRUD Operations in Code"},{"slug":"rap-unmanaged-bo","title":"Unmanaged RAP — When You Need Full Control"},{"slug":"rap-query-implementation","title":"RAP Query — Read-Only Access Patterns"}]},{"id":"rap-advanced","title":"RAP Advanced Features","lessons":[{"slug":"rap-validations-determinations","title":"Validations and Determinations — Business Rules in RAP"},{"slug":"rap-actions","title":"Actions — Static, Instance, and Factory Actions"},{"slug":"rap-draft","title":"Draft Handling — Save Incomplete Work"},{"slug":"rap-feature-control","title":"Feature Control and Authorization — Dynamic UI Behavior"}]},{"id":"real-world-next-steps","title":"Real-World Patterns & Next Steps","lessons":[{"slug":"rap-testing-and-clean-core","title":"Testing RAP Apps and Clean Core Compliance"},{"slug":"rap-extensibility","title":"Extensibility — BADIs, Side-by-Side, and BTP Integration"},{"slug":"abap-modern-whats-next","title":"What's Next — Certification, CDS Pattern, and Your Career"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T48cb,<h1 id="joins-and-associations-in-cds-views">Joins and Associations in CDS Views</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How joins work in CDS (same concept, cleaner syntax)</li>
+<li>What associations are and how they differ from joins</li>
+<li>Cardinality definitions: <code>[0..1]</code>, <code>[1..1]</code>, <code>[0..*]</code>, <code>[1..*]</code></li>
+<li>When to use joins vs associations</li>
+<li>Path expressions — navigating associations in SELECT</li>
+</ul>
+</div><h2 id="joins-in-cds--familiar-but-cleaner">Joins in CDS — Familiar but Cleaner</h2>
+<p>You know SQL joins from Classic ABAP. CDS joins are the same concept:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_OrderWithCustomer</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> so</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  INNER JOIN</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> cust</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ON</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">customer_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> cust</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">customer_id</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">order_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">     AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">order_date</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">   AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderDate,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">status</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">       AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> Status</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      cust</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">name</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">       AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CustomerName,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      cust</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">city</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">       AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CustomerCity,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      cust</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">country</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Country</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>This works. But there's a problem: the join executes even if you never need the customer fields. If you SELECT only <code>OrderId</code> and <code>Status</code>, you still pay the cost of joining to <code>ztm_customer</code>.</p>
+<h2 id="associations--lazy-joins">Associations — Lazy Joins</h2>
+<p>Associations define a <strong>relationship</strong> without executing a join. The join only happens when you actually access the associated data:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">DEFINE VIEW ENTITY ZI_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> SELECT</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ztm_salesorder </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> so</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ASSOCIATION </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[0..1]</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_Customer </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> _Customer</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    ON</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">projection</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">CustomerId</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> _Customer</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">CustomerId</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  key</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">order_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">   AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">customer_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> CustomerId,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">order_date</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderDate,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">status</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      AS</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> Status</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">      so</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">amount</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">      AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Amount,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      _Customer   </span><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- expose the association</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<p>Key differences from joins:</p>
+<ul>
+<li>The association target is another <strong>CDS view</strong> (not a table)</li>
+<li>The prefix <code>_</code> is the naming convention for associations</li>
+<li>The join only fires when you access <code>_Customer</code> fields</li>
+<li>The association is exposed as a navigation path</li>
+</ul>
+<h3 id="using-associations-in-abap-sql">Using Associations in ABAP SQL</h3>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Only order data — NO join to customer</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId, Status </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_orders</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-light-font-style:inherit;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">" Order + customer name — NOW the join fires</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">SELECT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> OrderId, Status, \_Customer-CustomerName</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  INTO TABLE</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">DATA</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">lt_orders_with_cust</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">).</span></span></code></pre>
+<p>The backslash-underscore syntax (<code>\_Customer-CustomerName</code>) is a <strong>path expression</strong>. It navigates the association and triggers the join.</p>
+<h2 id="cardinality--how-many-related-rows">Cardinality — How Many Related Rows?</h2>
+<p>Cardinality tells the framework the expected ratio between parent and associated rows:</p>
+<pre class="shiki shiki-themes github-light one-dark-pro" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34" tabindex="0"><code><span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">" One order has exactly one customer (or none)</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ASSOCIATION [0..1] TO ZI_TM_Customer AS _Customer</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  ON $projection.CustomerId = _Customer.CustomerId</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> One order has zero </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">or</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> many </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">line</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> items</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">ASSOCIATION </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">[0..*]</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> TO</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> ZI_TM_SalesOrderItem </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> _Items</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  ON</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> $</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">projection</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">OrderId</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> _Items</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">OrderId</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">" One line item has exactly one product</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">ASSOCIATION [1..1] TO ZI_TM_Product AS _Product</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  ON $projection.ProductId = _Product.ProductId</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Cardinality</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[0..1]</code></td>
+<td>Zero or one related row</td>
+<td>Order → Customer (customer might not exist yet)</td>
+</tr>
+<tr>
+<td><code>[1..1]</code></td>
+<td>Exactly one related row</td>
+<td>Line item → Product (product must exist)</td>
+</tr>
+<tr>
+<td><code>[0..*]</code></td>
+<td>Zero or many related rows</td>
+<td>Order → Line items</td>
+</tr>
+<tr>
+<td><code>[1..*]</code></td>
+<td>One or many related rows</td>
+<td>Customer → Orders (at least one)</td>
+</tr>
+</tbody>
+</table>
+<p>Getting cardinality right matters for performance. The framework uses it to choose optimal join strategies.</p>
+<h2 id="when-to-use-joins-vs-associations">When to Use Joins vs Associations</h2>
+<table>
+<thead>
+<tr>
+<th>Use a JOIN when...</th>
+<th>Use an ASSOCIATION when...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You always need the joined data</td>
+<td>The related data is sometimes needed</td>
+</tr>
+<tr>
+<td>You need to filter on joined fields</td>
+<td>You want to expose a navigation path</td>
+</tr>
+<tr>
+<td>Performance requires a single query</td>
+<td>You want on-demand loading</td>
+</tr>
+<tr>
+<td>Combining data for aggregation</td>
+<td>Building a reusable data model</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> Use associations by default. Use joins only when you always need the data and performance requires it.</p>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Defining associations ON table fields instead of $projection</strong> — Use <code>$projection.FieldAlias</code> in association conditions, not the raw table field names.</li>
+<li><strong>Wrong cardinality</strong> — <code>[1..1]</code> means the framework expects exactly one match. If zero matches are possible, use <code>[0..1]</code> to avoid runtime errors.</li>
+<li><strong>Not exposing associations</strong> — If you define <code>_Customer</code> but don't list it in the field list, it's invisible to consumers.</li>
+<li><strong>Joining tables directly instead of CDS views</strong> — Best practice is to associate TO another CDS view (<code>ZI_TM_Customer</code>), not directly to a table. This keeps the layering clean.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Associations are lazy joins — they define relationships without executing them until needed.</li>
+<li>Path expressions (<code>\_Association-Field</code>) navigate associations in ABAP SQL.</li>
+<li>Cardinality (<code>[0..1]</code>, <code>[0..*]</code>, etc.) describes expected row counts and affects performance.</li>
+<li>Use associations by default, joins only when you always need the data.</li>
+<li>Associations target CDS views, not tables. This keeps your data model layered.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Our CDS views have data, but no presentation logic. In Lesson 8, we'll add <strong>annotations</strong> — the metadata that tells Fiori how to display fields, which fields are searchable, and how to expose the view as an OData service. Annotations are what make CDS views "intelligent."</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Joins and Associations in CDS Views\",\"description\":\"Learn the difference between CDS joins and associations, define relationships between TechMart entities, and understand cardinality and on-demand loading.\",\"url\":\"https://codewise.lumivoxx.com/abap-modern/cds-joins-and-associations\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"url\":\"https://codewise.lumivoxx.com/abap-modern\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"ABAP Modern — RAP, CDS & ABAP Cloud\",\"item\":\"https://codewise.lumivoxx.com/abap-modern\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Joins and Associations in CDS Views\",\"item\":\"https://codewise.lumivoxx.com/abap-modern/cds-joins-and-associations\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"ABAP Modern — RAP, CDS & ABAP Cloud"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"CDS Views"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Joins and Associations in CDS Views"}],["$","p",null,{"className":"lesson-header__description","children":"Learn the difference between CDS joins and associations, define relationships between TechMart entities, and understand cardinality and on-demand loading."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/abap-modern/what-are-cds-views","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"What Are CDS Views? Your First CDS View"}]]}],["$","$L6",null,{"href":"/abap-modern/cds-annotations","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Annotations — UI, Search, OData, and Metadata Extensions"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"joins-in-cds--familiar-but-cleaner","text":"Joins in CDS — Familiar but Cleaner","level":2},{"id":"associations--lazy-joins","text":"Associations — Lazy Joins","level":2},{"id":"using-associations-in-abap-sql","text":"Using Associations in ABAP SQL","level":3},{"id":"cardinality--how-many-related-rows","text":"Cardinality — How Many Related Rows?","level":2},{"id":"when-to-use-joins-vs-associations","text":"When to Use Joins vs Associations","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Joins and Associations in CDS Views — ABAP Modern — RAP, CDS & ABAP Cloud | CodewiseX"}],["$","meta","1",{"name":"description","content":"Learn the difference between CDS joins and associations, define relationships between TechMart entities, and understand cardinality and on-demand loading."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"cds associations,cds joins,abap,cardinality,data modeling"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/abap-modern/cds-joins-and-associations/"}],["$","meta","8",{"property":"og:title","content":"Joins and Associations in CDS Views"}],["$","meta","9",{"property":"og:description","content":"Learn the difference between CDS joins and associations, define relationships between TechMart entities, and understand cardinality and on-demand loading."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/abap-modern/cds-joins-and-associations/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]
