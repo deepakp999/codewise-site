@@ -36,6 +36,11 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-adsense-account" content="ca-pub-9139184252658211" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211"
+          crossOrigin="anonymous"
+        />
         {/* Inline script to set dark mode BEFORE paint to avoid flash */}
         <script
           dangerouslySetInnerHTML={{
