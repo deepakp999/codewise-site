@@ -1,0 +1,224 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T3429,<h1 id="building-a-data-strategy-that-makes-ai-possible">Building a Data Strategy That Makes AI Possible</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Six practical steps to build an AI-ready data foundation</li>
+<li>The "data product" mindset that changes how organizations treat data</li>
+<li>How to sequence data investments based on AI priorities</li>
+<li>The Data Readiness Roadmap — a template for your organization</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Meridian's data readiness assessment (Lesson 8) had revealed clear gaps: fragmented systems, inconsistent data formats, manual processes, and limited governance. Priya (CTO) and David (CFO) worked together on a plan. David's condition: "Show me a phased approach. We're not going to fix everything at once, and I need to see each phase connected to a business outcome."</p>
+<p>Priya designed a six-month data readiness roadmap that Meridian would execute BEFORE scaling their AI initiatives. The logic was simple: invest three months in data foundations, and the subsequent AI projects would be faster, cheaper, and more reliable than if they'd skipped ahead.</p>
+<h2 id="step-1-data-audit--know-what-you-have">Step 1: Data Audit — Know What You Have</h2>
+<p>Before building anything, inventory your current data landscape:</p>
+<ul>
+<li><strong>What data exists?</strong> Systems, databases, files, spreadsheets, manual records</li>
+<li><strong>Where does it live?</strong> ERP, CRM, data warehouse, cloud storage, individual departments</li>
+<li><strong>Who owns it?</strong> Named individual or team responsible for each dataset</li>
+<li><strong>How is it updated?</strong> Real-time, daily batch, weekly manual entry, ad hoc</li>
+<li><strong>What's the quality?</strong> Known issues, gaps, inconsistencies</li>
+</ul>
+<p>The audit doesn't need to be exhaustive. Start with the data relevant to your top 2–3 AI use cases (from the Opportunity Matrix in Lesson 7). Expand over time.</p>
+<p><strong>Meridian's approach:</strong> They audited data for their two "Start Here" use cases — demand forecasting and invoice processing. This took two weeks, not six months, because they scoped it narrowly.</p>
+<h2 id="step-2-data-quality-framework--define-good-enough">Step 2: Data Quality Framework — Define "Good Enough"</h2>
+<p>Establish quality standards for the dimensions from Lesson 8: accuracy, completeness, consistency, timeliness, and uniqueness.</p>
+<p>The key principle: <strong>quality standards should be specific to each use case, not universal.</strong> Different AI applications tolerate different levels of imperfection.</p>
+<table>
+<thead>
+<tr>
+<th>Quality Dimension</th>
+<th>Demand Forecasting Standard</th>
+<th>Invoice Processing Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness</td>
+<td>&#x3C; 5% missing values in sales data</td>
+<td>&#x3C; 1% missing fields per invoice</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Revenue figures within 2% of actuals</td>
+<td>Amounts must match exactly</td>
+</tr>
+<tr>
+<td>Timeliness</td>
+<td>Data available within 24 hours</td>
+<td>Data available within 4 hours</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>Product names standardized across systems</td>
+<td>Vendor names standardized</td>
+</tr>
+</tbody>
+</table>
+<p>Once standards are defined, measure current data against them. The gap between current state and target state is your data quality improvement plan.</p>
+<h2 id="step-3-data-governance--ownership-access-and-accountability">Step 3: Data Governance — Ownership, Access, and Accountability</h2>
+<p>Governance establishes who is responsible for data and how it's managed:</p>
+<p><strong>Data Ownership:</strong> Assign a business owner (not IT) for each major domain — sales data, product data, customer data, financial data. The owner is accountable for quality and availability.</p>
+<p><strong>Data Stewardship:</strong> Stewards are the operational layer — they monitor quality, resolve issues, and coordinate across systems. Often these are existing subject matter experts in each department who take on data responsibilities.</p>
+<p><strong>Access and Security:</strong> Define who can access what data, at what level of detail, and under what conditions. This becomes critical when AI systems process data at scale.</p>
+<p><strong>Policies:</strong> Document policies for data classification, retention, privacy (GDPR, CCPA), and usage in AI systems. These policies should be living documents, reviewed quarterly.</p>
+<p><strong>Meridian's approach:</strong> They started with a "lightweight governance" model — data owners for five key domains, a monthly data quality review, and a one-page acceptable use policy for AI tools. They planned to formalize the governance structure over the next year as AI usage expanded.</p>
+<h2 id="step-4-data-integration--connect-the-silos">Step 4: Data Integration — Connect the Silos</h2>
+<p>Most organizations' data lives in multiple systems that weren't designed to work together. Integration creates the connected foundation AI needs.</p>
+<p>Practical approaches:</p>
+<p><strong>Data Warehouse / Data Lake:</strong> Centralize data from multiple sources into a single analytical platform (Snowflake, BigQuery, Databricks, or similar). This gives AI models consistent, reliable access to data.</p>
+<p><strong>Data Pipelines:</strong> Automated processes that extract data from source systems, transform it (clean, standardize, join), and load it into the warehouse. These pipelines should run on a schedule and include quality checks.</p>
+<p><strong>APIs and Event Streams:</strong> For real-time use cases, connect systems through APIs or message queues rather than batch processes.</p>
+<p>The choice between centralized (warehouse) and decentralized (data mesh) architectures depends on organizational structure:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When It Fits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Centralized (data warehouse)</strong></td>
+<td>Smaller data teams, fewer sources, need for consistency</td>
+</tr>
+<tr>
+<td><strong>Decentralized (data mesh)</strong></td>
+<td>Large organizations, many business units, strong domain expertise</td>
+</tr>
+<tr>
+<td><strong>Hybrid</strong></td>
+<td>Most common — central platform with domain-level ownership</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Meridian's approach:</strong> They already had Snowflake as their data warehouse. The gap was that four product lines' data hadn't been integrated. The data team built pipelines to bring those sources into Snowflake — a focused, scoped integration effort rather than a boil-the-ocean initiative.</p>
+<h2 id="step-5-dataops--make-quality-continuous">Step 5: DataOps — Make Quality Continuous</h2>
+<p>DataOps applies the principles of DevOps to data management: automation, monitoring, and continuous improvement.</p>
+<p>Key DataOps practices:</p>
+<ul>
+<li><strong>Automated quality checks:</strong> Every data pipeline includes validation rules that flag issues before bad data reaches downstream systems</li>
+<li><strong>Pipeline monitoring:</strong> Dashboards that show pipeline health — are they running on time? Are there failures? Is data arriving as expected?</li>
+<li><strong>Anomaly detection on data itself:</strong> Use ML to detect unusual patterns in incoming data (sudden drops in volume, unexpected null values, format changes)</li>
+<li><strong>Version control:</strong> Track changes to data transformations so you can understand what changed and when</li>
+<li><strong>Incident response:</strong> Clear process for handling data quality issues — who gets alerted, what's the SLA for resolution</li>
+</ul>
+<p>DataOps transforms data quality from a periodic audit ("let's clean the data before the AI project") into an ongoing operational capability ("data quality is monitored and maintained continuously").</p>
+<h2 id="step-6-the-data-product-mindset">Step 6: The Data Product Mindset</h2>
+<p>The most important conceptual shift in data strategy is treating data as a <strong>product</strong> rather than a <strong>byproduct</strong> of systems.</p>
+<p><strong>Data as byproduct:</strong> "Our ERP generates data. Somebody in IT stores it. When we need it for a report, we ask them to extract it. Quality varies."</p>
+<p><strong>Data as product:</strong> "Our 'Customer 360' data product integrates customer data from CRM, ERP, and support systems. It has a named owner, quality SLAs, documentation, and a regular update schedule. Five teams consume it — including the churn prediction model."</p>
+<table>
+<thead>
+<tr>
+<th>Byproduct Mindset</th>
+<th>Product Mindset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data is extracted on request</td>
+<td>Data is published on schedule</td>
+</tr>
+<tr>
+<td>Quality is checked when problems arise</td>
+<td>Quality is monitored continuously</td>
+</tr>
+<tr>
+<td>Documentation is sparse</td>
+<td>Documentation is part of the product</td>
+</tr>
+<tr>
+<td>One team creates, many teams struggle to use</td>
+<td>One team creates, many teams self-serve</td>
+</tr>
+<tr>
+<td>AI team spends 80% of time cleaning data</td>
+<td>AI team spends 80% of time building models</td>
+</tr>
+</tbody>
+</table>
+<p>The data product mindset has a direct impact on AI economics: when a clean, reliable "Sales Transactions" data product exists, every AI initiative that needs sales data benefits. Build it once, serve it many times. This is how data investments compound.</p>
+<h2 id="the-data-readiness-roadmap-template">The Data Readiness Roadmap Template</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Timeframe</th>
+<th>Activities</th>
+<th>Business Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Audit</td>
+<td>Weeks 1–2</td>
+<td>Inventory data for top use cases, identify gaps</td>
+<td>Clear picture of current state</td>
+</tr>
+<tr>
+<td>2. Quick fixes</td>
+<td>Weeks 3–6</td>
+<td>Standardize formats, resolve duplicates, fill critical gaps</td>
+<td>Data clean enough for first pilot</td>
+</tr>
+<tr>
+<td>3. Integration</td>
+<td>Weeks 4–10</td>
+<td>Build pipelines for missing data sources, integrate silos</td>
+<td>Unified data for priority use cases</td>
+</tr>
+<tr>
+<td>4. Governance</td>
+<td>Weeks 6–12</td>
+<td>Assign owners, define policies, establish review cadence</td>
+<td>Accountability and oversight</td>
+</tr>
+<tr>
+<td>5. DataOps</td>
+<td>Weeks 10–16</td>
+<td>Automate quality checks, pipeline monitoring, alerting</td>
+<td>Sustainable data operations</td>
+</tr>
+<tr>
+<td>6. Data products</td>
+<td>Ongoing</td>
+<td>Formalize key datasets as products with SLAs</td>
+<td>Reusable foundation for scaling AI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Phases overlap. You don't finish one before starting the next. And the timeline compresses if you scope the effort to 2–3 priority use cases rather than the entire organization.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Data strategy is AI strategy. The organizations that invest in data foundations first reach production AI faster and more reliably than those that skip ahead.</li>
+<li>Start scoped: build data readiness for your top 2–3 use cases, not for the entire enterprise. Expand as you learn.</li>
+<li>The data product mindset is the highest-leverage concept in this lesson. One well-maintained data product can serve dozens of AI initiatives over time.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Building a data strategy in isolation from AI priorities</strong> — Data work should be guided by the AI use cases it's meant to enable. "Clean all the data" is not a strategy. "Make sales data AI-ready for the demand forecasting initiative" is.</li>
+<li><strong>Treating data cleanup as a one-time project</strong> — Data quality degrades naturally as systems change and new data flows in. DataOps ensures continuous quality.</li>
+<li><strong>Underestimating integration effort</strong> — Connecting systems that weren't designed to work together is often the most time-consuming part of data readiness. Budget time and resources accordingly.</li>
+<li><strong>Skipping governance because "we'll add it later"</strong> — Governance gets harder to retrofit as AI usage grows. Starting with lightweight governance early is far easier than imposing it after the fact.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>A practical data strategy has six steps: audit, quality framework, governance, integration, DataOps, and the data product mindset.</li>
+<li>Scope data work to your priority AI use cases. Don't try to fix everything at once.</li>
+<li>The data product mindset — treating clean data as a reusable product with ownership and SLAs — is the highest-leverage investment for long-term AI success.</li>
+<li>DataOps transforms data quality from periodic cleanup to continuous operations.</li>
+<li>The roadmap template in this lesson can be adapted immediately to your organization's context.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Your data strategy is set. The next decision: should you build AI capabilities in-house, buy SaaS solutions, or partner with AI vendors? In Lesson 10, we'll walk through the <strong>Build, Buy, or Partner</strong> decision framework.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Building a Data Strategy That Makes AI Possible\",\"description\":\"A practical six-step playbook for building the data foundation AI requires — from data audit and quality frameworks to DataOps and the data product mindset.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/data-strategy-for-ai\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Building a Data Strategy That Makes AI Possible\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/data-strategy-for-ai\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Building Your AI Strategy"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Building a Data Strategy That Makes AI Possible"}],["$","p",null,{"className":"lesson-header__description","children":"A practical six-step playbook for building the data foundation AI requires — from data audit and quality frameworks to DataOps and the data product mindset."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/data-readiness-assessment","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Data Readiness — Why This Comes Before Everything Else"}]]}],["$","$L8",null,{"href":"/ai-leadership/build-buy-partner","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Build, Buy, or Partner — Making the Right AI Investment Decisions"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"step-1-data-audit--know-what-you-have","text":"Step 1: Data Audit — Know What You Have","level":2},{"id":"step-2-data-quality-framework--define-good-enough","text":"Step 2: Data Quality Framework — Define \"Good Enough\"","level":2},{"id":"step-3-data-governance--ownership-access-and-accountability","text":"Step 3: Data Governance — Ownership, Access, and Accountability","level":2},{"id":"step-4-data-integration--connect-the-silos","text":"Step 4: Data Integration — Connect the Silos","level":2},{"id":"step-5-dataops--make-quality-continuous","text":"Step 5: DataOps — Make Quality Continuous","level":2},{"id":"step-6-the-data-product-mindset","text":"Step 6: The Data Product Mindset","level":2},{"id":"the-data-readiness-roadmap-template","text":"The Data Readiness Roadmap Template","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

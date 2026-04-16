@@ -1,0 +1,286 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/04fe_m1fp-15j.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","ai-leadership","the-ai-maturity-curve",""],"q":"","i":false,"f":[[["",{"children":[["course","ai-leadership","d",null],{"children":[["slug","the-ai-maturity-curve","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SqdzuPaEeA-UMZd5kjbkM"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"ai-leadership","modules":[{"id":"ai-literacy","title":"AI Literacy for Every Leader","lessons":[{"slug":"ai-landscape-for-executives","title":"The AI Landscape in 2026 — What Leaders Actually Need to Know"},{"slug":"the-full-ai-toolkit","title":"The Full AI Toolkit — It's Not Just Chatbots"},{"slug":"how-ai-actually-works","title":"How AI Actually Works — A Leader's Mental Model"},{"slug":"ai-business-models","title":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"},{"slug":"the-ai-maturity-curve","title":"Where Is Your Organization on the AI Maturity Curve?"}]},{"id":"ai-strategy","title":"Building Your AI Strategy","lessons":[{"slug":"strategy-not-tools","title":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"},{"slug":"finding-high-value-use-cases","title":"Finding High-Value AI Use Cases — The Opportunity Matrix"},{"slug":"data-readiness-assessment","title":"Data Readiness — Why This Comes Before Everything Else"},{"slug":"data-strategy-for-ai","title":"Building a Data Strategy That Makes AI Possible"},{"slug":"build-buy-partner","title":"Build, Buy, or Partner — Making the Right AI Investment Decisions"},{"slug":"the-ai-strategy-document","title":"Writing the AI Strategy Document Your Board Will Actually Read"}]},{"id":"ai-governance","title":"AI Governance, Risk, and Ethics","lessons":[{"slug":"ai-governance-framework","title":"AI Governance — The Framework That Enables Innovation"},{"slug":"ai-risk-landscape","title":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"},{"slug":"responsible-ai","title":"Responsible AI in Practice — Beyond the Ethics Statement"},{"slug":"ai-regulation","title":"AI Regulation — EU AI Act, US Policies, and What's Coming"},{"slug":"shadow-ai","title":"Shadow AI — The Risk You Need to Address Proactively"}]},{"id":"ai-people","title":"People, Culture, and Change Management","lessons":[{"slug":"ai-talent-strategy","title":"AI Talent Strategy — Build, Hire, and Upskill"},{"slug":"leading-ai-adoption","title":"Leading AI Adoption — Change Management That Works"},{"slug":"the-ai-operating-model","title":"The AI Operating Model — Centralized, Federated, or Hybrid?"},{"slug":"ai-and-workforce","title":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"},{"slug":"building-ai-culture","title":"Building an AI-Ready Culture — From Experimentation to Institution"}]},{"id":"ai-execution","title":"Execution, Measurement, and Scaling","lessons":[{"slug":"from-pilot-to-production","title":"From Pilot to Production — Why Most AI Pilots Fail to Scale"},{"slug":"measuring-ai-roi","title":"Measuring AI ROI — Metrics That Actually Matter"},{"slug":"scaling-ai","title":"Scaling AI Across the Enterprise — From One Team to Every Team"},{"slug":"agentic-ai-and-whats-next","title":"Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan"},{"slug":"your-first-90-days","title":"Your First 90 Days as an AI-Ready Leader"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T2d1a,<h1 id="where-is-your-organization-on-the-ai-maturity-curve">Where Is Your Organization on the AI Maturity Curve?</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The four stages of AI maturity and what each looks like in practice</li>
+<li>How to assess maturity separately for classical ML and GenAI</li>
+<li>The five dimensions of AI readiness: Strategy, Data, Talent, Governance, Technology</li>
+<li>A practical self-assessment you can apply to your own organization</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Sarah (CEO) asked a deceptively simple question after the value mapping exercise: "So where are WE on this journey?"</p>
+<p>Priya initially answered "early stage." But David pushed back: "Our supply chain forecasting system has been running for three years and saves us millions annually. That's not early stage."</p>
+<p>They realized the answer depends on what you're measuring and which type of AI you're evaluating. Meridian was at different maturity levels for different capabilities — advanced in some areas, just beginning in others. Most organizations are the same. Maturity isn't a single score; it's a profile.</p>
+<h2 id="the-four-stages-of-ai-maturity">The Four Stages of AI Maturity</h2>
+<h3 id="stage-1-exploring">Stage 1: Exploring</h3>
+<p><strong>What it looks like:</strong></p>
+<ul>
+<li>Leadership is learning about AI and discussing potential applications</li>
+<li>Individual employees may be experimenting with AI tools</li>
+<li>No formal AI strategy or budget allocation</li>
+<li>Data infrastructure was built for reporting, not for AI</li>
+<li>AI discussions are primarily about awareness and possibilities</li>
+</ul>
+<p><strong>What Meridian found here:</strong> GenAI adoption. Individual teams used ChatGPT and Copilot informally, but there was no enterprise approach, no policy, and no measurement.</p>
+<h3 id="stage-2-experimenting">Stage 2: Experimenting</h3>
+<p><strong>What it looks like:</strong></p>
+<ul>
+<li>A few pilot projects are underway, often driven by enthusiastic individuals or teams</li>
+<li>Initial budget is allocated, typically within IT or a specific business unit</li>
+<li>Data quality issues surface during pilot work</li>
+<li>Early governance questions emerge (who approves AI use, what data is allowed)</li>
+<li>Results from pilots are promising but not yet scaled</li>
+</ul>
+<p><strong>What Meridian found here:</strong> Computer vision for quality control. The QC team had piloted defect detection on one production line with encouraging results, but it hadn't been expanded or integrated into broader operations.</p>
+<h3 id="stage-3-scaling">Stage 3: Scaling</h3>
+<p><strong>What it looks like:</strong></p>
+<ul>
+<li>AI initiatives are tied to specific business KPIs and measured regularly</li>
+<li>Multiple projects are in production across different departments</li>
+<li>Data infrastructure has been upgraded to support AI workloads</li>
+<li>Governance frameworks are in place</li>
+<li>AI roles exist (data engineers, ML engineers, AI product managers)</li>
+<li>The organization is learning how to operationalize AI — monitoring, retraining, managing model performance</li>
+</ul>
+<p><strong>What Meridian found here:</strong> Supply chain demand forecasting and financial anomaly detection. These had been in production for years, with established data pipelines, regular model retraining, and clear business metrics.</p>
+<h3 id="stage-4-transforming">Stage 4: Transforming</h3>
+<p><strong>What it looks like:</strong></p>
+<ul>
+<li>AI is embedded in core business processes and decision-making</li>
+<li>The organization continuously identifies new AI opportunities</li>
+<li>Data is treated as a strategic asset with enterprise-wide governance</li>
+<li>AI capability is a competitive advantage and part of the company's identity</li>
+<li>Leadership regularly reviews AI portfolio performance alongside other business metrics</li>
+</ul>
+<p><strong>What Meridian found here:</strong> Not yet — and that's fine. Most organizations haven't reached this stage. According to Deloitte's 2026 survey, only 34% of organizations describe their AI impact as "truly transformative" — the majority are still in earlier stages (<a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html">Deloitte 2026</a>).</p>
+<h2 id="the-five-dimensions-of-ai-readiness">The Five Dimensions of AI Readiness</h2>
+<p>Maturity isn't just about how many AI projects you have. It spans five dimensions:</p>
+<p><strong>1. Strategy</strong> — Is AI connected to business priorities? Is there a roadmap?</p>
+<table>
+<thead>
+<tr>
+<th>Exploring</th>
+<th>Experimenting</th>
+<th>Scaling</th>
+<th>Transforming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No formal AI strategy</td>
+<td>Pilot-level planning</td>
+<td>AI roadmap tied to KPIs</td>
+<td>AI embedded in corporate strategy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Data</strong> — Is your data ready to support AI reliably?</p>
+<table>
+<thead>
+<tr>
+<th>Exploring</th>
+<th>Experimenting</th>
+<th>Scaling</th>
+<th>Transforming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data in silos, quality unknown</td>
+<td>Data cleaned for specific pilots</td>
+<td>Data pipelines and quality frameworks</td>
+<td>Data treated as strategic asset with continuous governance</td>
+</tr>
+</tbody>
+</table>
+<p>This dimension deserves special attention. According to the World Economic Forum, fewer than one in five organizations report high maturity in data readiness (<a href="https://www.weforum.org/stories/2026/01/why-data-readiness-is-now-a-strategic-imperative-for-businesses/">WEF 2026</a>). We'll dedicate two full lessons to data readiness in Module 2.</p>
+<p><strong>3. Talent</strong> — Do you have the people and skills?</p>
+<table>
+<thead>
+<tr>
+<th>Exploring</th>
+<th>Experimenting</th>
+<th>Scaling</th>
+<th>Transforming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No dedicated AI roles</td>
+<td>A few data scientists or ML engineers</td>
+<td>Cross-functional AI teams</td>
+<td>AI literacy across the organization</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4. Governance</strong> — Are there policies, oversight, and accountability?</p>
+<table>
+<thead>
+<tr>
+<th>Exploring</th>
+<th>Experimenting</th>
+<th>Scaling</th>
+<th>Transforming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No AI-specific policies</td>
+<td>Ad hoc review of AI projects</td>
+<td>Formal governance framework</td>
+<td>Governance embedded in all AI workflows</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5. Technology</strong> — Is the infrastructure ready?</p>
+<table>
+<thead>
+<tr>
+<th>Exploring</th>
+<th>Experimenting</th>
+<th>Scaling</th>
+<th>Transforming</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard IT stack, no ML infrastructure</td>
+<td>Cloud-based experimentation tools</td>
+<td>ML platform, data pipelines, monitoring</td>
+<td>Integrated AI infrastructure, automated ML operations</td>
+</tr>
+</tbody>
+</table>
+<h2 id="meridians-maturity-profile">Meridian's Maturity Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Classical ML</th>
+<th>Generative AI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strategy</td>
+<td>Experimenting (no unified ML strategy)</td>
+<td>Exploring (no GenAI strategy)</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Scaling (supply chain data is strong)</td>
+<td>Exploring (no data governance for GenAI)</td>
+</tr>
+<tr>
+<td>Talent</td>
+<td>Scaling (small data team in supply chain)</td>
+<td>Exploring (no GenAI expertise)</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Experimenting (informal review)</td>
+<td>Exploring (no policies)</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>Scaling (ML platform in supply chain)</td>
+<td>Exploring (individual SaaS tools)</td>
+</tr>
+</tbody>
+</table>
+<p>The insight: Meridian was more mature than they assumed in classical ML — and less mature than they assumed in GenAI. This profile helped them prioritize: strengthen governance for what they already had, build data foundations for what they wanted, and avoid spreading resources too thin.</p>
+<h2 id="self-assessment-your-organization">Self-Assessment: Your Organization</h2>
+<p>For each dimension, rate your organization's maturity for both classical ML and GenAI:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Classical ML (1–4)</th>
+<th>GenAI (1–4)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strategy</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Talent</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>___</td>
+<td>___</td>
+</tr>
+<tr>
+<td>Technology</td>
+<td>___</td>
+<td>___</td>
+</tr>
+</tbody>
+</table>
+<p>(1 = Exploring, 2 = Experimenting, 3 = Scaling, 4 = Transforming)</p>
+<p><strong>Where to focus:</strong> The lowest-scoring dimension is typically the one that constrains everything else. A strong technology stack with poor data quality produces unreliable AI. Advanced talent without governance creates risk. A clear strategy without data readiness leads to stalled pilots.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>This assessment is most valuable when completed collaboratively by the leadership team — each member sees different dimensions more clearly.</li>
+<li>There's no "correct" stage. Being at Stage 1 is fine if you know it and plan accordingly. Being at Stage 3 on paper but Stage 1 in data readiness is a risk.</li>
+<li>The assessment naturally surfaces the conversation about where to invest next — and that's exactly what Module 2 addresses.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Overestimating maturity based on one success</strong> — Having a single AI project in production doesn't mean the organization is at "Scaling" maturity. Assessment should look across all five dimensions.</li>
+<li><strong>Assessing only GenAI maturity</strong> — Many organizations are more mature in classical ML than they realize. Assessing both separately gives a more accurate picture.</li>
+<li><strong>Treating maturity as a race</strong> — Not every organization needs to reach Stage 4. The right maturity level depends on your industry, competitive dynamics, and strategic priorities.</li>
+<li><strong>Ignoring data readiness</strong> — Data consistently emerges as the constraining dimension in maturity assessments. It deserves the most honest evaluation.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>AI maturity is a profile across five dimensions (strategy, data, talent, governance, technology), not a single score.</li>
+<li>Assess maturity separately for classical ML and GenAI — most organizations have different levels for each.</li>
+<li>Data readiness is the most common constraint, with fewer than one in five organizations reporting high maturity.</li>
+<li>The lowest-scoring dimension typically constrains overall AI capability. Focus investment there first.</li>
+<li>Module 1 is complete — you now have AI literacy: the landscape, the toolkit, how it works, how it creates value, and where you stand.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Module 1 is complete. You have the AI literacy foundation. In Module 2, we shift from understanding to strategy. Lesson 6 opens with a critical distinction: <strong>AI Strategy vs AI Activity</strong> — why most organizations confuse using AI tools with having an AI strategy, and how to build something that actually guides decisions.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Where Is Your Organization on the AI Maturity Curve?\",\"description\":\"A practical self-assessment framework to evaluate your organization's AI readiness across strategy, data, talent, governance, and technology.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/the-ai-maturity-curve\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Where Is Your Organization on the AI Maturity Curve?\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/the-ai-maturity-curve\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Literacy for Every Leader"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Where Is Your Organization on the AI Maturity Curve?"}],["$","p",null,{"className":"lesson-header__description","children":"A practical self-assessment framework to evaluate your organization's AI readiness across strategy, data, talent, governance, and technology."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/ai-leadership/ai-business-models","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"}]]}],["$","$L6",null,{"href":"/ai-leadership/strategy-not-tools","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-four-stages-of-ai-maturity","text":"The Four Stages of AI Maturity","level":2},{"id":"stage-1-exploring","text":"Stage 1: Exploring","level":3},{"id":"stage-2-experimenting","text":"Stage 2: Experimenting","level":3},{"id":"stage-3-scaling","text":"Stage 3: Scaling","level":3},{"id":"stage-4-transforming","text":"Stage 4: Transforming","level":3},{"id":"the-five-dimensions-of-ai-readiness","text":"The Five Dimensions of AI Readiness","level":2},{"id":"meridians-maturity-profile","text":"Meridian's Maturity Profile","level":2},{"id":"self-assessment-your-organization","text":"Self-Assessment: Your Organization","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Where Is Your Organization on the AI Maturity Curve? — AI for Leadership — Strategic AI Literacy for Every Leader | CodewiseX"}],["$","meta","1",{"name":"description","content":"A practical self-assessment framework to evaluate your organization's AI readiness across strategy, data, talent, governance, and technology."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"ai maturity,ai readiness assessment,enterprise ai,ai strategy,self assessment"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/ai-leadership/the-ai-maturity-curve/"}],["$","meta","8",{"property":"og:title","content":"Where Is Your Organization on the AI Maturity Curve?"}],["$","meta","9",{"property":"og:description","content":"A practical self-assessment framework to evaluate your organization's AI readiness across strategy, data, talent, governance, and technology."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/ai-leadership/the-ai-maturity-curve/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

@@ -1,0 +1,200 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T3057,<h1 id="the-full-ai-toolkit--its-not-just-chatbots">The Full AI Toolkit — It's Not Just Chatbots</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Eight categories of AI capability that drive business value</li>
+<li>How classical ML differs from generative AI — and why both matter</li>
+<li>Where each AI type is already used in business (with examples)</li>
+<li>How to identify AI capabilities that may already exist in your organization</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>After the board meeting in Lesson 1, Priya (CTO) scheduled a working session with the leadership team. She brought a simple exercise: "Let's inventory every tool and system across Meridian that uses some form of AI or machine learning."</p>
+<p>The results surprised everyone. The supply chain team had been using a demand forecasting system — time series ML — for three years. Finance used anomaly detection to flag unusual expense patterns. The quality control team had piloted camera-based defect detection on one production line. Salesforce Einstein was scoring leads in the CRM. Even the HR team's resume screening tool used natural language processing.</p>
+<p>These capabilities had been delivering value quietly, under names like "advanced analytics," "smart alerts," or "predictive scoring." The leadership team realized that understanding AI meant understanding a much broader toolkit than chatbots and content generation.</p>
+<h2 id="the-eight-ai-capabilities">The Eight AI Capabilities</h2>
+<h3 id="1-classification">1. Classification</h3>
+<p><strong>What it does:</strong> Sorts things into categories based on patterns learned from historical data.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Email spam detection (spam vs legitimate)</li>
+<li>Customer churn prediction (likely to leave vs likely to stay)</li>
+<li>Loan approval assessment (approve vs review vs decline)</li>
+<li>Support ticket routing (billing vs technical vs account)</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> Any system that categorizes, scores, or flags items automatically is likely using classification. Salesforce Einstein lead scoring, credit risk models, and content moderation systems all use classification at their core.</p>
+<h3 id="2-regression-and-forecasting">2. Regression and Forecasting</h3>
+<p><strong>What it does:</strong> Predicts a numerical value based on input variables.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Revenue forecasting</li>
+<li>Pricing optimization (what price maximizes margin?)</li>
+<li>Customer lifetime value estimation</li>
+<li>Real estate valuation models</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> Financial planning tools, pricing engines, and demand planning systems frequently use regression models. When your planning tool says "projected Q3 revenue: $142M," there's likely a regression model behind that number.</p>
+<h3 id="3-time-series-analysis">3. Time Series Analysis</h3>
+<p><strong>What it does:</strong> Analyzes data points collected over time to identify trends, seasonality, and patterns — then projects forward.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Demand forecasting (how many units to produce next month)</li>
+<li>Inventory optimization (when to reorder, how much to stock)</li>
+<li>Capacity planning (how many servers, agents, or machines needed)</li>
+<li>Energy consumption prediction</li>
+<li>Financial market analysis</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> This is among the most widely deployed forms of ML in business. Supply chain, operations, and finance teams often rely on time series models daily. If your organization does any form of demand planning, you likely have time series AI in production — even if no one calls it that.</p>
+<h3 id="4-anomaly-detection">4. Anomaly Detection</h3>
+<p><strong>What it does:</strong> Identifies data points that deviate from expected patterns — flagging the unusual without being told what "unusual" looks like.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Fraud detection in financial transactions</li>
+<li>Manufacturing quality control (detecting defective products on a production line)</li>
+<li>Cybersecurity (identifying unusual network activity)</li>
+<li>Infrastructure monitoring (predicting equipment failure before it happens)</li>
+<li>Expense report auditing</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> Any "alert" system that identifies outliers — unusual transactions, unexpected sensor readings, suspicious login patterns — is likely using anomaly detection. These systems are valuable because they can catch patterns humans would miss in high-volume data.</p>
+<h3 id="5-computer-vision">5. Computer Vision</h3>
+<p><strong>What it does:</strong> Extracts information from images and video — recognizing objects, reading text, measuring dimensions, detecting defects.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Manufacturing defect detection (visual inspection of products)</li>
+<li>Document processing (extracting data from invoices, receipts, forms)</li>
+<li>Retail inventory counting</li>
+<li>Medical imaging analysis</li>
+<li>Warehouse and logistics monitoring</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> If your organization processes large volumes of documents (invoices, contracts, claims), computer vision + OCR likely plays a role. Manufacturing leaders may encounter it in quality inspection systems.</p>
+<h3 id="6-natural-language-processing-nlp--beyond-chatbots">6. Natural Language Processing (NLP) — Beyond Chatbots</h3>
+<p><strong>What it does:</strong> Understands, analyzes, and extracts meaning from text — a broader capability than generating text.</p>
+<p><strong>Business examples beyond chatbots:</strong></p>
+<ul>
+<li>Sentiment analysis (understanding customer feedback at scale)</li>
+<li>Entity extraction (pulling names, dates, amounts from contracts)</li>
+<li>Text classification (categorizing support tickets, legal documents, emails)</li>
+<li>Summarization (condensing long reports, meeting transcripts)</li>
+<li>Translation and localization</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> Customer feedback analysis, contract review tools, compliance monitoring, and market intelligence platforms all use NLP. Generative AI (chatbots) is one application of NLP, but the analytical side — understanding and extracting meaning — often delivers more structured business value.</p>
+<h3 id="7-optimization">7. Optimization</h3>
+<p><strong>What it does:</strong> Finds the best possible solution given constraints — maximizing or minimizing an objective across many variables.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Supply chain route optimization (minimize delivery cost and time)</li>
+<li>Workforce scheduling (optimal shift assignments)</li>
+<li>Portfolio optimization (maximize return for given risk)</li>
+<li>Manufacturing production scheduling</li>
+<li>Marketing budget allocation across channels</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> Any system that answers "what's the best way to allocate X given constraints Y and Z" uses optimization. This is one of the oldest and most impactful forms of AI in business — operations research has used these techniques for decades, and modern AI has made them faster and more capable.</p>
+<h3 id="8-recommendation-engines">8. Recommendation Engines</h3>
+<p><strong>What it does:</strong> Suggests items, actions, or content based on user behavior and preferences.</p>
+<p><strong>Business examples:</strong></p>
+<ul>
+<li>Product recommendations (e-commerce cross-sell and upsell)</li>
+<li>Content recommendations (learning platforms, news feeds)</li>
+<li>Next-best-action in sales (which customer to call, which offer to present)</li>
+<li>Internal knowledge discovery (suggesting relevant documents to employees)</li>
+</ul>
+<p><strong>How leaders encounter it:</strong> If your e-commerce platform shows "customers also bought" or your CRM suggests "next best action," there's a recommendation engine at work. These systems directly influence revenue and are among the highest-ROI AI applications.</p>
+<h2 id="the-full-picture">The Full Picture</h2>
+<table>
+<thead>
+<tr>
+<th>AI Capability</th>
+<th>Primary Value</th>
+<th>Maturity Level</th>
+<th>Example at Meridian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classification</td>
+<td>Categorize and score</td>
+<td>Mature (10+ years)</td>
+<td>Lead scoring in Salesforce</td>
+</tr>
+<tr>
+<td>Regression/Forecasting</td>
+<td>Predict numbers</td>
+<td>Mature</td>
+<td>Revenue forecasting in finance</td>
+</tr>
+<tr>
+<td>Time Series</td>
+<td>Trend and seasonality</td>
+<td>Mature</td>
+<td>Supply chain demand planning</td>
+</tr>
+<tr>
+<td>Anomaly Detection</td>
+<td>Find the unusual</td>
+<td>Mature</td>
+<td>Expense fraud flagging</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>See and interpret</td>
+<td>Growing</td>
+<td>QC defect detection pilot</td>
+</tr>
+<tr>
+<td>NLP (analytical)</td>
+<td>Understand text</td>
+<td>Growing</td>
+<td>Customer feedback analysis</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Find the best option</td>
+<td>Mature</td>
+<td>Delivery route planning</td>
+</tr>
+<tr>
+<td>Recommendation</td>
+<td>Suggest next action</td>
+<td>Mature</td>
+<td>CRM next-best-action</td>
+</tr>
+<tr>
+<td><strong>Generative AI</strong></td>
+<td><strong>Create content</strong></td>
+<td><strong>Early-maturing</strong></td>
+<td><strong>Individual Copilot usage</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Notice where GenAI sits in this table — it's one of nine capabilities, and it's among the newest. The other eight have been delivering business value, often for years, under names that don't include "AI."</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<p>Consider these questions:</p>
+<ul>
+<li>How many of these eight capabilities are already in use somewhere in your organization?</li>
+<li>Are there high-value applications of time series, anomaly detection, or optimization that your teams haven't explored?</li>
+<li>When your organization discusses "AI strategy," does the conversation cover this full spectrum, or does it focus primarily on GenAI?</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Underinvesting in classical ML while chasing GenAI</strong> — GenAI captures attention, but time series forecasting, anomaly detection, and optimization often deliver faster, more measurable ROI because the use cases are well-defined and the technology is proven.</li>
+<li><strong>Not recognizing existing AI</strong> — Many organizations already run ML models under labels like "advanced analytics" or "predictive tools." An AI inventory often reveals more capability than expected.</li>
+<li><strong>Treating all AI as the same investment decision</strong> — A fraud detection model and a GenAI content tool have completely different data requirements, risk profiles, and ROI timelines. Evaluate each on its own merits.</li>
+<li><strong>Overlooking optimization</strong> — Route optimization, scheduling, and resource allocation have been delivering value for decades. Modern AI makes these techniques more accessible and powerful.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>AI is a toolkit of at least nine distinct capabilities. Generative AI is one of them — important, but not the whole picture.</li>
+<li>Classical ML (classification, regression, time series, anomaly detection) is mature, proven, and often already present in organizations under different names.</li>
+<li>The highest-impact AI strategy considers the full spectrum, matching each capability to the business problems where it adds the most value.</li>
+<li>An AI inventory — cataloging where these capabilities already exist in your organization — is a practical first step for any leadership team.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Now that we know WHAT AI can do, let's understand HOW it works. In Lesson 3, we'll build a leader's mental model — how ML learns from data, how LLMs generate text, and the key differences that affect business decisions. No math required, just the intuition you need to evaluate opportunities and ask informed questions.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"The Full AI Toolkit — It's Not Just Chatbots\",\"description\":\"Explore the complete spectrum of AI capabilities beyond generative AI — from time series forecasting and anomaly detection to computer vision and optimization.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/the-full-ai-toolkit\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"The Full AI Toolkit — It's Not Just Chatbots\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/the-full-ai-toolkit\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Literacy for Every Leader"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"The Full AI Toolkit — It's Not Just Chatbots"}],["$","p",null,{"className":"lesson-header__description","children":"Explore the complete spectrum of AI capabilities beyond generative AI — from time series forecasting and anomaly detection to computer vision and optimization."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/ai-landscape-for-executives","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"The AI Landscape in 2026 — What Leaders Actually Need to Know"}]]}],["$","$L8",null,{"href":"/ai-leadership/how-ai-actually-works","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"How AI Actually Works — A Leader's Mental Model"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-eight-ai-capabilities","text":"The Eight AI Capabilities","level":2},{"id":"1-classification","text":"1. Classification","level":3},{"id":"2-regression-and-forecasting","text":"2. Regression and Forecasting","level":3},{"id":"3-time-series-analysis","text":"3. Time Series Analysis","level":3},{"id":"4-anomaly-detection","text":"4. Anomaly Detection","level":3},{"id":"5-computer-vision","text":"5. Computer Vision","level":3},{"id":"6-natural-language-processing-nlp--beyond-chatbots","text":"6. Natural Language Processing (NLP) — Beyond Chatbots","level":3},{"id":"7-optimization","text":"7. Optimization","level":3},{"id":"8-recommendation-engines","text":"8. Recommendation Engines","level":3},{"id":"the-full-picture","text":"The Full Picture","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

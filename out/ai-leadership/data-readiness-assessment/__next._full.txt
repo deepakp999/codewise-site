@@ -1,0 +1,293 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/04fe_m1fp-15j.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","ai-leadership","data-readiness-assessment",""],"q":"","i":false,"f":[[["",{"children":[["course","ai-leadership","d",null],{"children":[["slug","data-readiness-assessment","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SqdzuPaEeA-UMZd5kjbkM"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"ai-leadership","modules":[{"id":"ai-literacy","title":"AI Literacy for Every Leader","lessons":[{"slug":"ai-landscape-for-executives","title":"The AI Landscape in 2026 — What Leaders Actually Need to Know"},{"slug":"the-full-ai-toolkit","title":"The Full AI Toolkit — It's Not Just Chatbots"},{"slug":"how-ai-actually-works","title":"How AI Actually Works — A Leader's Mental Model"},{"slug":"ai-business-models","title":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"},{"slug":"the-ai-maturity-curve","title":"Where Is Your Organization on the AI Maturity Curve?"}]},{"id":"ai-strategy","title":"Building Your AI Strategy","lessons":[{"slug":"strategy-not-tools","title":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"},{"slug":"finding-high-value-use-cases","title":"Finding High-Value AI Use Cases — The Opportunity Matrix"},{"slug":"data-readiness-assessment","title":"Data Readiness — Why This Comes Before Everything Else"},{"slug":"data-strategy-for-ai","title":"Building a Data Strategy That Makes AI Possible"},{"slug":"build-buy-partner","title":"Build, Buy, or Partner — Making the Right AI Investment Decisions"},{"slug":"the-ai-strategy-document","title":"Writing the AI Strategy Document Your Board Will Actually Read"}]},{"id":"ai-governance","title":"AI Governance, Risk, and Ethics","lessons":[{"slug":"ai-governance-framework","title":"AI Governance — The Framework That Enables Innovation"},{"slug":"ai-risk-landscape","title":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"},{"slug":"responsible-ai","title":"Responsible AI in Practice — Beyond the Ethics Statement"},{"slug":"ai-regulation","title":"AI Regulation — EU AI Act, US Policies, and What's Coming"},{"slug":"shadow-ai","title":"Shadow AI — The Risk You Need to Address Proactively"}]},{"id":"ai-people","title":"People, Culture, and Change Management","lessons":[{"slug":"ai-talent-strategy","title":"AI Talent Strategy — Build, Hire, and Upskill"},{"slug":"leading-ai-adoption","title":"Leading AI Adoption — Change Management That Works"},{"slug":"the-ai-operating-model","title":"The AI Operating Model — Centralized, Federated, or Hybrid?"},{"slug":"ai-and-workforce","title":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"},{"slug":"building-ai-culture","title":"Building an AI-Ready Culture — From Experimentation to Institution"}]},{"id":"ai-execution","title":"Execution, Measurement, and Scaling","lessons":[{"slug":"from-pilot-to-production","title":"From Pilot to Production — Why Most AI Pilots Fail to Scale"},{"slug":"measuring-ai-roi","title":"Measuring AI ROI — Metrics That Actually Matter"},{"slug":"scaling-ai","title":"Scaling AI Across the Enterprise — From One Team to Every Team"},{"slug":"agentic-ai-and-whats-next","title":"Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan"},{"slug":"your-first-90-days","title":"Your First 90 Days as an AI-Ready Leader"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T2e59,<h1 id="data-readiness--why-this-comes-before-everything-else">Data Readiness — Why This Comes Before Everything Else</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Why data readiness is the number one determinant of AI success</li>
+<li>The four pillars of data readiness: Availability, Quality, Governance, Architecture</li>
+<li>How to run a practical data readiness assessment</li>
+<li>What "good enough" data looks like (perfection is not the standard)</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Meridian's first "Start Here" initiative — expanding demand forecasting to all product lines — seemed straightforward. The supply chain team had proven the model works on three product lines. Scaling it to all fifteen should be simple, right?</p>
+<p>Priya (CTO) ran a data readiness check across the remaining product lines. What she found changed the timeline:</p>
+<ul>
+<li>Four product lines had sales data in a separate regional ERP system that wasn't integrated with the primary data warehouse</li>
+<li>Two product lines had inconsistent product categorization — the same item had different names in different systems</li>
+<li>Historical data for three product lines only went back 14 months (the model needed at least 24 months for reliable seasonality patterns)</li>
+<li>One product line had no digital records for wholesale orders — they were tracked in spreadsheets updated manually</li>
+</ul>
+<p>The model wasn't the bottleneck. The data was. Priya estimated it would take three months to clean and integrate the data before the forecasting model could even begin training on the new product lines.</p>
+<p>This is one of the most common patterns in enterprise AI: organizations invest in AI technology while underinvesting in the data foundation it requires.</p>
+<h2 id="the-data-reality">The Data Reality</h2>
+<p>The World Economic Forum reports that fewer than one in five organizations have achieved high maturity in any aspect of data readiness (<a href="https://www.weforum.org/stories/2026/01/why-data-readiness-is-now-a-strategic-imperative-for-businesses/">WEF 2026</a>).</p>
+<p>More than half of business leaders cite data quality and availability as major challenges to accelerating AI adoption. And 72% say they will prioritize data foundations and pipelines as their fastest-growing AI-related investment over the next 12 months (<a href="https://www.weforum.org/stories/2026/01/why-data-readiness-is-now-a-strategic-imperative-for-businesses/">WEF 2026</a>).</p>
+<p>The BARC Data, BI and Analytics Trend Monitor 2026 confirms this pattern: data quality management has reclaimed the number one position among priorities for analytics and AI practitioners (<a href="https://www.strategy.com/software/blog/why-data-quality-is-key-to-ai-success-in-2026">Strategy.com/BARC 2026</a>).</p>
+<p>The message from the research is consistent: AI success depends more on data readiness than on model selection or technology choice.</p>
+<h2 id="the-four-pillars-of-data-readiness">The Four Pillars of Data Readiness</h2>
+<h3 id="pillar-1-availability">Pillar 1: Availability</h3>
+<p><strong>Question:</strong> Can we access the data we need?</p>
+<table>
+<thead>
+<tr>
+<th>Assessment Area</th>
+<th>What to Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the data exist?</td>
+<td>Is it captured digitally, or only in manual records, emails, or documents?</td>
+</tr>
+<tr>
+<td>Is it accessible?</td>
+<td>Can the data team query it programmatically, or is it locked in proprietary systems?</td>
+</tr>
+<tr>
+<td>Is it integrated?</td>
+<td>Can data from different systems be combined? Or does it live in disconnected silos?</td>
+</tr>
+<tr>
+<td>Is it timely?</td>
+<td>Is data available in near-real-time, or only in monthly batch exports?</td>
+</tr>
+<tr>
+<td>Is it sufficient?</td>
+<td>Is there enough historical data for the intended use case (typically 2+ years for time series)?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Meridian's finding:</strong> Four product lines had data trapped in a regional ERP system with no integration to the central data warehouse. The data existed but wasn't accessible to the forecasting team.</p>
+<h3 id="pillar-2-quality">Pillar 2: Quality</h3>
+<p><strong>Question:</strong> Can we trust this data?</p>
+<table>
+<thead>
+<tr>
+<th>Quality Dimension</th>
+<th>What It Means</th>
+<th>Example at Meridian</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>Data reflects reality</td>
+<td>Product prices matched actual invoiced amounts</td>
+</tr>
+<tr>
+<td><strong>Completeness</strong></td>
+<td>No critical fields missing</td>
+<td>8% of order records were missing customer region</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong></td>
+<td>Same data, same format everywhere</td>
+<td>Product "Widget-Pro" was also called "WidgetPro" and "WIDGET PRO"</td>
+</tr>
+<tr>
+<td><strong>Timeliness</strong></td>
+<td>Data is current enough for the use case</td>
+<td>Wholesale data was updated weekly; model needed daily</td>
+</tr>
+<tr>
+<td><strong>Uniqueness</strong></td>
+<td>No unwanted duplicates</td>
+<td>3% duplicate customer records across two CRM instances</td>
+</tr>
+</tbody>
+</table>
+<p>A practical standard: data doesn't need to be perfect. It needs to be <strong>good enough for the specific use case.</strong> A demand forecasting model can tolerate 2% missing values. A fraud detection model may not tolerate any. Define quality thresholds per use case, not as an abstract standard.</p>
+<h3 id="pillar-3-governance">Pillar 3: Governance</h3>
+<p><strong>Question:</strong> Is there clear ownership, accountability, and control?</p>
+<table>
+<thead>
+<tr>
+<th>Governance Area</th>
+<th>What to Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ownership</strong></td>
+<td>Is there a named person or team responsible for each major dataset?</td>
+</tr>
+<tr>
+<td><strong>Access control</strong></td>
+<td>Are there clear policies on who can access what data?</td>
+</tr>
+<tr>
+<td><strong>Lineage</strong></td>
+<td>Can you trace where data came from and how it was transformed?</td>
+</tr>
+<tr>
+<td><strong>Privacy and compliance</strong></td>
+<td>Is personal data handled according to GDPR, CCPA, or industry-specific regulations?</td>
+</tr>
+<tr>
+<td><strong>Classification</strong></td>
+<td>Is data classified by sensitivity level (public, internal, confidential, restricted)?</td>
+</tr>
+<tr>
+<td><strong>Retention</strong></td>
+<td>Are there policies on how long data is kept and when it's archived or deleted?</td>
+</tr>
+</tbody>
+</table>
+<p>Without governance, even high-quality data becomes a liability — especially when AI systems process sensitive information at scale.</p>
+<h3 id="pillar-4-architecture">Pillar 4: Architecture</h3>
+<p><strong>Question:</strong> Can our systems deliver data to AI workloads reliably?</p>
+<table>
+<thead>
+<tr>
+<th>Architecture Area</th>
+<th>What to Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Storage</strong></td>
+<td>Is data stored in systems that support analytical workloads (data warehouse, data lake)?</td>
+</tr>
+<tr>
+<td><strong>Pipelines</strong></td>
+<td>Are there automated processes that move and transform data from source to destination?</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>Can different systems share data through APIs, event streams, or batch processes?</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Can the infrastructure handle the volume and velocity that AI workloads require?</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Are there alerts and dashboards for pipeline failures, data quality drops, and latency issues?</td>
+</tr>
+</tbody>
+</table>
+<p>Many organizations built their data architecture for reporting and business intelligence — monthly dashboards, quarterly reports. AI often requires different patterns: real-time data access, larger data volumes, and higher quality standards. Evaluating whether existing architecture can support AI workloads is essential before committing to AI projects.</p>
+<h2 id="the-data-readiness-scorecard">The Data Readiness Scorecard</h2>
+<p>For each pillar, rate your organization on a 1–5 scale:</p>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Score (1–5)</th>
+<th>Evidence / Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Availability</td>
+<td>___</td>
+<td></td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>___</td>
+<td></td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>___</td>
+<td></td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>___</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Overall Readiness</strong></td>
+<td><strong>Average</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpreting the score:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Average Score</th>
+<th>Readiness Level</th>
+<th>Recommended Next Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0 – 2.0</td>
+<td>Early</td>
+<td>Focus entirely on data foundations before AI investment</td>
+</tr>
+<tr>
+<td>2.0 – 3.0</td>
+<td>Developing</td>
+<td>Target AI use cases where data is strongest; invest in foundations for others</td>
+</tr>
+<tr>
+<td>3.0 – 4.0</td>
+<td>Ready</td>
+<td>Proceed with prioritized AI initiatives; continue strengthening foundations</td>
+</tr>
+<tr>
+<td>4.0 – 5.0</td>
+<td>Advanced</td>
+<td>Scale AI confidently; focus on optimization and continuous improvement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Run this assessment for each AI use case under consideration, not just once for the organization as a whole. Data readiness varies significantly by domain.</li>
+<li>Share the results with your leadership team. Data readiness is not a technical detail — it directly affects AI investment timelines, costs, and likelihood of success.</li>
+<li>If the assessment reveals significant gaps, the next lesson (Lesson 9) provides a practical playbook for building a data strategy.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Treating data readiness as a one-time project</strong> — Data quality degrades over time as systems change, new data sources are added, and processes evolve. Readiness requires continuous attention, not a one-off cleanup.</li>
+<li><strong>Assuming IT owns data readiness alone</strong> — Business teams generate and consume the data. Readiness is a shared responsibility between business and technology.</li>
+<li><strong>Aiming for perfection before starting</strong> — "Perfect data" doesn't exist. Define "good enough" thresholds for each use case and start there. Improve iteratively.</li>
+<li><strong>Investing in AI before understanding data gaps</strong> — The most common pattern in stalled AI projects: a team spends months building a model, only to discover that the data needed to run it in production isn't available, clean, or governed.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Data readiness is the number one determinant of AI success. More than model selection, more than technology choice, more than talent.</li>
+<li>The four pillars — Availability, Quality, Governance, Architecture — provide a practical assessment framework.</li>
+<li>Fewer than one in five organizations report high data readiness maturity. This is the most common constraint on AI progress.</li>
+<li>Data readiness is not a one-time exercise — it's an ongoing organizational capability.</li>
+<li>The scorecard in this lesson is a tool you can use immediately with your leadership team.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>The assessment reveals where you stand. Lesson 9 provides the action plan: <strong>Building a Data Strategy That Makes AI Possible</strong> — practical steps from data audit to DataOps, including the "data product" mindset that turns clean data into a reusable organizational asset.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Data Readiness — Why This Comes Before Everything Else\",\"description\":\"Fewer than 1-in-5 organizations have high data readiness. Learn the four-pillar assessment framework and why data foundations determine AI success.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/data-readiness-assessment\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Data Readiness — Why This Comes Before Everything Else\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/data-readiness-assessment\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Building Your AI Strategy"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Data Readiness — Why This Comes Before Everything Else"}],["$","p",null,{"className":"lesson-header__description","children":"Fewer than 1-in-5 organizations have high data readiness. Learn the four-pillar assessment framework and why data foundations determine AI success."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/ai-leadership/finding-high-value-use-cases","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Finding High-Value AI Use Cases — The Opportunity Matrix"}]]}],["$","$L6",null,{"href":"/ai-leadership/data-strategy-for-ai","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Building a Data Strategy That Makes AI Possible"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-data-reality","text":"The Data Reality","level":2},{"id":"the-four-pillars-of-data-readiness","text":"The Four Pillars of Data Readiness","level":2},{"id":"pillar-1-availability","text":"Pillar 1: Availability","level":3},{"id":"pillar-2-quality","text":"Pillar 2: Quality","level":3},{"id":"pillar-3-governance","text":"Pillar 3: Governance","level":3},{"id":"pillar-4-architecture","text":"Pillar 4: Architecture","level":3},{"id":"the-data-readiness-scorecard","text":"The Data Readiness Scorecard","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"Data Readiness — Why This Comes Before Everything Else — AI for Leadership — Strategic AI Literacy for Every Leader | CodewiseX"}],["$","meta","1",{"name":"description","content":"Fewer than 1-in-5 organizations have high data readiness. Learn the four-pillar assessment framework and why data foundations determine AI success."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"data readiness,data quality,ai foundation,data governance,data strategy"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/ai-leadership/data-readiness-assessment/"}],["$","meta","8",{"property":"og:title","content":"Data Readiness — Why This Comes Before Everything Else"}],["$","meta","9",{"property":"og:description","content":"Fewer than 1-in-5 organizations have high data readiness. Learn the four-pillar assessment framework and why data foundations determine AI success."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/ai-leadership/data-readiness-assessment/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

@@ -17,6 +17,11 @@ CodewiseX is an educational platform offering free technical courses with clear 
 - Topics: SAP ABAP, reports, internal tables, Open SQL, ALV, BAPIs, IDocs, debugging
 - Lessons: 30
 
+### AI for Leadership — Strategic AI Literacy for Every Leader
+- URL: https://codewise.lumivoxx.com/ai-leadership
+- Topics: AI strategy, governance, risk, talent, ROI, change management, agentic AI, executive AI literacy
+- Lessons: 26
+
 ## Key Pages
 - Homepage: https://codewise.lumivoxx.com
 - About: https://codewise.lumivoxx.com/about

@@ -27,6 +27,15 @@
     "tags": ["abap", "sap", "rap", "cds", "s4hana"]
   },
   {
+    "id": "ai-leadership",
+    "title": "AI for Leadership — Strategic AI Literacy for Every Leader",
+    "description": "Master AI strategy, governance, and execution — 26 lessons on AI literacy, risk, talent, ROI, and the leadership decisions that matter most in 2026.",
+    "status": "active",
+    "href": "/ai-leadership",
+    "lessonCount": 26,
+    "tags": ["ai", "leadership", "strategy", "governance", "executive"]
+  },
+  {
     "id": "sql",
     "title": "SQL Fundamentals",
     "description": "Write powerful SQL queries from scratch. Coming soon.",

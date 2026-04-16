@@ -1,0 +1,134 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T2bdc,<h1 id="how-ai-actually-works--a-leaders-mental-model">How AI Actually Works — A Leader's Mental Model</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>How classical ML learns from data (the pattern-matching mental model)</li>
+<li>How large language models generate text (the next-word-prediction mental model)</li>
+<li>Key concepts leaders encounter: training data, fine-tuning, RAG, hallucinations</li>
+<li>The practical implications of each concept for business decisions</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>After the AI toolkit session, David (CFO) pulled Priya (CTO) aside. "I understand what AI can do now. But I don't understand how it does it. When a vendor tells me their model has '97% accuracy' or that we need to 'fine-tune a foundation model,' I don't know how to evaluate those claims."</p>
+<p>Priya offered a working session — not to teach David to code, but to give him the mental models he needed to ask informed questions. "You don't need to understand calculus to evaluate a financial model," she said. "And you don't need to understand neural network architecture to evaluate an AI proposal. But you do need the right intuition."</p>
+<p>This lesson provides that intuition.</p>
+<h2 id="how-classical-ml-works--the-pattern-matching-model">How Classical ML Works — The Pattern-Matching Model</h2>
+<p>Classical ML learns from examples. The process has three phases:</p>
+<p><strong>Phase 1: Training</strong></p>
+<p>You give the system historical data with known outcomes. For example, Meridian's fraud detection model was trained on five years of expense reports — each labeled as "legitimate" or "fraudulent" by the finance team.</p>
+<p>The model examines thousands of examples and finds patterns: fraudulent expenses tend to be submitted on Fridays, tend to be just below approval thresholds, tend to come from certain expense categories, and tend to have round numbers.</p>
+<p>Think of it like an experienced auditor who has reviewed 50,000 expense reports. They develop instincts — patterns they can't always articulate but can consistently recognize.</p>
+<p><strong>Phase 2: Testing</strong></p>
+<p>Before deployment, the model is tested on data it has never seen. If it correctly identifies 95% of known fraud cases while flagging only 2% of legitimate expenses, the team has a measure of performance.</p>
+<p>This is where the "97% accuracy" claims come from. Leaders should ask: Accuracy on what data? Over what time period? What are the consequences of the 3% it gets wrong?</p>
+<p><strong>Phase 3: Inference (Production)</strong></p>
+<p>The model is deployed. New expense reports flow in, and the model scores each one: "82% likely legitimate" or "94% likely fraudulent." Human reviewers focus their attention on high-risk items.</p>
+<p>The key insight: <strong>ML doesn't understand expenses or fraud. It recognizes statistical patterns in data.</strong> If the patterns change — if a new type of fraud emerges that doesn't match historical patterns — the model will miss it until it's retrained with new examples.</p>
+<h3 id="what-leaders-should-take-away">What Leaders Should Take Away</h3>
+<ul>
+<li>ML models are only as good as the data they're trained on. Historical data with biases produces biased models.</li>
+<li>"Accuracy" is not a single number — ask about false positives (flagging legitimate items) and false negatives (missing real issues).</li>
+<li>Models need ongoing monitoring and retraining. A model trained on 2022 data may not perform well on 2026 patterns.</li>
+</ul>
+<h2 id="how-large-language-models-work--the-next-word-model">How Large Language Models Work — The Next-Word Model</h2>
+<p>LLMs (GPT, Claude, Gemini, Llama) work on a fundamentally different principle from classical ML. Understanding this difference helps leaders set appropriate expectations.</p>
+<p><strong>The core mechanism:</strong> An LLM predicts the most likely next word (or token) in a sequence. It does this billions of times, word by word, to produce paragraphs, essays, code, and conversations.</p>
+<p>An analogy: imagine reading every book, article, website, and conversation transcript ever written — billions of documents. After absorbing all that text, you develop an extraordinary intuition for how language works: what typically follows what, how arguments are structured, how code is written, how different topics connect.</p>
+<p>That's what an LLM has — a vast statistical model of language patterns, trained on enormous amounts of text. When you give it a prompt, it generates a response by predicting what text would most plausibly follow, word by word.</p>
+<p><strong>What this means in practice:</strong></p>
+<ul>
+<li>LLMs are remarkably good at generating fluent, contextually appropriate text</li>
+<li>They can summarize, translate, explain, draft, and transform text with impressive quality</li>
+<li>They don't "know" things the way a database does — they generate plausible text based on patterns</li>
+<li>They can produce text that sounds authoritative but is factually incorrect (hallucinations)</li>
+</ul>
+<h3 id="key-concepts-leaders-encounter">Key Concepts Leaders Encounter</h3>
+<p><strong>Training data</strong> — The text an LLM was trained on. This determines what it "knows." If a topic wasn't well-represented in training data, the model will be weaker on it. Enterprise-specific knowledge (your company's products, policies, processes) is almost certainly not in a general LLM's training data.</p>
+<p><strong>Fine-tuning</strong> — Additional training on a specific dataset to specialize a model. For example, fine-tuning a general LLM on medical literature produces a model that's stronger at medical tasks. Fine-tuning requires data, compute resources, and ML expertise.</p>
+<p><strong>RAG (Retrieval-Augmented Generation)</strong> — Instead of relying solely on what the LLM learned during training, RAG retrieves relevant documents from your data sources and includes them in the prompt. The LLM then generates answers based on your actual documents. This is often more practical than fine-tuning for enterprise use cases — it's faster to implement, easier to update, and keeps your data current.</p>
+<p><strong>Hallucinations</strong> — When an LLM generates text that sounds confident and plausible but is factually incorrect. This happens because the model is predicting likely text, not verifying facts. For high-stakes business use cases (legal, financial, medical), hallucination risk requires careful mitigation — human review, fact-checking pipelines, or RAG-based grounding in verified sources.</p>
+<p><strong>Tokens</strong> — LLMs process text in chunks called tokens (roughly 3–4 characters). This matters because LLM pricing is per token, and context windows (how much text the model can consider at once) are measured in tokens. When a vendor quotes pricing or context limits, they're talking about tokens.</p>
+<h2 id="the-key-difference-for-business-decisions">The Key Difference for Business Decisions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Classical ML</th>
+<th>Generative AI (LLMs)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Learns from</strong></td>
+<td>Your historical data</td>
+<td>Vast public text corpus</td>
+</tr>
+<tr>
+<td><strong>Produces</strong></td>
+<td>Predictions and scores</td>
+<td>New text, code, images</td>
+</tr>
+<tr>
+<td><strong>Strength</strong></td>
+<td>Precision on specific tasks</td>
+<td>Flexibility across many tasks</td>
+</tr>
+<tr>
+<td><strong>Data requirement</strong></td>
+<td>Needs your labeled data</td>
+<td>Works out-of-the-box, enhanced with your data via RAG</td>
+</tr>
+<tr>
+<td><strong>Customization</strong></td>
+<td>Train a custom model</td>
+<td>Fine-tune or use RAG</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>Model drift, biased training data</td>
+<td>Hallucinations, data leakage</td>
+</tr>
+<tr>
+<td><strong>ROI timeline</strong></td>
+<td>Proven, faster for defined use cases</td>
+<td>Still maturing for enterprise</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Fraud detection, demand forecasting</td>
+<td>Document drafting, summarization</td>
+</tr>
+</tbody>
+</table>
+<p>The practical implication: <strong>when a vendor proposes an AI solution, ask which type of AI it uses.</strong> The answer shapes everything — data requirements, accuracy expectations, risk profile, and cost.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>When evaluating an AI vendor: ask whether their solution uses classical ML (trained on your data) or GenAI (leveraging a general model). The answer determines data requirements and accuracy expectations.</li>
+<li>When considering GenAI for high-stakes use cases: understand the hallucination risk and ask what mitigation is in place (RAG, human review, confidence scores).</li>
+<li>When someone proposes "fine-tuning a model": ask what data will be used, how much it costs, and whether RAG might achieve the same goal more simply.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Expecting LLMs to be factual databases</strong> — LLMs generate plausible text, not verified facts. For any use case where accuracy matters, pair LLMs with retrieval systems (RAG) and human review.</li>
+<li><strong>Assuming "AI" means one type of technology</strong> — A fraud detection model and a ChatGPT deployment are fundamentally different technologies with different requirements. Evaluate each on its own terms.</li>
+<li><strong>Ignoring the training data question</strong> — For classical ML, the most important question is "what data was this trained on?" For LLMs, the most important question is "how will we ground this in our data?" In both cases, data quality is the determining factor.</li>
+<li><strong>Overcomplicating the technical understanding</strong> — You don't need to understand backpropagation or transformer architecture. The mental models in this lesson — "pattern matching from data" for ML, "next-word prediction from vast text" for LLMs — are sufficient for sound business decisions.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Classical ML learns patterns from YOUR historical data and makes predictions. LLMs learn language patterns from vast public text and generate new content.</li>
+<li>Both types of AI are only as good as their data — historical data quality for ML, retrieval and grounding for LLMs.</li>
+<li>Key concepts for leaders: training data, fine-tuning, RAG, hallucinations, and tokens. These come up in every AI vendor conversation and investment decision.</li>
+<li>The right level of technical understanding for a leader is enough to ask informed questions and evaluate proposals — not enough to build models.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>We know what AI is and how it works. Now let's connect it to business value. In Lesson 4, we'll explore <strong>how AI creates business value</strong> across four dimensions — revenue, cost, risk, and customer experience — with concrete examples mapped to each type of AI capability.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"How AI Actually Works — A Leader's Mental Model\",\"description\":\"Build an intuitive understanding of how machine learning and large language models work — no math, just the mental models you need for sound business decisions.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/how-ai-actually-works\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"How AI Actually Works — A Leader's Mental Model\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/how-ai-actually-works\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Literacy for Every Leader"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"How AI Actually Works — A Leader's Mental Model"}],["$","p",null,{"className":"lesson-header__description","children":"Build an intuitive understanding of how machine learning and large language models work — no math, just the mental models you need for sound business decisions."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/the-full-ai-toolkit","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"The Full AI Toolkit — It's Not Just Chatbots"}]]}],["$","$L8",null,{"href":"/ai-leadership/ai-business-models","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"how-classical-ml-works--the-pattern-matching-model","text":"How Classical ML Works — The Pattern-Matching Model","level":2},{"id":"what-leaders-should-take-away","text":"What Leaders Should Take Away","level":3},{"id":"how-large-language-models-work--the-next-word-model","text":"How Large Language Models Work — The Next-Word Model","level":2},{"id":"key-concepts-leaders-encounter","text":"Key Concepts Leaders Encounter","level":3},{"id":"the-key-difference-for-business-decisions","text":"The Key Difference for Business Decisions","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

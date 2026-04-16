@@ -125,6 +125,7 @@ function getEmojiForCourse(id: string): string {
     pyspark: "🔥",
     "abap-classic": "🏗️",
     "abap-modern": "🚀",
+    "ai-leadership": "🧠",
     sql: "🗃️",
     python: "🐍",
     kafka: "📡",

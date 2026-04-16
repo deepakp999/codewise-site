@@ -1,0 +1,134 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/04fe_m1fp-15j.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","ai-leadership","strategy-not-tools",""],"q":"","i":false,"f":[[["",{"children":[["course","ai-leadership","d",null],{"children":[["slug","strategy-not-tools","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SqdzuPaEeA-UMZd5kjbkM"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"ai-leadership","modules":[{"id":"ai-literacy","title":"AI Literacy for Every Leader","lessons":[{"slug":"ai-landscape-for-executives","title":"The AI Landscape in 2026 — What Leaders Actually Need to Know"},{"slug":"the-full-ai-toolkit","title":"The Full AI Toolkit — It's Not Just Chatbots"},{"slug":"how-ai-actually-works","title":"How AI Actually Works — A Leader's Mental Model"},{"slug":"ai-business-models","title":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"},{"slug":"the-ai-maturity-curve","title":"Where Is Your Organization on the AI Maturity Curve?"}]},{"id":"ai-strategy","title":"Building Your AI Strategy","lessons":[{"slug":"strategy-not-tools","title":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"},{"slug":"finding-high-value-use-cases","title":"Finding High-Value AI Use Cases — The Opportunity Matrix"},{"slug":"data-readiness-assessment","title":"Data Readiness — Why This Comes Before Everything Else"},{"slug":"data-strategy-for-ai","title":"Building a Data Strategy That Makes AI Possible"},{"slug":"build-buy-partner","title":"Build, Buy, or Partner — Making the Right AI Investment Decisions"},{"slug":"the-ai-strategy-document","title":"Writing the AI Strategy Document Your Board Will Actually Read"}]},{"id":"ai-governance","title":"AI Governance, Risk, and Ethics","lessons":[{"slug":"ai-governance-framework","title":"AI Governance — The Framework That Enables Innovation"},{"slug":"ai-risk-landscape","title":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"},{"slug":"responsible-ai","title":"Responsible AI in Practice — Beyond the Ethics Statement"},{"slug":"ai-regulation","title":"AI Regulation — EU AI Act, US Policies, and What's Coming"},{"slug":"shadow-ai","title":"Shadow AI — The Risk You Need to Address Proactively"}]},{"id":"ai-people","title":"People, Culture, and Change Management","lessons":[{"slug":"ai-talent-strategy","title":"AI Talent Strategy — Build, Hire, and Upskill"},{"slug":"leading-ai-adoption","title":"Leading AI Adoption — Change Management That Works"},{"slug":"the-ai-operating-model","title":"The AI Operating Model — Centralized, Federated, or Hybrid?"},{"slug":"ai-and-workforce","title":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"},{"slug":"building-ai-culture","title":"Building an AI-Ready Culture — From Experimentation to Institution"}]},{"id":"ai-execution","title":"Execution, Measurement, and Scaling","lessons":[{"slug":"from-pilot-to-production","title":"From Pilot to Production — Why Most AI Pilots Fail to Scale"},{"slug":"measuring-ai-roi","title":"Measuring AI ROI — Metrics That Actually Matter"},{"slug":"scaling-ai","title":"Scaling AI Across the Enterprise — From One Team to Every Team"},{"slug":"agentic-ai-and-whats-next","title":"Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan"},{"slug":"your-first-90-days","title":"Your First 90 Days as an AI-Ready Leader"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T1fc0,<h1 id="ai-strategy-vs-ai-activity--why-most-companies-get-this-wrong">AI Strategy vs AI Activity — Why Most Companies Get This Wrong</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The difference between AI activity and AI strategy</li>
+<li>Why activity without strategy leads to scattered results</li>
+<li>The five components of a real AI strategy</li>
+<li>How to move from "we're doing AI" to "we have an AI strategy"</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>At Meridian's next quarterly review, Sarah (CEO) asked each department head: "What are you doing with AI?"</p>
+<p>The answers came quickly. Marketing was using GenAI for social media copy. Sales had Salesforce Einstein scoring leads. Supply chain was running their forecasting model. IT was piloting a helpdesk chatbot. HR was testing an AI-powered resume screening tool.</p>
+<p>Sarah felt good for about ten minutes. Then David (CFO) asked a question that shifted the room: "These are all interesting. But which of them are connected to our three-year strategic priorities? How much are we spending in total? Who's governing the data flowing into these tools? And how do we know if any of them are actually working?"</p>
+<p>Silence.</p>
+<p>Meridian had AI activity. They didn't have an AI strategy.</p>
+<h2 id="activity-vs-strategy">Activity vs Strategy</h2>
+<p>The distinction matters because it determines whether AI investments compound into organizational capability or remain scattered experiments.</p>
+<p><strong>AI Activity looks like:</strong></p>
+<ul>
+<li>Individual teams adopting AI tools independently</li>
+<li>Pilots launched based on team enthusiasm or vendor pitches</li>
+<li>No shared data infrastructure across AI initiatives</li>
+<li>No centralized view of AI spending, risk, or results</li>
+<li>Success measured anecdotally ("the team loves it") rather than by business KPIs</li>
+</ul>
+<p><strong>AI Strategy looks like:</strong></p>
+<ul>
+<li>AI initiatives prioritized based on business impact and organizational readiness</li>
+<li>Shared data foundations that support multiple use cases</li>
+<li>Clear governance for data, risk, and ethical considerations</li>
+<li>Defined metrics and regular review against business outcomes</li>
+<li>A roadmap that sequences investments based on dependencies and value</li>
+</ul>
+<p>According to PwC's 2026 predictions, organizations that concentrate AI investment on a few key workflows — guided by senior leadership — consistently outperform those that spread efforts across many disconnected initiatives (<a href="https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html">PwC 2026</a>).</p>
+<h2 id="the-five-components-of-a-real-ai-strategy">The Five Components of a Real AI Strategy</h2>
+<h3 id="1-business-alignment">1. Business Alignment</h3>
+<p>Every AI initiative maps to a specific business priority. Not "let's explore what AI can do" but "we need to reduce inventory carrying costs by 12% in FY27, and time series forecasting is how we'll get there."</p>
+<h3 id="2-data-foundation">2. Data Foundation</h3>
+<p>AI strategy starts with data strategy. What data do we have? Where does it live? How clean is it? Who owns it? Can our systems serve it to AI models reliably? (We'll dedicate Lessons 8 and 9 entirely to this.)</p>
+<h3 id="3-governance-and-risk">3. Governance and Risk</h3>
+<p>How do we approve AI use cases? Who reviews them for risk, bias, and compliance? What's our policy on employee use of AI tools? How do we handle sensitive data in AI workflows?</p>
+<h3 id="4-talent-and-organization">4. Talent and Organization</h3>
+<p>What roles do we need? What skills should we develop in existing teams? How is AI ownership structured — centralized, federated, or hybrid?</p>
+<h3 id="5-measurement-and-accountability">5. Measurement and Accountability</h3>
+<p>How do we measure success? Who is accountable for results? How often do we review performance? What triggers scaling, pivoting, or stopping an initiative?</p>
+<h2 id="the-strategy-spectrum">The Strategy Spectrum</h2>
+<p>Not every organization needs the same depth of AI strategy. The right approach depends on your maturity level and ambition:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When It Fits</th>
+<th>What It Looks Like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Awareness-first</strong></td>
+<td>Exploring stage, building literacy</td>
+<td>Educate leadership, audit existing AI usage, establish basic policies</td>
+</tr>
+<tr>
+<td><strong>Selective investment</strong></td>
+<td>Experimenting stage, testing value</td>
+<td>2–3 prioritized pilots tied to business KPIs, governed data for those use cases</td>
+</tr>
+<tr>
+<td><strong>Platform building</strong></td>
+<td>Scaling stage, compounding value</td>
+<td>Enterprise data foundation, AI operating model, portfolio of initiatives</td>
+</tr>
+<tr>
+<td><strong>Strategic transformation</strong></td>
+<td>Transforming stage, AI as competitive advantage</td>
+<td>AI embedded in core processes, continuous innovation cycle, new business models</td>
+</tr>
+</tbody>
+</table>
+<p>All four are valid strategies. An organization at the Exploring stage that commits to building AI literacy and establishing governance policies has a strategy — it's just an early-stage one. The important thing is that decisions are deliberate, not reactive.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>If your organization has AI activity but no strategy, the first step isn't to add more activity — it's to connect existing activity to business priorities and add governance.</li>
+<li>A useful exercise: list every AI tool and initiative currently in use across the organization. Then ask: which of these are connected to our top 3 business priorities? Which have clear success metrics? Which have any governance?</li>
+<li>If the answer to those questions reveals gaps, you've found where strategy needs to start.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Confusing a vendor roadmap with an AI strategy</strong> — Adopting a suite of AI tools from a single vendor is a procurement decision, not a strategy. Strategy starts with business problems, not product catalogs.</li>
+<li><strong>Writing a strategy document that no one reads</strong> — A strategy is only useful if it guides decisions. The best strategies are short enough to reference regularly and specific enough to resolve disagreements about priorities.</li>
+<li><strong>Waiting for the "perfect" strategy before acting</strong> — Strategy and action should co-evolve. Start with clear priorities and governance, then refine as you learn. Waiting for completeness leads to paralysis.</li>
+<li><strong>Treating AI strategy as a one-time exercise</strong> — The AI landscape evolves rapidly. A strategy set in January 2026 should be reviewed and updated by July. Build in a regular review cadence.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>AI activity (using tools) and AI strategy (guided decisions) are different things. Most organizations have the former and need the latter.</li>
+<li>A real AI strategy has five components: business alignment, data foundation, governance, talent, and measurement.</li>
+<li>The right strategy depth depends on your maturity stage — even "build literacy and establish policies" is a valid strategy at the Exploring stage.</li>
+<li>PwC's research confirms that concentrated, leadership-guided AI investment outperforms scattered experimentation.</li>
+<li>The next four lessons build each component of the strategy: use case prioritization, data readiness, build-vs-buy decisions, and the strategy document itself.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>You need a strategy, and the first strategic decision is: where to invest. In Lesson 7, we'll introduce the <strong>Opportunity Matrix</strong> — a framework for identifying and prioritizing AI use cases based on business impact and organizational feasibility.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"AI Strategy vs AI Activity — Why Most Companies Get This Wrong\",\"description\":\"Learn the difference between using AI tools and having an AI strategy. Build the foundation for a strategy that guides decisions, not just showcases activity.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/strategy-not-tools\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI Strategy vs AI Activity — Why Most Companies Get This Wrong\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/strategy-not-tools\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Building Your AI Strategy"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"}],["$","p",null,{"className":"lesson-header__description","children":"Learn the difference between using AI tools and having an AI strategy. Build the foundation for a strategy that guides decisions, not just showcases activity."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/ai-leadership/the-ai-maturity-curve","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Where Is Your Organization on the AI Maturity Curve?"}]]}],["$","$L6",null,{"href":"/ai-leadership/finding-high-value-use-cases","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Finding High-Value AI Use Cases — The Opportunity Matrix"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"activity-vs-strategy","text":"Activity vs Strategy","level":2},{"id":"the-five-components-of-a-real-ai-strategy","text":"The Five Components of a Real AI Strategy","level":2},{"id":"1-business-alignment","text":"1. Business Alignment","level":3},{"id":"2-data-foundation","text":"2. Data Foundation","level":3},{"id":"3-governance-and-risk","text":"3. Governance and Risk","level":3},{"id":"4-talent-and-organization","text":"4. Talent and Organization","level":3},{"id":"5-measurement-and-accountability","text":"5. Measurement and Accountability","level":3},{"id":"the-strategy-spectrum","text":"The Strategy Spectrum","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong — AI for Leadership — Strategic AI Literacy for Every Leader | CodewiseX"}],["$","meta","1",{"name":"description","content":"Learn the difference between using AI tools and having an AI strategy. Build the foundation for a strategy that guides decisions, not just showcases activity."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"ai strategy,ai adoption,enterprise strategy,ai transformation,leadership"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/ai-leadership/strategy-not-tools/"}],["$","meta","8",{"property":"og:title","content":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"}],["$","meta","9",{"property":"og:description","content":"Learn the difference between using AI tools and having an AI strategy. Build the foundation for a strategy that guides decisions, not just showcases activity."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/ai-leadership/strategy-not-tools/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

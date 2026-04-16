@@ -1,0 +1,130 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/04fe_m1fp-15j.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","ai-leadership","ai-regulation",""],"q":"","i":false,"f":[[["",{"children":[["course","ai-leadership","d",null],{"children":[["slug","ai-regulation","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SqdzuPaEeA-UMZd5kjbkM"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"ai-leadership","modules":[{"id":"ai-literacy","title":"AI Literacy for Every Leader","lessons":[{"slug":"ai-landscape-for-executives","title":"The AI Landscape in 2026 — What Leaders Actually Need to Know"},{"slug":"the-full-ai-toolkit","title":"The Full AI Toolkit — It's Not Just Chatbots"},{"slug":"how-ai-actually-works","title":"How AI Actually Works — A Leader's Mental Model"},{"slug":"ai-business-models","title":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"},{"slug":"the-ai-maturity-curve","title":"Where Is Your Organization on the AI Maturity Curve?"}]},{"id":"ai-strategy","title":"Building Your AI Strategy","lessons":[{"slug":"strategy-not-tools","title":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"},{"slug":"finding-high-value-use-cases","title":"Finding High-Value AI Use Cases — The Opportunity Matrix"},{"slug":"data-readiness-assessment","title":"Data Readiness — Why This Comes Before Everything Else"},{"slug":"data-strategy-for-ai","title":"Building a Data Strategy That Makes AI Possible"},{"slug":"build-buy-partner","title":"Build, Buy, or Partner — Making the Right AI Investment Decisions"},{"slug":"the-ai-strategy-document","title":"Writing the AI Strategy Document Your Board Will Actually Read"}]},{"id":"ai-governance","title":"AI Governance, Risk, and Ethics","lessons":[{"slug":"ai-governance-framework","title":"AI Governance — The Framework That Enables Innovation"},{"slug":"ai-risk-landscape","title":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"},{"slug":"responsible-ai","title":"Responsible AI in Practice — Beyond the Ethics Statement"},{"slug":"ai-regulation","title":"AI Regulation — EU AI Act, US Policies, and What's Coming"},{"slug":"shadow-ai","title":"Shadow AI — The Risk You Need to Address Proactively"}]},{"id":"ai-people","title":"People, Culture, and Change Management","lessons":[{"slug":"ai-talent-strategy","title":"AI Talent Strategy — Build, Hire, and Upskill"},{"slug":"leading-ai-adoption","title":"Leading AI Adoption — Change Management That Works"},{"slug":"the-ai-operating-model","title":"The AI Operating Model — Centralized, Federated, or Hybrid?"},{"slug":"ai-and-workforce","title":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"},{"slug":"building-ai-culture","title":"Building an AI-Ready Culture — From Experimentation to Institution"}]},{"id":"ai-execution","title":"Execution, Measurement, and Scaling","lessons":[{"slug":"from-pilot-to-production","title":"From Pilot to Production — Why Most AI Pilots Fail to Scale"},{"slug":"measuring-ai-roi","title":"Measuring AI ROI — Metrics That Actually Matter"},{"slug":"scaling-ai","title":"Scaling AI Across the Enterprise — From One Team to Every Team"},{"slug":"agentic-ai-and-whats-next","title":"Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan"},{"slug":"your-first-90-days","title":"Your First 90 Days as an AI-Ready Leader"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T1d54,<h1 id="ai-regulation--eu-ai-act-us-policies-and-whats-coming">AI Regulation — EU AI Act, US Policies, and What's Coming</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The EU AI Act's risk-based classification system</li>
+<li>US AI policy landscape and sector-specific regulations</li>
+<li>How regulation applies to AI users, not just AI builders</li>
+<li>Practical compliance preparation steps</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Elena (General Counsel) presented a regulatory briefing. Her opening point: "The EU AI Act applies to us even though we don't build AI models. We USE AI — and the regulation covers users too. We operate in the EU, which means compliance is not optional."</p>
+<p>This was a perspective shift for the team. They'd assumed AI regulation was primarily a concern for technology companies that build AI systems, not for companies that use them as business tools.</p>
+<h2 id="the-eu-ai-act--risk-based-framework">The EU AI Act — Risk-Based Framework</h2>
+<p>The EU AI Act classifies AI systems by risk level, with escalating requirements:</p>
+<p><strong>Unacceptable Risk (Banned):</strong> Social scoring by governments, real-time biometric surveillance in public spaces (with narrow exceptions), AI that manipulates behavior to cause harm.</p>
+<p><strong>High Risk (Strict Requirements):</strong> AI used in employment decisions (hiring, evaluation), credit scoring, educational assessment, critical infrastructure management, law enforcement. High-risk systems require: conformity assessments, documentation of training data and model behavior, human oversight mechanisms, accuracy and robustness testing, and registration in an EU database.</p>
+<p><strong>Limited Risk (Transparency Obligations):</strong> AI systems that interact with people must disclose they are AI. Deepfake content must be labeled. Emotion recognition systems must inform users.</p>
+<p><strong>Minimal Risk (No Specific Requirements):</strong> AI in spam filters, video game AI, industrial optimization. Most enterprise AI falls here.</p>
+<p><strong>Key insight for leaders:</strong> Classification depends on the USE CASE, not the technology. The same LLM used for internal meeting summaries (minimal risk) and for screening job applicants (high risk) falls into different categories — with different compliance obligations.</p>
+<p><strong>Meridian's assessment:</strong> Invoice processing — minimal risk (internal operational efficiency, no individual impact). Resume screening — high risk (employment decisions affecting individuals). Demand forecasting — minimal risk (internal business optimization). The resume screening tool immediately moved to the governance committee for enhanced review.</p>
+<h2 id="us-ai-policy-landscape">US AI Policy Landscape</h2>
+<p>The US approach is more sector-specific than the EU's comprehensive framework:</p>
+<ul>
+<li><strong>Executive Orders</strong> provide federal guidance on AI safety, security, and trustworthiness</li>
+<li><strong>Sector regulators</strong> apply existing laws to AI: SEC for AI in financial services, FDA for AI in healthcare, FTC for AI in consumer protection</li>
+<li><strong>State-level regulation</strong> is emerging, with varying requirements across jurisdictions</li>
+</ul>
+<p>For organizations operating in the US, the practical approach is: monitor federal guidance, understand your sector's regulatory expectations, and build governance that anticipates regulatory evolution.</p>
+<h2 id="global-regulatory-trends">Global Regulatory Trends</h2>
+<p>Regardless of jurisdiction, several trends are consistent:</p>
+<ol>
+<li><strong>Risk-based approaches</strong> — regulation scales with the potential impact of AI decisions</li>
+<li><strong>Transparency requirements</strong> — organizations must disclose AI usage, especially when it affects individuals</li>
+<li><strong>Accountability</strong> — someone must be responsible for AI system behavior</li>
+<li><strong>Data governance</strong> — requirements around training data quality, consent, and privacy</li>
+<li><strong>Human oversight</strong> — high-stakes AI decisions require human review</li>
+</ol>
+<p>Organizations that build governance aligned with these trends will be better prepared as regulations mature.</p>
+<h2 id="practical-compliance-preparation">Practical Compliance Preparation</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+<th>Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Classify all AI systems by risk level (EU AI Act categories)</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Identify high-risk use cases and assess compliance gaps</td>
+<td>Within 1 month</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ensure human oversight mechanisms exist for high-risk systems</td>
+<td>Within 3 months</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Document AI systems: purpose, data, testing, limitations</td>
+<td>Ongoing</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Monitor regulatory developments in your operating jurisdictions</td>
+<td>Quarterly review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>If you operate in the EU or serve EU customers, the EU AI Act compliance timeline is active. Assess your AI portfolio now.</li>
+<li>If you operate primarily in the US, sector-specific regulation applies. Understand your industry's regulatory expectations.</li>
+<li>Regardless of jurisdiction, building governance practices aligned with global trends positions you well as regulation evolves.</li>
+<li>The responsible AI practices from Lesson 14 (fairness testing, transparency, documentation, human oversight) directly support regulatory compliance.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Assuming regulation only applies to AI builders</strong> — The EU AI Act has obligations for deployers (users) of AI, not just providers (builders).</li>
+<li><strong>Waiting for regulation to be "finalized" before preparing</strong> — Regulatory implementation is phased. Building governance now is preparation, not premature compliance.</li>
+<li><strong>Over-complying for low-risk use cases</strong> — Not every AI tool needs a full conformity assessment. Match compliance effort to risk classification.</li>
+<li><strong>Ignoring sector-specific requirements</strong> — General AI regulation is one layer. Healthcare, financial services, and other sectors have additional requirements.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>The EU AI Act classifies AI by risk level, with escalating requirements. Most enterprise AI falls in minimal or limited risk categories. Employment, credit, and education AI is high risk.</li>
+<li>Regulation applies to AI USERS, not just AI builders. Organizations that deploy AI have compliance obligations.</li>
+<li>Global regulatory trends converge on: risk-based approaches, transparency, accountability, data governance, and human oversight.</li>
+<li>The governance and responsible AI practices from Lessons 12–14 directly support regulatory compliance.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>There's one risk area that existing governance often misses entirely. In Lesson 16, we'll address <strong>Shadow AI</strong> — the AI tools employees are using without organizational oversight — and how to move from prohibition to productive governance.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"AI Regulation — EU AI Act, US Policies, and What's Coming\",\"description\":\"A plain-language guide to current AI regulation, risk classification tiers, compliance requirements, and how to prepare your organization.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/ai-regulation\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI Regulation — EU AI Act, US Policies, and What's Coming\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/ai-regulation\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Governance, Risk, and Ethics"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"AI Regulation — EU AI Act, US Policies, and What's Coming"}],["$","p",null,{"className":"lesson-header__description","children":"A plain-language guide to current AI regulation, risk classification tiers, compliance requirements, and how to prepare your organization."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/ai-leadership/responsible-ai","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Responsible AI in Practice — Beyond the Ethics Statement"}]]}],["$","$L6",null,{"href":"/ai-leadership/shadow-ai","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Shadow AI — The Risk You Need to Address Proactively"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-eu-ai-act--risk-based-framework","text":"The EU AI Act — Risk-Based Framework","level":2},{"id":"us-ai-policy-landscape","text":"US AI Policy Landscape","level":2},{"id":"global-regulatory-trends","text":"Global Regulatory Trends","level":2},{"id":"practical-compliance-preparation","text":"Practical Compliance Preparation","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"AI Regulation — EU AI Act, US Policies, and What's Coming — AI for Leadership — Strategic AI Literacy for Every Leader | CodewiseX"}],["$","meta","1",{"name":"description","content":"A plain-language guide to current AI regulation, risk classification tiers, compliance requirements, and how to prepare your organization."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"eu ai act,ai regulation,compliance,ai policy,ai law"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/ai-leadership/ai-regulation/"}],["$","meta","8",{"property":"og:title","content":"AI Regulation — EU AI Act, US Policies, and What's Coming"}],["$","meta","9",{"property":"og:description","content":"A plain-language guide to current AI regulation, risk classification tiers, compliance requirements, and how to prepare your organization."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/ai-leadership/ai-regulation/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

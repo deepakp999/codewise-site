@@ -1,0 +1,232 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T276e,<h1 id="the-ai-operating-model--centralized-federated-or-hybrid">The AI Operating Model — Centralized, Federated, or Hybrid?</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The three primary AI operating model patterns</li>
+<li>Trade-offs between each approach</li>
+<li>How to choose the right model for your organization's stage</li>
+<li>How operating models typically evolve</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>With talent strategy and change management approaches in place, Sarah (CEO) raised an organizational question: "Where does AI ownership sit in our org structure? Is this Priya's responsibility? Should each business unit own their AI initiatives? Should we create a new function?"</p>
+<p>The team realized this wasn't just an org chart question — it would affect speed, consistency, and accountability for years to come.</p>
+<h2 id="the-three-primary-models">The Three Primary Models</h2>
+<h3 id="model-1-centralized-center-of-excellence">Model 1: Centralized (Center of Excellence)</h3>
+<p>A single team owns AI capabilities and serves the rest of the organization.</p>
+<pre><code>              CEO
+               |
+    ┌──────────┼──────────┐
+    │          │          │
+   CTO        CFO       Sales VP
+    │
+   AI Center of Excellence
+   (Data engineers, ML engineers,
+    data scientists, AI PMs)
+    │
+    └─→ Serves all business units
+</code></pre>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Consistent standards, governance, and quality</li>
+<li>Efficient use of scarce specialist talent</li>
+<li>Easier to manage data and infrastructure investment</li>
+<li>Clear accountability for AI decisions</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Can become a bottleneck as demand grows</li>
+<li>Distance from business context may slow use case development</li>
+<li>Business units may feel disconnected from "their" AI initiatives</li>
+</ul>
+<p><strong>When it fits:</strong></p>
+<ul>
+<li>Early-stage AI maturity (Exploring or Experimenting)</li>
+<li>Limited specialist talent</li>
+<li>Strong need for consistent governance and standards</li>
+<li>Smaller organizations where centralization is naturally efficient</li>
+</ul>
+<h3 id="model-2-federated-embedded-in-business-units">Model 2: Federated (Embedded in Business Units)</h3>
+<p>Each business unit has its own AI capability, with light coordination across units.</p>
+<pre><code>              CEO
+               |
+    ┌──────────┼──────────┐
+    │          │          │
+  Manufacturing  Finance  Sales
+    │          │          │
+   AI Team    AI Team    AI Team
+   (their own)(their own)(their own)
+</code></pre>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Close to business context, faster use case identification</li>
+<li>Business units feel ownership of their AI work</li>
+<li>Natural alignment with business priorities</li>
+<li>Speed of execution within each unit</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Inconsistent standards and governance across units</li>
+<li>Duplicated effort and infrastructure investment</li>
+<li>Difficulty sharing learning across units</li>
+<li>Can create competing or incompatible approaches</li>
+</ul>
+<p><strong>When it fits:</strong></p>
+<ul>
+<li>Mature AI organizations</li>
+<li>Highly diverse business units with very different needs</li>
+<li>Organizations where business unit autonomy is a strong cultural value</li>
+<li>Companies with significant scale that can support specialist talent in each unit</li>
+</ul>
+<h3 id="model-3-hybrid-hub-and-spoke">Model 3: Hybrid (Hub and Spoke)</h3>
+<p>A central team provides shared capabilities (platform, standards, specialists) while business units have embedded translators and AI champions.</p>
+<pre><code>              CEO
+               |
+    ┌──────────┼──────────┐
+    │          │          │
+   CTO        CFO        Sales VP
+    │          │          │
+  AI Hub     AI lead in   AI lead in
+  (Platform, finance     sales
+  specialists, (translator) (translator)
+  governance)
+    │      ←→  Coordinated through AI Hub
+</code></pre>
+<p><strong>Strengths:</strong></p>
+<ul>
+<li>Combines centralized expertise with business proximity</li>
+<li>Shared platforms and standards reduce duplication</li>
+<li>Business units retain ownership of their use cases</li>
+<li>Specialist talent is leveraged across the organization</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>More complex to set up and govern</li>
+<li>Requires clear definition of central vs distributed responsibilities</li>
+<li>Coordination overhead</li>
+</ul>
+<p><strong>When it fits:</strong></p>
+<ul>
+<li>Most mid-to-large organizations as they mature</li>
+<li>Organizations where both consistency and business proximity matter</li>
+<li>Companies with diverse business units that can benefit from shared platforms</li>
+</ul>
+<h2 id="how-operating-models-evolve">How Operating Models Evolve</h2>
+<p>Most organizations follow a maturity progression:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Typical Model</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exploring (Stage 1)</td>
+<td>No formal model</td>
+<td>Individual experimentation</td>
+</tr>
+<tr>
+<td>Experimenting (Stage 2)</td>
+<td>Centralized</td>
+<td>Concentrate talent, learn together</td>
+</tr>
+<tr>
+<td>Scaling (Stage 3)</td>
+<td>Hybrid</td>
+<td>Combine central platform with business proximity</td>
+</tr>
+<tr>
+<td>Transforming (Stage 4)</td>
+<td>Hybrid or Federated</td>
+<td>AI capability embedded throughout</td>
+</tr>
+</tbody>
+</table>
+<p>There's no single "right" model — the right model depends on stage, organizational structure, and culture.</p>
+<h2 id="meridians-operating-model-decision">Meridian's Operating Model Decision</h2>
+<p>Meridian's leadership chose a hybrid model:</p>
+<p><strong>Central AI Hub (reporting to CTO):</strong></p>
+<ul>
+<li>Data platform and infrastructure</li>
+<li>Specialist talent (data engineers, ML engineers)</li>
+<li>Governance framework and review process</li>
+<li>Standards and shared tooling</li>
+</ul>
+<p><strong>Embedded AI Champions in business units:</strong></p>
+<ul>
+<li>Identify AI use cases relevant to their domain</li>
+<li>Coordinate with the central hub on implementation</li>
+<li>Drive adoption within their teams</li>
+<li>Provide business context for prioritization</li>
+</ul>
+<p><strong>Cross-functional AI Governance Committee:</strong></p>
+<ul>
+<li>Reviews and approves new initiatives</li>
+<li>Includes leaders from technology, finance, legal, HR, and rotating business unit representatives</li>
+<li>Meets monthly</li>
+</ul>
+<p>The hybrid model gave Meridian centralized governance and shared platforms while keeping business units close to use case identification.</p>
+<h2 id="budget-and-accountability">Budget and Accountability</h2>
+<p>Operating model choice directly affects budgeting:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Budget Pattern</th>
+<th>Accountability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Centralized</td>
+<td>Central AI budget, business units request services</td>
+<td>Central team accountable for delivery</td>
+</tr>
+<tr>
+<td>Federated</td>
+<td>Each business unit funds and owns their AI</td>
+<td>Business units accountable for results</td>
+</tr>
+<tr>
+<td>Hybrid</td>
+<td>Shared platform budget centrally, use case budgets in business units</td>
+<td>Joint accountability — central for platform, business for outcomes</td>
+</tr>
+</tbody>
+</table>
+<p>Defining how AI investment is funded clarifies who owns what and reduces conflict over priorities.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Operating model is a significant decision with multi-year implications. Take time to consider trade-offs with the leadership team.</li>
+<li>The right model depends on your stage, structure, and culture — not on what other organizations are doing.</li>
+<li>Plan to evolve. The model that fits at the Experimenting stage may not fit at the Scaling stage.</li>
+<li>Whatever model you choose, define clearly: who owns what, how decisions are made, how budget flows, and how coordination happens.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Choosing federated too early</strong> — Federated models work when AI maturity is high across business units. Adopting federated at the Experimenting stage typically produces inconsistent results and duplicated effort.</li>
+<li><strong>Centralizing forever</strong> — Centralized models can become bottlenecks as demand grows. Plan to evolve toward hybrid or federated as the organization matures.</li>
+<li><strong>Hybrid in name only</strong> — A hybrid model that doesn't clearly define central vs distributed responsibilities becomes ambiguous and slow.</li>
+<li><strong>Ignoring budget structure</strong> — Operating model and budget structure should align. Mismatched structures create friction and unclear accountability.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Three primary operating models: centralized (Center of Excellence), federated (embedded in business units), hybrid (hub and spoke).</li>
+<li>Most organizations evolve from centralized → hybrid as they mature. Federated typically emerges only at advanced maturity.</li>
+<li>The right model depends on stage, structure, and culture — there's no universal answer.</li>
+<li>Operating model affects budgeting, accountability, and speed. Choose deliberately.</li>
+<li>Plan to evolve as your organization's AI maturity grows.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>The right operating model creates structure. The next question is the most personal: how does AI affect the people doing the work? In Lesson 20, we'll cover <strong>AI and the workforce</strong> — augmentation, automation, role evolution, and thoughtful workforce development.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"The AI Operating Model — Centralized, Federated, or Hybrid?\",\"description\":\"How to structure AI ownership, accountability, and budget across the enterprise. The trade-offs between centralized centers of excellence, federated teams, and hybrid models.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/the-ai-operating-model\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"The AI Operating Model — Centralized, Federated, or Hybrid?\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/the-ai-operating-model\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"People, Culture, and Change Management"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"The AI Operating Model — Centralized, Federated, or Hybrid?"}],["$","p",null,{"className":"lesson-header__description","children":"How to structure AI ownership, accountability, and budget across the enterprise. The trade-offs between centralized centers of excellence, federated teams, and hybrid models."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/leading-ai-adoption","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Leading AI Adoption — Change Management That Works"}]]}],["$","$L8",null,{"href":"/ai-leadership/ai-and-workforce","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-three-primary-models","text":"The Three Primary Models","level":2},{"id":"model-1-centralized-center-of-excellence","text":"Model 1: Centralized (Center of Excellence)","level":3},{"id":"model-2-federated-embedded-in-business-units","text":"Model 2: Federated (Embedded in Business Units)","level":3},{"id":"model-3-hybrid-hub-and-spoke","text":"Model 3: Hybrid (Hub and Spoke)","level":3},{"id":"how-operating-models-evolve","text":"How Operating Models Evolve","level":2},{"id":"meridians-operating-model-decision","text":"Meridian's Operating Model Decision","level":2},{"id":"budget-and-accountability","text":"Budget and Accountability","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

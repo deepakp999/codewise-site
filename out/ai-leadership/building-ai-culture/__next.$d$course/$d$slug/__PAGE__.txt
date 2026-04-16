@@ -1,0 +1,170 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T2928,<h1 id="building-an-ai-ready-culture--from-experimentation-to-institution">Building an AI-Ready Culture — From Experimentation to Institution</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The cultural practices that sustain AI adoption</li>
+<li>How data culture supports AI success</li>
+<li>Why experimentation norms matter</li>
+<li>How leaders model the culture they want to build</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Sarah (CEO) asked the team a deliberately open question: "Twelve months from now, what should it feel like to work at Meridian — different from today?"</p>
+<p>The discussion revealed something important. The leadership team could list technology investments, governance processes, and talent programs. But the harder question — what cultural practices would make all of that stick — required more thought.</p>
+<p>Culture isn't decorative. It's what determines whether strategy, governance, and operating models actually produce results over time. An organization with excellent frameworks and a culture that doesn't support them underperforms an organization with simpler frameworks and an aligned culture.</p>
+<h2 id="four-cultural-practices-that-matter">Four Cultural Practices That Matter</h2>
+<h3 id="1-data-culture">1. Data Culture</h3>
+<p>Data culture is the shared set of habits, norms, and values around data within an organization. Teams with strong data culture:</p>
+<ul>
+<li>Take data quality personally — they care about accuracy and completeness</li>
+<li>Make decisions with data when data is available</li>
+<li>Acknowledge when data is insufficient rather than guessing</li>
+<li>Share data across teams rather than hoarding it</li>
+<li>Treat data as a shared organizational asset</li>
+</ul>
+<p>Data culture is the foundation AI culture builds on. The organizations that succeed with AI typically have strong data culture that predates AI initiatives.</p>
+<p><strong>How leaders build it:</strong></p>
+<ul>
+<li>Ask for data in decisions and ask good questions about data quality</li>
+<li>Publicly acknowledge data limitations rather than pretending certainty</li>
+<li>Invest in data literacy across the organization (not just technical teams)</li>
+<li>Share data broadly — make it a shared asset, not a departmental possession</li>
+</ul>
+<h3 id="2-experimentation-norms">2. Experimentation Norms</h3>
+<p>AI progress happens through iteration. Initial models improve with feedback. Pilots reveal unexpected considerations. Approaches that seemed promising don't always deliver; approaches that seemed unlikely sometimes succeed.</p>
+<p>Organizations that adapt well have healthy experimentation norms:</p>
+<ul>
+<li>Hypotheses are articulated clearly before tests begin</li>
+<li>Results — positive or negative — are treated as information, not as personal credit or blame</li>
+<li>Stopping an unsuccessful initiative is framed as learning, not failure</li>
+<li>Small, time-boxed experiments are preferred over long commitment to unproven approaches</li>
+<li>Retrospectives are regular practice, not a crisis response</li>
+</ul>
+<p><strong>How leaders build it:</strong></p>
+<ul>
+<li>When a pilot doesn't meet expectations, focus on what was learned</li>
+<li>Celebrate good decisions to stop or pivot initiatives</li>
+<li>Model intellectual honesty about what works and what doesn't</li>
+<li>Protect teams from pressure to show uniformly positive results</li>
+</ul>
+<h3 id="3-learning-orientation">3. Learning Orientation</h3>
+<p>AI capabilities evolve rapidly. Regulation evolves. Best practices evolve. Organizations where learning is normal — where people expect to develop their capabilities continuously — adapt more effectively.</p>
+<p>Signs of strong learning orientation:</p>
+<ul>
+<li>Time and budget allocated for learning (not just for immediate deliverables)</li>
+<li>Leaders model learning visibly (taking courses, sharing what they're reading)</li>
+<li>Learning is integrated into performance conversations</li>
+<li>Knowledge sharing is rewarded</li>
+<li>External learning (conferences, industry connections) is valued</li>
+</ul>
+<p><strong>How leaders build it:</strong></p>
+<ul>
+<li>Participate in learning yourself, visibly</li>
+<li>Ask team members what they're learning and how you can support it</li>
+<li>Make space in calendars for development, not just delivery</li>
+<li>Reference learning in decisions ("This article/study/conversation changed my thinking...")</li>
+</ul>
+<h3 id="4-collaborative-decision-making">4. Collaborative Decision-Making</h3>
+<p>AI decisions are inherently cross-functional. Technology, business, legal, HR, finance all have valid perspectives. Organizations where these perspectives come together productively make better decisions than those where decisions are made in functional silos.</p>
+<p><strong>How leaders build it:</strong></p>
+<ul>
+<li>Create structured forums for cross-functional discussion (like the governance committee)</li>
+<li>Rotate rotating leadership of AI initiatives across functions</li>
+<li>Ensure different perspectives are heard before decisions are finalized</li>
+<li>Recognize cross-functional contributions in performance conversations</li>
+</ul>
+<h2 id="signs-of-healthy-vs-unhealthy-ai-culture">Signs of Healthy vs Unhealthy AI Culture</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Healthy</th>
+<th>Unhealthy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Response to failed pilots</td>
+<td>"What did we learn?"</td>
+<td>"Who's responsible?"</td>
+</tr>
+<tr>
+<td>Handling uncertainty</td>
+<td>Acknowledged openly</td>
+<td>Hidden or spun positively</td>
+</tr>
+<tr>
+<td>Data quality issues</td>
+<td>Raised by teams proactively</td>
+<td>Surface during problems</td>
+</tr>
+<tr>
+<td>Cross-functional decisions</td>
+<td>Regular and productive</td>
+<td>Rare or conflict-ridden</td>
+</tr>
+<tr>
+<td>Leadership engagement</td>
+<td>Visible and sustained</td>
+<td>Episodic or absent</td>
+</tr>
+<tr>
+<td>Learning investment</td>
+<td>Structured and supported</td>
+<td>Ad hoc or individual</td>
+</tr>
+<tr>
+<td>Communication about AI</td>
+<td>Clear, specific, regular</td>
+<td>Vague or inconsistent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="how-leaders-shape-culture">How Leaders Shape Culture</h2>
+<p>Culture is shaped more by what leaders DO than what they SAY. A few specific behaviors matter disproportionately:</p>
+<p><strong>What you ask about:</strong> If leaders ask about AI results regularly, AI gets priority. If leaders ask about data quality, teams pay attention to data quality. Questions drive focus.</p>
+<p><strong>What you celebrate:</strong> Celebrating thoughtful experimentation — including learning from initiatives that didn't meet expectations — builds experimentation culture. Celebrating only wins builds a culture where people hide problems.</p>
+<p><strong>What you tolerate:</strong> Tolerating siloed decision-making normalizes it. Insisting on cross-functional consultation for significant decisions builds collaborative culture.</p>
+<p><strong>What you model:</strong> Leaders who invest in their own AI literacy, engage in learning, and make decisions based on data signal what's expected across the organization.</p>
+<h2 id="meridians-cultural-commitments">Meridian's Cultural Commitments</h2>
+<p>Based on the leadership discussion, Meridian committed to several cultural practices:</p>
+<ol>
+<li><strong>Data quality is everyone's responsibility</strong> — not just IT's. Teams are accountable for the quality of data they generate.</li>
+<li><strong>Pilots are time-boxed experiments, not commitments</strong> — a 90-day pilot that doesn't meet criteria is ended without fanfare; what was learned is documented.</li>
+<li><strong>Learning is protected time</strong> — managers allocate time for team members to develop AI-related capabilities.</li>
+<li><strong>Cross-functional decisions use the governance committee</strong> — significant AI decisions involve multiple perspectives by design.</li>
+<li><strong>Leaders model the culture</strong> — the leadership team participates in AI learning programs, attends experimentation readouts, and makes their own use of AI tools transparent.</li>
+</ol>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Culture is shaped by leadership behavior more than leadership communication. What leaders do signals what's expected.</li>
+<li>Data culture often predates and predicts AI culture. If data culture is weak, invest there first.</li>
+<li>Experimentation norms matter because AI work is inherently iterative. Organizations that can't stop or pivot initiatives gracefully struggle to scale AI.</li>
+<li>Culture change takes time — typically 12–24 months for meaningful shift. Sustained leadership attention is required.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Announcing cultural change without modeling it</strong> — Leaders who talk about learning culture but don't learn, or talk about data-driven decisions but decide by gut, undermine the culture they're trying to build.</li>
+<li><strong>Expecting culture to shift quickly</strong> — Culture change is slow. Plan for years, not weeks.</li>
+<li><strong>Ignoring data culture</strong> — AI culture grows from data culture. Organizations that skip the foundation struggle to sustain the building.</li>
+<li><strong>Treating culture as HR's responsibility</strong> — Culture is shaped by everyone in leadership, not just the CHRO.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Four cultural practices support AI success: data culture, experimentation norms, learning orientation, collaborative decision-making.</li>
+<li>Culture is shaped more by what leaders do than what they say — by what they ask about, celebrate, tolerate, and model.</li>
+<li>Data culture is foundational. Organizations with strong data culture adopt AI more successfully than those without it.</li>
+<li>Culture change takes 12–24 months of sustained leadership attention.</li>
+<li>Module 4 is complete. You now have talent strategy, change management, operating model, workforce approach, and cultural foundation.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Module 5 begins. We shift from preparation to execution. Lesson 22 addresses a critical challenge: <strong>why most AI pilots fail to reach production</strong> — and what it takes to bridge that gap reliably.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Building an AI-Ready Culture — From Experimentation to Institution\",\"description\":\"The cultural practices that sustain AI adoption over time — experimentation norms, data culture, learning orientation, and how leaders model the behaviors they want.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/building-ai-culture\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Building an AI-Ready Culture — From Experimentation to Institution\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/building-ai-culture\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"People, Culture, and Change Management"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Building an AI-Ready Culture — From Experimentation to Institution"}],["$","p",null,{"className":"lesson-header__description","children":"The cultural practices that sustain AI adoption over time — experimentation norms, data culture, learning orientation, and how leaders model the behaviors they want."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/ai-and-workforce","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"}]]}],["$","$L8",null,{"href":"/ai-leadership/from-pilot-to-production","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"From Pilot to Production — Why Most AI Pilots Fail to Scale"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"four-cultural-practices-that-matter","text":"Four Cultural Practices That Matter","level":2},{"id":"1-data-culture","text":"1. Data Culture","level":3},{"id":"2-experimentation-norms","text":"2. Experimentation Norms","level":3},{"id":"3-learning-orientation","text":"3. Learning Orientation","level":3},{"id":"4-collaborative-decision-making","text":"4. Collaborative Decision-Making","level":3},{"id":"signs-of-healthy-vs-unhealthy-ai-culture","text":"Signs of Healthy vs Unhealthy AI Culture","level":2},{"id":"how-leaders-shape-culture","text":"How Leaders Shape Culture","level":2},{"id":"meridians-cultural-commitments","text":"Meridian's Cultural Commitments","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

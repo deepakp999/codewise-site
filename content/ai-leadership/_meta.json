@@ -1,0 +1,63 @@
+{
+  "id": "ai-leadership",
+  "title": "AI for Leadership — Strategic AI Literacy for Every Leader",
+  "description": "Master AI strategy, governance, and execution — from zero to confident leadership decisions.",
+  "modules": [
+    {
+      "id": "ai-literacy",
+      "title": "AI Literacy for Every Leader",
+      "lessons": [
+        { "slug": "ai-landscape-for-executives", "title": "The AI Landscape in 2026 — What Leaders Actually Need to Know", "file": "01-ai-landscape-for-executives.md" },
+        { "slug": "the-full-ai-toolkit", "title": "The Full AI Toolkit — It's Not Just Chatbots", "file": "02-the-full-ai-toolkit.md" },
+        { "slug": "how-ai-actually-works", "title": "How AI Actually Works — A Leader's Mental Model", "file": "03-how-ai-actually-works.md" },
+        { "slug": "ai-business-models", "title": "How AI Creates Business Value — Revenue, Cost, Risk, Experience", "file": "04-ai-business-models.md" },
+        { "slug": "the-ai-maturity-curve", "title": "Where Is Your Organization on the AI Maturity Curve?", "file": "05-the-ai-maturity-curve.md" }
+      ]
+    },
+    {
+      "id": "ai-strategy",
+      "title": "Building Your AI Strategy",
+      "lessons": [
+        { "slug": "strategy-not-tools", "title": "AI Strategy vs AI Activity — Why Most Companies Get This Wrong", "file": "06-strategy-not-tools.md" },
+        { "slug": "finding-high-value-use-cases", "title": "Finding High-Value AI Use Cases — The Opportunity Matrix", "file": "07-finding-high-value-use-cases.md" },
+        { "slug": "data-readiness-assessment", "title": "Data Readiness — Why This Comes Before Everything Else", "file": "08-data-readiness-assessment.md" },
+        { "slug": "data-strategy-for-ai", "title": "Building a Data Strategy That Makes AI Possible", "file": "09-data-strategy-for-ai.md" },
+        { "slug": "build-buy-partner", "title": "Build, Buy, or Partner — Making the Right AI Investment Decisions", "file": "10-build-buy-partner.md" },
+        { "slug": "the-ai-strategy-document", "title": "Writing the AI Strategy Document Your Board Will Actually Read", "file": "11-the-ai-strategy-document.md" }
+      ]
+    },
+    {
+      "id": "ai-governance",
+      "title": "AI Governance, Risk, and Ethics",
+      "lessons": [
+        { "slug": "ai-governance-framework", "title": "AI Governance — The Framework That Enables Innovation", "file": "12-ai-governance-framework.md" },
+        { "slug": "ai-risk-landscape", "title": "The AI Risk Landscape — What Can Go Wrong and How to Prepare", "file": "13-ai-risk-landscape.md" },
+        { "slug": "responsible-ai", "title": "Responsible AI in Practice — Beyond the Ethics Statement", "file": "14-responsible-ai.md" },
+        { "slug": "ai-regulation", "title": "AI Regulation — EU AI Act, US Policies, and What's Coming", "file": "15-ai-regulation.md" },
+        { "slug": "shadow-ai", "title": "Shadow AI — The Risk You Need to Address Proactively", "file": "16-shadow-ai.md" }
+      ]
+    },
+    {
+      "id": "ai-people",
+      "title": "People, Culture, and Change Management",
+      "lessons": [
+        { "slug": "ai-talent-strategy", "title": "AI Talent Strategy — Build, Hire, and Upskill", "file": "17-ai-talent-strategy.md" },
+        { "slug": "leading-ai-adoption", "title": "Leading AI Adoption — Change Management That Works", "file": "18-leading-ai-adoption.md" },
+        { "slug": "the-ai-operating-model", "title": "The AI Operating Model — Centralized, Federated, or Hybrid?", "file": "19-the-ai-operating-model.md" },
+        { "slug": "ai-and-workforce", "title": "AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions", "file": "20-ai-and-workforce.md" },
+        { "slug": "building-ai-culture", "title": "Building an AI-Ready Culture — From Experimentation to Institution", "file": "21-building-ai-culture.md" }
+      ]
+    },
+    {
+      "id": "ai-execution",
+      "title": "Execution, Measurement, and Scaling",
+      "lessons": [
+        { "slug": "from-pilot-to-production", "title": "From Pilot to Production — Why Most AI Pilots Fail to Scale", "file": "22-from-pilot-to-production.md" },
+        { "slug": "measuring-ai-roi", "title": "Measuring AI ROI — Metrics That Actually Matter", "file": "23-measuring-ai-roi.md" },
+        { "slug": "scaling-ai", "title": "Scaling AI Across the Enterprise — From One Team to Every Team", "file": "24-scaling-ai.md" },
+        { "slug": "agentic-ai-and-whats-next", "title": "Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan", "file": "25-agentic-ai-and-whats-next.md" },
+        { "slug": "your-first-90-days", "title": "Your First 90 Days as an AI-Ready Leader", "file": "26-your-first-90-days.md" }
+      ]
+    }
+  ]
+}

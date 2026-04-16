@@ -1,0 +1,108 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T1d54,<h1 id="ai-regulation--eu-ai-act-us-policies-and-whats-coming">AI Regulation — EU AI Act, US Policies, and What's Coming</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The EU AI Act's risk-based classification system</li>
+<li>US AI policy landscape and sector-specific regulations</li>
+<li>How regulation applies to AI users, not just AI builders</li>
+<li>Practical compliance preparation steps</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Elena (General Counsel) presented a regulatory briefing. Her opening point: "The EU AI Act applies to us even though we don't build AI models. We USE AI — and the regulation covers users too. We operate in the EU, which means compliance is not optional."</p>
+<p>This was a perspective shift for the team. They'd assumed AI regulation was primarily a concern for technology companies that build AI systems, not for companies that use them as business tools.</p>
+<h2 id="the-eu-ai-act--risk-based-framework">The EU AI Act — Risk-Based Framework</h2>
+<p>The EU AI Act classifies AI systems by risk level, with escalating requirements:</p>
+<p><strong>Unacceptable Risk (Banned):</strong> Social scoring by governments, real-time biometric surveillance in public spaces (with narrow exceptions), AI that manipulates behavior to cause harm.</p>
+<p><strong>High Risk (Strict Requirements):</strong> AI used in employment decisions (hiring, evaluation), credit scoring, educational assessment, critical infrastructure management, law enforcement. High-risk systems require: conformity assessments, documentation of training data and model behavior, human oversight mechanisms, accuracy and robustness testing, and registration in an EU database.</p>
+<p><strong>Limited Risk (Transparency Obligations):</strong> AI systems that interact with people must disclose they are AI. Deepfake content must be labeled. Emotion recognition systems must inform users.</p>
+<p><strong>Minimal Risk (No Specific Requirements):</strong> AI in spam filters, video game AI, industrial optimization. Most enterprise AI falls here.</p>
+<p><strong>Key insight for leaders:</strong> Classification depends on the USE CASE, not the technology. The same LLM used for internal meeting summaries (minimal risk) and for screening job applicants (high risk) falls into different categories — with different compliance obligations.</p>
+<p><strong>Meridian's assessment:</strong> Invoice processing — minimal risk (internal operational efficiency, no individual impact). Resume screening — high risk (employment decisions affecting individuals). Demand forecasting — minimal risk (internal business optimization). The resume screening tool immediately moved to the governance committee for enhanced review.</p>
+<h2 id="us-ai-policy-landscape">US AI Policy Landscape</h2>
+<p>The US approach is more sector-specific than the EU's comprehensive framework:</p>
+<ul>
+<li><strong>Executive Orders</strong> provide federal guidance on AI safety, security, and trustworthiness</li>
+<li><strong>Sector regulators</strong> apply existing laws to AI: SEC for AI in financial services, FDA for AI in healthcare, FTC for AI in consumer protection</li>
+<li><strong>State-level regulation</strong> is emerging, with varying requirements across jurisdictions</li>
+</ul>
+<p>For organizations operating in the US, the practical approach is: monitor federal guidance, understand your sector's regulatory expectations, and build governance that anticipates regulatory evolution.</p>
+<h2 id="global-regulatory-trends">Global Regulatory Trends</h2>
+<p>Regardless of jurisdiction, several trends are consistent:</p>
+<ol>
+<li><strong>Risk-based approaches</strong> — regulation scales with the potential impact of AI decisions</li>
+<li><strong>Transparency requirements</strong> — organizations must disclose AI usage, especially when it affects individuals</li>
+<li><strong>Accountability</strong> — someone must be responsible for AI system behavior</li>
+<li><strong>Data governance</strong> — requirements around training data quality, consent, and privacy</li>
+<li><strong>Human oversight</strong> — high-stakes AI decisions require human review</li>
+</ol>
+<p>Organizations that build governance aligned with these trends will be better prepared as regulations mature.</p>
+<h2 id="practical-compliance-preparation">Practical Compliance Preparation</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+<th>Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Classify all AI systems by risk level (EU AI Act categories)</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Identify high-risk use cases and assess compliance gaps</td>
+<td>Within 1 month</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ensure human oversight mechanisms exist for high-risk systems</td>
+<td>Within 3 months</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Document AI systems: purpose, data, testing, limitations</td>
+<td>Ongoing</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Monitor regulatory developments in your operating jurisdictions</td>
+<td>Quarterly review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>If you operate in the EU or serve EU customers, the EU AI Act compliance timeline is active. Assess your AI portfolio now.</li>
+<li>If you operate primarily in the US, sector-specific regulation applies. Understand your industry's regulatory expectations.</li>
+<li>Regardless of jurisdiction, building governance practices aligned with global trends positions you well as regulation evolves.</li>
+<li>The responsible AI practices from Lesson 14 (fairness testing, transparency, documentation, human oversight) directly support regulatory compliance.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Assuming regulation only applies to AI builders</strong> — The EU AI Act has obligations for deployers (users) of AI, not just providers (builders).</li>
+<li><strong>Waiting for regulation to be "finalized" before preparing</strong> — Regulatory implementation is phased. Building governance now is preparation, not premature compliance.</li>
+<li><strong>Over-complying for low-risk use cases</strong> — Not every AI tool needs a full conformity assessment. Match compliance effort to risk classification.</li>
+<li><strong>Ignoring sector-specific requirements</strong> — General AI regulation is one layer. Healthcare, financial services, and other sectors have additional requirements.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>The EU AI Act classifies AI by risk level, with escalating requirements. Most enterprise AI falls in minimal or limited risk categories. Employment, credit, and education AI is high risk.</li>
+<li>Regulation applies to AI USERS, not just AI builders. Organizations that deploy AI have compliance obligations.</li>
+<li>Global regulatory trends converge on: risk-based approaches, transparency, accountability, data governance, and human oversight.</li>
+<li>The governance and responsible AI practices from Lessons 12–14 directly support regulatory compliance.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>There's one risk area that existing governance often misses entirely. In Lesson 16, we'll address <strong>Shadow AI</strong> — the AI tools employees are using without organizational oversight — and how to move from prohibition to productive governance.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"AI Regulation — EU AI Act, US Policies, and What's Coming\",\"description\":\"A plain-language guide to current AI regulation, risk classification tiers, compliance requirements, and how to prepare your organization.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/ai-regulation\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI Regulation — EU AI Act, US Policies, and What's Coming\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/ai-regulation\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Governance, Risk, and Ethics"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"AI Regulation — EU AI Act, US Policies, and What's Coming"}],["$","p",null,{"className":"lesson-header__description","children":"A plain-language guide to current AI regulation, risk classification tiers, compliance requirements, and how to prepare your organization."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/responsible-ai","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Responsible AI in Practice — Beyond the Ethics Statement"}]]}],["$","$L8",null,{"href":"/ai-leadership/shadow-ai","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Shadow AI — The Risk You Need to Address Proactively"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-eu-ai-act--risk-based-framework","text":"The EU AI Act — Risk-Based Framework","level":2},{"id":"us-ai-policy-landscape","text":"US AI Policy Landscape","level":2},{"id":"global-regulatory-trends","text":"Global Regulatory Trends","level":2},{"id":"practical-compliance-preparation","text":"Practical Compliance Preparation","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

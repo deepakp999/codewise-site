@@ -1,0 +1,146 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/04fe_m1fp-15j.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","ai-leadership","ai-risk-landscape",""],"q":"","i":false,"f":[[["",{"children":[["course","ai-leadership","d",null],{"children":[["slug","ai-risk-landscape","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SqdzuPaEeA-UMZd5kjbkM"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"ai-leadership","modules":[{"id":"ai-literacy","title":"AI Literacy for Every Leader","lessons":[{"slug":"ai-landscape-for-executives","title":"The AI Landscape in 2026 — What Leaders Actually Need to Know"},{"slug":"the-full-ai-toolkit","title":"The Full AI Toolkit — It's Not Just Chatbots"},{"slug":"how-ai-actually-works","title":"How AI Actually Works — A Leader's Mental Model"},{"slug":"ai-business-models","title":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"},{"slug":"the-ai-maturity-curve","title":"Where Is Your Organization on the AI Maturity Curve?"}]},{"id":"ai-strategy","title":"Building Your AI Strategy","lessons":[{"slug":"strategy-not-tools","title":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"},{"slug":"finding-high-value-use-cases","title":"Finding High-Value AI Use Cases — The Opportunity Matrix"},{"slug":"data-readiness-assessment","title":"Data Readiness — Why This Comes Before Everything Else"},{"slug":"data-strategy-for-ai","title":"Building a Data Strategy That Makes AI Possible"},{"slug":"build-buy-partner","title":"Build, Buy, or Partner — Making the Right AI Investment Decisions"},{"slug":"the-ai-strategy-document","title":"Writing the AI Strategy Document Your Board Will Actually Read"}]},{"id":"ai-governance","title":"AI Governance, Risk, and Ethics","lessons":[{"slug":"ai-governance-framework","title":"AI Governance — The Framework That Enables Innovation"},{"slug":"ai-risk-landscape","title":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"},{"slug":"responsible-ai","title":"Responsible AI in Practice — Beyond the Ethics Statement"},{"slug":"ai-regulation","title":"AI Regulation — EU AI Act, US Policies, and What's Coming"},{"slug":"shadow-ai","title":"Shadow AI — The Risk You Need to Address Proactively"}]},{"id":"ai-people","title":"People, Culture, and Change Management","lessons":[{"slug":"ai-talent-strategy","title":"AI Talent Strategy — Build, Hire, and Upskill"},{"slug":"leading-ai-adoption","title":"Leading AI Adoption — Change Management That Works"},{"slug":"the-ai-operating-model","title":"The AI Operating Model — Centralized, Federated, or Hybrid?"},{"slug":"ai-and-workforce","title":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"},{"slug":"building-ai-culture","title":"Building an AI-Ready Culture — From Experimentation to Institution"}]},{"id":"ai-execution","title":"Execution, Measurement, and Scaling","lessons":[{"slug":"from-pilot-to-production","title":"From Pilot to Production — Why Most AI Pilots Fail to Scale"},{"slug":"measuring-ai-roi","title":"Measuring AI ROI — Metrics That Actually Matter"},{"slug":"scaling-ai","title":"Scaling AI Across the Enterprise — From One Team to Every Team"},{"slug":"agentic-ai-and-whats-next","title":"Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan"},{"slug":"your-first-90-days","title":"Your First 90 Days as an AI-Ready Leader"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T238d,<h1 id="the-ai-risk-landscape--what-can-go-wrong-and-how-to-prepare">The AI Risk Landscape — What Can Go Wrong and How to Prepare</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The seven categories of AI risk that affect enterprises</li>
+<li>How each risk manifests differently for classical ML vs GenAI</li>
+<li>Practical mitigation approaches for each risk category</li>
+<li>How to assess risk level for AI initiatives</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Elena (General Counsel) brought a structured risk briefing to the governance committee. "We need to understand what can go wrong before it does. Not to create fear, but to build appropriate safeguards."</p>
+<p>She organized AI risks into seven categories, each with concrete examples relevant to Meridian's planned initiatives. The team found the exercise valuable — several risks they hadn't considered became governance priorities.</p>
+<h2 id="the-seven-risk-categories">The Seven Risk Categories</h2>
+<h3 id="1-accuracy-and-hallucination-risk">1. Accuracy and Hallucination Risk</h3>
+<p><strong>Classical ML:</strong> Models produce incorrect predictions when data patterns change or edge cases appear. A demand forecasting model might predict normal demand during an unusual event (a supply chain disruption, a competitor's product launch).</p>
+<p><strong>GenAI:</strong> Large language models can generate text that sounds authoritative but is factually incorrect — hallucinations. This is particularly concerning when GenAI outputs are used in customer communications, legal documents, or financial reports.</p>
+<p><strong>Mitigation:</strong> Human review for high-stakes outputs. Confidence scores that flag uncertain predictions. RAG-based grounding in verified data sources for GenAI. Regular accuracy monitoring for deployed models.</p>
+<h3 id="2-bias-and-fairness-risk">2. Bias and Fairness Risk</h3>
+<p>AI models learn patterns from historical data — including historical biases. A hiring model trained on past hiring decisions may replicate existing biases. A lending model may disadvantage certain demographic groups if historical lending data reflects discriminatory patterns.</p>
+<p><strong>Mitigation:</strong> Audit training data for representation and balance. Test model outputs across demographic groups. Use fairness metrics during model development. Establish clear policies for human review of AI-influenced decisions that affect individuals.</p>
+<h3 id="3-data-privacy-and-leakage-risk">3. Data Privacy and Leakage Risk</h3>
+<p>AI systems process large volumes of data, sometimes including sensitive information. Risks include: employee entering confidential data into a public AI tool, AI vendor accessing data beyond what's necessary, training data containing personal information, and model outputs inadvertently revealing private information.</p>
+<p><strong>Mitigation:</strong> Clear data classification policies (what can enter AI systems, what cannot). Approved tool lists with vetted data handling practices. Technical controls like data masking and access logging. Regular audits of data flowing into AI systems.</p>
+<h3 id="4-security-and-adversarial-risk">4. Security and Adversarial Risk</h3>
+<p>AI systems can be targets for malicious actors: prompt injection (manipulating GenAI through crafted inputs), model poisoning (corrupting training data), and unauthorized access to AI systems or their outputs.</p>
+<p><strong>Mitigation:</strong> Security review as part of AI initiative assessment. Input validation and filtering. Access controls on AI systems and their data. Monitoring for unusual usage patterns.</p>
+<h3 id="5-model-drift-and-reliability-risk">5. Model Drift and Reliability Risk</h3>
+<p>ML models degrade over time as real-world patterns change. A model trained on 2024 customer behavior may perform poorly on 2026 patterns. Without monitoring, this degradation goes unnoticed until business impact becomes visible.</p>
+<p><strong>Mitigation:</strong> Continuous performance monitoring with alerts. Scheduled model retraining. Comparison of model predictions against actual outcomes. Clear thresholds for when a model should be retrained or retired.</p>
+<h3 id="6-vendor-and-dependency-risk">6. Vendor and Dependency Risk</h3>
+<p>Organizations using third-party AI tools depend on vendor stability, pricing, and continued service. Risks include: vendor changing terms or pricing, vendor discontinuing a service, vendor being acquired, and inability to migrate away from a vendor.</p>
+<p><strong>Mitigation:</strong> Data portability clauses in contracts. Understanding vendor's model and data practices. Avoiding over-dependence on a single vendor for critical capabilities. Regular vendor review.</p>
+<h3 id="7-regulatory-and-compliance-risk">7. Regulatory and Compliance Risk</h3>
+<p>AI regulation is evolving globally. The EU AI Act, US executive orders, and industry-specific regulations create compliance obligations for AI users — not just AI builders.</p>
+<p><strong>Mitigation:</strong> Covered in detail in Lesson 15. Key principle: compliance awareness should be part of every AI initiative assessment, not addressed after deployment.</p>
+<h2 id="risk-assessment-for-ai-initiatives">Risk Assessment for AI Initiatives</h2>
+<p>Add a risk assessment to the governance review process:</p>
+<table>
+<thead>
+<tr>
+<th>Risk Category</th>
+<th>Low</th>
+<th>Medium</th>
+<th>High</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>Internal use, advisory only</td>
+<td>Customer-facing, human reviewed</td>
+<td>Automated decisions affecting individuals</td>
+</tr>
+<tr>
+<td>Bias</td>
+<td>No individual impact</td>
+<td>Affects groups indirectly</td>
+<td>Directly influences decisions about people</td>
+</tr>
+<tr>
+<td>Data privacy</td>
+<td>Public data only</td>
+<td>Internal data</td>
+<td>Personal or confidential data</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>No sensitive systems</td>
+<td>Connected to internal systems</td>
+<td>Connected to critical systems</td>
+</tr>
+<tr>
+<td>Model drift</td>
+<td>Low-stakes predictions</td>
+<td>Revenue-impacting predictions</td>
+<td>Safety or compliance-critical</td>
+</tr>
+<tr>
+<td>Vendor dependency</td>
+<td>Multiple alternatives exist</td>
+<td>Limited alternatives</td>
+<td>Single vendor, critical capability</td>
+</tr>
+<tr>
+<td>Regulatory</td>
+<td>No regulated data or decisions</td>
+<td>Industry-regulated data</td>
+<td>Directly regulated AI use cases</td>
+</tr>
+</tbody>
+</table>
+<p>Meridian used this matrix to classify their invoice processing initiative as "medium risk" (internal data, vendor dependency, no individual impact) and their eventual demand forecasting expansion as "low to medium risk" (internal data, built in-house, no individual impact).</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Risk assessment should be part of the AI initiative review process (Lesson 12), not a separate exercise. Integrate it into governance.</li>
+<li>The risk profile varies significantly by AI type: GenAI has higher hallucination and data leakage risk; classical ML has higher model drift risk. Assess accordingly.</li>
+<li>Most AI risks are manageable with proportionate safeguards. The goal is informed risk management, not risk elimination.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Treating all AI risk as the same</strong> — A meeting summarization tool and an automated lending decision have vastly different risk profiles. Govern proportionally.</li>
+<li><strong>Focusing only on GenAI risks</strong> — Classical ML risks (model drift, bias in training data, accuracy degradation) are well-documented and equally important.</li>
+<li><strong>Assessing risk once and never revisiting</strong> — Risk profiles change as AI systems evolve, data changes, and regulations update. Build periodic review into governance.</li>
+<li><strong>Assuming vendor tools are risk-free</strong> — SaaS AI tools carry vendor dependency, data handling, and compliance risks that require the same governance attention as custom-built AI.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>AI risk spans seven categories: accuracy, bias, data privacy, security, model drift, vendor dependency, and regulatory compliance.</li>
+<li>Risk assessment should be integrated into the governance review process for every AI initiative.</li>
+<li>Classical ML and GenAI have different risk profiles — assess each on its own terms.</li>
+<li>Most risks are manageable with proportionate safeguards. The goal is informed management, not avoidance.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Risk management is the defensive side. In Lesson 14, we'll cover the proactive side: <strong>Responsible AI in Practice</strong> — moving beyond ethics statements to concrete practices for fairness, transparency, and human oversight. Including a practical dimension often overlooked: how data quality directly affects AI fairness.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"The AI Risk Landscape — What Can Go Wrong and How to Prepare\",\"description\":\"A comprehensive risk taxonomy for AI in the enterprise — from hallucinations and bias to data leakage and model drift — with practical mitigation approaches.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/ai-risk-landscape\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"The AI Risk Landscape — What Can Go Wrong and How to Prepare\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/ai-risk-landscape\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Governance, Risk, and Ethics"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"}],["$","p",null,{"className":"lesson-header__description","children":"A comprehensive risk taxonomy for AI in the enterprise — from hallucinations and bias to data leakage and model drift — with practical mitigation approaches."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/ai-leadership/ai-governance-framework","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"AI Governance — The Framework That Enables Innovation"}]]}],["$","$L6",null,{"href":"/ai-leadership/responsible-ai","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Responsible AI in Practice — Beyond the Ethics Statement"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-seven-risk-categories","text":"The Seven Risk Categories","level":2},{"id":"1-accuracy-and-hallucination-risk","text":"1. Accuracy and Hallucination Risk","level":3},{"id":"2-bias-and-fairness-risk","text":"2. Bias and Fairness Risk","level":3},{"id":"3-data-privacy-and-leakage-risk","text":"3. Data Privacy and Leakage Risk","level":3},{"id":"4-security-and-adversarial-risk","text":"4. Security and Adversarial Risk","level":3},{"id":"5-model-drift-and-reliability-risk","text":"5. Model Drift and Reliability Risk","level":3},{"id":"6-vendor-and-dependency-risk","text":"6. Vendor and Dependency Risk","level":3},{"id":"7-regulatory-and-compliance-risk","text":"7. Regulatory and Compliance Risk","level":3},{"id":"risk-assessment-for-ai-initiatives","text":"Risk Assessment for AI Initiatives","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"The AI Risk Landscape — What Can Go Wrong and How to Prepare — AI for Leadership — Strategic AI Literacy for Every Leader | CodewiseX"}],["$","meta","1",{"name":"description","content":"A comprehensive risk taxonomy for AI in the enterprise — from hallucinations and bias to data leakage and model drift — with practical mitigation approaches."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"ai risk,hallucinations,ai bias,data leakage,model drift"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/ai-leadership/ai-risk-landscape/"}],["$","meta","8",{"property":"og:title","content":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"}],["$","meta","9",{"property":"og:description","content":"A comprehensive risk taxonomy for AI in the enterprise — from hallucinations and bias to data leakage and model drift — with practical mitigation approaches."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/ai-leadership/ai-risk-landscape/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

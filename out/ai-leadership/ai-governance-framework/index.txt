@@ -1,0 +1,153 @@
+1:"$Sreact.fragment"
+2:I[29728,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"SidebarProvider"]
+3:I[43922,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+4:I[39756,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+5:I[37457,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
+6:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+d:I[68027,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"default",1]
+:HL["/_next/static/chunks/04fe_m1fp-15j.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5c285b27cdda1fe8-s.p.0yo6-5yoeeudq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","ai-leadership","ai-governance-framework",""],"q":"","i":false,"f":[[["",{"children":[["course","ai-leadership","d",null],{"children":[["slug","ai-governance-framework","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/106s2c4nvckqs.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0n4z.7yu76je-.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dm_sans_f65b9734-module__rAqehG__variable jetbrains_mono_85d22c22-module__HuXS2q__variable h-full antialiased","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","meta",null,{"name":"google-adsense-account","content":"ca-pub-9139184252658211"}],["$","script",null,{"async":true,"src":"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9139184252658211","crossOrigin":"anonymous"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              (function() {\n                try {\n                  var theme = localStorage.getItem('cw-theme');\n                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {\n                    document.documentElement.classList.add('dark');\n                  } else {\n                    document.documentElement.classList.remove('dark');\n                  }\n                } catch (e) {}\n              })();\n            "}}]]}],["$","body",null,{"className":"min-h-full flex flex-col relative overflow-x-hidden","suppressHydrationWarning":true,"children":[["$","div",null,{"className":"bg-orb bg-orb--blue","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--purple","aria-hidden":"true"}],["$","div",null,{"className":"bg-orb bg-orb--green","aria-hidden":"true"}],["$","$L2",null,{"children":["$","div",null,{"className":"relative z-10 flex flex-col min-h-full flex-1","children":[["$","$L3",null,{}],["$","div",null,{"className":"flex flex-1","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"footer","role":"contentinfo","children":["$","div",null,{"className":"footer__inner","children":[["$","div",null,{"className":"footer__left","children":[["$","$L6",null,{"href":"/","className":"footer__logo","aria-label":"CodewiseX Home","children":[["$","span",null,{"className":"footer__logo-accent","children":"Code"}],"wiseX"]}],["$","p",null,{"className":"footer__tagline","children":"Free, in-depth technical courses — built for clarity."}]]}],["$","div",null,{"className":"footer__links","children":[["$","$L6",null,{"href":"/","className":"footer__link","children":"Courses"}],["$","$L6",null,{"href":"/about","className":"footer__link","children":"About"}],["$","$L6",null,{"href":"/privacy","className":"footer__link","children":"Privacy"}],["$","$L6",null,{"href":"/terms","className":"footer__link","children":"Terms"}],["$","a",null,{"href":"mailto:hey@lumivoxx.com","className":"footer__link","children":"Contact"}]]}],"$L7"]}]}]]}]}]]}]]}]]}],{"children":["$L8",{"children":["$L9",{"children":["$La",{},null,false,null]},null,false,"$@b"]},null,false,null]},null,false,null],"$Lc",false]],"m":"$undefined","G":["$d",["$Le"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"SqdzuPaEeA-UMZd5kjbkM"}
+11:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+12:"$Sreact.suspense"
+15:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"ViewportBoundary"]
+17:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"MetadataBoundary"]
+7:["$","div",null,{"className":"footer__bottom","children":["$","p",null,{"className":"footer__copyright","children":["© ",2026," CodewiseX by Lumivoxx. All content is free to learn from."]}]}]
+8:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/01ou0qd~0sig9.js","async":true,"nonce":"$undefined"}]],"$Lf"]}]
+9:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}]
+14:[]
+b:"$W14"
+c:["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","div",null,{"hidden":true,"children":["$","$L17",null,{"children":["$","$12",null,{"name":"Next.Metadata","children":"$L18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+e:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/04fe_m1fp-15j.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+19:I[31078,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js"],"default"]
+f:["$","$L19",null,{"courseId":"ai-leadership","modules":[{"id":"ai-literacy","title":"AI Literacy for Every Leader","lessons":[{"slug":"ai-landscape-for-executives","title":"The AI Landscape in 2026 — What Leaders Actually Need to Know"},{"slug":"the-full-ai-toolkit","title":"The Full AI Toolkit — It's Not Just Chatbots"},{"slug":"how-ai-actually-works","title":"How AI Actually Works — A Leader's Mental Model"},{"slug":"ai-business-models","title":"How AI Creates Business Value — Revenue, Cost, Risk, Experience"},{"slug":"the-ai-maturity-curve","title":"Where Is Your Organization on the AI Maturity Curve?"}]},{"id":"ai-strategy","title":"Building Your AI Strategy","lessons":[{"slug":"strategy-not-tools","title":"AI Strategy vs AI Activity — Why Most Companies Get This Wrong"},{"slug":"finding-high-value-use-cases","title":"Finding High-Value AI Use Cases — The Opportunity Matrix"},{"slug":"data-readiness-assessment","title":"Data Readiness — Why This Comes Before Everything Else"},{"slug":"data-strategy-for-ai","title":"Building a Data Strategy That Makes AI Possible"},{"slug":"build-buy-partner","title":"Build, Buy, or Partner — Making the Right AI Investment Decisions"},{"slug":"the-ai-strategy-document","title":"Writing the AI Strategy Document Your Board Will Actually Read"}]},{"id":"ai-governance","title":"AI Governance, Risk, and Ethics","lessons":[{"slug":"ai-governance-framework","title":"AI Governance — The Framework That Enables Innovation"},{"slug":"ai-risk-landscape","title":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"},{"slug":"responsible-ai","title":"Responsible AI in Practice — Beyond the Ethics Statement"},{"slug":"ai-regulation","title":"AI Regulation — EU AI Act, US Policies, and What's Coming"},{"slug":"shadow-ai","title":"Shadow AI — The Risk You Need to Address Proactively"}]},{"id":"ai-people","title":"People, Culture, and Change Management","lessons":[{"slug":"ai-talent-strategy","title":"AI Talent Strategy — Build, Hire, and Upskill"},{"slug":"leading-ai-adoption","title":"Leading AI Adoption — Change Management That Works"},{"slug":"the-ai-operating-model","title":"The AI Operating Model — Centralized, Federated, or Hybrid?"},{"slug":"ai-and-workforce","title":"AI and the Workforce — Augmentation, Automation, and Thoughtful Transitions"},{"slug":"building-ai-culture","title":"Building an AI-Ready Culture — From Experimentation to Institution"}]},{"id":"ai-execution","title":"Execution, Measurement, and Scaling","lessons":[{"slug":"from-pilot-to-production","title":"From Pilot to Production — Why Most AI Pilots Fail to Scale"},{"slug":"measuring-ai-roi","title":"Measuring AI ROI — Metrics That Actually Matter"},{"slug":"scaling-ai","title":"Scaling AI Across the Enterprise — From One Team to Every Team"},{"slug":"agentic-ai-and-whats-next","title":"Agentic AI, Sovereign AI, and What's Coming — A Leader's Horizon Scan"},{"slug":"your-first-90-days","title":"Your First 90 Days as an AI-Ready Leader"}]}],"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1b:T2257,<h1 id="ai-governance--the-framework-that-enables-innovation">AI Governance — The Framework That Enables Innovation</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Why governance enables AI adoption (rather than slowing it down)</li>
+<li>The three layers of AI governance: policy, process, people</li>
+<li>How to structure a governance committee and review cadence</li>
+<li>A lightweight governance model you can implement immediately</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Elena (General Counsel) opened the governance discussion with an observation that reframed the conversation: "Governance isn't about saying no. It's about giving people clear guardrails so they can say yes with confidence."</p>
+<p>She'd seen the pattern at a previous company: without governance, teams hesitated to adopt AI because they didn't know what was allowed. Ironically, the absence of policies created more paralysis than policies would have. Clear rules — what data can be used, what tools are approved, what requires review — actually accelerated adoption because teams knew the boundaries.</p>
+<h2 id="why-governance-enables-adoption">Why Governance Enables Adoption</h2>
+<p>According to Deloitte's 2026 research, enterprises where senior leadership actively shapes AI governance achieve significantly greater business value than those delegating governance to technical teams alone (<a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html">Deloitte 2026</a>).</p>
+<p>The reason is straightforward: governance creates organizational trust in AI. When teams know that AI tools have been reviewed for risk, that data handling meets compliance standards, and that there's a clear process for raising concerns — they adopt with more confidence and less friction.</p>
+<h2 id="the-three-layers">The Three Layers</h2>
+<h3 id="layer-1-policy">Layer 1: Policy</h3>
+<p>Written guidelines that establish what's expected:</p>
+<ul>
+<li><strong>AI Acceptable Use Policy</strong> — What AI tools are approved for use? What types of data can and cannot be processed through AI systems? What outputs require human review?</li>
+<li><strong>Data Usage Policy for AI</strong> — How must data be classified before it enters an AI system? What consent or authorization is required?</li>
+<li><strong>AI Procurement Standards</strong> — What security, privacy, and transparency requirements must AI vendors meet?</li>
+<li><strong>AI Output Review Standards</strong> — Which AI outputs can be used directly? Which require human validation? (E.g., GenAI-drafted customer communications may require human review; AI-flagged expense anomalies may not.)</li>
+</ul>
+<h3 id="layer-2-process">Layer 2: Process</h3>
+<p>How governance operates day-to-day:</p>
+<ul>
+<li><strong>New AI Initiative Review</strong> — Before an AI project begins, it goes through a structured assessment: What data does it use? What's the risk profile? Who's accountable? What are the success metrics?</li>
+<li><strong>Ongoing Monitoring</strong> — How are deployed AI systems monitored for performance, accuracy, fairness, and compliance?</li>
+<li><strong>Incident Response</strong> — What happens when something goes wrong? Who's notified? What's the escalation path?</li>
+<li><strong>Periodic Review</strong> — How often are AI systems re-evaluated? (Quarterly is a common starting cadence.)</li>
+</ul>
+<h3 id="layer-3-people">Layer 3: People</h3>
+<p>Who is responsible:</p>
+<ul>
+<li><strong>AI Governance Committee</strong> — Cross-functional group that reviews and approves AI initiatives. Typically includes representatives from technology, legal/compliance, business operations, HR, and finance.</li>
+<li><strong>AI Initiative Owners</strong> — Each AI project has a named business owner accountable for outcomes and risk management.</li>
+<li><strong>Data Owners</strong> — Named individuals responsible for data quality and governance in their domain (established in Lesson 9).</li>
+</ul>
+<h2 id="meridians-governance-model">Meridian's Governance Model</h2>
+<p>Meridian started with a "lightweight governance" approach appropriate for their maturity level:</p>
+<p><strong>Committee:</strong> Monthly 60-minute meeting with Priya (CTO), Elena (General Counsel), David (CFO), and one rotating business unit leader. Agenda: review new AI initiatives, check on active projects, discuss emerging risks.</p>
+<p><strong>Policies (Phase 1):</strong> A one-page AI Acceptable Use Policy covering: approved tools, prohibited data types (confidential client data, personally identifiable information without consent), output review requirements, and how to request new tool approvals.</p>
+<p><strong>Process:</strong> New AI initiatives complete a one-page assessment form (purpose, data used, risk level, success metrics, accountable owner) before receiving approval from the governance committee.</p>
+<p><strong>Principle:</strong> "Start lightweight, formalize as you scale." The governance model grows with AI adoption, not ahead of it.</p>
+<h2 id="the-ai-initiative-assessment-form">The AI Initiative Assessment Form</h2>
+<p>A practical tool for governance review:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initiative name</td>
+<td>Clear, descriptive title</td>
+</tr>
+<tr>
+<td>Business owner</td>
+<td>Named individual accountable</td>
+</tr>
+<tr>
+<td>Value lever</td>
+<td>Revenue / Cost / Risk / Experience</td>
+</tr>
+<tr>
+<td>Data sources</td>
+<td>What data is used, where does it come from</td>
+</tr>
+<tr>
+<td>Data sensitivity</td>
+<td>Classification: public / internal / confidential / restricted</td>
+</tr>
+<tr>
+<td>AI type</td>
+<td>Classical ML / GenAI / Agentic / SaaS tool</td>
+</tr>
+<tr>
+<td>Risk level</td>
+<td>Low / Medium / High (based on data sensitivity + decision impact)</td>
+</tr>
+<tr>
+<td>Human oversight</td>
+<td>What outputs are reviewed by humans before action?</td>
+</tr>
+<tr>
+<td>Success metrics</td>
+<td>How is success measured?</td>
+</tr>
+<tr>
+<td>Review cadence</td>
+<td>How often is performance evaluated?</td>
+</tr>
+</tbody>
+</table>
+<p>Low-risk initiatives (approved SaaS tools, internal-only data, human review of outputs) can be approved by the committee asynchronously. Medium and high-risk initiatives warrant discussion.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>You don't need a perfect governance framework to start. A one-page acceptable use policy and a monthly review meeting are meaningful first steps.</li>
+<li>Governance should be proportionate to risk. A team using a meeting summarization tool needs lighter governance than a team deploying AI for credit decisions.</li>
+<li>The governance committee should include business AND technology voices. Governance that's purely technical misses business context; governance that's purely business misses technical risk.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Governance so heavy that it discourages adoption</strong> — If getting an AI tool approved takes six months and twelve forms, teams will either not use AI or use it without approval. Scale governance to risk level.</li>
+<li><strong>No governance at all</strong> — The opposite extreme. Without any structure, organizations accumulate AI risk exposure without visibility.</li>
+<li><strong>Governance committee without authority</strong> — If the committee can review but not approve or block, it becomes advisory rather than governance. Give it decision-making authority.</li>
+<li><strong>Creating governance for AI but not for data</strong> — AI governance and data governance are interconnected. Both need attention.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>AI governance enables adoption by giving teams clear guardrails and organizational confidence.</li>
+<li>Three layers: policy (written guidelines), process (how governance operates), people (who's responsible).</li>
+<li>Start lightweight — one-page acceptable use policy, monthly review meeting, initiative assessment form.</li>
+<li>Senior leadership involvement in governance correlates with greater AI business value (Deloitte 2026).</li>
+<li>Scale governance as AI adoption grows. Phase 1 doesn't need to be the final state.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Governance manages risk proactively. But what specific risks should you manage? In Lesson 13, we'll map <strong>the AI risk landscape</strong> — hallucinations, bias, data leakage, model drift, and other risks that every leadership team should understand.</p>10:["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"AI Governance — The Framework That Enables Innovation\",\"description\":\"Build an AI governance framework that manages risk proactively while enabling teams to adopt AI with confidence. Roles, policies, and review processes.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/ai-governance-framework\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI Governance — The Framework That Enables Innovation\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/ai-governance-framework\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"AI Governance, Risk, and Ethics"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"AI Governance — The Framework That Enables Innovation"}],["$","p",null,{"className":"lesson-header__description","children":"Build an AI governance framework that manages risk proactively while enabling teams to adopt AI with confidence. Roles, policies, and review processes."}]]}],["$","$L1a",null,{"html":"$1b"}],"$L1c"]}],"$L1d"]}]
+1e:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+1c:["$","div",null,{"className":"lesson-nav","children":[["$","$L6",null,{"href":"/ai-leadership/the-ai-strategy-document","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Writing the AI Strategy Document Your Board Will Actually Read"}]]}],["$","$L6",null,{"href":"/ai-leadership/ai-risk-landscape","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"The AI Risk Landscape — What Can Go Wrong and How to Prepare"}]]}]]}]
+1d:["$","aside",null,{"className":"lesson-toc","children":["$","$L1e",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"why-governance-enables-adoption","text":"Why Governance Enables Adoption","level":2},{"id":"the-three-layers","text":"The Three Layers","level":2},{"id":"layer-1-policy","text":"Layer 1: Policy","level":3},{"id":"layer-2-process","text":"Layer 2: Process","level":3},{"id":"layer-3-people","text":"Layer 3: People","level":3},{"id":"meridians-governance-model","text":"Meridian's Governance Model","level":2},{"id":"the-ai-initiative-assessment-form","text":"The AI Initiative Assessment Form","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+1f:I[27201,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"IconMark"]
+13:null
+18:[["$","title","0",{"children":"AI Governance — The Framework That Enables Innovation — AI for Leadership — Strategic AI Literacy for Every Leader | CodewiseX"}],["$","meta","1",{"name":"description","content":"Build an AI governance framework that manages risk proactively while enabling teams to adopt AI with confidence. Roles, policies, and review processes."}],["$","meta","2",{"name":"author","content":"CodewiseX"}],["$","meta","3",{"name":"keywords","content":"ai governance,ai policy,governance framework,enterprise ai,risk management"}],["$","meta","4",{"name":"creator","content":"CodewiseX"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","meta","6",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","7",{"rel":"canonical","href":"https://codewise.lumivoxx.com/ai-leadership/ai-governance-framework/"}],["$","meta","8",{"property":"og:title","content":"AI Governance — The Framework That Enables Innovation"}],["$","meta","9",{"property":"og:description","content":"Build an AI governance framework that manages risk proactively while enabling teams to adopt AI with confidence. Roles, policies, and review processes."}],["$","meta","10",{"property":"og:url","content":"https://codewise.lumivoxx.com/ai-leadership/ai-governance-framework/"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"CodewiseX — Free Technical Courses"}],["$","meta","14",{"name":"twitter:description","content":"Free, in-depth technical courses built for clarity."}],["$","link","15",{"rel":"icon","href":"/icon.svg?icon.0_3y651p_bmcq.svg","sizes":"any","type":"image/svg+xml"}],["$","$L1f","16",{}]]

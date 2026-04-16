@@ -1,0 +1,204 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T2709,<h1 id="writing-the-ai-strategy-document-your-board-will-actually-read">Writing the AI Strategy Document Your Board Will Actually Read</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The one-page AI strategy framework</li>
+<li>How to structure a strategy document that guides real decisions</li>
+<li>How Meridian's completed strategy looks</li>
+<li>Tips for presenting AI strategy to a board or leadership team</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Sarah (CEO) asked Priya and David to prepare a document for the board. "Keep it to two pages. The board doesn't want a technology manifesto. They want to understand: what are we doing, why, what does it cost, what are the risks, and how will we know it's working?"</p>
+<p>Priya's first draft was twelve pages with architecture diagrams. David's feedback: "I can't present this. The board will check their phones by page three."</p>
+<p>They iterated to a structured two-page document that covered seven sections — enough depth to guide decisions, concise enough to hold attention.</p>
+<h2 id="the-seven-section-framework">The Seven-Section Framework</h2>
+<h3 id="section-1-vision-and-strategic-alignment-34-sentences">Section 1: Vision and Strategic Alignment (3–4 sentences)</h3>
+<p>Connect AI to the company's existing strategic priorities. This isn't about AI — it's about business outcomes that AI enables.</p>
+<p><strong>Meridian's version:</strong>
+"Meridian will leverage AI capabilities to strengthen three strategic priorities: operational efficiency in manufacturing and supply chain, revenue growth through data-driven demand management, and risk reduction through proactive governance of AI usage across the organization. Our approach is phased, grounded in data readiness, and measured by business outcomes."</p>
+<h3 id="section-2-data-readiness-assessment-brief-summary">Section 2: Data Readiness Assessment (Brief summary)</h3>
+<p>The board needs to understand: are we ready? This section summarizes the data readiness scorecard from Lesson 8.</p>
+<p><strong>Meridian's version:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Current State</th>
+<th>Target State (12 months)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Availability</td>
+<td>3/5 — most data accessible, 4 product lines pending integration</td>
+<td>4/5 — all product lines integrated</td>
+</tr>
+<tr>
+<td>Quality</td>
+<td>2.5/5 — inconsistent standards across domains</td>
+<td>3.5/5 — quality framework in place for priority domains</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>2/5 — informal, no named owners</td>
+<td>3.5/5 — lightweight governance with domain owners</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>3/5 — Snowflake in place, pipelines incomplete</td>
+<td>4/5 — automated pipelines for priority use cases</td>
+</tr>
+</tbody>
+</table>
+<p>"Data readiness is our primary investment area in the first six months. This foundation determines the speed and reliability of all subsequent AI initiatives."</p>
+<h3 id="section-3-priority-use-cases-the-short-list">Section 3: Priority Use Cases (The short list)</h3>
+<p>From the Opportunity Matrix (Lesson 7), present 2–3 initiatives with clear business cases:</p>
+<table>
+<thead>
+<tr>
+<th>Initiative</th>
+<th>Value Lever</th>
+<th>Approach</th>
+<th>Timeline</th>
+<th>Expected Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expand demand forecasting</td>
+<td>Cost (inventory optimization)</td>
+<td>Build (extend existing model)</td>
+<td>6 months</td>
+<td>Reduce carrying costs by 10–15%</td>
+</tr>
+<tr>
+<td>Invoice processing automation</td>
+<td>Cost (operational efficiency)</td>
+<td>Buy (SaaS platform)</td>
+<td>8 weeks</td>
+<td>Process 80% of invoices without manual review</td>
+</tr>
+<tr>
+<td>AI usage policy and governance</td>
+<td>Risk</td>
+<td>Internal</td>
+<td>4 weeks</td>
+<td>Managed use of AI tools across the organization</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-4-governance-summary">Section 4: Governance Summary</h3>
+<p>One paragraph on how AI will be governed. Details come in Module 3, but the board needs to know governance is planned.</p>
+<p>"All AI initiatives will be reviewed by a cross-functional governance committee (CTO, CFO, General Counsel). An acceptable use policy for AI tools will be published within four weeks. Data governance standards will be established for each priority use case."</p>
+<h3 id="section-5-talent-and-organization">Section 5: Talent and Organization</h3>
+<p>What roles exist, what's needed, and how you'll develop capability:</p>
+<p>"Meridian's existing data engineering team (4 people) will lead implementation of the forecasting expansion. For invoice processing, a vendor partnership provides capability without new headcount. We will invest in AI literacy development for the broader leadership team over the next six months."</p>
+<h3 id="section-6-investment-and-timeline">Section 6: Investment and Timeline</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Timeline</th>
+<th>Investment</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1: Foundations</td>
+<td>Months 1–3</td>
+<td>$120K (data integration, governance setup)</td>
+<td>Data readiness for priority use cases</td>
+</tr>
+<tr>
+<td>Phase 2: First initiatives</td>
+<td>Months 3–6</td>
+<td>$85K (SaaS subscription, model development)</td>
+<td>Invoice automation live, forecasting expanding</td>
+</tr>
+<tr>
+<td>Phase 3: Evaluate and plan</td>
+<td>Months 6–9</td>
+<td>Minimal (measurement, planning)</td>
+<td>Results assessed, Year 2 roadmap drafted</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section-7-success-metrics">Section 7: Success Metrics</h3>
+<p>How will we know this is working?</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Baseline</th>
+<th>Target (12 months)</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inventory carrying cost</td>
+<td>$X million</td>
+<td>10–15% reduction</td>
+<td>Finance quarterly report</td>
+</tr>
+<tr>
+<td>Invoice processing time</td>
+<td>12 minutes avg.</td>
+<td>3 minutes avg.</td>
+<td>Operations dashboard</td>
+</tr>
+<tr>
+<td>Data readiness score</td>
+<td>2.6 average</td>
+<td>3.5 average</td>
+<td>Quarterly assessment</td>
+</tr>
+<tr>
+<td>AI governance coverage</td>
+<td>No formal policy</td>
+<td>Policy published, 100% awareness</td>
+<td>HR/compliance tracking</td>
+</tr>
+</tbody>
+</table>
+<h2 id="presentation-tips">Presentation Tips</h2>
+<p>When presenting AI strategy to a board or senior leadership team:</p>
+<p><strong>Lead with business outcomes, not technology.</strong> "We will reduce inventory costs by 10–15% using AI-powered demand forecasting" resonates. "We will deploy a time series ML model using XGBoost" does not.</p>
+<p><strong>Acknowledge what you don't know.</strong> "We expect 10–15% cost reduction based on results from three product lines. We'll validate this as we expand." This builds credibility.</p>
+<p><strong>Present data readiness honestly.</strong> Boards appreciate candor about gaps — it shows the team has done the homework and isn't overpromising.</p>
+<p><strong>Include a "do nothing" comparison.</strong> What happens if we don't invest? Not as a scare tactic, but as context: "Without demand forecasting expansion, we expect inventory carrying costs to remain at current levels of $X million."</p>
+<p><strong>Keep it to 2 pages plus an appendix.</strong> The main document should stand alone. Technical details, vendor comparisons, and detailed timelines go in the appendix for those who want to dig deeper.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>This template works at any scale — from a startup with 50 people to an enterprise with 50,000. The seven sections apply regardless of size.</li>
+<li>If you completed the exercises in Lessons 5–10, you already have the raw material for every section. This lesson is about assembling and communicating it.</li>
+<li>A strategy document is only as valuable as its influence on decisions. Share it broadly, reference it when evaluating new AI proposals, and update it every 6 months.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Writing the strategy document after launching AI initiatives</strong> — Strategy should precede investment, not rationalize it after the fact.</li>
+<li><strong>Omitting the data readiness section</strong> — Boards and leadership teams need to understand that data work is a prerequisite, not a delay. Framing data investment as "phase 1 of the AI strategy" gives it the priority it deserves.</li>
+<li><strong>Overpromising timelines and outcomes</strong> — Conservative estimates that you exceed build more credibility than ambitious targets that you miss.</li>
+<li><strong>Creating a document that lives in a drawer</strong> — A good strategy document is referenced monthly. If no one looks at it after the board meeting, it wasn't specific enough to guide decisions.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>A strong AI strategy document has seven sections: vision, data readiness, use cases, governance, talent, investment, and metrics.</li>
+<li>Lead with business outcomes, not technology. The board cares about results, not algorithms.</li>
+<li>Data readiness belongs early in the document — as the second section — because it determines the feasibility of everything that follows.</li>
+<li>Keep the main document to two pages. Put technical details in an appendix.</li>
+<li>Update the strategy every six months. AI capabilities and organizational readiness evolve — the strategy should evolve with them.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Module 2 is complete. You have a strategy. Now let's make sure it's safe. Module 3 opens with <strong>AI Governance — The Framework That Enables Innovation</strong> — building governance that accelerates AI adoption by managing risk proactively, not blocking progress reactively.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Writing the AI Strategy Document Your Board Will Actually Read\",\"description\":\"A practical template for creating a clear, concise AI strategy document that connects vision to data readiness, use cases, governance, timeline, and metrics.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/the-ai-strategy-document\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Writing the AI Strategy Document Your Board Will Actually Read\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/the-ai-strategy-document\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Building Your AI Strategy"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Writing the AI Strategy Document Your Board Will Actually Read"}],["$","p",null,{"className":"lesson-header__description","children":"A practical template for creating a clear, concise AI strategy document that connects vision to data readiness, use cases, governance, timeline, and metrics."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/build-buy-partner","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Build, Buy, or Partner — Making the Right AI Investment Decisions"}]]}],["$","$L8",null,{"href":"/ai-leadership/ai-governance-framework","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"AI Governance — The Framework That Enables Innovation"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-seven-section-framework","text":"The Seven-Section Framework","level":2},{"id":"section-1-vision-and-strategic-alignment-34-sentences","text":"Section 1: Vision and Strategic Alignment (3–4 sentences)","level":3},{"id":"section-2-data-readiness-assessment-brief-summary","text":"Section 2: Data Readiness Assessment (Brief summary)","level":3},{"id":"section-3-priority-use-cases-the-short-list","text":"Section 3: Priority Use Cases (The short list)","level":3},{"id":"section-4-governance-summary","text":"Section 4: Governance Summary","level":3},{"id":"section-5-talent-and-organization","text":"Section 5: Talent and Organization","level":3},{"id":"section-6-investment-and-timeline","text":"Section 6: Investment and Timeline","level":3},{"id":"section-7-success-metrics","text":"Section 7: Success Metrics","level":3},{"id":"presentation-tips","text":"Presentation Tips","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

@@ -1,0 +1,116 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T271e,<h1 id="ai-talent-strategy--build-hire-and-upskill">AI Talent Strategy — Build, Hire, and Upskill</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>The AI roles that matter most for enterprise success</li>
+<li>How to balance hiring, upskilling, and partnership</li>
+<li>Why data literacy is a baseline skill for every manager</li>
+<li>A practical talent strategy framework</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Marcus (CHRO) opened the talent planning session with a question: "Do we need to hire 20 data scientists?"</p>
+<p>Priya (CTO) laughed. "Most organizations think they do, and most organizations are wrong. We need a few specialists, but more importantly, we need AI-literate managers and business analysts who can translate between business needs and technical capabilities."</p>
+<p>The Deloitte 2026 State of AI report validated this view: the AI skills gap was identified as the biggest barrier to integration, and education — not just hiring — was the number one way companies adjusted their talent strategies (<a href="https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html">Deloitte 2026</a>).</p>
+<p>Meridian's talent strategy focused on three layers: specialists (few, focused), translators (the critical middle), and literate leaders (the broad base).</p>
+<h2 id="the-three-layers-of-ai-talent">The Three Layers of AI Talent</h2>
+<h3 id="layer-1-ai-literacy-for-all-leaders">Layer 1: AI Literacy for All Leaders</h3>
+<p>Every manager, director, VP, and executive benefits from understanding:</p>
+<ul>
+<li>The AI landscape and toolkit (the material in Module 1)</li>
+<li>Data quality and readiness concepts</li>
+<li>How to evaluate AI proposals and vendor pitches</li>
+<li>Basic governance and risk concepts</li>
+</ul>
+<p>This isn't a nice-to-have. It's becoming a baseline expectation, similar to financial literacy or digital literacy. Leaders without this foundation struggle to contribute meaningfully to AI decisions that affect their domains.</p>
+<p><strong>How to build it:</strong> Executive education programs, internal learning paths, this course. Typically 20–40 hours of structured learning over 3–6 months.</p>
+<h3 id="layer-2-ai-translators-the-critical-middle">Layer 2: AI Translators (The Critical Middle)</h3>
+<p>Translators bridge business and technical domains. They include:</p>
+<ul>
+<li><strong>AI Product Managers</strong> — Define AI use cases, prioritize work, manage stakeholders, measure outcomes</li>
+<li><strong>Business Analysts with AI Skills</strong> — Understand what AI can do for their domain, work with technical teams to specify requirements</li>
+<li><strong>Domain Experts with Data Skills</strong> — Subject matter experts (supply chain, finance, marketing) who understand enough about data and AI to identify opportunities and validate outputs</li>
+<li><strong>AI Champions</strong> — Leaders in each department who advocate for and coordinate AI adoption within their function</li>
+</ul>
+<p>Translators are often underinvested compared to specialists. But according to research on AI implementation patterns, organizations that succeed at scaling AI typically have strong translator roles embedded in business functions.</p>
+<p><strong>How to build it:</strong> Mix of hiring, internal development, and role evolution. Many translators emerge from existing analyst or product management roles with targeted upskilling.</p>
+<h3 id="layer-3-ai-specialists">Layer 3: AI Specialists</h3>
+<p>These are the technical builders and operators:</p>
+<ul>
+<li><strong>Data Engineers</strong> — Build and maintain data pipelines, integration, and quality infrastructure</li>
+<li><strong>Machine Learning Engineers</strong> — Build, deploy, and maintain ML models</li>
+<li><strong>Data Scientists</strong> — Research, experiment, and develop analytical solutions</li>
+<li><strong>MLOps Engineers</strong> — Operationalize AI systems with monitoring, retraining, and governance tooling</li>
+<li><strong>AI Security Specialists</strong> — Address AI-specific security and adversarial risks</li>
+</ul>
+<p><strong>How many do you need?</strong> Fewer than most organizations assume. A team of 3–8 specialists can support a significant AI portfolio when paired with strong translators and effective use of external tools.</p>
+<p><strong>How to build it:</strong> Specialist hiring is competitive and expensive. Many organizations combine a small internal team with strategic partnerships for specialized needs.</p>
+<h2 id="the-three-layer-framework">The Three-Layer Framework</h2>
+<pre><code>┌────────────────────────────────────────────────────────┐
+│ Layer 1: AI-Literate Leaders (broad base)              │
+│ Every manager, director, VP, executive                 │
+│ Skill: Strategic AI understanding                      │
+│ Investment: Structured learning, 20-40 hours           │
+├────────────────────────────────────────────────────────┤
+│ Layer 2: AI Translators (critical middle)              │
+│ Product managers, analysts, domain experts, champions  │
+│ Skill: Bridge business and technical                   │
+│ Investment: Role development, hybrid hire/upskill      │
+├────────────────────────────────────────────────────────┤
+│ Layer 3: AI Specialists (focused depth)                │
+│ Data engineers, ML engineers, data scientists          │
+│ Skill: Technical building and operations               │
+│ Investment: Hire externally + selective internal       │
+└────────────────────────────────────────────────────────┘
+</code></pre>
+<h2 id="meridians-talent-approach">Meridian's Talent Approach</h2>
+<ul>
+<li><strong>Layer 1:</strong> All 45 directors and above complete an AI literacy program (including this course) over the next six months</li>
+<li><strong>Layer 2:</strong> Identify and develop 8–10 "AI champions" from existing managers across business units. Add 2 AI product manager roles to the 2027 hiring plan</li>
+<li><strong>Layer 3:</strong> Small team of 4 (existing: 2 data engineers, 1 data scientist; new hires: 1 ML engineer)</li>
+<li><strong>Partnerships:</strong> Vendor relationship for specialized GenAI capabilities; consulting partnership for initial acceleration</li>
+</ul>
+<h2 id="data-literacy-as-baseline">Data Literacy as Baseline</h2>
+<p>Separate from "AI literacy" is a narrower but equally important skill: <strong>data literacy.</strong></p>
+<p>Data literacy means every manager can:</p>
+<ul>
+<li>Ask good questions about data quality ("How complete is this dataset? Where did it come from?")</li>
+<li>Understand basic data concepts (averages vs medians, correlation vs causation, sample size)</li>
+<li>Recognize data quality issues that would affect AI or any analytical decision</li>
+<li>Interpret data visualizations and dashboards accurately</li>
+<li>Know when to push back on a data-driven claim</li>
+</ul>
+<p>This is becoming a baseline expectation in most knowledge work, regardless of AI involvement. Organizations that invest in data literacy benefit across all data-driven decisions, not just AI-specific ones.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Don't default to "we need to hire data scientists." Assess needs across all three layers first.</li>
+<li>AI literacy for leaders is often the highest-leverage investment. A literate leader makes better decisions about everything else (strategy, investment, governance).</li>
+<li>Translators are often underinvested. They're what turn specialist work into business outcomes.</li>
+<li>Data literacy is foundational. Invest in it broadly.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Over-indexing on specialist hiring</strong> — Hiring 20 data scientists without the translator layer typically produces impressive models that don't get adopted.</li>
+<li><strong>Treating AI literacy as optional for "non-technical" leaders</strong> — Every leader makes decisions about AI: evaluating proposals, allocating budget, managing risk, leading change. Literacy enables all of these.</li>
+<li><strong>Underinvesting in translators</strong> — The role is less visible than specialists, but often the difference between successful and stalled AI initiatives.</li>
+<li><strong>Ignoring data literacy</strong> — Data literacy benefits every decision involving data, not just AI. It's a multiplier across the organization.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>AI talent strategy has three layers: literate leaders (broad), translators (critical middle), specialists (focused depth).</li>
+<li>AI literacy for leadership is a baseline expectation, not optional upskilling.</li>
+<li>Translators — AI product managers, analysts, domain experts — are often underinvested and critical to success.</li>
+<li>Data literacy is foundational and benefits every data-driven decision, not just AI.</li>
+<li>Most organizations need fewer specialists than they assume, but stronger translator and leadership layers.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Having the right people is foundational. Leading them through change is the next challenge. In Lesson 18, we'll cover <strong>change management for AI adoption</strong> — practical approaches for helping organizations move from resistance to engagement.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"AI Talent Strategy — Build, Hire, and Upskill\",\"description\":\"The roles that matter for AI success, practical approaches to building capability, and why data literacy is becoming a baseline skill for every manager.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/ai-talent-strategy\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"AI Talent Strategy — Build, Hire, and Upskill\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/ai-talent-strategy\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"People, Culture, and Change Management"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"AI Talent Strategy — Build, Hire, and Upskill"}],["$","p",null,{"className":"lesson-header__description","children":"The roles that matter for AI success, practical approaches to building capability, and why data literacy is becoming a baseline skill for every manager."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/shadow-ai","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Shadow AI — The Risk You Need to Address Proactively"}]]}],["$","$L8",null,{"href":"/ai-leadership/leading-ai-adoption","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Leading AI Adoption — Change Management That Works"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-three-layers-of-ai-talent","text":"The Three Layers of AI Talent","level":2},{"id":"layer-1-ai-literacy-for-all-leaders","text":"Layer 1: AI Literacy for All Leaders","level":3},{"id":"layer-2-ai-translators-the-critical-middle","text":"Layer 2: AI Translators (The Critical Middle)","level":3},{"id":"layer-3-ai-specialists","text":"Layer 3: AI Specialists","level":3},{"id":"the-three-layer-framework","text":"The Three-Layer Framework","level":2},{"id":"meridians-talent-approach","text":"Meridian's Talent Approach","level":2},{"id":"data-literacy-as-baseline","text":"Data Literacy as Baseline","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

@@ -1,0 +1,165 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T24c9,<h1 id="build-buy-or-partner--making-the-right-ai-investment-decisions">Build, Buy, or Partner — Making the Right AI Investment Decisions</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>When to build custom AI, when to buy SaaS, when to partner</li>
+<li>The four-factor decision framework: Differentiation, Data, Cost, Speed</li>
+<li>How data readiness shapes the build-vs-buy decision</li>
+<li>Practical evaluation criteria for AI vendors</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>With use cases prioritized and data foundations underway, Priya (CTO) presented three options for the invoice processing initiative:</p>
+<p><strong>Option A (Build):</strong> Hire ML engineers, build a custom model trained on Meridian's invoice formats. Timeline: 6–9 months.</p>
+<p><strong>Option B (Buy):</strong> Subscribe to a commercial document processing platform. Timeline: 6–8 weeks.</p>
+<p><strong>Option C (Partner):</strong> Engage a specialized firm to build a tailored solution deployed on Meridian's infrastructure. Timeline: 3–4 months.</p>
+<p>David (CFO) asked the right question: "What's the framework? This isn't just a cost comparison." He was right — the answer depends on strategic context, not just price.</p>
+<h2 id="the-four-factor-framework">The Four-Factor Framework</h2>
+<h3 id="factor-1-strategic-differentiation">Factor 1: Strategic Differentiation</h3>
+<p>Is this capability a competitive advantage or a commodity?</p>
+<p>Invoice processing is operational efficiency — valuable, but not unique to Meridian. Buying makes sense. Meridian's demand forecasting, built on proprietary supply chain data and customer patterns, is potentially a differentiator. Building makes more sense.</p>
+<p><strong>Low differentiation → lean toward BUY.</strong> High differentiation → lean toward BUILD.</p>
+<h3 id="factor-2-data-sensitivity-and-readiness">Factor 2: Data Sensitivity and Readiness</h3>
+<p>Where does your data go, and is it AI-ready?</p>
+<p>SaaS tools process data in the vendor's cloud. For regulated industries, this raises compliance questions. Building keeps data on your infrastructure.</p>
+<p>Data readiness also affects the decision: building custom AI requires clean, sufficient, well-structured data. If your data isn't there yet, a SaaS tool that works with less data preparation may deliver value faster while you build foundations.</p>
+<p><strong>Sensitive/regulated data → lean toward BUILD or on-premise PARTNER.</strong> Data not yet AI-ready → lean toward BUY (for now).</p>
+<h3 id="factor-3-total-cost-of-ownership">Factor 3: Total Cost of Ownership</h3>
+<p>Compare the full cost, not just the sticker price:</p>
+<table>
+<thead>
+<tr>
+<th>Cost Component</th>
+<th>Build</th>
+<th>Buy (SaaS)</th>
+<th>Partner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Upfront investment</td>
+<td>High (talent, infrastructure)</td>
+<td>Low (subscription)</td>
+<td>Medium (project fee)</td>
+</tr>
+<tr>
+<td>Ongoing maintenance</td>
+<td>Your team maintains it</td>
+<td>Vendor maintains it</td>
+<td>Depends on contract</td>
+</tr>
+<tr>
+<td>Customization</td>
+<td>Unlimited</td>
+<td>Limited to vendor's features</td>
+<td>Negotiable</td>
+</tr>
+<tr>
+<td>Scaling cost</td>
+<td>Infrastructure scales with usage</td>
+<td>Per-user or per-transaction pricing</td>
+<td>May need renegotiation</td>
+</tr>
+<tr>
+<td>Hidden costs</td>
+<td>Talent retention, model retraining</td>
+<td>Vendor lock-in, data migration</td>
+<td>Knowledge transfer</td>
+</tr>
+</tbody>
+</table>
+<p>A SaaS subscription looks cheaper initially but may cost more over 3–5 years at scale. A custom build looks expensive initially but may cost less if you have high volume and strong internal capability.</p>
+<h3 id="factor-4-speed-to-value">Factor 4: Speed to Value</h3>
+<p>How quickly does the organization need results?</p>
+<p>Building takes months to years. Buying can deliver value in weeks. Partnering falls in between.</p>
+<p>For Meridian's invoice processing (operational efficiency, no competitive differentiation, data is structured and available), the answer was clear: <strong>Buy.</strong> Time-to-value mattered more than customization, and the capability wasn't a strategic differentiator.</p>
+<p>For demand forecasting (competitive advantage, proprietary data, existing ML expertise): <strong>Build</strong>, with the option to partner for initial acceleration.</p>
+<h2 id="the-decision-matrix">The Decision Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Points to BUILD</th>
+<th>Points to BUY</th>
+<th>Points to PARTNER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Differentiation</td>
+<td>High — unique advantage</td>
+<td>Low — commodity</td>
+<td>Medium — some customization needed</td>
+</tr>
+<tr>
+<td>Data sensitivity</td>
+<td>Regulated, must stay on-premise</td>
+<td>Low sensitivity</td>
+<td>Moderate — trusted partner</td>
+</tr>
+<tr>
+<td>Internal capability</td>
+<td>Strong ML/data team exists</td>
+<td>No ML team</td>
+<td>Have domain expertise, need AI expertise</td>
+</tr>
+<tr>
+<td>Data readiness</td>
+<td>Data is clean and available</td>
+<td>Data isn't ready (SaaS works anyway)</td>
+<td>Data needs preparation</td>
+</tr>
+<tr>
+<td>Speed needed</td>
+<td>Can wait 6+ months</td>
+<td>Need results in weeks</td>
+<td>Need results in 2–4 months</td>
+</tr>
+<tr>
+<td>Budget model</td>
+<td>CapEx acceptable</td>
+<td>OpEx preferred</td>
+<td>Project budget available</td>
+</tr>
+</tbody>
+</table>
+<p>Score each factor for your use case. The column with the most points suggests the right approach.</p>
+<h2 id="evaluating-ai-vendors-when-you-buy-or-partner">Evaluating AI Vendors (When You Buy or Partner)</h2>
+<p>When evaluating vendors, consider these areas:</p>
+<p><strong>Technical fit:</strong> Does the solution address your specific use case? Can it integrate with your existing systems? What's the implementation complexity?</p>
+<p><strong>Data handling:</strong> Where is data processed and stored? What security and privacy controls are in place? Can you retrieve your data if you switch vendors?</p>
+<p><strong>Transparency:</strong> Can the vendor explain how their models work? What's the accuracy on data similar to yours (not just their best benchmark)? How do they handle errors and edge cases?</p>
+<p><strong>Track record:</strong> Do they have customers in your industry? Can they provide reference cases with measurable outcomes?</p>
+<p><strong>Roadmap alignment:</strong> Is the vendor investing in capabilities you'll need in 2–3 years? Are they dependent on a single model provider that could change terms?</p>
+<p><strong>Commercial terms:</strong> What happens if you want to leave? Is there a data portability clause? How does pricing scale with volume?</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Most organizations will use a mix: buy for commodity capabilities, build for differentiators, partner for initial acceleration.</li>
+<li>Data readiness shapes this decision more than most leaders realize. If your data isn't ready, building custom AI will stall — buying a SaaS tool that works with less preparation may be the pragmatic first step.</li>
+<li>Revisit build-vs-buy decisions as your organization matures. What you buy today (because you lack internal capability) you might build in-house next year (once you've developed the team and data foundations).</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Building everything because "we want to own the IP"</strong> — Owning custom AI is only valuable if the capability is a differentiator. Building a custom email classification system when a commercial tool does the same thing is a misallocation of scarce AI talent.</li>
+<li><strong>Buying without evaluating data portability</strong> — If you can't export your data and models when a vendor relationship ends, you're locked in. Always negotiate data portability.</li>
+<li><strong>Assuming a vendor's demo reflects your reality</strong> — Vendor demos use clean, curated data. Ask for performance metrics on data similar to yours, or request a proof-of-concept on your actual data.</li>
+<li><strong>Ignoring total cost of ownership</strong> — A $50K/year SaaS tool processing 10 million documents costs $5 per thousand. At Meridian's scale, that's reasonable. At 10x scale, building might be cheaper.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Build when AI is a competitive differentiator and you have the data and talent. Buy when the capability is a commodity and speed matters. Partner when you need expertise to get started.</li>
+<li>Data readiness is a decisive factor — it affects not just whether AI works, but which approach is practical.</li>
+<li>Most organizations use a mix of all three approaches, evolving over time as internal capabilities grow.</li>
+<li>When buying, evaluate data handling, transparency, portability, and total cost of ownership — not just features and price.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>All the components are in place: use cases prioritized, data strategy set, build-vs-buy decided. In Lesson 11, we'll pull it all together into <strong>the AI strategy document</strong> — a clear, concise plan that your leadership team and board can understand, support, and use to guide decisions.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Build, Buy, or Partner — Making the Right AI Investment Decisions\",\"description\":\"A decision framework for choosing between building custom AI, buying SaaS tools, or partnering with AI vendors — based on strategic value, data, cost, and speed.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/build-buy-partner\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Build, Buy, or Partner — Making the Right AI Investment Decisions\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/build-buy-partner\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"Building Your AI Strategy"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Build, Buy, or Partner — Making the Right AI Investment Decisions"}],["$","p",null,{"className":"lesson-header__description","children":"A decision framework for choosing between building custom AI, buying SaaS tools, or partnering with AI vendors — based on strategic value, data, cost, and speed."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/data-strategy-for-ai","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"Building a Data Strategy That Makes AI Possible"}]]}],["$","$L8",null,{"href":"/ai-leadership/the-ai-strategy-document","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"Writing the AI Strategy Document Your Board Will Actually Read"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-four-factor-framework","text":"The Four-Factor Framework","level":2},{"id":"factor-1-strategic-differentiation","text":"Factor 1: Strategic Differentiation","level":3},{"id":"factor-2-data-sensitivity-and-readiness","text":"Factor 2: Data Sensitivity and Readiness","level":3},{"id":"factor-3-total-cost-of-ownership","text":"Factor 3: Total Cost of Ownership","level":3},{"id":"factor-4-speed-to-value","text":"Factor 4: Speed to Value","level":3},{"id":"the-decision-matrix","text":"The Decision Matrix","level":2},{"id":"evaluating-ai-vendors-when-you-buy-or-partner","text":"Evaluating AI Vendors (When You Buy or Partner)","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

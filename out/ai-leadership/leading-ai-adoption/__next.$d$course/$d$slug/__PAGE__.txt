@@ -1,0 +1,124 @@
+1:"$Sreact.fragment"
+2:I[61970,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+8:I[22016,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],""]
+9:I[74356,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js","/_next/static/chunks/01ou0qd~0sig9.js","/_next/static/chunks/0ontsox_.r.2k.js"],"default"]
+a:I[97367,["/_next/static/chunks/106s2c4nvckqs.js","/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T2207,<h1 id="leading-ai-adoption--change-management-that-works">Leading AI Adoption — Change Management That Works</h1>
+<div data-cw-section="learn-box"><h2 id="what-youll-learn">What You'll Learn</h2>
+<ul>
+<li>Why technology investment delivers only part of AI value</li>
+<li>The three phases of AI adoption change</li>
+<li>Communication strategies that build engagement</li>
+<li>How to address concerns constructively</li>
+</ul>
+</div><h2 id="the-meridian-story">The Meridian Story</h2>
+<p>Sarah (CEO) and Marcus (CHRO) discussed the people dimension of Meridian's AI strategy. Marcus observed: "We can buy the best technology and design the best governance, but if people across the organization don't understand and engage with AI thoughtfully, we won't see the results."</p>
+<p>PwC's 2026 AI predictions reinforce this view: technology typically delivers only about 20% of an AI initiative's value. The other 80% comes from how work is redesigned and how people engage with the new capabilities (<a href="https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html">PwC 2026</a>).</p>
+<p>This is why change management isn't a supporting function for AI initiatives — it's the primary driver of success.</p>
+<h2 id="the-three-phases">The Three Phases</h2>
+<h3 id="phase-1-awareness">Phase 1: Awareness</h3>
+<p><strong>What it looks like:</strong> People across the organization understand that AI is becoming part of how the company operates. They know the leadership team's perspective, the strategic priorities, and what's expected of them.</p>
+<p><strong>Leadership actions:</strong></p>
+<ul>
+<li>Clear, consistent communication from the top about AI's role</li>
+<li>Open forums for questions and discussion</li>
+<li>Visible leadership engagement with AI topics (not just delegated to IT)</li>
+<li>Honest acknowledgment of uncertainties and evolving areas</li>
+</ul>
+<p><strong>Common concerns to address:</strong></p>
+<ul>
+<li>"Will AI affect my role?" — Provide clarity on how roles may evolve and what support is available</li>
+<li>"Is this another initiative that will fade?" — Demonstrate sustained leadership commitment</li>
+<li>"Do I need to learn to code?" — Clarify what skills matter (most people need literacy, not technical skills)</li>
+</ul>
+<h3 id="phase-2-engagement">Phase 2: Engagement</h3>
+<p><strong>What it looks like:</strong> Teams are actively participating in AI initiatives — identifying use cases, contributing to pilots, providing feedback on tools, learning new capabilities.</p>
+<p><strong>Leadership actions:</strong></p>
+<ul>
+<li>Create structured opportunities for employees to contribute ideas and feedback</li>
+<li>Celebrate early wins visibly, even small ones</li>
+<li>Invest in learning resources — literacy programs, tool training, time for experimentation</li>
+<li>Recognize AI champions and translators who bridge domains</li>
+</ul>
+<p><strong>The "bring-your-team-along" principle:</strong>
+When launching an AI initiative, involve the affected team from the beginning. People who help design a change engage with it constructively. People who have it imposed on them typically resist.</p>
+<h3 id="phase-3-institutionalization">Phase 3: Institutionalization</h3>
+<p><strong>What it looks like:</strong> AI-enabled ways of working are the norm, not the exception. Processes incorporate AI capabilities. New hires are trained in AI-enabled workflows from day one. Results are measured and communicated regularly.</p>
+<p><strong>Leadership actions:</strong></p>
+<ul>
+<li>Incorporate AI literacy into onboarding and ongoing training</li>
+<li>Update performance management to reflect AI-enabled workflows</li>
+<li>Share results transparently — what's working, what's being adjusted</li>
+<li>Continue leadership visibility as AI matures from novel to normal</li>
+</ul>
+<h2 id="communication-principles">Communication Principles</h2>
+<h3 id="be-specific">Be Specific</h3>
+<p>"We're going to use AI to help our teams work more effectively" is too vague to be useful. "We're implementing a document processing tool that will reduce the manual review time for invoices by about 75%, starting with the accounts payable team in Q2" gives people something concrete to engage with.</p>
+<h3 id="be-honest-about-uncertainty">Be Honest About Uncertainty</h3>
+<p>Not every AI initiative will succeed. Some will deliver less value than expected. Being honest about this upfront builds credibility when leaders communicate successes. "We're piloting this capability and will evaluate results after 90 days" is stronger than "This will transform our operations."</p>
+<h3 id="address-concerns-before-questions-are-asked">Address Concerns Before Questions Are Asked</h3>
+<p>If people have concerns about AI's impact on their roles, addressing those concerns proactively is more effective than waiting to be asked. Providing clarity on: what roles are evolving and how, what learning opportunities are available, and what support the organization is providing makes the change easier to engage with.</p>
+<h3 id="share-results-transparently">Share Results Transparently</h3>
+<p>When AI initiatives deliver results, share specifically what worked and why. When they don't meet expectations, share what you learned. This builds organizational learning and trust.</p>
+<h2 id="the-engagement-matrix">The Engagement Matrix</h2>
+<p>Different people engage with change differently. Understanding this helps you communicate more effectively:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Typical Characteristics</th>
+<th>How to Engage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enthusiasts</strong></td>
+<td>Early adopters, already experimenting</td>
+<td>Give them visibility, channel their energy into champion roles</td>
+</tr>
+<tr>
+<td><strong>Open-minded</strong></td>
+<td>Curious but cautious</td>
+<td>Provide clear information, opportunities to learn, early examples of success</td>
+</tr>
+<tr>
+<td><strong>Skeptical</strong></td>
+<td>Want to see evidence, ask hard questions</td>
+<td>Welcome their questions — they improve the work. Share data and results</td>
+</tr>
+<tr>
+<td><strong>Concerned</strong></td>
+<td>Worried about impact on their roles</td>
+<td>Address specifically with clarity about what's changing and what support is available</td>
+</tr>
+</tbody>
+</table>
+<p>All four groups are valuable. Enthusiasts drive momentum. Skeptics improve quality. Concerned voices surface real issues to address. Effective change management engages all of them.</p>
+<h2 id="what-this-means-for-your-organization">What This Means for Your Organization</h2>
+<ul>
+<li>Change management isn't a separate workstream from AI initiatives — it's woven throughout every initiative from planning to deployment.</li>
+<li>The 20/80 ratio (technology/people) is a useful mental model for resource allocation. If your AI budget is 95% technology and 5% change management, the balance is off.</li>
+<li>Communication is not a one-time event. Sustained, consistent communication over months builds engagement. A single announcement does not.</li>
+</ul>
+<div data-cw-section="mistake-card"><h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li><strong>Treating change management as a post-launch activity</strong> — "We'll train people once it's deployed" typically produces low adoption. Engagement should begin during planning.</li>
+<li><strong>Vague communication</strong> — General statements about AI's importance don't help people engage. Specificity builds understanding.</li>
+<li><strong>Ignoring skeptical voices</strong> — Skeptics often surface real issues. Dismissing their concerns loses valuable feedback and damages trust.</li>
+<li><strong>Underinvesting in learning</strong> — Expecting people to adopt AI-enabled workflows without time or resources to learn is setting them up to struggle.</li>
+</ul>
+</div><h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Technology delivers about 20% of AI value; how people engage delivers the other 80% (PwC 2026).</li>
+<li>AI adoption moves through three phases: awareness, engagement, institutionalization. Each requires different leadership actions.</li>
+<li>Communication should be specific, honest, proactive, and sustained over time.</li>
+<li>Different groups engage with change differently — enthusiasts, open-minded, skeptical, concerned. Effective change management addresses all four.</li>
+</ul>
+<h2 id="next-lesson">Next Lesson</h2>
+<p>Change management works at the individual and team level. At the organizational level, AI requires structural choices. In Lesson 19, we'll examine <strong>the AI operating model</strong> — how to structure AI ownership, accountability, and budget across the enterprise.</p>0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"lesson-main","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Leading AI Adoption — Change Management That Works\",\"description\":\"Practical change management for AI adoption — communication strategies, engagement approaches, and how to build organizational momentum.\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership/leading-ai-adoption\",\"isPartOf\":{\"@type\":\"Course\",\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"url\":\"https://codewise.lumivoxx.com/ai-leadership\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"CodewiseX\",\"url\":\"https://codewise.lumivoxx.com\"},\"isAccessibleForFree\":true,\"inLanguage\":\"en\"}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"CodewiseX\",\"item\":\"https://codewise.lumivoxx.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"AI for Leadership — Strategic AI Literacy for Every Leader\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Leading AI Adoption — Change Management That Works\",\"item\":\"https://codewise.lumivoxx.com/ai-leadership/leading-ai-adoption\"}]}"}}],["$","article",null,{"className":"lesson-article","data-pagefind-body":true,"children":[["$","header",null,{"className":"lesson-header","children":[["$","div",null,{"className":"lesson-header__breadcrumb","children":[["$","span",null,{"className":"lesson-header__course","children":"AI for Leadership — Strategic AI Literacy for Every Leader"}],["$","span",null,{"className":"lesson-header__sep","children":"/"}],["$","span",null,{"className":"lesson-header__module","children":"People, Culture, and Change Management"}]]}],["$","h1",null,{"className":"lesson-header__title","children":"Leading AI Adoption — Change Management That Works"}],["$","p",null,{"className":"lesson-header__description","children":"Practical change management for AI adoption — communication strategies, engagement approaches, and how to build organizational momentum."}]]}],["$","$L2",null,{"html":"$3"}],"$L4"]}],"$L5"]}],["$L6"],"$L7"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"SqdzuPaEeA-UMZd5kjbkM"}
+4:["$","div",null,{"className":"lesson-nav","children":[["$","$L8",null,{"href":"/ai-leadership/ai-talent-strategy","className":"lesson-nav__card lesson-nav__card--prev glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"← Previous"}],["$","span",null,{"className":"lesson-nav__title","children":"AI Talent Strategy — Build, Hire, and Upskill"}]]}],["$","$L8",null,{"href":"/ai-leadership/the-ai-operating-model","className":"lesson-nav__card lesson-nav__card--next glass","children":[["$","span",null,{"className":"lesson-nav__label","children":"Next →"}],["$","span",null,{"className":"lesson-nav__title","children":"The AI Operating Model — Centralized, Federated, or Hybrid?"}]]}]]}]
+5:["$","aside",null,{"className":"lesson-toc","children":["$","$L9",null,{"entries":[{"id":"what-youll-learn","text":"What You'll Learn","level":2},{"id":"the-meridian-story","text":"The Meridian Story","level":2},{"id":"the-three-phases","text":"The Three Phases","level":2},{"id":"phase-1-awareness","text":"Phase 1: Awareness","level":3},{"id":"phase-2-engagement","text":"Phase 2: Engagement","level":3},{"id":"phase-3-institutionalization","text":"Phase 3: Institutionalization","level":3},{"id":"communication-principles","text":"Communication Principles","level":2},{"id":"be-specific","text":"Be Specific","level":3},{"id":"be-honest-about-uncertainty","text":"Be Honest About Uncertainty","level":3},{"id":"address-concerns-before-questions-are-asked","text":"Address Concerns Before Questions Are Asked","level":3},{"id":"share-results-transparently","text":"Share Results Transparently","level":3},{"id":"the-engagement-matrix","text":"The Engagement Matrix","level":2},{"id":"what-this-means-for-your-organization","text":"What This Means for Your Organization","level":2},{"id":"common-mistakes","text":"Common Mistakes","level":2},{"id":"key-takeaways","text":"Key Takeaways","level":2},{"id":"next-lesson","text":"Next Lesson","level":2}]}]}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/0ontsox_.r.2k.js","async":true}]
+7:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null
