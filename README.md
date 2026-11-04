@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Codewise
 
-## Getting Started
+**Live:** [codewise.lumivoxx.com](https://codewise.lumivoxx.com)
 
-First, run the development server:
+Codewise is a free, self-hosted learning platform with hands-on courses for data engineers, SAP developers and business leaders. Every lesson is written as Markdown and rendered as a fast static site.
+
+## Courses
+
+| Course | Lessons | For |
+|---|---|---|
+| **PySpark for Absolute Beginners** | 30 | DataFrames, joins, partitions, shuffles, skew, caching, performance tuning, production patterns, interview prep |
+| **ABAP Classic: SAP Programming from Scratch** | 30 | Reports, internal tables, Open SQL, ALV, BAPIs, IDocs, debugging |
+| **ABAP Modern: RAP, CDS & ABAP Cloud** | 25 | CDS views, RAP business objects, ABAP Cloud, clean core for S/4HANA |
+| **AI for Leadership** | 26 | AI literacy, strategy, governance, risk, talent, ROI and leadership decisions |
+
+That's 110+ lessons in total.
+
+## Tech
+
+- **Next.js (App Router) + TypeScript**, statically exported
+- **Content as code:** each course is a folder of Markdown lessons in `content/<course>/` with a `_meta.json`, registered in `content/courses.json`
+- **Tailwind CSS** for styling
+- **Docker + Nginx** for self-hosting (`Dockerfile`, `nginx.conf`, `deploy.sh`)
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export to ./out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Add a course
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Create `content/<course-id>/` with numbered Markdown lessons (`01-intro.md`, …) and a `_meta.json`.
+2. Add an entry to `content/courses.json`.
+3. Rebuild.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Author
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by [Deepak Pandalai](https://github.com/deepakp999), who leads data and AI work in the commercial vehicle industry.
